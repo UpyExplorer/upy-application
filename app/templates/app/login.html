@@ -1,0 +1,55 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<body class="hold-transition login-page">
+<div class="login-box">
+  
+  <div class="login-logo">
+  </div>
+
+  <div class="card">
+    <div class="card-body login-card-body">
+    <h4><p class="login-box-msg">IndexOffy</p></h4>
+
+        <form class="form-signin">
+        <div class="input-group mb-3">
+        <input type="email" id="emailUsuario" name="emailUsuario" class="form-control alert1" placeholder="E-mail">
+          <div class="input-group-append">
+            <div class="input-group-text alert1">
+              <span class="fas fa-envelope"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+        <input type="password" id="senhaUsuario" name="senhaUsuario" class="form-control alert2" placeholder="Senha">
+          <div class="input-group-append">
+            <div class="input-group-text alert2">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+        </div>
+        <div class="row">  
+          <div class="col-4">      
+          </div>
+        </div>
+      </form>
+      <div class="social-auth-links text-center mb-3">
+        <button id="logar" type="button" class="btn btn-block btn-success">
+          <i class="mr-2"></i> Entrar
+        </a>
+       <button id="cadastrar" type="button" class="btn btn-block btn-default">
+          <i class="mr-2"></i> Cadastrar-se
+        </a>
+      </div>
+        <p class="mb-1">
+      </p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}

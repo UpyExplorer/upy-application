@@ -1,0 +1,106 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+<body class="hold-transition sidebar-mini  layout-fixed">
+
+    <!-- HEADER -->
+    {% include 'app/layout/header.html' %}
+    <!-- /.HEADER -->
+
+    <div class="wrapper">
+
+        <!-- MENU -->
+        {% include 'app/layout/main_menu.html' %}
+        <!-- /.MENU -->
+        <!-- CONTEUDO -->
+        <div class="content-wrapper">
+            <!-- CONTEUDO_CABECALHO -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0 text-dark">Painel de Controle</h1>
+                        </div>
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active">Dashboard v1</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.CONTEUDO_CABECALHO -->
+            <!-- DASHBOARD -->
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- Default box -->
+                            <div class="card">
+                                <div class="card-header">
+
+                                    <div class="card-tools">
+                                        <button type="button" class="btn btn-success btn-salvar" id="btn-salvar"><i class="fas fa-floppy-o"></i>   Salvar</button>
+                                    </div>
+                                </div>
+                                <div class="table-responsive text-nowrap">
+
+                                </div>
+                            </div>
+            </section>
+
+            <!-- /.DASHBOARD -->
+            <!-- CONTEUDO_INICIO -->
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-header">
+
+                                    <div class="row">
+                                        <div class="form-group col-sm">
+                                            <label for="ImputNome">Nome Completo:</label>
+                                            <input type="text" class="form-control" id="ImputNome">
+                                        </div>
+                                        <div class="form-group col-sm">
+                                            <label for="ImputEmail">E-mail:</label>
+                                            <input type="email" class="form-control" id="ImputEmail">
+                                        </div>
+                                        
+                                        <div class="form-group col-sm">
+                                            <label for="ImputEmail">Status:</label>
+                                            <select class="form-control">
+                                                <option>Ativo</option>
+                                                <option>Inativo</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+            </section>
+        </div>
+
+        <!-- FOOTER -->
+        {% include 'app/layout/footer.html' %}
+        <!-- /.FOOTER -->
+
+        <aside class="control-sidebar control-sidebar-dark">
+        </aside>
+
+    </div>
+
+    {% endblock %}
+
+
+    {% block scripts %}
+
+    {% load staticfiles %}
+
+    {% endblock %}
+
