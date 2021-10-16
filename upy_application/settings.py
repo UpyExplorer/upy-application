@@ -25,7 +25,7 @@ SECRET_KEY = '191b886a-b0ab-480a-b1fe-2e7017b812ce'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.upy-application.herokuapp.com','upy-application.herokuapp.com']
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 # Application references
