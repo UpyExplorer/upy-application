@@ -1,4 +1,6 @@
 import os
+import dj_database_url
+
 from os.path import dirname
 from django.utils.translation import gettext_lazy as _
 
@@ -78,7 +80,7 @@ EMAIL_USE_SSL = True
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': os.environ.get('DATABASE_URL'),
     }
 }
 
