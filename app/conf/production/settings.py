@@ -122,10 +122,10 @@ TIME_ZONE = 'UTC'
 USE_TZ = True
 
 STATIC_ROOT = os.path.join(CONTENT_DIR, 'static')
-STATIC_URL = '/static/'
+STATIC_URL =  '/var/www/upy-application.herokuapp.com/content/static/'
 
 MEDIA_ROOT = os.path.join(CONTENT_DIR, 'media')
-MEDIA_URL = '/media/'
+MEDIA_URL = '/var/www/upy-application.herokuapp.com/content/media/'
 
 STATICFILES_DIRS = [
     os.path.join(CONTENT_DIR, 'assets'),
