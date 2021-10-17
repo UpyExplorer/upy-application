@@ -23,16 +23,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.admin',
-    'django.contrib.admin_list',
-    'django.contrib.admin_modify',
-    'django.contrib.admin_urls',
-    'django.contrib.cache',
-    'django.contrib.i18n',
-    'django.contrib.l10n',
-    'django.contrib.log',
-    'django.contrib.static',
-    'django.contrib.tz',
 
     # Vendor apps
     'bootstrap4',
