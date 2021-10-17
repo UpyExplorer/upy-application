@@ -8,7 +8,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 SECRET_KEY = '3d305kajG5Jy8KBafCMpHwDIsNi0SqVaW'
 
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = [
     'upy-application.herokuapp.com',
 ]
