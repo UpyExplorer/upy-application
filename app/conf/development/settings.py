@@ -44,6 +44,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'app.urls'
@@ -70,8 +71,8 @@ WSGI_APPLICATION = 'app.wsgi.application'
 
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 EMAIL_FILE_PATH = os.path.join(CONTENT_DIR, 'tmp/emails')
-EMAIL_HOST_USER = 'test@example.com'
-DEFAULT_FROM_EMAIL = 'test@example.com'
+EMAIL_HOST_USER = 'upyexplorer@gmail.com'
+DEFAULT_FROM_EMAIL = 'upyexplorer@gmail.com'
 
 DATABASES = {
     'default': dj_database_url.config(default='postgres://wkxvovoaaipfov:2315842a393c273107c4f1cd6870b9fbd151bc692fcdeb96c3ec646f2c39d5d6@ec2-54-147-76-191.compute-1.amazonaws.com:5432/d84ee6ijnm04ed')
