@@ -1,3 +1,3 @@
-web: python source/manage.py runserver
-python source/manage.py collectstatic --noinput
-python source/manage.py migrate
+web: gunicorn app.wsgi:application --log-file - --log-level debug
+python manage.py collectstatic --noinput
+manage.py migrate
