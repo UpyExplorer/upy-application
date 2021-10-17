@@ -78,10 +78,7 @@ EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.environ.get('DATABASE_URL'),
-    }
+    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
 }
 
 AUTH_PASSWORD_VALIDATORS = [
