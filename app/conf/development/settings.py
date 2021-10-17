@@ -1,5 +1,7 @@
 import os
 import warnings
+import dj_database_url
+
 from django.utils.translation import gettext_lazy as _
 from os.path import dirname
 
@@ -72,10 +74,7 @@ EMAIL_HOST_USER = 'test@example.com'
 DEFAULT_FROM_EMAIL = 'test@example.com'
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+    'default': dj_database_url.config(default='postgres://wkxvovoaaipfov:2315842a393c273107c4f1cd6870b9fbd151bc692fcdeb96c3ec646f2c39d5d6@ec2-54-147-76-191.compute-1.amazonaws.com:5432/d84ee6ijnm04ed')
 }
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -123,10 +122,10 @@ TIME_ZONE = 'UTC'
 USE_TZ = True
 
 STATIC_ROOT = os.path.join(CONTENT_DIR, 'static')
-STATIC_URL = '/static/'
+STATIC_URL = '/content/static/'
 
 MEDIA_ROOT = os.path.join(CONTENT_DIR, 'media')
-MEDIA_URL = '/media/'
+MEDIA_URL = '/content/media/'
 
 STATICFILES_DIRS = [
     os.path.join(CONTENT_DIR, 'assets'),
