@@ -14,7 +14,7 @@ ALLOWED_HOSTS = [
 ]
 
 SITE_ID = 1
-DISABLE_COLLECTSTATIC = 1
+DISABLE_COLLECTSTATIC = False
 
 INSTALLED_APPS = [
     'django.contrib.admin',
