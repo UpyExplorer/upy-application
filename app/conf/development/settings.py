@@ -11,9 +11,9 @@ BASE_DIR = dirname(dirname(dirname(dirname(os.path.abspath(__file__)))))
 CONTENT_DIR = os.path.join(BASE_DIR, 'content')
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = os.environ.get('EMAIL_HOST')
 
-DEBUG = os.environ.get('DEBUG')
+DEBUG = True
 ALLOWED_HOSTS = []
 
 SITE_ID = 1
@@ -75,7 +75,7 @@ EMAIL_HOST_USER = os.environ.get('EMAIL_HOST')
 DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST')
 
 DATABASES = {
-    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
+    'default': dj_database_url.config(default='postgres://wkxvovoaaipfov:2315842a393c273107c4f1cd6870b9fbd151bc692fcdeb96c3ec646f2c39d5d6@ec2-54-147-76-191.compute-1.amazonaws.com:5432/d84ee6ijnm04ed')
 }
 
 AUTH_PASSWORD_VALIDATORS = [
