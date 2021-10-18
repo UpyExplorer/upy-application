@@ -14,8 +14,7 @@ ALLOWED_HOSTS = [
 ]
 
 SITE_ID = 1
-DISABLE_COLLECTSTATIC = 1
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+DISABLE_COLLECTSTATIC = 0
 
 INSTALLED_APPS = [
     'django.contrib.admin',
