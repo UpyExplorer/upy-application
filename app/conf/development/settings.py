@@ -31,8 +31,8 @@ INSTALLED_APPS = [
     'bootstrap4',
 
     # Application apps
-    'source.modules.main',
-    'modules.accounts',
+    'main',
+    'accounts',
 ]
 
 MIDDLEWARE = [
