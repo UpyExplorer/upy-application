@@ -1,2 +1,3 @@
-web: python manage.py runserver
-heroku ps:scale web=1
+web: gunicorn app.wsgi:application --log-file - --log-level debug
+python manage.py collectstatic --noinput
+manage.py migrate
