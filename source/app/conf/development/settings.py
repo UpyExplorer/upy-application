@@ -11,9 +11,9 @@ BASE_DIR = dirname(dirname(dirname(dirname(os.path.abspath(__file__)))))
 CONTENT_DIR = os.path.join(BASE_DIR, 'content')
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
-SECRET_KEY = 'key'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
-DEBUG = True
+DEBUG = os.environ.get('DEBUG')
 ALLOWED_HOSTS = []
 
 SITE_ID = 1
@@ -75,12 +75,8 @@ EMAIL_HOST_USER = os.environ.get('EMAIL_HOST')
 DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST')
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
 }
-
 
 AUTH_PASSWORD_VALIDATORS = [
     {
