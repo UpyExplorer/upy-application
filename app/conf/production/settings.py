@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     # Application apps
     'modules.main',
     'modules.accounts',
+    'modules.base',
 ]
 
 MIDDLEWARE = [
