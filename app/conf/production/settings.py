@@ -8,12 +8,10 @@ BASE_DIR = dirname(dirname(dirname(dirname(os.path.abspath(__file__)))))
 CONTENT_DIR = os.path.join(BASE_DIR, 'content')
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
-SECRET_KEY = '3d305kajG5Jy8KBafCMpHwDIsNi0SqVaW'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
-DEBUG = True
-ALLOWED_HOSTS = [
-    'upy-application.herokuapp.com',
-]
+DEBUG = os.environ.get('DEBUG')
+ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOSTS')]
 
 SITE_ID = 1
 DISABLE_COLLECTSTATIC = 1
@@ -72,11 +70,11 @@ WSGI_APPLICATION = 'app.wsgi.application'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-EMAIL_HOST = ''
-EMAIL_HOST_USER = ''
-DEFAULT_FROM_EMAIL = ''
-EMAIL_HOST_PASSWORD = ''
-EMAIL_PORT = 465
+EMAIL_HOST = os.environ.get('EMAIL_HOST')
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+EMAIL_PORT = os.environ.get('EMAIL_PORT')
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 
@@ -141,6 +139,3 @@ LOCALE_PATHS = [
 SIGN_UP_FIELDS = ['username', 'first_name', 'last_name', 'email', 'password1', 'password2']
 if DISABLE_USERNAME:
     SIGN_UP_FIELDS = ['first_name', 'last_name', 'email', 'password1', 'password2']
-
-
-print(STATIC_ROOT)
