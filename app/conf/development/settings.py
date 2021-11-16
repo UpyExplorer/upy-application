@@ -5,7 +5,7 @@ import dj_database_url
 from django.utils.translation import gettext_lazy as _
 from os.path import dirname
 
-warnings.simplefilter('error', DeprecationWarning)
+# warnings.simplefilter('error', DeprecationWarning)
 
 BASE_DIR = dirname(dirname(dirname(dirname(os.path.abspath(__file__)))))
 CONTENT_DIR = os.path.join(BASE_DIR, 'content')
