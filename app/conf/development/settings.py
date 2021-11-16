@@ -126,7 +126,7 @@ LANGUAGES = [
 TIME_ZONE = 'UTC'
 USE_TZ = True
 
-STATIC_ROOT = os.path.join(CONTENT_DIR, 'static')
+STATIC_ROOT = os.path.join(CONTENT_DIR, 'staticfiles')
 STATIC_URL = '/content/static/'
 
 MEDIA_ROOT = os.path.join(CONTENT_DIR, 'media')
