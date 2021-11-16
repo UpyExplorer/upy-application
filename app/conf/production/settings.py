@@ -116,8 +116,6 @@ LANGUAGE_CODE = 'pt-br'
 LANGUAGES = [
     ('pt-br', _('Português-BR')),
     ('en', _('English')),
-    ('ru', _('Russian')),
-    ('zh-Hans', _('Simplified Chinese')),
 ]
 
 TIME_ZONE = 'UTC'
