@@ -12,6 +12,7 @@ urlpatterns = [
     path('i18n/', include('django.conf.urls.i18n')),
     path('language/', ChangeLanguageView.as_view(), name='change_language'),
     path('accounts/', include('modules.accounts.urls')),
+    path('dashboard/', include('modules.dashboard.urls')),
 ]
 
 if settings.DEBUG:
