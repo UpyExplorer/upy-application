@@ -6,8 +6,8 @@ from django.utils.translation import gettext_lazy as _
 
 
 def send_mail(to, template, context):
-    html_content = render_to_string(f'accounts/emails/{template}.html', context)
-    text_content = render_to_string(f'accounts/emails/{template}.txt', context)
+    html_content = render_to_string(f'account/emails/{template}.html', context)
+    text_content = render_to_string(f'account/emails/{template}.txt', context)
 
     msg = EmailMultiAlternatives(context['subject'], text_content, settings.DEFAULT_FROM_EMAIL, [to])
     msg.attach_alternative(html_content, 'text/html')
@@ -17,7 +17,7 @@ def send_mail(to, template, context):
 def send_activation_email(request, email, code):
     context = {
         'subject': _('Profile activation'),
-        'uri': request.build_absolute_uri(reverse('accounts:activate', kwargs={'code': code})),
+        'uri': request.build_absolute_uri(reverse('account:activate', kwargs={'code': code})),
     }
 
     send_mail(email, 'activate_profile', context)
@@ -26,7 +26,7 @@ def send_activation_email(request, email, code):
 def send_activation_change_email(request, email, code):
     context = {
         'subject': _('Change email'),
-        'uri': request.build_absolute_uri(reverse('accounts:change_email_activation', kwargs={'code': code})),
+        'uri': request.build_absolute_uri(reverse('account:change_email_activation', kwargs={'code': code})),
     }
 
     send_mail(email, 'change_email', context)
@@ -36,7 +36,7 @@ def send_reset_password_email(request, email, token, uid):
     context = {
         'subject': _('Restore password'),
         'uri': request.build_absolute_uri(
-            reverse('accounts:restore_password_confirm', kwargs={'uidb64': uid, 'token': token})),
+            reverse('account:restore_password_confirm', kwargs={'uidb64': uid, 'token': token})),
     }
 
     send_mail(email, 'restore_password_email', context)

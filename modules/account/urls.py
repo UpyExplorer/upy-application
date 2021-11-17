@@ -7,7 +7,7 @@ from .views import (
     RestorePasswordView, RestorePasswordDoneView, RestorePasswordConfirmView,
 )
 
-app_name = 'accounts'
+app_name = 'account'
 
 urlpatterns = [
     path('log-in/', LogInView.as_view(), name='log_in'),
