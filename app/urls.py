@@ -7,7 +7,7 @@ from modules.main.views import IndexPageView, ChangeLanguageView
 from modules.accounts.views import LogInView
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('backoffice/', admin.site.urls),
     path('', LogInView.as_view(), name='index'),
     path('i18n/', include('django.conf.urls.i18n')),
     path('language/', ChangeLanguageView.as_view(), name='change_language'),
