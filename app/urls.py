@@ -5,6 +5,7 @@ from django.conf.urls.static import static
 
 from modules.main.views import IndexPageView, ChangeLanguageView
 from modules.accounts.views import LogInView
+from modules.dashboard.views import DashboardPageView
 
 urlpatterns = [
     path('backoffice/', admin.site.urls),
@@ -12,7 +13,7 @@ urlpatterns = [
     path('i18n/', include('django.conf.urls.i18n')),
     path('language/', ChangeLanguageView.as_view(), name='change_language'),
     path('accounts/', include('modules.accounts.urls')),
-    path('dashboard/', include('modules.dashboard.urls')),
+    path('dashboard/', DashboardPageView.as_view(), name='dashboard'),
 ]
 
 if settings.DEBUG:
