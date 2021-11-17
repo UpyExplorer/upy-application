@@ -8,7 +8,7 @@ from modules.accounts.views import LogInView
 
 urlpatterns = [
     path('backoffice/', admin.site.urls),
-    path('', LogInView.as_view(), name='index'),
+    path('', IndexPageView.as_view(), name='index'),
     path('i18n/', include('django.conf.urls.i18n')),
     path('language/', ChangeLanguageView.as_view(), name='change_language'),
     path('accounts/', include('modules.accounts.urls')),
