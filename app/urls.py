@@ -6,7 +6,7 @@ from django.conf.urls.static import static
 from modules.main.views import IndexPageView, ChangeLanguageView
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('backoffice/', admin.site.urls),
     path('', IndexPageView.as_view(), name='index'),
     path('i18n/', include('django.conf.urls.i18n')),
     path('language/', ChangeLanguageView.as_view(), name='change_language'),
