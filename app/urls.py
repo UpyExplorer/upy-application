@@ -4,10 +4,11 @@ from django.urls import path, include
 from django.conf.urls.static import static
 
 from modules.main.views import IndexPageView, ChangeLanguageView
+from modules.accounts.views import LogInView
 
 urlpatterns = [
     path('backoffice/', admin.site.urls),
-    path('', IndexPageView.as_view(), name='index'),
+    path('', LogInView.as_view(), name='index'),
     path('i18n/', include('django.conf.urls.i18n')),
     path('language/', ChangeLanguageView.as_view(), name='change_language'),
     path('accounts/', include('modules.accounts.urls')),
