@@ -196,9 +196,13 @@
               <div class="col-lg-12 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title">Dashboard</h4>
-                    <div class="table-responsive">
-                        <!-- Content here -->
+                    <div class="container">
+                      <h4 class="card-title">Dashboard</h4>
+                        {% bootstrap_messages %}
+                    
+                        {% block content %}
+                            No content.
+                        {% endblock %}
                     </div>
                   </div>
                 </div>
