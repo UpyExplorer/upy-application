@@ -11024,8 +11024,7 @@ fieldset:disabled a.btn {
 
 .btn-warning:hover {
   color: #212529;
-  background-color: #ffb310;
-  border-color: #ffaf03;
+  background-color: #eba308;
 }
 
 .btn-warning:focus, .btn-warning.focus {
@@ -18000,11 +17999,11 @@ button.bg-dark:focus {
 }
 
 .text-primary {
-  color: #6640b2 !important;
+  color: #df4b4b !important;
 }
 
 a.text-primary:hover, a.text-primary:focus {
-  color: #462c7a !important;
+  color: #df4b4b !important;
 }
 
 .text-secondary {
@@ -20564,7 +20563,7 @@ dl li {
 }
 
 .sidebar .nav .nav-item.active > .nav-link {
-  background: #171717;
+  background: #303030;
   position: relative;
 }
 
@@ -20587,7 +20586,7 @@ dl li {
 }
 
 .sidebar .nav:not(.sub-menu) > .nav-item:hover > .nav-link {
-  background: #171717;
+  background: #303030;
   color: #ffffff;
 }
 
@@ -20972,7 +20971,7 @@ dl li {
     width: 70px;
   }
   .sidebar-icon-only .sidebar > .nav {
-    margin-top: 1.8rem;
+    margin-top: 2.3rem;
   }
   .sidebar-icon-only .sidebar .nav {
     overflow: visible;
@@ -21026,7 +21025,7 @@ dl li {
     display: flex;
     -webkit-align-items: center;
     align-items: center;
-    background: #171717;
+    background: #303030;
     padding: 0.5rem 1.4rem;
     left: 70px;
     position: absolute;
@@ -21042,7 +21041,7 @@ dl li {
     display: none;
   }
   .sidebar-icon-only .sidebar .nav .nav-item.hover-open .nav-link:hover .menu-title {
-    background: #171717;
+    background: #303030;
   }
   .sidebar-icon-only .sidebar .nav .nav-item.hover-open .collapse,
   .sidebar-icon-only .sidebar .nav .nav-item.hover-open .collapsing {
@@ -21065,3 +21064,10 @@ dl li {
 }
 
 /*# sourceMappingURL=maps/style.css.map */
+
+.profile-img {
+  width: 2.187rem;
+  height: 2.187rem;
+  border-radius: 0.25rem;
+  width: 35 px;
+}
