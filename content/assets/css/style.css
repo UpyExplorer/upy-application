@@ -20623,11 +20623,11 @@ dl li {
 }
 
 .sidebar .nav.sub-menu .nav-item .nav-link:hover {
-  color: #93a8ff;
+  color: #858585;
 }
 
 .sidebar .nav.sub-menu .nav-item .nav-link.active {
-  color: #93a8ff;
+  color: #858585;
   background: transparent;
 }
 
@@ -21026,7 +21026,7 @@ dl li {
     display: flex;
     -webkit-align-items: center;
     align-items: center;
-    background: #dc3736;
+    background: #171717;
     padding: 0.5rem 1.4rem;
     left: 70px;
     position: absolute;
@@ -21042,13 +21042,13 @@ dl li {
     display: none;
   }
   .sidebar-icon-only .sidebar .nav .nav-item.hover-open .nav-link:hover .menu-title {
-    background: #dc3736;
+    background: #171717;
   }
   .sidebar-icon-only .sidebar .nav .nav-item.hover-open .collapse,
   .sidebar-icon-only .sidebar .nav .nav-item.hover-open .collapsing {
     display: block;
     padding: .5rem 0;
-    background: #dc3736;
+    background: #242424;
     border-radius: 0 0 5px 0;
     position: absolute;
     left: 70px;
