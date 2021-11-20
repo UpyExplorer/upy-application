@@ -33,8 +33,12 @@ INSTALLED_APPS = [
 
     # Application apps
     'modules.main',
-    'modules.accounts',
     'modules.base',
+    'modules.account',
+    'modules.dashboard',
+
+    # Forms
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
@@ -99,8 +103,8 @@ ENABLE_USER_ACTIVATION = True
 DISABLE_USERNAME = False
 LOGIN_VIA_EMAIL = True
 LOGIN_VIA_EMAIL_OR_USERNAME = False
-LOGIN_REDIRECT_URL = 'index'
-LOGIN_URL = 'accounts:log_in'
+LOGIN_REDIRECT_URL = 'dashboard'
+LOGIN_URL = 'account:log_in'
 USE_REMEMBER_ME = True
 
 RESTORE_PASSWORD_VIA_EMAIL_OR_USERNAME = False
@@ -120,7 +124,7 @@ LANGUAGES = [
     ('en', _('English')),
 ]
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Sao_Paulo'
 USE_TZ = True
 
 STATIC_ROOT = os.path.join(CONTENT_DIR, 'staticfiles')

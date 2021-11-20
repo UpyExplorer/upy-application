@@ -31,8 +31,12 @@ INSTALLED_APPS = [
 
     # Application apps
     'modules.main',
-    'modules.accounts',
     'modules.base',
+    'modules.account',
+    'modules.dashboard',
+
+    # Forms
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
@@ -99,12 +103,12 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 ENABLE_USER_ACTIVATION = True
-DISABLE_USERNAME = False
-LOGIN_VIA_EMAIL = False
-LOGIN_VIA_EMAIL_OR_USERNAME = True
-LOGIN_REDIRECT_URL = 'index'
-LOGIN_URL = 'accounts:log_in'
-USE_REMEMBER_ME = False
+DISABLE_USERNAME = True
+LOGIN_VIA_EMAIL = True
+LOGIN_VIA_EMAIL_OR_USERNAME = False
+LOGIN_REDIRECT_URL = 'dashboard'
+LOGIN_URL = 'account:log_in'
+USE_REMEMBER_ME = True
 
 RESTORE_PASSWORD_VIA_EMAIL_OR_USERNAME = True
 EMAIL_ACTIVATION_AFTER_CHANGING = True
@@ -119,14 +123,14 @@ LANGUAGES = [
     ('en', _('English')),
 ]
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Sao_Paulo'
 USE_TZ = True
 
 STATIC_ROOT = os.path.join(CONTENT_DIR, 'staticfiles')
-STATIC_URL = '/static/'
+STATIC_URL = '/content/static/'
 
 MEDIA_ROOT = os.path.join(CONTENT_DIR, 'media')
-MEDIA_URL = '/media/'
+MEDIA_URL = '/content/media/'
 
 STATICFILES_DIRS = [
     os.path.join(CONTENT_DIR, 'assets'),
@@ -135,6 +139,7 @@ STATICFILES_DIRS = [
 LOCALE_PATHS = [
     os.path.join(CONTENT_DIR, 'locale')
 ]
+print(LOCALE_PATHS)
 
 SIGN_UP_FIELDS = ['username', 'first_name', 'last_name', 'email', 'password1', 'password2']
 if DISABLE_USERNAME:
