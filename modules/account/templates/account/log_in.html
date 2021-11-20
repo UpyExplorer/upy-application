@@ -21,49 +21,51 @@
 
         {% for field in form.visible_fields %}
 
-        <div class="form-group">
             {% if field.name == 'email' %}
-                <label for="{{ field.id_for_label }}">{{ field.label }}</label>
-                <div class="input-group">
-                    <div class="input-group-prepend bg-transparent">
-                        <span class="input-group-text bg-transparent border-right-0">
-                            {% if field.name == 'email' %}
-                                <i class="mdi mdi-account-outline text-primary"></i>
-                            {% endif %}
-                        </span>
-                    </div>
-                    {% if field.name == 'email' %}
-                        {{ field|add_class:'form-control form-control-lg' }}
-                    {% endif %}
+                <div class="form-group">
+                    <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend bg-transparent">
+                            <span class="input-group-text bg-transparent border-right-0">
+                                {% if field.name == 'email' %}
+                                    <i class="mdi mdi-account-outline text-primary"></i>
+                                {% endif %}
+                            </span>
+                        </div>
+                        {% if field.name == 'email' %}
+                            {{ field|add_class:'form-control form-control-lg' }}
+                        {% endif %}
 
-                    {% for error in field.errors %}
-                        <span class="help-block">{{ error }}</span>
-                    {% endfor %}
+                        {% for error in field.errors %}
+                            <span class="help-block">{{ error }}</span>
+                        {% endfor %}
+                    </div>
                 </div>
             {% endif %}
 
             {% if field.name == 'password' %}
-                <label for="{{ field.id_for_label }}">{{ field.label }}</label>
-                <div class="input-group">
-                    <div class="input-group-prepend bg-transparent">
-                        <span class="input-group-text bg-transparent border-right-0">
-                            {% if field.name == 'password' %}
-                                <i class="mdi mdi-lock-outline text-primary"></i>
-                            {% endif %}
-                        </span>
+                <div class="form-group">
+                    <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend bg-transparent">
+                            <span class="input-group-text bg-transparent border-right-0">
+                                {% if field.name == 'password' %}
+                                    <i class="mdi mdi-lock-outline text-primary"></i>
+                                {% endif %}
+                            </span>
+                        </div>
+
+                        {% if field.name == 'password' %}
+                            {{ field|add_class:'form-control form-control-lg' }}
+                        {% endif %}
+
+                        {% for error in field.errors %}
+                            <span class="help-block">{{ error }}</span>
+                        {% endfor %}
                     </div>
-
-                    {% if field.name == 'password' %}
-                        {{ field|add_class:'form-control form-control-lg' }}
-                    {% endif %}
-
-                    {% for error in field.errors %}
-                        <span class="help-block">{{ error }}</span>
-                    {% endfor %}
                 </div>
             {% endif %}
-        </div>
-      {% endfor %}
+        {% endfor %}
         <div class="mt-3">
             <button class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn">{% trans 'Login' %}</button>
         </div>
