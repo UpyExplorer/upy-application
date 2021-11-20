@@ -35,6 +35,9 @@ INSTALLED_APPS = [
     'modules.main',
     'modules.account',
     'modules.dashboard',
+
+    # Forms
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
