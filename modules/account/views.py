@@ -40,7 +40,7 @@ class GuestOnlyView(View):
 
 
 class LogInView(GuestOnlyView, FormView):
-    template_name = 'accounts/log_in.html'
+    template_name = 'account/log_in.html'
 
     @staticmethod
     def get_form_class(**kwargs):
@@ -86,7 +86,7 @@ class LogInView(GuestOnlyView, FormView):
 
 
 class SignUpView(GuestOnlyView, FormView):
-    template_name = 'accounts/sign_up.html'
+    template_name = 'account/sign_up.html'
     form_class = SignUpForm
 
     def form_valid(self, form):
@@ -148,11 +148,11 @@ class ActivateView(View):
 
         messages.success(request, _('You have successfully activated your account!'))
 
-        return redirect('accounts:log_in')
+        return redirect('account:log_in')
 
 
 class ResendActivationCodeView(GuestOnlyView, FormView):
-    template_name = 'accounts/resend_activation_code.html'
+    template_name = 'account/resend_activation_code.html'
 
     @staticmethod
     def get_form_class(**kwargs):
@@ -178,11 +178,11 @@ class ResendActivationCodeView(GuestOnlyView, FormView):
 
         messages.success(self.request, _('A new activation code has been sent to your email address.'))
 
-        return redirect('accounts:resend_activation_code')
+        return redirect('account:resend_activation_code')
 
 
 class RestorePasswordView(GuestOnlyView, FormView):
-    template_name = 'accounts/restore_password.html'
+    template_name = 'account/restore_password.html'
 
     @staticmethod
     def get_form_class(**kwargs):
@@ -198,11 +198,11 @@ class RestorePasswordView(GuestOnlyView, FormView):
 
         send_reset_password_email(self.request, user.email, token, uid)
 
-        return redirect('accounts:restore_password_done')
+        return redirect('account:restore_password_done')
 
 
 class ChangeProfileView(LoginRequiredMixin, FormView):
-    template_name = 'accounts/profile/change_profile.html'
+    template_name = 'account/profile/change_profile.html'
     form_class = ChangeProfileForm
 
     def get_initial(self):
@@ -220,11 +220,11 @@ class ChangeProfileView(LoginRequiredMixin, FormView):
 
         messages.success(self.request, _('Profile data has been successfully updated.'))
 
-        return redirect('accounts:change_profile')
+        return redirect('account:change_profile')
 
 
 class ChangeEmailView(LoginRequiredMixin, FormView):
-    template_name = 'accounts/profile/change_email.html'
+    template_name = 'account/profile/change_email.html'
     form_class = ChangeEmailForm
 
     def get_form_kwargs(self):
@@ -259,7 +259,7 @@ class ChangeEmailView(LoginRequiredMixin, FormView):
 
             messages.success(self.request, _('Email successfully changed.'))
 
-        return redirect('accounts:change_email')
+        return redirect('account:change_email')
 
 
 class ChangeEmailActivateView(View):
@@ -277,11 +277,11 @@ class ChangeEmailActivateView(View):
 
         messages.success(request, _('You have successfully changed your email!'))
 
-        return redirect('accounts:change_email')
+        return redirect('account:change_email')
 
 
 class RemindUsernameView(GuestOnlyView, FormView):
-    template_name = 'accounts/remind_username.html'
+    template_name = 'account/remind_username.html'
     form_class = RemindUsernameForm
 
     def form_valid(self, form):
@@ -290,11 +290,11 @@ class RemindUsernameView(GuestOnlyView, FormView):
 
         messages.success(self.request, _('Your username has been successfully sent to your email.'))
 
-        return redirect('accounts:remind_username')
+        return redirect('account:remind_username')
 
 
 class ChangePasswordView(BasePasswordChangeView):
-    template_name = 'accounts/profile/change_password.html'
+    template_name = 'account/profile/change_password.html'
 
     def form_valid(self, form):
         # Change the password
@@ -305,11 +305,11 @@ class ChangePasswordView(BasePasswordChangeView):
 
         messages.success(self.request, _('Your password was changed.'))
 
-        return redirect('accounts:change_password')
+        return redirect('account:change_password')
 
 
 class RestorePasswordConfirmView(BasePasswordResetConfirmView):
-    template_name = 'accounts/restore_password_confirm.html'
+    template_name = 'account/restore_password_confirm.html'
 
     def form_valid(self, form):
         # Change the password
@@ -317,12 +317,12 @@ class RestorePasswordConfirmView(BasePasswordResetConfirmView):
 
         messages.success(self.request, _('Your password has been set. You may go ahead and login now.'))
 
-        return redirect('accounts:log_in')
+        return redirect('account:log_in')
 
 
 class RestorePasswordDoneView(BasePasswordResetDoneView):
-    template_name = 'accounts/restore_password_done.html'
+    template_name = 'account/restore_password_done.html'
 
 
 class LogOutView(LoginRequiredMixin, BaseLogoutView):
-    template_name = 'accounts/log_out.html'
+    template_name = 'account/log_out.html'
