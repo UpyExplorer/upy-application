@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-20 05:57-0300\n"
+"POT-Creation-Date: 2021-11-20 07:50-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: app/conf/development/settings.py:122 app/conf/production/settings.py:118
+#: app/conf/development/settings.py:125 app/conf/production/settings.py:121
 msgid "Português-BR"
 msgstr "Português-BR"
 
-#: app/conf/development/settings.py:123 app/conf/production/settings.py:119
+#: app/conf/development/settings.py:126 app/conf/production/settings.py:122
 msgid "English"
 msgstr "Inglês"
 
@@ -88,7 +88,7 @@ msgid "Change email"
 msgstr "Alterar E-mail"
 
 #: content/templates/layouts/default/page.html:53
-#: modules/account/templates/account/log_in.html:19
+#: modules/account/templates/account/log_in.html:70
 #: modules/account/templates/account/remind_username.html:23
 #: modules/account/templates/account/resend_activation_code.html:23
 #: modules/account/templates/account/restore_password.html:23
@@ -125,7 +125,7 @@ msgstr "Salvar"
 msgid "Password"
 msgstr "Senha"
 
-#: modules/account/forms.py:24
+#: modules/account/forms.py:24 modules/account/templates/account/log_in.html:79
 msgid "Remember me"
 msgstr "Lembrar-me"
 
@@ -245,15 +245,15 @@ msgstr "Olá! vamos começar"
 msgid "Sign in to continue."
 msgstr "Faça login para continuar."
 
-#: modules/account/templates/account/log_in.html:29
+#: modules/account/templates/account/log_in.html:85
 msgid "Forgot your password?"
 msgstr "Esqueceu sua senha?"
 
-#: modules/account/templates/account/log_in.html:33
+#: modules/account/templates/account/log_in.html:89
 msgid "Don't have an account? "
 msgstr "Não tem conta?"
 
-#: modules/account/templates/account/log_in.html:33
+#: modules/account/templates/account/log_in.html:89
 #: modules/account/templates/account/sign_up.html:15
 msgid "Create"
 msgstr "Criar"
