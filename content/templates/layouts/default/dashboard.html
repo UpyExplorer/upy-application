@@ -46,7 +46,7 @@
             </div>
             <h5 class="font-weight-bold mb-0 d-none d-md-block mt-1">
               {% if request.user.is_authenticated %}
-                Welcome back, {{ request.user.username }}
+              {% trans 'Welcome back' %}, {{ request.user.username }}
               {% endif %}
             </h5>
             <ul class="navbar-nav navbar-nav-right">
@@ -119,15 +119,15 @@
                   </a> -->
                   <a class="dropdown-item">
                     <i class="mdi mdi-heart text-primary"></i>
-                    Upgrade Pro
+                      {% trans 'Update Pro' %}
                   </a>
                   <a class="dropdown-item" href="{% url 'change_language' %}">
                     <i class="mdi mdi-web"></i>
-                    Change language
+                      {% trans 'Change language' %}
                   </a>
                   <a class="dropdown-item" href="{% url 'account:log_out' %}">
                     <i class="mdi mdi-logout"></i>
-                    Logout
+                      {% trans 'Logout' %}
                   </a>
                 </div>
               </li>
@@ -210,8 +210,8 @@
                   <div class="card">
                     <div class="card-body">
                       <div class="d-sm-flex justify-content-center justify-content-sm-between py-2">
-                        <p class="text-center text-sm-left d-block d-sm-inline-block mb-0">© Copyright Upy-Explorer. All Rights Reserved</p>
-                        <p class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center mb-0">Versão 1.0.0</p>
+                        <p class="text-center text-sm-left d-block d-sm-inline-block mb-0">© Copyright Upy-Explorer. {% trans 'All Rights Reserved' %}</p>
+                        <p class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center mb-0">{% trans 'Version' %} 1.0.0</p>
                       </div>
                     </div>
                   </div>

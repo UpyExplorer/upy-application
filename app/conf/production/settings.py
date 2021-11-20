@@ -119,14 +119,14 @@ LANGUAGES = [
     ('en', _('English')),
 ]
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Sao_Paulo'
 USE_TZ = True
 
 STATIC_ROOT = os.path.join(CONTENT_DIR, 'staticfiles')
-STATIC_URL = '/static/'
+STATIC_URL = '/content/static/'
 
 MEDIA_ROOT = os.path.join(CONTENT_DIR, 'media')
-MEDIA_URL = '/media/'
+MEDIA_URL = '/content/media/'
 
 STATICFILES_DIRS = [
     os.path.join(CONTENT_DIR, 'assets'),
@@ -135,6 +135,7 @@ STATICFILES_DIRS = [
 LOCALE_PATHS = [
     os.path.join(CONTENT_DIR, 'locale')
 ]
+print(LOCALE_PATHS)
 
 SIGN_UP_FIELDS = ['username', 'first_name', 'last_name', 'email', 'password1', 'password2']
 if DISABLE_USERNAME:
