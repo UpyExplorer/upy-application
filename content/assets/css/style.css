@@ -20280,6 +20280,15 @@ dl li {
 
 /* === Landing screens === */
 /* Auth */
+
+@media (max-width: 1000px) {
+
+    .auth .login-half-bg{
+      visibility: hidden;
+    }
+  
+  }
+
 .auth .login-half-bg {
   background: url("../media/login-bg.jpg");
   
