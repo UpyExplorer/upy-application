@@ -1,6 +1,14 @@
 from django.db import models
 
 
-class Test_model(models.Model):
+class Configuration(models.Model):
     code = models.CharField(max_length=20, unique=True)
-    name = models.CharField(max_length=20, unique=True)
+
+class Integration(models.Model):
+    code = models.CharField(max_length=20, unique=True)
+
+class Module(models.Model):
+    code = models.CharField(max_length=20, unique=True)
+
+class Plan(models.Model):
+    code = models.CharField(max_length=20, unique=True)
