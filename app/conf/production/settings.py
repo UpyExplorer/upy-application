@@ -123,10 +123,10 @@ TIME_ZONE = 'UTC'
 USE_TZ = True
 
 STATIC_ROOT = os.path.join(CONTENT_DIR, 'staticfiles')
-STATIC_URL = '/static/'
+STATIC_URL = '/content/static/'
 
 MEDIA_ROOT = os.path.join(CONTENT_DIR, 'media')
-MEDIA_URL = '/media/'
+MEDIA_URL = '/content/media/'
 
 STATICFILES_DIRS = [
     os.path.join(CONTENT_DIR, 'assets'),
