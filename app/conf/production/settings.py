@@ -119,7 +119,7 @@ LANGUAGES = [
     ('en', _('English')),
 ]
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Sao_Paulo'
 USE_TZ = True
 
 STATIC_ROOT = os.path.join(CONTENT_DIR, 'staticfiles')
