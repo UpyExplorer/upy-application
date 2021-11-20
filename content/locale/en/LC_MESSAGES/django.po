@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-20 02:47-0300\n"
+"POT-Creation-Date: 2021-11-20 05:59-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,11 +19,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: app/conf/development/settings.py:122 app/conf/production/settings.py:118
-msgid "English"
+msgid "Português-BR"
 msgstr ""
 
 #: app/conf/development/settings.py:123 app/conf/production/settings.py:119
-msgid "Português-BR"
+msgid "English"
 msgstr ""
 
 #: content/templates/dashboard/index.html:9 content/templates/main/index.html:9
@@ -35,31 +35,32 @@ msgstr ""
 msgid "You are a guest."
 msgstr ""
 
-#: content/templates/layouts/default/dashboard.html:49
+#: content/templates/layouts/default/dashboard.html:44
 msgid "Welcome back"
 msgstr ""
 
-#: content/templates/layouts/default/dashboard.html:122
+#: content/templates/layouts/default/dashboard.html:62
 #: content/templates/layouts/menu.html:49
 msgid "Update Pro"
 msgstr ""
 
-#: content/templates/layouts/default/dashboard.html:126
+#: content/templates/layouts/default/dashboard.html:66
 #: content/templates/layouts/default/page.html:63
 #: content/templates/main/change_language.html:10
 msgid "Change language"
 msgstr ""
 
-#: content/templates/layouts/default/dashboard.html:130
+#: content/templates/layouts/default/dashboard.html:70
 #: content/templates/layouts/default/page.html:49
 msgid "Logout"
 msgstr ""
 
-#: content/templates/layouts/default/dashboard.html:213
+#: content/templates/layouts/default/dashboard.html:110
+#: content/templates/layouts/default/external.html:40
 msgid "All Rights Reserved"
 msgstr ""
 
-#: content/templates/layouts/default/dashboard.html:214
+#: content/templates/layouts/default/dashboard.html:111
 msgid "Version"
 msgstr ""
 
@@ -87,8 +88,7 @@ msgid "Change email"
 msgstr ""
 
 #: content/templates/layouts/default/page.html:53
-#: modules/account/templates/account/log_in.html:8
-#: modules/account/templates/account/log_in.html:15
+#: modules/account/templates/account/log_in.html:19
 #: modules/account/templates/account/remind_username.html:23
 #: modules/account/templates/account/resend_activation_code.html:23
 #: modules/account/templates/account/restore_password.html:23
@@ -233,17 +233,25 @@ msgstr ""
 msgid "Please, go to the following page and choose a new password:"
 msgstr ""
 
-#: modules/account/templates/account/log_in.html:23
-msgid "Forgot your password?"
-msgstr ""
+#: modules/account/templates/account/log_in.html:12
+msgid "Hello! let's get started"
+msgstr "Olá! vamos começar"
 
-#: modules/account/templates/account/log_in.html:26
-msgid "Forgot your username?"
+#: modules/account/templates/account/log_in.html:13
+msgid "Sign in to continue."
 msgstr ""
 
 #: modules/account/templates/account/log_in.html:29
-#: modules/account/templates/account/resend_activation_code.html:8
-msgid "Resend an activation code"
+msgid "Forgot your password?"
+msgstr ""
+
+#: modules/account/templates/account/log_in.html:33
+msgid "Don't have an account? "
+msgstr ""
+
+#: modules/account/templates/account/log_in.html:33
+#: modules/account/templates/account/sign_up.html:15
+msgid "Create"
 msgstr ""
 
 #: modules/account/templates/account/log_out.html:7
@@ -266,6 +274,10 @@ msgstr ""
 #: modules/account/templates/account/resend_activation_code.html:15
 #: modules/account/templates/account/restore_password.html:15
 msgid "Next"
+msgstr ""
+
+#: modules/account/templates/account/resend_activation_code.html:8
+msgid "Resend an activation code"
 msgstr ""
 
 #: modules/account/templates/account/restore_password.html:8
@@ -301,10 +313,6 @@ msgstr ""
 msgid ""
 "If you don't receive an email, please make sure you've entered the address "
 "you signed up with, and check your spam folder."
-msgstr ""
-
-#: modules/account/templates/account/sign_up.html:15
-msgid "Create"
 msgstr ""
 
 #: modules/account/utils.py:19
