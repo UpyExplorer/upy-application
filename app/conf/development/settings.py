@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     # Application apps
     'modules.main',
     'modules.base',
+    'modules.log',
     'modules.account',
     'modules.dashboard',
 
