@@ -6,6 +6,7 @@ from django.contrib.auth.views import (
     LogoutView as BaseLogoutView, PasswordChangeView as BasePasswordChangeView,
     PasswordResetDoneView as BasePasswordResetDoneView, PasswordResetConfirmView as BasePasswordResetConfirmView,
 )
+from django.core.exceptions import PermissionDenied
 from django.shortcuts import get_object_or_404, redirect
 from django.utils.crypto import get_random_string
 from django.utils.decorators import method_decorator
@@ -205,6 +206,13 @@ class ChangeProfileView(LoginRequiredMixin, FormView):
     template_name = 'account/profile/change_profile.html'
     form_class = ChangeProfileForm
 
+    def get(self, request, *args, **kwargs):
+        if not self.request.user.has_perm('global_permissions.app_account_change_profile_view'):
+            raise PermissionDenied
+
+        self.object = None
+        return super().get(request, *args, **kwargs)
+
     def get_initial(self):
         user = self.request.user
         initial = super().get_initial()
@@ -226,6 +234,13 @@ class ChangeProfileView(LoginRequiredMixin, FormView):
 class ChangeEmailView(LoginRequiredMixin, FormView):
     template_name = 'account/profile/change_email.html'
     form_class = ChangeEmailForm
+
+    def get(self, request, *args, **kwargs):
+        if not self.request.user.has_perm('global_permissions.app_account_change_email_view'):
+            raise PermissionDenied
+
+        self.object = None
+        return super().get(request, *args, **kwargs)
 
     def get_form_kwargs(self):
         kwargs = super().get_form_kwargs()
@@ -295,6 +310,13 @@ class RemindUsernameView(GuestOnlyView, FormView):
 
 class ChangePasswordView(BasePasswordChangeView):
     template_name = 'account/profile/change_password.html'
+
+    def get(self, request, *args, **kwargs):
+        if not self.request.user.has_perm('global_permissions.app_account_change_password_view'):
+            raise PermissionDenied
+
+        self.object = None
+        return super().get(request, *args, **kwargs)
 
     def form_valid(self, form):
         # Change the password
