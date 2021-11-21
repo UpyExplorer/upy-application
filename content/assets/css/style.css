@@ -20295,8 +20295,16 @@ dl li {
   background-size: cover;
 }
 
+@media (max-width: 1000px) {
+
+    .auth .register-half-bg{
+      visibility: hidden;
+    }
+  
+  }
+
 .auth .register-half-bg {
-  background: url("../images/auth/register-bg.jpg");
+  background: url("../media/register-bg.jpg");
   background-size: cover;
 }
 
