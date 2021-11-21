@@ -33,8 +33,14 @@ INSTALLED_APPS = [
 
     # Application apps
     'modules.main',
+    'modules.base',
+    'modules.log',
+    'modules.api',
     'modules.account',
     'modules.dashboard',
+
+    # Forms
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
@@ -77,10 +83,7 @@ EMAIL_HOST_USER = 'upyexplorer@gmail.com'
 DEFAULT_FROM_EMAIL = 'upyexplorer@gmail.com'
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+    'default': dj_database_url.config(default='mysql://u217473324_app_dev:XyvQhMH5@31.170.166.166/u217473324_app_dev')
 }
 
 AUTH_PASSWORD_VALIDATORS = [
