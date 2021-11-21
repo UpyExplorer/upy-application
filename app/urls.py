@@ -8,12 +8,14 @@ from modules.account.views import LogInView
 from modules.dashboard.views import DashboardPageView
 
 urlpatterns = [
-    path('backoffice/', admin.site.urls),
-    path('', IndexPageView.as_view(), name='index'),
-    path('i18n/', include('django.conf.urls.i18n')),
-    path('language/', ChangeLanguageView.as_view(), name='change_language'),
-    path('account/', include('modules.account.urls')),
+    path('', DashboardPageView.as_view(), name='index'),
     path('dashboard/', DashboardPageView.as_view(), name='dashboard'),
+    path('backoffice/', admin.site.urls),
+
+    path('language/', ChangeLanguageView.as_view(), name='change_language'),
+
+    path('i18n/', include('django.conf.urls.i18n')),
+    path('account/', include('modules.account.urls')),
 ]
 
 if settings.DEBUG:

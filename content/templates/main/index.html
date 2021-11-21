@@ -1,4 +1,4 @@
-{% extends 'layouts/default/page.html' %}
+{% extends 'layouts/default/simple.html' %}
 
 {% load i18n %}
 
@@ -8,9 +8,9 @@
 
         {% trans 'Your username is' %} <b>{{ request.user.username }}</b>.
 
-    {% else %}
+    <!-- {% else %}
 
-        {% trans 'You are a guest.' %}
+        {% trans 'You are a guest.' %} -->
 
     {% endif %}
 
