@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     # Forms
     'widget_tweaks',
     'crispy_forms',
+
+    # Permissions
+    'global_permissions',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
