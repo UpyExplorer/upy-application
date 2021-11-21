@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-20 07:55-0300\n"
+"POT-Creation-Date: 2021-11-20 21:37-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: app/conf/development/settings.py:125 app/conf/production/settings.py:121
+#: app/conf/development/settings.py:128 app/conf/production/settings.py:127
 msgid "Português-BR"
 msgstr ""
 
-#: app/conf/development/settings.py:126 app/conf/production/settings.py:122
+#: app/conf/development/settings.py:129 app/conf/production/settings.py:128
 msgid "English"
 msgstr ""
 
@@ -57,6 +57,7 @@ msgstr ""
 
 #: content/templates/layouts/default/dashboard.html:110
 #: content/templates/layouts/default/external.html:40
+#: content/templates/layouts/default/register.html:40
 msgid "All Rights Reserved"
 msgstr ""
 
@@ -96,7 +97,6 @@ msgid "Login"
 msgstr ""
 
 #: content/templates/layouts/default/page.html:56
-#: modules/account/templates/account/sign_up.html:8
 msgid "Register"
 msgstr ""
 
@@ -250,7 +250,7 @@ msgid "Don't have an account? "
 msgstr ""
 
 #: modules/account/templates/account/log_in.html:89
-#: modules/account/templates/account/sign_up.html:15
+#: modules/account/templates/account/sign_up.html:122
 msgid "Create"
 msgstr ""
 
@@ -315,6 +315,14 @@ msgid ""
 "you signed up with, and check your spam folder."
 msgstr ""
 
+#: modules/account/templates/account/sign_up.html:13
+msgid "New here?"
+msgstr ""
+
+#: modules/account/templates/account/sign_up.html:14
+msgid "Join us today! It takes only few steps"
+msgstr ""
+
 #: modules/account/utils.py:19
 msgid "Profile activation"
 msgstr ""
@@ -374,6 +382,25 @@ msgstr ""
 msgid "close"
 msgstr ""
 
+#: venv/lib/python3.9/site-packages/crispy_forms/tests/test_form_helper.py:129
+#: venv/lib/python3.9/site-packages/crispy_forms/tests/test_form_helper.py:139
+#: venv/lib/python3.9/site-packages/django/forms/fields.py:54
+msgid "This field is required."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/crispy_forms/tests/test_layout.py:392
+msgid "i18n text"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/crispy_forms/tests/test_layout.py:394
+msgid "i18n legend"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/crispy_forms/tests/test_layout_objects.py:142
+#: venv/lib/python3.9/site-packages/django/core/validators.py:22
+msgid "Enter a valid value."
+msgstr ""
+
 #: venv/lib/python3.9/site-packages/django/contrib/messages/apps.py:7
 msgid "Messages"
 msgstr ""
@@ -406,10 +433,6 @@ msgstr ""
 
 #: venv/lib/python3.9/site-packages/django/core/paginator.py:58
 msgid "That page contains no results"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/core/validators.py:22
-msgid "Enter a valid value."
 msgstr ""
 
 #: venv/lib/python3.9/site-packages/django/core/validators.py:93
@@ -810,10 +833,6 @@ msgstr ""
 #. characters will prevent the default label_suffix to be appended to the label
 #: venv/lib/python3.9/site-packages/django/forms/boundfield.py:150
 msgid ":?.!"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/forms/fields.py:54
-msgid "This field is required."
 msgstr ""
 
 #: venv/lib/python3.9/site-packages/django/forms/fields.py:247
