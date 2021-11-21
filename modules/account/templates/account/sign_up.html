@@ -68,18 +68,18 @@
                 </div>
             {% endif %}
         
-            {% if field.name == 'password' %}
+            {% if field.name == 'password1' %}
                 <div class="form-group">
                     <label for="{{ field.id_for_label }}">{{ field.label }}</label>
                     <div class="input-group">
                         <div class="input-group-prepend bg-transparent">
                             <span class="input-group-text bg-transparent border-right-0">
-                                {% if field.name == 'password' %}
+                                {% if field.name == 'password1' %}
                                     <i class="mdi mdi-lock text-primary"></i>
                                 {% endif %}
                             </span>
                         </div>
-                        {% if field.name == 'password' %}
+                        {% if field.name == 'password1' %}
                             {{ field|add_class:'form-control form-control-lg' }}
                         {% endif %}
                         <!-- <div style="color: #d7d7d7;">
