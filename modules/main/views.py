@@ -11,7 +11,7 @@ class ChangeLanguageView(LoginRequiredMixin, TemplateView):
     template_name = 'main/change_language.html'
 
     def get(self, request, *args, **kwargs):
-        if not self.request.user.has_perm('global_permissions.language_view'):
+        if not self.request.user.has_perm('global_permissions.app_account_language_view'):
             raise PermissionDenied
 
         context = self.get_context_data(**kwargs)
