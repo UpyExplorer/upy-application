@@ -26,6 +26,7 @@ class Data(models.Model):
 
 
 class Configuration(models.Model):
+    data = models.ForeignKey(Data, on_delete=models.SET_NULL, null=True)
     key = models.CharField(max_length=50,blank=True, null=True)
     description = models.CharField(max_length=50,blank=True, null=True)
     value = models.CharField(max_length=10,blank=True, null=True)
