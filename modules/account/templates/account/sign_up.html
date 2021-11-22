@@ -38,10 +38,10 @@
                         {% if field.name == 'username' %}
                             {{ field|add_class:'form-control form-control-lg' }}
                         {% endif %}
-                        {% for error in field.errors %}
-                            <span class="help-block">{{ error }}</span>
-                        {% endfor %}
                     </div>
+                    {% for error in field.errors %}
+                        <span class="help-block" style="color: #b60909;">{{ error }}</span>
+                    {% endfor %}
                     <div style="color: #a5a5a5; font-size: small;">
                         {{ field.help_text }}
                     </div>
@@ -62,11 +62,10 @@
                         {% if field.name == 'email' %}
                             {{ field|add_class:'form-control form-control-lg' }}
                         {% endif %}
-
-                        {% for error in field.errors %}
-                            <span class="help-block">{{ error }}</span>
-                        {% endfor %}
                     </div>
+                    {% for error in field.errors %}
+                        <span class="help-block" style="color: #b60909;">{{ error }}</span>
+                    {% endfor %}
                     <div style="color: #a5a5a5; font-size: small;">
                         {{ field.help_text }}
                     </div>
@@ -87,11 +86,10 @@
                         {% if field.name == 'password1' %}
                             {{ field|add_class:'form-control form-control-lg' }}
                         {% endif %}
-                            
-                        {% for error in field.errors %}
-                            <span class="help-block">{{ error }}</span>
-                        {% endfor %}
                     </div>
+                    {% for error in field.errors %}
+                        <span class="help-block" style="color: #b60909;">{{ error }}</span>
+                    {% endfor %}
                     <div style="color: #a5a5a5; font-size: small;">
                         {{ field.help_text }}
                     </div>
@@ -112,11 +110,10 @@
                         {% if field.name == 'password2' %}
                             {{ field|add_class:'form-control form-control-lg' }}
                         {% endif %}
-
-                        {% for error in field.errors %}
-                            <span class="help-block">{{ error }}</span>
-                        {% endfor %}
                     </div>
+                    {% for error in field.errors %}
+                        <span class="help-block" style="color: #b60909;">{{ error }}</span>
+                    {% endfor %}
                     <div style="color: #a5a5a5; font-size: small;">
                         {{ field.help_text }}
                     </div>
