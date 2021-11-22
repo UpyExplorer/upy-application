@@ -28,7 +28,11 @@ from .forms import (
     RestorePasswordForm, RestorePasswordViaEmailOrUsernameForm, RemindUsernameForm,
     ResendActivationCodeForm, ResendActivationCodeViaEmailForm, ChangeProfileForm, ChangeEmailForm,
 )
-from .models import Activation
+
+from modules.account.models import Activation
+from modules.base.models import Configuration as BaseConfiguration
+from modules.company.models import Data, Configuration, Relationship
+
 from django.contrib.auth.models import Group
 
 
@@ -104,27 +108,41 @@ class SignUpView(GuestOnlyView, FormView):
         if settings.ENABLE_USER_ACTIVATION:
             user.is_active = False
 
-        # Create a user record
-        user.save()
-        
-        # ##### Implementation Initial
-        
-        # # Create BaseCustomer
-        # customer = Customer(email=user.email)
-        # customer.save()
+        try:
+            # Create a user record
+            user.save()
+            
+            # ##### Implementation Initial
+            
+            # # Create CompanyData
+            data = Data(email=user.email)
+            data.save()
 
-        # # Create Configurations
-        # configurations = Configuration.objects.all()
+            # # Create Configurations
+            params = BaseConfiguration.objects.all()
+            
+            for config in params:
+                configuration = Configuration(
+                    key=config.key,
+                    description=config.description,
+                    value=config.value,
+                    data_id=data.id
+                )
+                configuration.save()
+            
+            # # Add Plan Group
+            user_group = Group.objects.get(name='Default')
+            user.groups.add(user_group)
+
+            # # Add Relationship
+            relationship = Relationship(data_id=data.id,user_id=user.id)
+            relationship.save()
+
+            # ##### Implementation Initial
         
-        # # Add Plan Group
-        user_group = Group.objects.get(name='Default')
-        user.groups.add(user_group)
-
-        # # Add Relationship
-        # relationship = Relationship(base_customer_id=customer.id,user_id=user.id)
-        # relationship.save()
-
-        # ##### Implementation Initial
+        except:
+            messages.error(request, _('Error!'))
+            return redirect('account:sign_up')
 
         # Change the username to the "user_ID" form
         if settings.DISABLE_USERNAME:
