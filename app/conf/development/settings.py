@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'modules.api',
     'modules.account',
     'modules.dashboard',
+    'modules.company',
 
     # Forms
     'widget_tweaks',
@@ -105,7 +106,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 ENABLE_USER_ACTIVATION = True
-DISABLE_USERNAME = False
+DISABLE_USERNAME = True
 LOGIN_VIA_EMAIL = True
 LOGIN_VIA_EMAIL_OR_USERNAME = False
 LOGIN_REDIRECT_URL = 'dashboard'
