@@ -4,50 +4,53 @@
 
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
     <ul class="nav" style="margin-top: 0px;">
-      <li class="nav-item sidebar-category" style="margin-top: -7px;">
-        <!-- <p style="margin-bottom: 3px;">Navigation</p> -->
-        <!-- <span></span> -->
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="{% url 'dashboard' %}" style="height: 65px;">
-          <i class="mdi mdi-view-quilt menu-icon"></i>
-          <span class="menu-title">{% trans 'Dashboard' %}</span>
-        </a>
-      </li>
-      <li class="nav-item sidebar-category">
-        <p>Menu</p>
-        <!-- <span></span> -->
-      </li>
-     
-      <li class="nav-item">
-        <a class="nav-link collapsed" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-          <i class="mdi mdi-account-settings menu-icon"></i>
-          <span class="menu-title">{% trans 'My Profile' %}</span>
-          <i class="menu-arrow"></i>
-        </a>
-        <div class="collapse" id="ui-basic" style="">
-          <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" href="{% url 'account:change_password' %}">{% trans 'Change password' %}</a></li>
-            <li class="nav-item"> <a class="nav-link" href="{% url 'account:change_profile' %}">{% trans 'Change profile' %}</a></li>
-            <li class="nav-item"> <a class="nav-link" href="{% url 'account:change_email' %}">{% trans 'Change email' %}</a></li>
-          </ul>
-        </div>
-      </li>
+
+        {% if perms.global_permissions.app_dashboard %}
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'dashboard' %}" style="height: 65px;">
+                    <i class="mdi mdi-view-quilt menu-icon"></i>
+                    <span class="menu-title">{% trans 'Dashboard' %}</span>
+                </a>
+            </li>
+        {% endif %}
+
+        <li class="nav-item sidebar-category">
+            <p>Menu</p>
+        </li>
+
+        {% if perms.global_permissions.app_account %}
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                    <i class="mdi mdi-account-settings menu-icon"></i>
+                    <span class="menu-title">{% trans 'My Profile' %}</span>
+                    <i class="menu-arrow"></i>
+                </a>
+                <div class="collapse" id="ui-basic">
+                    <ul class="nav flex-column sub-menu">
+                        {% if perms.global_permissions.app_account_change_password_view %}
+                            <li class="nav-item"> <a class="nav-link" href="{% url 'account:change_password' %}">{% trans 'Change password' %}</a></li>
+                        {% endif %}
+
+                        {% if perms.global_permissions.app_account_change_profile_view %}
+                            <li class="nav-item"> <a class="nav-link" href="{% url 'account:change_profile' %}">{% trans 'Change profile' %}</a></li>
+                        {% endif %}
+
+                        {% if perms.global_permissions.app_account_change_email_view %}
+                            <li class="nav-item"> <a class="nav-link" href="{% url 'account:change_email' %}">{% trans 'Change email' %}</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </li>
+        {% endif %}
       
-      <li class="nav-item sidebar-category">
-        <!-- <p>...</p> -->
-        <!-- <span></span> -->
-      </li>
-      <!-- <li class="nav-item">
-        <a class="nav-link" href="{% url 'account:log_out' %}">
-          <i class="mdi mdi-file-document-box-outline menu-icon"></i>
-          <span class="menu-title">Logout</span>
-        </a>
-      </li> -->
-      <li class="nav-item">
-        <a class="nav-link" href="#" style="background: #d3403f !important;">
-          <button class="btn btn-warning btn-sm menu-title" style="color: black;">{% trans 'Update Pro' %}</button>
-        </a>
-      </li>
+        <li class="nav-item sidebar-category">
+            <p></p>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="#" style="background: #d3403f !important;">
+                <button class="btn btn-warning btn-sm menu-title" style="color: black;">{% trans 'Update Pro' %}</button>
+            </a>
+        </li>
     </ul>
   </nav>
