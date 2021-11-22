@@ -28,6 +28,7 @@ from .forms import (
     ResendActivationCodeForm, ResendActivationCodeViaEmailForm, ChangeProfileForm, ChangeEmailForm,
 )
 from .models import Activation
+from django.contrib.auth.models import Group
 
 
 class GuestOnlyView(View):
@@ -104,6 +105,25 @@ class SignUpView(GuestOnlyView, FormView):
 
         # Create a user record
         user.save()
+        
+        # ##### Implementation Initial
+        
+        # # Create BaseCustomer
+        # customer = Customer(email=user.email)
+        # customer.save()
+
+        # # Create Configurations
+        # configurations = Configuration.objects.all()
+        
+        # # Add Plan Group
+        user_group = Group.objects.get(name='Default')
+        user.groups.add(user_group)
+
+        # # Add Relationship
+        # relationship = Relationship(base_customer_id=customer.id,user_id=user.id)
+        # relationship.save()
+
+        # ##### Implementation Initial
 
         # Change the username to the "user_ID" form
         if settings.DISABLE_USERNAME:
