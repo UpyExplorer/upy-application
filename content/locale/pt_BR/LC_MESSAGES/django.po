@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-20 21:37-0300\n"
+"POT-Creation-Date: 2021-11-22 23:49-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: app/conf/development/settings.py:128 app/conf/production/settings.py:127
+#: app/conf/development/settings.py:144 app/conf/production/settings.py:143
 msgid "Português-BR"
 msgstr "Português-BR"
 
-#: app/conf/development/settings.py:129 app/conf/production/settings.py:128
+#: app/conf/development/settings.py:145 app/conf/production/settings.py:144
 msgid "English"
 msgstr "Inglês"
 
@@ -39,57 +39,67 @@ msgstr "Você é um convidado"
 msgid "Welcome back"
 msgstr "Bem vindo"
 
-#: content/templates/layouts/default/dashboard.html:62
-#: content/templates/layouts/menu.html:49
+#: content/templates/layouts/default/dashboard.html:63
+#: content/templates/layouts/menu.html:52
 msgid "Update Pro"
 msgstr "Melhorar Conta"
 
-#: content/templates/layouts/default/dashboard.html:66
+#: content/templates/layouts/default/dashboard.html:69
 #: content/templates/layouts/default/page.html:63
 #: content/templates/main/change_language.html:10
 msgid "Change language"
 msgstr "Alterar Idioma"
 
-#: content/templates/layouts/default/dashboard.html:70
+#: content/templates/layouts/default/dashboard.html:75
 #: content/templates/layouts/default/page.html:49
 msgid "Logout"
 msgstr "Sair"
 
-#: content/templates/layouts/default/dashboard.html:110
-#: content/templates/layouts/default/external.html:40
+#: content/templates/layouts/default/dashboard.html:86
+msgid "Notifications"
+msgstr "Notificações"
+
+#: content/templates/layouts/default/dashboard.html:95
+msgid "Welcome to System!"
+msgstr "Bem vindo ao Sistema!"
+
+#: content/templates/layouts/default/dashboard.html:137
+#: content/templates/layouts/default/login.html:40
 #: content/templates/layouts/default/register.html:40
 msgid "All Rights Reserved"
 msgstr "Todos os direitos reservados"
 
-#: content/templates/layouts/default/dashboard.html:111
+#: content/templates/layouts/default/dashboard.html:138
 msgid "Version"
 msgstr "Versão"
 
 #: content/templates/layouts/default/page.html:30
+#: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_changes_confirmation.html:6
+#: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_revision_confirmation.html:6
 msgid "Home"
 msgstr "Início"
 
 #: content/templates/layouts/default/page.html:40
-#: content/templates/layouts/menu.html:30
+#: content/templates/layouts/menu.html:31
 #: modules/account/templates/account/profile/change_password.html:8
 msgid "Change password"
 msgstr "Alterar Senha"
 
 #: content/templates/layouts/default/page.html:43
-#: content/templates/layouts/menu.html:31
+#: content/templates/layouts/menu.html:35
 #: modules/account/templates/account/profile/change_profile.html:8
 msgid "Change profile"
 msgstr "Alterar Perfil"
 
 #: content/templates/layouts/default/page.html:46
-#: content/templates/layouts/menu.html:32
+#: content/templates/layouts/menu.html:39
 #: modules/account/templates/account/profile/change_email.html:8
 #: modules/account/utils.py:28
 msgid "Change email"
 msgstr "Alterar E-mail"
 
 #: content/templates/layouts/default/page.html:53
-#: modules/account/templates/account/log_in.html:70
+#: modules/account/templates/account/log_in.html:67
 #: modules/account/templates/account/remind_username.html:23
 #: modules/account/templates/account/resend_activation_code.html:23
 #: modules/account/templates/account/restore_password.html:23
@@ -100,7 +110,7 @@ msgstr "Entrar"
 msgid "Register"
 msgstr "Cadastrar-se"
 
-#: content/templates/layouts/menu.html:14
+#: content/templates/layouts/menu.html:12
 msgid "Dashboard"
 msgstr "Painel de Controle"
 
@@ -118,6 +128,7 @@ msgstr "Selecionar Idioma"
 #: modules/account/templates/account/profile/change_profile.html:15
 #: modules/account/templates/account/restore_password_confirm.html:21
 #: venv/lib/python3.9/site-packages/django/forms/widgets.py:405
+#: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_revision_confirmation.html:24
 msgid "Change"
 msgstr "Salvar"
 
@@ -125,7 +136,7 @@ msgstr "Salvar"
 msgid "Password"
 msgstr "Senha"
 
-#: modules/account/forms.py:24 modules/account/templates/account/log_in.html:79
+#: modules/account/forms.py:24 modules/account/templates/account/log_in.html:76
 msgid "Remember me"
 msgstr "Lembrar-me"
 
@@ -245,16 +256,16 @@ msgstr "Olá! vamos começar"
 msgid "Sign in to continue."
 msgstr "Faça login para continuar."
 
-#: modules/account/templates/account/log_in.html:85
+#: modules/account/templates/account/log_in.html:82
 msgid "Forgot your password?"
 msgstr "Esqueceu sua senha?"
 
-#: modules/account/templates/account/log_in.html:89
+#: modules/account/templates/account/log_in.html:86
 msgid "Don't have an account? "
 msgstr "Não tem conta?"
 
-#: modules/account/templates/account/log_in.html:89
-#: modules/account/templates/account/sign_up.html:122
+#: modules/account/templates/account/log_in.html:86
+#: modules/account/templates/account/sign_up.html:126
 msgid "Create"
 msgstr "Criar"
 
@@ -327,11 +338,11 @@ msgstr ""
 "Se você não receber um e-mail, certifique-se de inserir o endereço com o "
 "qual se inscreveu e verifique sua pasta de spam."
 
-#: modules/account/templates/account/sign_up.html:13
+#: modules/account/templates/account/sign_up.html:12
 msgid "New here?"
 msgstr "Novo aqui?"
 
-#: modules/account/templates/account/sign_up.html:14
+#: modules/account/templates/account/sign_up.html:13
 msgid "Join us today! It takes only few steps"
 msgstr "Junte-se a nós hoje! Leva apenas alguns passos"
 
@@ -343,51 +354,55 @@ msgstr "Ativação de perfil"
 msgid "Your username"
 msgstr "Seu nome de usuário"
 
-#: modules/account/views.py:124
+#: modules/account/views.py:144
+msgid "Error!"
+msgstr "Erro!"
+
+#: modules/account/views.py:163
 msgid ""
 "You are signed up. To activate the account, follow the link sent to the mail."
 msgstr ""
 "Você está inscrito. Para ativar a conta, siga o link enviado para o e-mail."
 
-#: modules/account/views.py:131
+#: modules/account/views.py:170
 msgid "You are successfully signed up!"
 msgstr "Você se inscreveu com sucesso!"
 
-#: modules/account/views.py:149
+#: modules/account/views.py:188
 msgid "You have successfully activated your account!"
 msgstr "Você ativou sua conta com sucesso!"
 
-#: modules/account/views.py:179
+#: modules/account/views.py:218
 msgid "A new activation code has been sent to your email address."
 msgstr "Um novo código de ativação foi enviado para o seu endereço de e-mail."
 
-#: modules/account/views.py:221
+#: modules/account/views.py:267
 msgid "Profile data has been successfully updated."
 msgstr "Os dados do perfil foram atualizados com sucesso."
 
-#: modules/account/views.py:255
+#: modules/account/views.py:308
 msgid "To complete the change of email address, click on the link sent to it."
 msgstr ""
 "Para concluir a alteração do endereço de e-mail, clique no link enviado para "
 "ele."
 
-#: modules/account/views.py:260
+#: modules/account/views.py:313
 msgid "Email successfully changed."
 msgstr "Email alterado com sucesso."
 
-#: modules/account/views.py:278
+#: modules/account/views.py:331
 msgid "You have successfully changed your email!"
 msgstr "Você alterou seu e-mail com sucesso!"
 
-#: modules/account/views.py:291
+#: modules/account/views.py:344
 msgid "Your username has been successfully sent to your email."
 msgstr "Seu nome de usuário foi enviado com sucesso para o seu e-mail."
 
-#: modules/account/views.py:306
+#: modules/account/views.py:366
 msgid "Your password was changed."
 msgstr "Sua senha foi modificada."
 
-#: modules/account/views.py:318
+#: modules/account/views.py:378
 msgid "Your password has been set. You may go ahead and login now."
 msgstr "Sua senha foi definida. Você pode ir em frente e entrar agora."
 
@@ -1594,6 +1609,204 @@ msgstr ""
 
 #: venv/lib/python3.9/site-packages/django/views/templates/default_urlconf.html:249
 msgid "Connect, get help, or contribute"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/global_permissions/models.py:34
+msgid "Global Permission"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/global_permissions/models.py:35
+msgid "Global Permissions"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/models_logging/apps.py:7
+msgid "Models logging"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/models_logging/models.py:26
+#, fuzzy
+#| msgid "Version"
+msgid "Revisions"
+msgstr "Versão"
+
+#: venv/lib/python3.9/site-packages/models_logging/models.py:27
+#, fuzzy
+#| msgid "Version"
+msgid "Revision"
+msgstr "Versão"
+
+#: venv/lib/python3.9/site-packages/models_logging/models.py:30
+msgid "date created"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/models_logging/models.py:31
+msgid "The date and time this revision was created."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/models_logging/models.py:32
+msgid "comment"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/models_logging/models.py:32
+msgid "A text comment on this revision."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/models_logging/models.py:49
+#: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_revision_confirmation.html:28
+#, fuzzy
+#| msgid "Change profile"
+msgid "Changes of object"
+msgstr "Alterar Perfil"
+
+#: venv/lib/python3.9/site-packages/models_logging/models.py:50
+msgid "All changes"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/models_logging/models.py:53
+msgid "Added"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/models_logging/models.py:54
+#, fuzzy
+#| msgid "Change"
+msgid "Changed"
+msgstr "Salvar"
+
+#: venv/lib/python3.9/site-packages/models_logging/models.py:55
+msgid "Deleted"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/models_logging/models.py:58
+msgid "Date created"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/models_logging/models.py:59
+msgid "The date and time this changes was."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/models_logging/models.py:61
+#: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/object_history.html:16
+#, fuzzy
+#| msgid "Username"
+msgid "User"
+msgstr "Nome de usuário"
+
+#: venv/lib/python3.9/site-packages/models_logging/models.py:61
+msgid "The user who created this changes."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/models_logging/models.py:63
+msgid "Primary key of the model under version control."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/models_logging/models.py:69
+msgid "The database the model under version control is stored in."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/models_logging/models.py:74
+msgid "The old data of changed fields."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/models_logging/models.py:76
+msgid "A string representation of the object."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/models_logging/models.py:78
+#: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/object_history.html:18
+#: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_revision_confirmation.html:25
+msgid "Action"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/models_logging/models.py:78
+msgid "added|changed|deleted"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/change_form.html:8
+#: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_changes_confirmation.html:11
+#: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_revision_confirmation.html:11
+msgid "Revert"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/object_history.html:8
+msgid ""
+"Choose a date from the list below to revert to a previous version of this "
+"object."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/object_history.html:15
+msgid "Date/time"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/object_history.html:17
+msgid "Object"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/object_history.html:19
+#, fuzzy
+#| msgid "Change language"
+msgid "Changed data"
+msgstr "Alterar Idioma"
+
+#: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/object_history.html:56
+msgid ""
+"This object doesn't have a change history. It probably wasn't added via this "
+"admin site."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_changes_confirmation.html:16
+#: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_revision_confirmation.html:16
+#, python-format
+msgid "Are you sure you want to revert the %(object_name)s?"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_changes_confirmation.html:19
+msgid ""
+"Object was deleted in this change, if you revert this change, object will be "
+"created again"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_changes_confirmation.html:21
+msgid ""
+"Object was added in this change, if you revert this change, object will be "
+"deleted"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_changes_confirmation.html:32
+#: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_revision_confirmation.html:51
+msgid "Yes, I'm sure"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_changes_confirmation.html:33
+#: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_revision_confirmation.html:52
+msgid "No, take me back"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_revision_confirmation.html:18
+msgid ""
+"Revision contains many of changes, take a look very attentively at all "
+"changes"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_revision_confirmation.html:19
+msgid "Atantion! Only"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_revision_confirmation.html:19
+msgid "from"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_revision_confirmation.html:20
+msgid ""
+"showed in this table. But reverting will be in all changes. All changes you "
+"can see in Changes admin"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_revision_confirmation.html:26
+msgid "ContentType"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_revision_confirmation.html:27
+msgid "Object_id"
 msgstr ""
 
 #~ msgid "Forgot your username?"
