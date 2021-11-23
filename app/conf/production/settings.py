@@ -11,7 +11,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 DEBUG = False
-ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOSTS')]
+ALLOWED_HOSTS = ['upy-application.herokuapp.com']
 
 SITE_ID = 1
 DISABLE_COLLECTSTATIC = 1
