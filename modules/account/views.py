@@ -126,7 +126,7 @@ class SignUpView(GuestOnlyView, FormView):
                     key=config.key,
                     description=config.description,
                     value=config.value,
-                    data_id=data.id
+                    company_data_id=data.id
                 )
                 configuration.save()
             
@@ -135,7 +135,7 @@ class SignUpView(GuestOnlyView, FormView):
             user.groups.add(user_group)
 
             # # Add Relationship
-            relationship = Relationship(data_id=data.id,user_id=user.id)
+            relationship = Relationship(company_data_id=data.id,user_id=user.id)
             relationship.save()
 
             # ##### Implementation Initial
