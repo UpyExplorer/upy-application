@@ -31,17 +31,19 @@
                         <div class="input-group-prepend bg-transparent">
                             <span class="input-group-text bg-transparent border-right-0">
                                 {% if field.name == 'username' %}
-                                    <i class="mdi mdi-account-outline text-primary" data-toggle="tooltip" data-placement="top" title="{{ field.help_text }}"></i>
+                                    <i class="mdi mdi-account-outline text-primary" data-toggle="tooltip" data-placement="top" title="{{ field.label }}"></i>
                                 {% endif %}
                             </span>
                         </div>
                         {% if field.name == 'username' %}
                             {{ field|add_class:'form-control form-control-lg' }}
                         {% endif %}
-
-                        {% for error in field.errors %}
-                            <span class="help-block">{{ error }}</span>
-                        {% endfor %}
+                    </div>
+                    {% for error in field.errors %}
+                        <span class="help-block" style="color: #b60909;">{{ error }}</span>
+                    {% endfor %}
+                    <div style="color: #a5a5a5; font-size: small;">
+                        {{ field.help_text }}
                     </div>
                 </div>
             {% endif %}
@@ -53,17 +55,19 @@
                         <div class="input-group-prepend bg-transparent">
                             <span class="input-group-text bg-transparent border-right-0">
                                 {% if field.name == 'email' %}
-                                    <i class="mdi mdi-email text-primary" data-toggle="tooltip" data-placement="top" title="{{ field.help_text }}"></i>
+                                    <i class="mdi mdi-email text-primary" data-toggle="tooltip" data-placement="top" title="{{ field.label }}"></i>
                                 {% endif %}
                             </span>
                         </div>
                         {% if field.name == 'email' %}
                             {{ field|add_class:'form-control form-control-lg' }}
                         {% endif %}
-
-                        {% for error in field.errors %}
-                            <span class="help-block">{{ error }}</span>
-                        {% endfor %}
+                    </div>
+                    {% for error in field.errors %}
+                        <span class="help-block" style="color: #b60909;">{{ error }}</span>
+                    {% endfor %}
+                    <div style="color: #a5a5a5; font-size: small;">
+                        {{ field.help_text }}
                     </div>
                 </div>
             {% endif %}
@@ -75,20 +79,19 @@
                         <div class="input-group-prepend bg-transparent">
                             <span class="input-group-text bg-transparent border-right-0">
                                 {% if field.name == 'password1' %}
-                                    <i class="mdi mdi-lock text-primary"></i>
+                                    <i class="mdi mdi-lock text-primary" data-toggle="tooltip" data-placement="top" title="{{ field.label }}"></i>
                                 {% endif %}
                             </span>
                         </div>
                         {% if field.name == 'password1' %}
                             {{ field|add_class:'form-control form-control-lg' }}
                         {% endif %}
-                        <!-- <div style="color: #d7d7d7;">
-                            {{ field.help_text }}
-                        </div> -->
-                            
-                        {% for error in field.errors %}
-                            <span class="help-block">{{ error }}</span>
-                        {% endfor %}
+                    </div>
+                    {% for error in field.errors %}
+                        <span class="help-block" style="color: #b60909;">{{ error }}</span>
+                    {% endfor %}
+                    <div style="color: #a5a5a5; font-size: small;">
+                        {{ field.help_text }}
                     </div>
                 </div>
             {% endif %}
@@ -100,17 +103,19 @@
                         <div class="input-group-prepend bg-transparent">
                             <span class="input-group-text bg-transparent border-right-0">
                                 {% if field.name == 'password2' %}
-                                    <i class="mdi mdi-lock text-primary" data-toggle="tooltip" data-placement="top" title="{{ field.help_text }}"></i>
+                                    <i class="mdi mdi-lock text-primary" data-toggle="tooltip" data-placement="top" title="{{ field.label }}"></i>
                                 {% endif %}
                             </span>
                         </div>
                         {% if field.name == 'password2' %}
                             {{ field|add_class:'form-control form-control-lg' }}
                         {% endif %}
-
-                        {% for error in field.errors %}
-                            <span class="help-block">{{ error }}</span>
-                        {% endfor %}
+                    </div>
+                    {% for error in field.errors %}
+                        <span class="help-block" style="color: #b60909;">{{ error }}</span>
+                    {% endfor %}
+                    <div style="color: #a5a5a5; font-size: small;">
+                        {{ field.help_text }}
                     </div>
                 </div>
             {% endif %}
@@ -123,4 +128,8 @@
 
     </form>
 
+    <script type="text/javascript">
+        var msg_password = "Your password can’t be too similar to your other personal information. Your password must contain at least 8 characters. Your password can’t be a commonly used password. Your password can’t be entirely numeric."
+    </script>
 {% endblock %}
+

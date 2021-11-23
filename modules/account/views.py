@@ -6,6 +6,7 @@ from django.contrib.auth.views import (
     LogoutView as BaseLogoutView, PasswordChangeView as BasePasswordChangeView,
     PasswordResetDoneView as BasePasswordResetDoneView, PasswordResetConfirmView as BasePasswordResetConfirmView,
 )
+from django.core.exceptions import PermissionDenied
 from django.shortcuts import get_object_or_404, redirect
 from django.utils.crypto import get_random_string
 from django.utils.decorators import method_decorator
@@ -27,7 +28,12 @@ from .forms import (
     RestorePasswordForm, RestorePasswordViaEmailOrUsernameForm, RemindUsernameForm,
     ResendActivationCodeForm, ResendActivationCodeViaEmailForm, ChangeProfileForm, ChangeEmailForm,
 )
-from .models import Activation
+
+from modules.account.models import Activation
+from modules.base.models import Configuration as BaseConfiguration
+from modules.company.models import Data, Configuration, Relationship
+
+from django.contrib.auth.models import Group
 
 
 class GuestOnlyView(View):
@@ -102,8 +108,41 @@ class SignUpView(GuestOnlyView, FormView):
         if settings.ENABLE_USER_ACTIVATION:
             user.is_active = False
 
-        # Create a user record
-        user.save()
+        try:
+            # Create a user record
+            user.save()
+            
+            # ##### Implementation Initial
+            
+            # # Create CompanyData
+            data = Data(email=user.email)
+            data.save()
+
+            # # Create Configurations
+            params = BaseConfiguration.objects.all()
+            
+            for config in params:
+                configuration = Configuration(
+                    key=config.key,
+                    description=config.description,
+                    value=config.value,
+                    company_data_id=data.id
+                )
+                configuration.save()
+            
+            # # Add Plan Group
+            user_group = Group.objects.get(name='Default')
+            user.groups.add(user_group)
+
+            # # Add Relationship
+            relationship = Relationship(company_data_id=data.id,user_id=user.id)
+            relationship.save()
+
+            # ##### Implementation Initial
+        
+        except:
+            messages.error(request, _('Error!'))
+            return redirect('account:sign_up')
 
         # Change the username to the "user_ID" form
         if settings.DISABLE_USERNAME:
@@ -205,6 +244,13 @@ class ChangeProfileView(LoginRequiredMixin, FormView):
     template_name = 'account/profile/change_profile.html'
     form_class = ChangeProfileForm
 
+    def get(self, request, *args, **kwargs):
+        if not self.request.user.has_perm('global_permissions.app_account_change_profile_view'):
+            raise PermissionDenied
+
+        self.object = None
+        return super().get(request, *args, **kwargs)
+
     def get_initial(self):
         user = self.request.user
         initial = super().get_initial()
@@ -226,6 +272,13 @@ class ChangeProfileView(LoginRequiredMixin, FormView):
 class ChangeEmailView(LoginRequiredMixin, FormView):
     template_name = 'account/profile/change_email.html'
     form_class = ChangeEmailForm
+
+    def get(self, request, *args, **kwargs):
+        if not self.request.user.has_perm('global_permissions.app_account_change_email_view'):
+            raise PermissionDenied
+
+        self.object = None
+        return super().get(request, *args, **kwargs)
 
     def get_form_kwargs(self):
         kwargs = super().get_form_kwargs()
@@ -295,6 +348,13 @@ class RemindUsernameView(GuestOnlyView, FormView):
 
 class ChangePasswordView(BasePasswordChangeView):
     template_name = 'account/profile/change_password.html'
+
+    def get(self, request, *args, **kwargs):
+        if not self.request.user.has_perm('global_permissions.app_account_change_password_view'):
+            raise PermissionDenied
+
+        self.object = None
+        return super().get(request, *args, **kwargs)
 
     def form_valid(self, form):
         # Change the password
