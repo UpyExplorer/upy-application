@@ -46,7 +46,18 @@ INSTALLED_APPS = [
 
     # Permissions
     'global_permissions',
+
+    # Logs
+    'models_logging',
 ]
+
+LOGGING_MODELS  = (
+    'modules.base',
+    'modules.api',
+    'modules.account',
+    'modules.company',
+    'django.contrib.auth',
+)
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
@@ -60,6 +71,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'models_logging.middleware.LoggingStackMiddleware',
 ]
 
 ROOT_URLCONF = 'app.urls'
