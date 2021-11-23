@@ -72,6 +72,8 @@ MIDDLEWARE = [
     'models_logging.middleware.LoggingStackMiddleware',
 ]
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 ROOT_URLCONF = 'app.urls'
 
 TEMPLATES = [
