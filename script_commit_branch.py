@@ -15,3 +15,4 @@ if branch and description:
     os.system("git stash apply")
     os.system("git add .")
     os.system("git commit -m 'UPY-#"+ str(branch) + " - " + str(description) + "'")
+    os.system("git push")
