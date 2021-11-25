@@ -49,32 +49,15 @@
                         </li>
 
                         <li class="nav-item nav-profile dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown" aria-expanded="false">
-                                <img src="{% static 'media/dashboard/user.jpg' %}" alt="profile" class="profile-img">
-                                <span class="nav-profile-name">
-                                    {% if request.user.is_authenticated %}
-                                        {{ request.user.username }}
-                                    {% endif %}
-                                </span>
+                            <a class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center" id="notificationDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                                <i class="mdi mdi-comment-question-outline mx-0"></i>
                             </a>
-                            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-                                <a class="dropdown-item">
-                                    <i class="mdi mdi-heart text-primary"></i>
-                                        {% trans 'Update Pro' %}
-                                </a>
-                                
-                                {% if perms.global_permissions.app_account_language_view %}
-                                    <a class="dropdown-item" href="{% url 'change_language' %}">
-                                        <i class="mdi mdi-web"></i>
-                                            {% trans 'Change language' %}
-                                    </a>
-                                {% endif %}
+                        </li>
 
-                                <a class="dropdown-item" href="{% url 'account:log_out' %}">
-                                    <i class="mdi mdi-logout"></i>
-                                        {% trans 'Logout' %}
-                                </a>
-                            </div>
+                        <li class="nav-item nav-profile dropdown">
+                            <a class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center" id="notificationDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                                <i class="mdi mdi-bell mx-0"></i>
+                            </a>
                         </li>
 
                         <li class="nav-item nav-profile dropdown">
@@ -95,6 +78,57 @@
                                         <h6 class="preview-subject font-weight-normal">{% trans 'Welcome to System!' %}</h6>
                                         <p class="font-weight-light small-text mb-0 text-muted">UpyExplorer</p>
                                     </div>
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item nav-profile dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown" aria-expanded="false" >
+                                <img src="{% static 'media/dashboard/user.jpg' %}" alt="profile" class="profile-img">
+                                <span class="nav-profile-name">
+                                    {% if request.user.is_authenticated %}
+                                        {{ request.user.username }}
+                                    {% endif %}
+                                </span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+                                <!-- style="width: 300px;" -->
+                                <!-- <div class="border-bottom text-center pb-4" style="padding: 10px;">
+                                    <img src="{% static 'media/dashboard/user.jpg' %}" alt="profile" class="img-lg rounded-circle mb-3" style="border: 2px solid #d7d7d7;">
+                                    <div class="mb-3">
+                                        <h3>
+                                            {% if request.user.is_authenticated %}
+                                                {{ request.user.username }}
+                                            {% endif %}
+                                        </h3>
+                                    </div>
+
+                                    <div class="py-4" style="padding-left: 25px; padding-right: 25px;">
+                                        <p class="clearfix">
+                                        <span class="float-left">
+                                            Status
+                                        </span>
+                                        <span class="float-right text-muted">
+                                            Active
+                                        </span>
+                                    </div>
+                                </div> -->
+
+                                <a class="dropdown-item">
+                                    <i class="mdi mdi-heart text-primary"></i>
+                                        {% trans 'Update Pro' %}
+                                </a>
+                                
+                                {% if perms.global_permissions.app_account_language_view %}
+                                    <a class="dropdown-item" href="{% url 'change_language' %}">
+                                        <i class="mdi mdi-web"></i>
+                                            {% trans 'Change language' %}
+                                    </a>
+                                {% endif %}
+
+                                <a class="dropdown-item" href="{% url 'account:log_out' %}">
+                                    <i class="mdi mdi-logout"></i>
+                                        {% trans 'Logout' %}
                                 </a>
                             </div>
                         </li>
