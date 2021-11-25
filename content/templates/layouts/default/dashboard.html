@@ -39,11 +39,11 @@
                         <img src="{% static 'media/upy-explorer.png' %}" style="width: 150px;" alt="logo" class="mobile-logo"/>
                         </a>
                     </div>
-                    <h5 class="font-weight-bold mb-0 d-none d-md-block mt-1">
+                    <h6 class="font-weight-bold mb-0 d-none d-md-block mt-1">
                         {% if request.user.is_authenticated %}
                         {% trans 'Welcome back' %}, {{ request.user.username }}
                         {% endif %}
-                    </h5>
+                    </h6>
                     <ul class="navbar-nav navbar-nav-right">
                         <li class="nav-item">
                         </li>
