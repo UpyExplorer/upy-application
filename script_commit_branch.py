@@ -13,4 +13,5 @@ if branch and description:
     os.system("git checkout UPY-#"+ str(branch))
     os.system("git pull")
     os.system("git stash apply")
+    os.system("git add .")
     os.system("git commit -m 'UPY-#"+ str(branch) + " - " + str(description) + "'")
