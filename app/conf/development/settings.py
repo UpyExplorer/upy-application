@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'modules.account',
     'modules.dashboard',
     'modules.company',
+    'modules.product',
+    'modules.order',
 
     # Forms
     'widget_tweaks',
