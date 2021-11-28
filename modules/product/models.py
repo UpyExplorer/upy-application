@@ -26,3 +26,6 @@ class Info(models.Model):
 
 class Stock(models.Model):
     product_info = models.ForeignKey(Info, on_delete=models.SET_NULL, null=True)
+
+class Image(models.Model):
+    product_info = models.ForeignKey(Info, on_delete=models.SET_NULL, null=True)
