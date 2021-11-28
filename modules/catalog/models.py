@@ -1,6 +1,7 @@
 
 from datetime import datetime
 from django.db import models
+from django.urls import reverse
 from modules.company.models import Data
 
 
@@ -22,3 +23,6 @@ class Product(models.Model):
     detail_height = models.DecimalField(max_digits=8, decimal_places=5, null=True)
     active = models.BooleanField(null=False, default=False)
     video_url = models.TextField(blank=True, null=True)
+
+    def get_absolute_url(self):
+        return "/catalog/product/{id}".format(id = self.id)
