@@ -1,18 +1,21 @@
 from django.views import generic
 from django.shortcuts import Http404, render
 from modules.catalog.models import Product
+from django.core.paginator import Paginator
 
 class ProductListView(generic.ListView):
     model = Product
     template_name = 'catalog/product/product_list.html'
+    paginate_by = 5
 
     def get_queryset(self):
-            return Product.objects.all()[:5]
+        return Product.objects.all()
 
     def get_context_data(self, **kwargs):
         context = super(ProductListView, self).get_context_data(**kwargs)
         context['some_data'] = 'This is just some data'
         return context
+
 
 class ProductDetailView(generic.DetailView):
     model = Product
