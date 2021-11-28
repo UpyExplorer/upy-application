@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-22 23:49-0300\n"
+"POT-Creation-Date: 2021-11-28 01:26-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: app/conf/development/settings.py:144 app/conf/production/settings.py:143
+#: app/conf/development/settings.py:148 app/conf/production/settings.py:147
 msgid "Português-BR"
 msgstr ""
 
-#: app/conf/development/settings.py:145 app/conf/production/settings.py:144
+#: app/conf/development/settings.py:149 app/conf/production/settings.py:148
 msgid "English"
 msgstr ""
 
@@ -39,37 +39,37 @@ msgstr ""
 msgid "Welcome back"
 msgstr ""
 
-#: content/templates/layouts/default/dashboard.html:63
-#: content/templates/layouts/menu.html:52
+#: content/templates/layouts/default/dashboard.html:69
+msgid "Notifications"
+msgstr ""
+
+#: content/templates/layouts/default/dashboard.html:78
+msgid "Welcome to System!"
+msgstr ""
+
+#: content/templates/layouts/default/dashboard.html:118
+#: content/templates/layouts/menu.html:69
 msgid "Update Pro"
 msgstr ""
 
-#: content/templates/layouts/default/dashboard.html:69
+#: content/templates/layouts/default/dashboard.html:124
 #: content/templates/layouts/default/page.html:63
 #: content/templates/main/change_language.html:10
 msgid "Change language"
 msgstr ""
 
-#: content/templates/layouts/default/dashboard.html:75
+#: content/templates/layouts/default/dashboard.html:130
 #: content/templates/layouts/default/page.html:49
 msgid "Logout"
 msgstr ""
 
-#: content/templates/layouts/default/dashboard.html:86
-msgid "Notifications"
-msgstr ""
-
-#: content/templates/layouts/default/dashboard.html:95
-msgid "Welcome to System!"
-msgstr ""
-
-#: content/templates/layouts/default/dashboard.html:137
+#: content/templates/layouts/default/dashboard.html:170
 #: content/templates/layouts/default/login.html:40
 #: content/templates/layouts/default/register.html:40
 msgid "All Rights Reserved"
 msgstr ""
 
-#: content/templates/layouts/default/dashboard.html:138
+#: content/templates/layouts/default/dashboard.html:171
 msgid "Version"
 msgstr ""
 
@@ -80,19 +80,19 @@ msgid "Home"
 msgstr ""
 
 #: content/templates/layouts/default/page.html:40
-#: content/templates/layouts/menu.html:31
+#: content/templates/layouts/menu.html:48
 #: modules/account/templates/account/profile/change_password.html:8
 msgid "Change password"
 msgstr ""
 
 #: content/templates/layouts/default/page.html:43
-#: content/templates/layouts/menu.html:35
+#: content/templates/layouts/menu.html:52
 #: modules/account/templates/account/profile/change_profile.html:8
 msgid "Change profile"
 msgstr ""
 
 #: content/templates/layouts/default/page.html:46
-#: content/templates/layouts/menu.html:39
+#: content/templates/layouts/menu.html:56
 #: modules/account/templates/account/profile/change_email.html:8
 #: modules/account/utils.py:28
 msgid "Change email"
@@ -115,6 +115,14 @@ msgid "Dashboard"
 msgstr ""
 
 #: content/templates/layouts/menu.html:25
+msgid "Catalog"
+msgstr ""
+
+#: content/templates/layouts/menu.html:31
+msgid "Product"
+msgstr ""
+
+#: content/templates/layouts/menu.html:42
 msgid "My Profile"
 msgstr ""
 
