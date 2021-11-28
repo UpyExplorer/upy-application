@@ -24,8 +24,13 @@ class Info(models.Model):
     video_url = models.TextField(blank=True, null=True)
 
 
+class Category(models.Model):
+    product_info = models.ForeignKey(Info, on_delete=models.SET_NULL, null=True)
+
+
 class Stock(models.Model):
     product_info = models.ForeignKey(Info, on_delete=models.SET_NULL, null=True)
+
 
 class Image(models.Model):
     product_info = models.ForeignKey(Info, on_delete=models.SET_NULL, null=True)
