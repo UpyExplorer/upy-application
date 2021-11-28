@@ -20291,7 +20291,11 @@ dl li {
 
 .auth .login-half-bg {
   background: url("../media/login-bg.jpg");
-  
+  position: fixed;
+  right: 0;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
 }
 
@@ -20305,6 +20309,11 @@ dl li {
 
 .auth .register-half-bg {
   background: url("../media/register-bg.jpg");
+  position: fixed;
+  right: 0;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
 }
 
@@ -20333,6 +20342,7 @@ dl li {
 
 .auth .auth-form-transparent {
   background: transparent;
+  padding-top: 50px !important;
 }
 
 .auth .auth-form-transparent .form-control,
