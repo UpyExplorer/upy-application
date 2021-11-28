@@ -4,9 +4,9 @@
   <h1>Product List</h1>
   {% if product_list %}
   <ul>
-    {% for produt in product_list %}
+    {% for product in product_list %}
       <li>
-        <a href="{{ produt.get_absolute_url }}">{{ produt.name }}</a> ({{produt.sku}})
+        <a href="{{ product.get_absolute_url }}">{{ product.name }}</a> ({{product.sku}})
       </li>
     {% endfor %}
   </ul>
