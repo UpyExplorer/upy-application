@@ -22,3 +22,7 @@ class Info(models.Model):
     detail_height = models.DecimalField(max_digits=8, decimal_places=5, null=True)
     active = models.BooleanField(null=False, default=False)
     video_url = models.TextField(blank=True, null=True)
+
+
+class Stock(models.Model):
+    product_info = models.ForeignKey(Info, on_delete=models.SET_NULL, null=True)
