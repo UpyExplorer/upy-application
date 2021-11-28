@@ -35,41 +35,41 @@ msgstr "Seu nome de usuário é"
 msgid "You are a guest."
 msgstr "Você é um convidado"
 
-#: content/templates/layouts/default/dashboard.html:44
+#: content/templates/layouts/default/page.html:44
 msgid "Welcome back"
 msgstr "Bem vindo"
 
-#: content/templates/layouts/default/dashboard.html:69
+#: content/templates/layouts/default/page.html:69
 msgid "Notifications"
 msgstr "Notificações"
 
-#: content/templates/layouts/default/dashboard.html:78
+#: content/templates/layouts/default/page.html:78
 msgid "Welcome to System!"
 msgstr "Bem vindo ao Sistema!"
 
-#: content/templates/layouts/default/dashboard.html:118
+#: content/templates/layouts/default/page.html:118
 #: content/templates/layouts/menu.html:69
 msgid "Update Pro"
 msgstr "Melhorar Conta"
 
-#: content/templates/layouts/default/dashboard.html:124
+#: content/templates/layouts/default/page.html:124
 #: content/templates/layouts/default/page.html:63
 #: content/templates/main/change_language.html:10
 msgid "Change language"
 msgstr "Alterar Idioma"
 
-#: content/templates/layouts/default/dashboard.html:130
+#: content/templates/layouts/default/page.html:130
 #: content/templates/layouts/default/page.html:49
 msgid "Logout"
 msgstr "Sair"
 
-#: content/templates/layouts/default/dashboard.html:170
+#: content/templates/layouts/default/page.html:170
 #: content/templates/layouts/default/login.html:40
 #: content/templates/layouts/default/register.html:40
 msgid "All Rights Reserved"
 msgstr "Todos os direitos reservados"
 
-#: content/templates/layouts/default/dashboard.html:171
+#: content/templates/layouts/default/page.html:171
 msgid "Version"
 msgstr "Versão"
 

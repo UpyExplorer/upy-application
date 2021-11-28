@@ -35,41 +35,41 @@ msgstr ""
 msgid "You are a guest."
 msgstr ""
 
-#: content/templates/layouts/default/dashboard.html:44
+#: content/templates/layouts/default/page.html:44
 msgid "Welcome back"
 msgstr ""
 
-#: content/templates/layouts/default/dashboard.html:69
+#: content/templates/layouts/default/page.html:69
 msgid "Notifications"
 msgstr ""
 
-#: content/templates/layouts/default/dashboard.html:78
+#: content/templates/layouts/default/page.html:78
 msgid "Welcome to System!"
 msgstr ""
 
-#: content/templates/layouts/default/dashboard.html:118
+#: content/templates/layouts/default/page.html:118
 #: content/templates/layouts/menu.html:69
 msgid "Update Pro"
 msgstr ""
 
-#: content/templates/layouts/default/dashboard.html:124
+#: content/templates/layouts/default/page.html:124
 #: content/templates/layouts/default/page.html:63
 #: content/templates/main/change_language.html:10
 msgid "Change language"
 msgstr ""
 
-#: content/templates/layouts/default/dashboard.html:130
+#: content/templates/layouts/default/page.html:130
 #: content/templates/layouts/default/page.html:49
 msgid "Logout"
 msgstr ""
 
-#: content/templates/layouts/default/dashboard.html:170
+#: content/templates/layouts/default/page.html:170
 #: content/templates/layouts/default/login.html:40
 #: content/templates/layouts/default/register.html:40
 msgid "All Rights Reserved"
 msgstr ""
 
-#: content/templates/layouts/default/dashboard.html:171
+#: content/templates/layouts/default/page.html:171
 msgid "Version"
 msgstr ""
 
