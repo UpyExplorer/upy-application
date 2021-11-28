@@ -18,6 +18,23 @@
             <p>Menu</p>
         </li>
 
+        {% if perms.global_permissions.app_catalog %}
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-toggle="collapse" href="#ui-product" aria-expanded="false" aria-controls="ui-product">
+                    <i class="mdi mdi-package-variant menu-icon"></i>
+                    <span class="menu-title">{% trans 'Catalog' %}</span>
+                    <i class="menu-arrow"></i>
+                </a>
+                <div class="collapse" id="ui-product">
+                    <ul class="nav flex-column sub-menu">
+                        {% if perms.global_permissions.app_catalog_list_product %}
+                            <li class="nav-item"> <a class="nav-link" href="{% url 'catalog:product_list' %}">{% trans 'Product' %}</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </li>
+        {% endif %}
+
         {% if perms.global_permissions.app_account %}
             <li class="nav-item">
                 <a class="nav-link collapsed" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">

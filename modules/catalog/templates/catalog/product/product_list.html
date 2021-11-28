@@ -1,0 +1,36 @@
+{% extends "layouts/default/dashboard.html" %}
+
+{% block content %}
+
+  <h1>Product List</h1>
+  {% if product_list %}
+  <ul>
+    {% for product in product_list %}
+      <li>
+        <a href="{{ product.get_absolute_url }}">{{ product.name }}</a> ({{product.sku}})
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no product in the library.</p>
+  {% endif %} 
+
+    {% block pagination %}
+        {% if is_paginated %}
+            <div class="pagination">
+                <span class="page-links">
+                    {% if page_obj.has_previous %}
+                        <a href="{{ request.path }}?page={{ page_obj.previous_page_number }}">previous</a>
+                    {% endif %}
+                    <span class="page-current">
+                        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                    </span>
+                    {% if page_obj.has_next %}
+                        <a href="{{ request.path }}?page={{ page_obj.next_page_number }}">next</a>
+                    {% endif %}
+                </span>
+            </div>
+        {% endif %}
+    {% endblock %}
+
+{% endblock %}
