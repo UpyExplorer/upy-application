@@ -1,0 +1,16 @@
+{% extends "layouts/default/dashboard.html" %}
+
+{% block content %}
+  <h1>Product List</h1>
+  {% if info_list %}
+  <ul>
+    {% for produt in info_list %}
+      <li>
+        <a href="{{ produt.get_absolute_url }}">{{ produt.name }}</a> ({{produt.sku}})
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no books in the library.</p>
+  {% endif %} 
+{% endblock %}

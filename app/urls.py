@@ -16,6 +16,7 @@ urlpatterns = [
 
     path('i18n/', include('django.conf.urls.i18n')),
     path('account/', include('modules.account.urls')),
+    path('product/', include('modules.product.urls')),
 ]
 
 if settings.DEBUG:
