@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-28 01:25-0300\n"
+"POT-Creation-Date: 2021-11-28 07:03-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,6 +34,12 @@ msgstr "Seu nome de usuário é"
 #: content/templates/main/index.html:13
 msgid "You are a guest."
 msgstr "Você é um convidado"
+
+#: content/templates/dashboard/log_in.html:40
+#: content/templates/dashboard/sign_up.html:40
+#: content/templates/layouts/default/dashboard.html:170
+msgid "All Rights Reserved"
+msgstr "Todos os direitos reservados"
 
 #: content/templates/layouts/default/dashboard.html:44
 msgid "Welcome back"
@@ -62,12 +68,6 @@ msgstr "Alterar Idioma"
 #: content/templates/layouts/default/page.html:49
 msgid "Logout"
 msgstr "Sair"
-
-#: content/templates/layouts/default/dashboard.html:170
-#: content/templates/layouts/default/login.html:40
-#: content/templates/layouts/default/register.html:40
-msgid "All Rights Reserved"
-msgstr "Todos os direitos reservados"
 
 #: content/templates/layouts/default/dashboard.html:171
 msgid "Version"
@@ -103,6 +103,7 @@ msgstr "Alterar E-mail"
 #: modules/account/templates/account/remind_username.html:23
 #: modules/account/templates/account/resend_activation_code.html:23
 #: modules/account/templates/account/restore_password.html:23
+#: modules/account/templates/account/sign_up.html:130
 msgid "Login"
 msgstr "Entrar"
 
@@ -353,6 +354,10 @@ msgstr "Novo aqui?"
 #: modules/account/templates/account/sign_up.html:13
 msgid "Join us today! It takes only few steps"
 msgstr "Junte-se a nós hoje! Leva apenas alguns passos"
+
+#: modules/account/templates/account/sign_up.html:130
+msgid "You already have an account?"
+msgstr "Você já tem uma conta?"
 
 #: modules/account/utils.py:19
 msgid "Profile activation"
