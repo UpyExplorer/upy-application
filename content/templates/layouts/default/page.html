@@ -82,7 +82,7 @@
 
                         <li class="nav-item nav-profile dropdown">
                             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown" aria-expanded="false" >
-                                <img src="{% static 'media/dashboard/user.jpg' %}" style="border: 2px solid #c4c4c4;" alt="profile" class="profile-img">
+                                <img src="{% static 'media/icon/icon-user.png' %}" style="width: auto; height: 50px;" alt="profile" class="profile-img">
                                 <span class="nav-profile-name">
                                     {% if request.user.is_authenticated %}
                                         {{ request.user.username }}
