@@ -1,0 +1,22 @@
+{% if is_paginated %}
+    <div class="row" style="margin-top: 25px;">
+        <div class="col-sm-12 col-md-5">
+            <div class="dataTables_info" id="order-listing_info" role="status" aria-live="polite">
+                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-7">
+            <div class="dataTables_paginate paging_simple_numbers" id="order-listing_paginate">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    {% if page_obj.has_previous %}
+                        <a type="button"href="{{ request.path }}?page={{ page_obj.previous_page_number }}" class="btn btn btn-outline-secondary">Previous</a>
+                    {% endif %}
+                    <button type="button" class="btn btn-primary">{{ page_obj.number }}</button>
+                    {% if page_obj.has_next %}
+                        <a type="button" href="{{ request.path }}?page={{ page_obj.next_page_number }}" class="btn btn btn-outline-secondary">Next</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endif %}

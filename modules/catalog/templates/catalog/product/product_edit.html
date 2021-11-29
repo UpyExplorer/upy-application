@@ -1,5 +1,9 @@
 {% extends "layouts/default/page.html" %}
 
+{% load static %}
+{% load bootstrap4 %}
+{% load i18n %}
+
 {% block content %}
 <form  id = "contactForm" method= "POST">
     {% csrf_token %}
