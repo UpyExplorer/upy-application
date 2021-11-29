@@ -5,6 +5,7 @@ from django.views.generic import FormView, View
 from modules.catalog.product.forms import ProductForm
 from modules.catalog.product.models import Product
 from modules.utils import get_company_id
+from django.utils.translation import gettext_lazy as _
 
 
 class ProductListView(LoginRequiredMixin, generic.ListView):
@@ -18,8 +19,8 @@ class ProductListView(LoginRequiredMixin, generic.ListView):
 
     def get_context_data(self, **kwargs):
         context = super(ProductListView, self).get_context_data(**kwargs)
-        context['view_path'] = 'Dashboard / Catalog / Product'
-        context['view_name'] = 'Product List'
+        context['view_path'] = _('Dashboard / Catalog / Product')
+        context['view_name'] = _('Product List')
 
         return context
 
@@ -30,8 +31,8 @@ class ProductDetailView(LoginRequiredMixin, generic.DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(ProductDetailView, self).get_context_data(**kwargs)
-        context['view_path'] = 'Dashboard / Catalog / Product / View'
-        context['view_name'] = 'Product View'
+        context['view_path'] = _('Dashboard / Catalog / Product')
+        context['view_name'] = _('Product View')
 
         return context
 
@@ -50,8 +51,8 @@ class ProductFormView(LoginRequiredMixin, View):
 
     def get_context_data(self, **kwargs):
         context = super(ProductFormView, self).get_context_data(**kwargs)
-        context['view_path'] = 'Dashboard / Catalog / Product / Edit'
-        context['view_name'] = 'Product Edit'
+        context['view_path'] = _('Dashboard / Catalog / Product')
+        context['view_name'] = _('Product Edit')
 
         return context
 

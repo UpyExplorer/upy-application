@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-28 07:03-0300\n"
+"POT-Creation-Date: 2021-11-29 04:46-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,89 +26,69 @@ msgstr ""
 msgid "English"
 msgstr ""
 
-#: content/templates/dashboard/index.html:9 content/templates/main/index.html:9
+#: content/templates/dashboard/index.html:16
+#: content/templates/main/index.html:9
 msgid "Your username is"
 msgstr ""
 
-#: content/templates/dashboard/index.html:13
+#: content/templates/dashboard/index.html:20
 #: content/templates/main/index.html:13
 msgid "You are a guest."
 msgstr ""
 
-#: content/templates/layouts/default/page.html:44
+#: content/templates/dashboard/log_in.html:40
+#: content/templates/dashboard/sign_up.html:40
+#: content/templates/layouts/default/page.html:166
+msgid "All Rights Reserved"
+msgstr ""
+
+#: content/templates/layouts/default/page.html:45
 msgid "Welcome back"
 msgstr ""
 
-#: content/templates/layouts/default/page.html:69
+#: content/templates/layouts/default/page.html:70
 msgid "Notifications"
 msgstr ""
 
-#: content/templates/layouts/default/page.html:78
+#: content/templates/layouts/default/page.html:79
 msgid "Welcome to System!"
 msgstr ""
 
-#: content/templates/layouts/default/page.html:118
+#: content/templates/layouts/default/page.html:119
 #: content/templates/layouts/menu.html:69
 msgid "Update Pro"
 msgstr ""
 
-#: content/templates/layouts/default/page.html:124
-#: content/templates/layouts/default/page.html:63
-#: content/templates/main/change_language.html:10
+#: content/templates/layouts/default/page.html:125
+#: content/templates/main/change_language.html:18
 msgid "Change language"
 msgstr ""
 
-#: content/templates/layouts/default/page.html:130
-#: content/templates/layouts/default/page.html:49
+#: content/templates/layouts/default/page.html:131
 msgid "Logout"
 msgstr ""
 
-#: content/templates/layouts/default/page.html:170
-#: content/templates/layouts/default/login.html:40
-#: content/templates/layouts/default/register.html:40
-msgid "All Rights Reserved"
-msgstr ""
-
-#: content/templates/layouts/default/page.html:171
+#: content/templates/layouts/default/page.html:167
 msgid "Version"
 msgstr ""
 
-#: content/templates/layouts/default/page.html:30
-#: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_changes_confirmation.html:6
-#: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_revision_confirmation.html:6
-msgid "Home"
+#: content/templates/layouts/default/pagination.html:9
+msgid "Page"
 msgstr ""
 
-#: content/templates/layouts/default/page.html:40
-#: content/templates/layouts/menu.html:48
-#: modules/account/templates/account/profile/change_password.html:8
-msgid "Change password"
+#: content/templates/layouts/default/pagination.html:9
+msgid "of"
 msgstr ""
 
-#: content/templates/layouts/default/page.html:43
-#: content/templates/layouts/menu.html:52
-#: modules/account/templates/account/profile/change_profile.html:8
-msgid "Change profile"
+#: content/templates/layouts/default/pagination.html:16
+msgid "Previous"
 msgstr ""
 
-#: content/templates/layouts/default/page.html:46
-#: content/templates/layouts/menu.html:56
-#: modules/account/templates/account/profile/change_email.html:8
-#: modules/account/utils.py:28
-msgid "Change email"
-msgstr ""
-
-#: content/templates/layouts/default/page.html:53
-#: modules/account/templates/account/log_in.html:67
-#: modules/account/templates/account/remind_username.html:23
-#: modules/account/templates/account/resend_activation_code.html:23
-#: modules/account/templates/account/restore_password.html:23
-#: modules/account/templates/account/sign_up.html:130
-msgid "Login"
-msgstr ""
-
-#: content/templates/layouts/default/page.html:56
-msgid "Register"
+#: content/templates/layouts/default/pagination.html:20
+#: modules/account/templates/account/remind_username.html:15
+#: modules/account/templates/account/resend_activation_code.html:15
+#: modules/account/templates/account/restore_password.html:15
+msgid "Next"
 msgstr ""
 
 #: content/templates/layouts/menu.html:12
@@ -127,14 +107,30 @@ msgstr ""
 msgid "My Profile"
 msgstr ""
 
-#: content/templates/main/change_language.html:19
+#: content/templates/layouts/menu.html:48
+#: modules/account/templates/account/profile/change_password.html:16
+msgid "Change password"
+msgstr ""
+
+#: content/templates/layouts/menu.html:52
+#: modules/account/templates/account/profile/change_profile.html:16
+msgid "Change profile"
+msgstr ""
+
+#: content/templates/layouts/menu.html:56
+#: modules/account/templates/account/profile/change_email.html:16
+#: modules/account/utils.py:28
+msgid "Change email"
+msgstr ""
+
+#: content/templates/main/change_language.html:27
 msgid "Select the language"
 msgstr ""
 
-#: content/templates/main/change_language.html:29
-#: modules/account/templates/account/profile/change_email.html:15
-#: modules/account/templates/account/profile/change_password.html:15
-#: modules/account/templates/account/profile/change_profile.html:15
+#: content/templates/main/change_language.html:37
+#: modules/account/templates/account/profile/change_email.html:23
+#: modules/account/templates/account/profile/change_password.html:23
+#: modules/account/templates/account/profile/change_profile.html:23
 #: modules/account/templates/account/restore_password_confirm.html:21
 #: venv/lib/python3.9/site-packages/django/forms/widgets.py:405
 #: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_revision_confirmation.html:24
@@ -261,6 +257,14 @@ msgstr ""
 msgid "Sign in to continue."
 msgstr ""
 
+#: modules/account/templates/account/log_in.html:67
+#: modules/account/templates/account/remind_username.html:23
+#: modules/account/templates/account/resend_activation_code.html:23
+#: modules/account/templates/account/restore_password.html:23
+#: modules/account/templates/account/sign_up.html:130
+msgid "Login"
+msgstr ""
+
 #: modules/account/templates/account/log_in.html:82
 msgid "Forgot your password?"
 msgstr ""
@@ -288,12 +292,6 @@ msgstr ""
 
 #: modules/account/templates/account/remind_username.html:8
 msgid "Remind a username"
-msgstr ""
-
-#: modules/account/templates/account/remind_username.html:15
-#: modules/account/templates/account/resend_activation_code.html:15
-#: modules/account/templates/account/restore_password.html:15
-msgid "Next"
 msgstr ""
 
 #: modules/account/templates/account/resend_activation_code.html:8
@@ -402,6 +400,51 @@ msgstr ""
 
 #: modules/account/views.py:378
 msgid "Your password has been set. You may go ahead and login now."
+msgstr ""
+
+#: modules/catalog/product/views.py:22 modules/catalog/product/views.py:34
+#: modules/catalog/product/views.py:54
+msgid "Dashboard / Catalog / Product"
+msgstr ""
+
+#: modules/catalog/product/views.py:23
+msgid "Product List"
+msgstr ""
+
+#: modules/catalog/product/views.py:35
+msgid "Product View"
+msgstr ""
+
+#: modules/catalog/product/views.py:55
+msgid "Product Edit"
+msgstr ""
+
+#: modules/catalog/templates/catalog/product/product_list.html:23
+msgid "Search Here..."
+msgstr ""
+
+#: modules/catalog/templates/catalog/product/product_list.html:55
+msgid "Name"
+msgstr ""
+
+#: modules/catalog/templates/catalog/product/product_list.html:56
+msgid "Sku"
+msgstr ""
+
+#: modules/catalog/templates/catalog/product/product_list.html:57
+msgid "Price Sell"
+msgstr ""
+
+#: modules/catalog/templates/catalog/product/product_list.html:94
+msgid "Options"
+msgstr ""
+
+#: modules/catalog/templates/catalog/product/product_list.html:96
+msgid "View"
+msgstr ""
+
+#: modules/catalog/templates/catalog/product/product_list.html:97
+msgid "Edit"
 msgstr ""
 
 #: venv/lib/python3.9/site-packages/bootstrap4/components.py:17
@@ -1737,6 +1780,11 @@ msgstr ""
 msgid ""
 "This object doesn't have a change history. It probably wasn't added via this "
 "admin site."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_changes_confirmation.html:6
+#: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_revision_confirmation.html:6
+msgid "Home"
 msgstr ""
 
 #: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_changes_confirmation.html:16
