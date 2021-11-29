@@ -126,6 +126,10 @@
             <button class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn">{% trans 'Create' %}</button>
         </div>
 
+        <div class="text-center mt-4 font-weight-light">
+            {% trans "You already have an account?" %} <a href="{% url 'account:log_in' %}" class="text-primary">{% trans 'Login' %}</a>
+        </div>
+
     </form>
 
     <script type="text/javascript">
