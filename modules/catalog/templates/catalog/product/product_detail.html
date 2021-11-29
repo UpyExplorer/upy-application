@@ -1,13 +1,13 @@
-{% extends "layouts/default/page.html" %}
+{% extends "layouts/default/container.html" %}
 
 {% load static %}
 {% load bootstrap4 %}
 {% load i18n %}
 
-{% block content %}
-  <h1>Title: {{ product.name }}</h1>
+{% block container %}
 
-  <p><strong>Name:</strong> <a href="">{{ product.price_sell }}</a></p>
-  <p><strong>Sku:</strong> {{ product.sku }}</p>
+	<h1>Title: {{ product.name }}</h1>
+	<p><strong>Name:</strong> <a href="">{{ product.price_sell }}</a></p>
+	<p><strong>Sku:</strong> {{ product.sku }}</p>
 
 {% endblock %}
