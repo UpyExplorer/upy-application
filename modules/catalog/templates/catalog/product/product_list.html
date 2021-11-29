@@ -6,65 +6,88 @@
 
 {% block content %}
 
-    <div class="main-panel">
-        <div class="content-wrapper">
-        <div class="row">
-            <div class="col-lg-12 grid-margin stretch-card" style="padding-bottom: 35px;">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="container">
-                            <!-- ====================CONTENT===================== -->
-
-                            <h4>Product List</h4>
-                            <hr>
-                            {% if product_list %}
-                                <div class="table-responsive">
-                                    <div class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <table class="table table-striped">
-                                                    <thead>
-                                                        <tr>
-                                                            <th width="5%""></th>
-                                                            <th width="5%">ID</th>
-                                                            <th width="75%">Name</th>
-                                                            <th>SKU</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        {% for product in product_list %}
-                                                        <tr>
-                                                            <td class="py-1">
-                                                                
-                                                                <!-- <i class="mdi mdi-package-variant menu-icon"></i> -->
-                                                                <img src="/content/static/media/icon-product.png" style="height: 45px !important; width: 65px !important">
-                                                            </td>
-                                                            <td>{{ product.id }}</td>
-                                                            <td>{{ product.name }}</td>
-                                                            <td>{{ product.sku }}</td>
-                                                        </tr>
-                                                        {% endfor %}
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-
-                                        {% block pagination %}
-                                            {% include "layouts/default/pagination.html" %}
-                                        {% endblock %}
-
-                                    </div>
-                                </div>
-                            {% else %}
-                                <p>There are no product in the library.</p>
-                            {% endif %}
-
-                            <!-- ====================CONTENT===================== -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="main-panel">
+		<div class="content-wrapper">
+			<div class="row">
+				<div class="col-lg-12 grid-margin stretch-card" style="padding-bottom: 35px;">
+					<div class="card">
+						<div class="card-body">
+							<!-- ====================CONTENT===================== -->
+							<h4>Product List</h4>
+							<hr>
+							{% if product_list %}
+								<div class="table-responsive">
+									<div class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
+										<div class="row">
+											<div class="col-sm-12">
+												<table class="table table-striped">
+													<thead>
+														<tr>
+															<th width="70%">Name</th>
+															<th width="10%">Sku</th>
+															<th width="10%">Price Sell</th>
+															<th></th>
+														</tr>
+														</thead>
+														<tbody>
+															{% for product in product_list %}
+															<tr>
+																<td class="py-1">
+																	<div class="email-wrapper wrapper">
+																		<div class="row align-items-stretch">
+																			<div class="mail-list-container border-right">
+																				<div class="mail-list">
+																					<div class="form-check">
+																						<label class="form-check-label">
+																							<input type="checkbox" class="form-check-input"> <i class="input-helper"></i>
+																						</label>
+																					</div>
+																					<div class="content" style="margin-left: 10px; margin-top: 3px;">
+																						<span ><img src="{% static 'media/icon-product.png' %}" style="width: 35px !important"></span>
+																					</div>
+																					<div class="content"style="margin-left: 10px;">
+																						<p class="sender-name">
+																							{{ product.name }}
+																						</p>
+																						<p class="message_text">
+																							ID: {{ product.id }} | {{ product.description }}
+																						</p>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</td>
+																<td>{{ product.sku }}</td>
+																<td>{{ product.price_sell }}</td>
+																<td>
+																	<div class="btn-group">
+																		<button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Options</button>
+																		<div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 44px, 0px);">
+																			<a class="dropdown-item">View</a>
+																			<a class="dropdown-item">Edit</a>
+																		</div>                          
+																	</div>
+																</td>
+														</tr>
+														{% endfor %}
+													</tbody>
+												</table>
+											</div>
+										</div>
+										{% block pagination %}
+											{% include "layouts/default/pagination.html" %}
+										{% endblock %}
+									</div>
+								</div>
+							{% else %}
+								<p>No products found in your database.</p>
+							{% endif %}
+							<!-- ====================CONTENT===================== -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 {% endblock %}
