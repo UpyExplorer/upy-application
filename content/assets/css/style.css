@@ -20428,7 +20428,7 @@ dl li {
   min-height: 100vh;
   padding-left: 0;
   padding-right: 0;
-  width: calc(100% - 240px);
+  width: calc(100% - 200px);
   transition: width 0.25s ease, margin 0.25s ease;
 }
 
@@ -20498,7 +20498,7 @@ dl li {
   -webkit-transition: width 0.25s ease, background 0.25s ease;
   -moz-transition: width 0.25s ease, background 0.25s ease;
   -ms-transition: width 0.25s ease, background 0.25s ease;
-  width: 240px;
+  width: 200px;
 }
 
 .sidebar .nav {
@@ -20964,7 +20964,7 @@ dl li {
 }
 
 .navbar.navbar-mini.fixed-top {
-  left: 240px;
+  left: 200px;
   transition: left 0.25s ease, width 0.25s ease;
 }
 
