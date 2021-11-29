@@ -27,7 +27,7 @@
                 </a>
                 <div class="collapse" id="ui-product">
                     <ul class="nav flex-column sub-menu">
-                        {% if perms.global_permissions.app_catalog_list_product %}
+                        {% if perms.global_permissions.app_catalog_product_list %}
                             <li class="nav-item"> <a class="nav-link" href="{% url 'catalog:product_list' %}">{% trans 'Product' %}</a></li>
                         {% endif %}
                     </ul>
