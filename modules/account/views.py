@@ -244,6 +244,13 @@ class ChangeProfileView(LoginRequiredMixin, FormView):
     template_name = 'account/profile/change_profile.html'
     form_class = ChangeProfileForm
 
+    def get_context_data(self, **kwargs):
+        context = super(ChangeProfileView, self).get_context_data(**kwargs)
+        context['view_name'] = _('Change Profile')
+        context['view_path'] = _('Dashboard / My Profile / Change Profile')
+
+        return context
+
     def get(self, request, *args, **kwargs):
         if not self.request.user.has_perm('global_permissions.app_account_change_profile_view'):
             raise PermissionDenied
@@ -272,6 +279,13 @@ class ChangeProfileView(LoginRequiredMixin, FormView):
 class ChangeEmailView(LoginRequiredMixin, FormView):
     template_name = 'account/profile/change_email.html'
     form_class = ChangeEmailForm
+
+    def get_context_data(self, **kwargs):
+        context = super(ChangeEmailView, self).get_context_data(**kwargs)
+        context['view_name'] = _('Change Email')
+        context['view_path'] = _('Dashboard / My Profile / Change Email')
+
+        return context
 
     def get(self, request, *args, **kwargs):
         if not self.request.user.has_perm('global_permissions.app_account_change_email_view'):
@@ -348,6 +362,13 @@ class RemindUsernameView(GuestOnlyView, FormView):
 
 class ChangePasswordView(BasePasswordChangeView):
     template_name = 'account/profile/change_password.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(ChangePasswordView, self).get_context_data(**kwargs)
+        context['view_name'] = _('Change Password')
+        context['view_path'] = _('Dashboard / My Profile / Change Password')
+
+        return context
 
     def get(self, request, *args, **kwargs):
         if not self.request.user.has_perm('global_permissions.app_account_change_password_view'):
