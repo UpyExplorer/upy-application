@@ -18,13 +18,22 @@ class ProductListView(LoginRequiredMixin, generic.ListView):
 
     def get_context_data(self, **kwargs):
         context = super(ProductListView, self).get_context_data(**kwargs)
-        context['some_data'] = 'This is just some data'
+        context['view_path'] = 'Dashboard / Catalog / Product'
+        context['view_name'] = 'Product List'
+
         return context
 
 
 class ProductDetailView(LoginRequiredMixin, generic.DetailView):
     template_name = 'catalog/product/product_detail.html'
     model = Product
+
+    def get_context_data(self, **kwargs):
+        context = super(ProductDetailView, self).get_context_data(**kwargs)
+        context['view_path'] = 'Dashboard / Catalog / Product / View'
+        context['view_name'] = 'Product View'
+
+        return context
 
     def get_object(self):
         company_data_id = get_company_id(self.request.user.id)
@@ -38,6 +47,13 @@ class ProductDetailView(LoginRequiredMixin, generic.DetailView):
 class ProductFormView(LoginRequiredMixin, View):
     template_name = 'catalog/product/product_edit.html'
     form_class = ProductForm
+
+    def get_context_data(self, **kwargs):
+        context = super(ProductFormView, self).get_context_data(**kwargs)
+        context['view_path'] = 'Dashboard / Catalog / Product / Edit'
+        context['view_name'] = 'Product Edit'
+
+        return context
 
     def get(self, *args, **kwargs):
         company_data_id = get_company_id(self.request.user.id)
