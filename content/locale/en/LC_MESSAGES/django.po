@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-29 04:46-0300\n"
+"POT-Creation-Date: 2021-11-29 05:24-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,19 +26,19 @@ msgstr ""
 msgid "English"
 msgstr ""
 
-#: content/templates/dashboard/index.html:16
+#: content/templates/dashboard/index.html:20
 #: content/templates/main/index.html:9
 msgid "Your username is"
 msgstr ""
 
-#: content/templates/dashboard/index.html:20
+#: content/templates/dashboard/index.html:24
 #: content/templates/main/index.html:13
 msgid "You are a guest."
 msgstr ""
 
 #: content/templates/dashboard/log_in.html:40
 #: content/templates/dashboard/sign_up.html:40
-#: content/templates/layouts/default/page.html:166
+#: content/templates/layouts/default/page.html:170
 msgid "All Rights Reserved"
 msgstr ""
 
@@ -68,7 +68,7 @@ msgstr ""
 msgid "Logout"
 msgstr ""
 
-#: content/templates/layouts/default/page.html:167
+#: content/templates/layouts/default/page.html:171
 msgid "Version"
 msgstr ""
 
@@ -91,7 +91,7 @@ msgstr ""
 msgid "Next"
 msgstr ""
 
-#: content/templates/layouts/menu.html:12
+#: content/templates/layouts/menu.html:12 modules/dashboard/views.py:12
 msgid "Dashboard"
 msgstr ""
 
@@ -108,18 +108,14 @@ msgid "My Profile"
 msgstr ""
 
 #: content/templates/layouts/menu.html:48
-#: modules/account/templates/account/profile/change_password.html:16
 msgid "Change password"
 msgstr ""
 
 #: content/templates/layouts/menu.html:52
-#: modules/account/templates/account/profile/change_profile.html:16
 msgid "Change profile"
 msgstr ""
 
-#: content/templates/layouts/menu.html:56
-#: modules/account/templates/account/profile/change_email.html:16
-#: modules/account/utils.py:28
+#: content/templates/layouts/menu.html:56 modules/account/utils.py:28
 msgid "Change email"
 msgstr ""
 
@@ -128,9 +124,9 @@ msgid "Select the language"
 msgstr ""
 
 #: content/templates/main/change_language.html:37
-#: modules/account/templates/account/profile/change_email.html:23
-#: modules/account/templates/account/profile/change_password.html:23
-#: modules/account/templates/account/profile/change_profile.html:23
+#: modules/account/templates/account/profile/change_email.html:24
+#: modules/account/templates/account/profile/change_password.html:24
+#: modules/account/templates/account/profile/change_profile.html:24
 #: modules/account/templates/account/restore_password_confirm.html:21
 #: venv/lib/python3.9/site-packages/django/forms/widgets.py:405
 #: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_revision_confirmation.html:24
@@ -374,31 +370,55 @@ msgstr ""
 msgid "A new activation code has been sent to your email address."
 msgstr ""
 
-#: modules/account/views.py:267
+#: modules/account/views.py:249
+msgid "Change Profile"
+msgstr ""
+
+#: modules/account/views.py:250
+msgid "Dashboard / My Profile / Change Profile"
+msgstr ""
+
+#: modules/account/views.py:274
 msgid "Profile data has been successfully updated."
 msgstr ""
 
-#: modules/account/views.py:308
+#: modules/account/views.py:285
+msgid "Change Email"
+msgstr ""
+
+#: modules/account/views.py:286
+msgid "Dashboard / My Profile / Change Email"
+msgstr ""
+
+#: modules/account/views.py:322
 msgid "To complete the change of email address, click on the link sent to it."
 msgstr ""
 
-#: modules/account/views.py:313
+#: modules/account/views.py:327
 msgid "Email successfully changed."
 msgstr ""
 
-#: modules/account/views.py:331
+#: modules/account/views.py:345
 msgid "You have successfully changed your email!"
 msgstr ""
 
-#: modules/account/views.py:344
+#: modules/account/views.py:358
 msgid "Your username has been successfully sent to your email."
 msgstr ""
 
-#: modules/account/views.py:366
+#: modules/account/views.py:368
+msgid "Change Password"
+msgstr ""
+
+#: modules/account/views.py:369
+msgid "Dashboard / My Profile / Change Password"
+msgstr ""
+
+#: modules/account/views.py:387
 msgid "Your password was changed."
 msgstr ""
 
-#: modules/account/views.py:378
+#: modules/account/views.py:399
 msgid "Your password has been set. You may go ahead and login now."
 msgstr ""
 
@@ -445,6 +465,12 @@ msgstr ""
 
 #: modules/catalog/templates/catalog/product/product_list.html:97
 msgid "Edit"
+msgstr ""
+
+#: modules/dashboard/views.py:11
+#: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_changes_confirmation.html:6
+#: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_revision_confirmation.html:6
+msgid "Home"
 msgstr ""
 
 #: venv/lib/python3.9/site-packages/bootstrap4/components.py:17
@@ -1780,11 +1806,6 @@ msgstr ""
 msgid ""
 "This object doesn't have a change history. It probably wasn't added via this "
 "admin site."
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_changes_confirmation.html:6
-#: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_revision_confirmation.html:6
-msgid "Home"
 msgstr ""
 
 #: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_changes_confirmation.html:16
