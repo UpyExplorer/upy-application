@@ -12,9 +12,10 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="container">
+							<h4 class="card-title">{{ view_name }}</h4>
+							<p class="card-description">{{ view_path }}</p>
+							<hr>
                             <!-- ====================CONTENT===================== -->
-                                <h4>{% trans 'Change profile' %}</h4>
-
                                 <form method="post">
                             
                                     {% csrf_token %}

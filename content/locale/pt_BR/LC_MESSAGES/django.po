@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-28 07:03-0300\n"
+"POT-Creation-Date: 2021-11-29 05:31-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,92 +26,72 @@ msgstr "Português-BR"
 msgid "English"
 msgstr "Inglês"
 
-#: content/templates/dashboard/index.html:9 content/templates/main/index.html:9
+#: content/templates/dashboard/index.html:20
+#: content/templates/main/index.html:9
 msgid "Your username is"
 msgstr "Seu nome de usuário é"
 
-#: content/templates/dashboard/index.html:13
+#: content/templates/dashboard/index.html:24
 #: content/templates/main/index.html:13
 msgid "You are a guest."
 msgstr "Você é um convidado"
 
-#: content/templates/layouts/default/page.html:44
+#: content/templates/dashboard/log_in.html:40
+#: content/templates/dashboard/sign_up.html:40
+#: content/templates/layouts/default/page.html:170
+msgid "All Rights Reserved"
+msgstr "Todos os direitos reservados"
+
+#: content/templates/layouts/default/page.html:45
 msgid "Welcome back"
 msgstr "Bem vindo"
 
-#: content/templates/layouts/default/page.html:69
+#: content/templates/layouts/default/page.html:70
 msgid "Notifications"
 msgstr "Notificações"
 
-#: content/templates/layouts/default/page.html:78
+#: content/templates/layouts/default/page.html:79
 msgid "Welcome to System!"
 msgstr "Bem vindo ao Sistema!"
 
-#: content/templates/layouts/default/page.html:118
+#: content/templates/layouts/default/page.html:119
 #: content/templates/layouts/menu.html:69
 msgid "Update Pro"
 msgstr "Melhorar Conta"
 
-#: content/templates/layouts/default/page.html:124
-#: content/templates/layouts/default/page.html:63
-#: content/templates/main/change_language.html:10
+#: content/templates/layouts/default/page.html:125
+#: content/templates/main/change_language.html:18
 msgid "Change language"
 msgstr "Alterar Idioma"
 
-#: content/templates/layouts/default/page.html:130
-#: content/templates/layouts/default/page.html:49
+#: content/templates/layouts/default/page.html:131
 msgid "Logout"
 msgstr "Sair"
-
-#: content/templates/layouts/default/page.html:170
-#: content/templates/layouts/default/login.html:40
-#: content/templates/layouts/default/register.html:40
-msgid "All Rights Reserved"
-msgstr "Todos os direitos reservados"
 
 #: content/templates/layouts/default/page.html:171
 msgid "Version"
 msgstr "Versão"
 
-#: content/templates/layouts/default/page.html:30
-#: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_changes_confirmation.html:6
-#: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_revision_confirmation.html:6
-msgid "Home"
-msgstr "Início"
+#: content/templates/layouts/default/pagination.html:9
+msgid "Page"
+msgstr "Página"
 
-#: content/templates/layouts/default/page.html:40
-#: content/templates/layouts/menu.html:48
-#: modules/account/templates/account/profile/change_password.html:8
-msgid "Change password"
-msgstr "Alterar Senha"
+#: content/templates/layouts/default/pagination.html:9
+msgid "of"
+msgstr "de"
 
-#: content/templates/layouts/default/page.html:43
-#: content/templates/layouts/menu.html:52
-#: modules/account/templates/account/profile/change_profile.html:8
-msgid "Change profile"
-msgstr "Alterar Perfil"
+#: content/templates/layouts/default/pagination.html:16
+msgid "Previous"
+msgstr "Anterior"
 
-#: content/templates/layouts/default/page.html:46
-#: content/templates/layouts/menu.html:56
-#: modules/account/templates/account/profile/change_email.html:8
-#: modules/account/utils.py:28
-msgid "Change email"
-msgstr "Alterar E-mail"
+#: content/templates/layouts/default/pagination.html:20
+#: modules/account/templates/account/remind_username.html:15
+#: modules/account/templates/account/resend_activation_code.html:15
+#: modules/account/templates/account/restore_password.html:15
+msgid "Next"
+msgstr "Próximo"
 
-#: content/templates/layouts/default/page.html:53
-#: modules/account/templates/account/log_in.html:67
-#: modules/account/templates/account/remind_username.html:23
-#: modules/account/templates/account/resend_activation_code.html:23
-#: modules/account/templates/account/restore_password.html:23
-#: modules/account/templates/account/sign_up.html:130
-msgid "Login"
-msgstr "Entrar"
-
-#: content/templates/layouts/default/page.html:56
-msgid "Register"
-msgstr "Cadastrar-se"
-
-#: content/templates/layouts/menu.html:12
+#: content/templates/layouts/menu.html:12 modules/dashboard/views.py:12
 msgid "Dashboard"
 msgstr "Painel de Controle"
 
@@ -127,14 +107,26 @@ msgstr "Produto"
 msgid "My Profile"
 msgstr "Meu Perfil"
 
-#: content/templates/main/change_language.html:19
+#: content/templates/layouts/menu.html:48
+msgid "Change password"
+msgstr "Alterar Senha"
+
+#: content/templates/layouts/menu.html:52
+msgid "Change profile"
+msgstr "Alterar Perfil"
+
+#: content/templates/layouts/menu.html:56 modules/account/utils.py:28
+msgid "Change email"
+msgstr "Alterar E-mail"
+
+#: content/templates/main/change_language.html:27
 msgid "Select the language"
 msgstr "Selecionar Idioma"
 
-#: content/templates/main/change_language.html:29
-#: modules/account/templates/account/profile/change_email.html:15
-#: modules/account/templates/account/profile/change_password.html:15
-#: modules/account/templates/account/profile/change_profile.html:15
+#: content/templates/main/change_language.html:37
+#: modules/account/templates/account/profile/change_email.html:24
+#: modules/account/templates/account/profile/change_password.html:24
+#: modules/account/templates/account/profile/change_profile.html:24
 #: modules/account/templates/account/restore_password_confirm.html:21
 #: venv/lib/python3.9/site-packages/django/forms/widgets.py:405
 #: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_revision_confirmation.html:24
@@ -265,6 +257,14 @@ msgstr "Olá! vamos começar"
 msgid "Sign in to continue."
 msgstr "Faça login para continuar."
 
+#: modules/account/templates/account/log_in.html:67
+#: modules/account/templates/account/remind_username.html:23
+#: modules/account/templates/account/resend_activation_code.html:23
+#: modules/account/templates/account/restore_password.html:23
+#: modules/account/templates/account/sign_up.html:130
+msgid "Login"
+msgstr "Entrar"
+
 #: modules/account/templates/account/log_in.html:82
 msgid "Forgot your password?"
 msgstr "Esqueceu sua senha?"
@@ -293,12 +293,6 @@ msgstr "Entrar novamente"
 #: modules/account/templates/account/remind_username.html:8
 msgid "Remind a username"
 msgstr "Lembre um nome de usuário"
-
-#: modules/account/templates/account/remind_username.html:15
-#: modules/account/templates/account/resend_activation_code.html:15
-#: modules/account/templates/account/restore_password.html:15
-msgid "Next"
-msgstr "Próximo"
 
 #: modules/account/templates/account/resend_activation_code.html:8
 msgid "Resend an activation code"
@@ -389,35 +383,110 @@ msgstr "Você ativou sua conta com sucesso!"
 msgid "A new activation code has been sent to your email address."
 msgstr "Um novo código de ativação foi enviado para o seu endereço de e-mail."
 
-#: modules/account/views.py:267
+#: modules/account/views.py:249
+msgid "Change Profile"
+msgstr "Alterar Perfil"
+
+#: modules/account/views.py:250
+msgid "Dashboard / My Profile / Change Profile"
+msgstr "Painel de Controle / Meu Perfil / Alterar Perfil"
+
+#: modules/account/views.py:274
 msgid "Profile data has been successfully updated."
 msgstr "Os dados do perfil foram atualizados com sucesso."
 
-#: modules/account/views.py:308
+#: modules/account/views.py:285
+msgid "Change Email"
+msgstr "Alterar E-mail"
+
+#: modules/account/views.py:286
+msgid "Dashboard / My Profile / Change Email"
+msgstr "Painel de Controle / Meu Perfil / Alterar E-mail"
+
+#: modules/account/views.py:322
 msgid "To complete the change of email address, click on the link sent to it."
 msgstr ""
 "Para concluir a alteração do endereço de e-mail, clique no link enviado para "
 "ele."
 
-#: modules/account/views.py:313
+#: modules/account/views.py:327
 msgid "Email successfully changed."
 msgstr "Email alterado com sucesso."
 
-#: modules/account/views.py:331
+#: modules/account/views.py:345
 msgid "You have successfully changed your email!"
 msgstr "Você alterou seu e-mail com sucesso!"
 
-#: modules/account/views.py:344
+#: modules/account/views.py:358
 msgid "Your username has been successfully sent to your email."
 msgstr "Seu nome de usuário foi enviado com sucesso para o seu e-mail."
 
-#: modules/account/views.py:366
+#: modules/account/views.py:368
+msgid "Change Password"
+msgstr "Alterar Senha"
+
+#: modules/account/views.py:369
+msgid "Dashboard / My Profile / Change Password"
+msgstr "Painel de Controle / Meu Perfil / Alterar Senha"
+
+#: modules/account/views.py:387
 msgid "Your password was changed."
 msgstr "Sua senha foi modificada."
 
-#: modules/account/views.py:378
+#: modules/account/views.py:399
 msgid "Your password has been set. You may go ahead and login now."
 msgstr "Sua senha foi definida. Você pode ir em frente e entrar agora."
+
+#: modules/catalog/product/views.py:22 modules/catalog/product/views.py:34
+#: modules/catalog/product/views.py:54
+msgid "Dashboard / Catalog / Product"
+msgstr "Painel de Controle / Catálogo / Produto"
+
+#: modules/catalog/product/views.py:23
+msgid "Product List"
+msgstr "Produto"
+
+#: modules/catalog/product/views.py:35
+msgid "Product View"
+msgstr "Produto"
+
+#: modules/catalog/product/views.py:55
+msgid "Product Edit"
+msgstr "Produto"
+
+#: modules/catalog/templates/catalog/product/product_list.html:23
+msgid "Search Here..."
+msgstr "Pesquise Aqui..."
+
+#: modules/catalog/templates/catalog/product/product_list.html:55
+msgid "Name"
+msgstr "Nome"
+
+#: modules/catalog/templates/catalog/product/product_list.html:56
+msgid "Sku"
+msgstr "Sku"
+
+#: modules/catalog/templates/catalog/product/product_list.html:57
+msgid "Price Sell"
+msgstr "Preço de Venda"
+
+#: modules/catalog/templates/catalog/product/product_list.html:94
+msgid "Options"
+msgstr "Opções"
+
+#: modules/catalog/templates/catalog/product/product_list.html:96
+msgid "View"
+msgstr "Visualizar"
+
+#: modules/catalog/templates/catalog/product/product_list.html:97
+msgid "Edit"
+msgstr "Editar"
+
+#: modules/dashboard/views.py:11
+#: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_changes_confirmation.html:6
+#: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_revision_confirmation.html:6
+msgid "Home"
+msgstr "Início"
 
 #: venv/lib/python3.9/site-packages/bootstrap4/components.py:17
 #: venv/lib/python3.9/site-packages/bootstrap4/templates/bootstrap4/form_errors.html:3
@@ -1667,7 +1736,7 @@ msgstr ""
 #: venv/lib/python3.9/site-packages/models_logging/models.py:49
 #: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_revision_confirmation.html:28
 #, fuzzy
-#| msgid "Change profile"
+#| msgid "Change Profile"
 msgid "Changes of object"
 msgstr "Alterar Perfil"
 
@@ -1821,6 +1890,9 @@ msgstr ""
 #: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_revision_confirmation.html:27
 msgid "Object_id"
 msgstr ""
+
+#~ msgid "Register"
+#~ msgstr "Cadastrar-se"
 
 #~ msgid "Forgot your username?"
 #~ msgstr "Esqueceu seu nome de usuário?"

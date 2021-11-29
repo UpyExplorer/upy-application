@@ -2,9 +2,11 @@ from django.views import generic
 from django.shortcuts import Http404, redirect, render
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import FormView, View
+from django.core.exceptions import PermissionDenied
 from modules.catalog.product.forms import ProductForm
 from modules.catalog.product.models import Product
 from modules.utils import get_company_id
+from django.utils.translation import gettext_lazy as _
 
 
 class ProductListView(LoginRequiredMixin, generic.ListView):
@@ -13,18 +15,33 @@ class ProductListView(LoginRequiredMixin, generic.ListView):
     paginate_by = 5
 
     def get_queryset(self):
+        if not self.request.user.has_perm('global_permissions.app_catalog_product_list'):
+            raise PermissionDenied
+
         company_data_id = get_company_id(self.request.user.id)
         return Product.objects.filter(company_data_id=company_data_id).all()
 
     def get_context_data(self, **kwargs):
         context = super(ProductListView, self).get_context_data(**kwargs)
-        context['some_data'] = 'This is just some data'
+        context['view_path'] = _('Dashboard / Catalog / Product')
+        context['view_name'] = _('Product List')
+
         return context
 
 
 class ProductDetailView(LoginRequiredMixin, generic.DetailView):
     template_name = 'catalog/product/product_detail.html'
     model = Product
+
+    def get_context_data(self, **kwargs):
+        if not self.request.user.has_perm('global_permissions.app_catalog_product_detail'):
+            raise PermissionDenied
+
+        context = super(ProductDetailView, self).get_context_data(**kwargs)
+        context['view_path'] = _('Dashboard / Catalog / Product')
+        context['view_name'] = _('Product View')
+
+        return context
 
     def get_object(self):
         company_data_id = get_company_id(self.request.user.id)
@@ -38,6 +55,16 @@ class ProductDetailView(LoginRequiredMixin, generic.DetailView):
 class ProductFormView(LoginRequiredMixin, View):
     template_name = 'catalog/product/product_edit.html'
     form_class = ProductForm
+
+    def get_context_data(self, **kwargs):
+        if not self.request.user.has_perm('global_permissions.app_catalog_product_edit'):
+            raise PermissionDenied
+	
+        context = super(ProductFormView, self).get_context_data(**kwargs)
+        context['view_path'] = _('Dashboard / Catalog / Product')
+        context['view_name'] = _('Product Edit')
+
+        return context
 
     def get(self, *args, **kwargs):
         company_data_id = get_company_id(self.request.user.id)
