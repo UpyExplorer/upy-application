@@ -15,39 +15,39 @@
 						<div class="mb-3">
 							<h3>{{ product.name }}</h3>
 							<div class="d-flex align-items-center justify-content-center">
-							<h5 class="mb-0 mr-2 text-muted">{{ product.sku }}</h5>
+								<h5 class="mb-0 mr-2 text-muted">{{ product.sku }}</h5>
+							</div>
 						</div>
+						<p class="w-75 mx-auto mb-3">{{ product.description }}</p>
 					</div>
-					<p class="w-75 mx-auto mb-3">{{ product.description }}</p>
-				</div>
-				<div class="py-4">
-					<p class="clearfix">
-						<span class="float-left">
-							Price Sell
-						</span>
-						<span class="float-right text-muted">
-							{% trans '$' %} {{ product.price_sell }}
-						</span>
-					</p>
-					<p class="clearfix">
-						<span class="float-left">
-							Price Cost
-						</span>
-						<span class="float-right text-muted">
-							{% trans '$' %} {{ product.price_cost }}
-						</span>
-					</p>
-					<p class="clearfix">
-						<span class="float-left">
-							Price Promo
-						</span>
-						<span class="float-right text-muted">
-							{% trans '$' %} {{ product.price_promo }}
-						</span>
-					</p>
+					<div class="py-4">
+						<p class="clearfix">
+							<span class="float-left">
+								Price Sell
+							</span>
+							<span class="float-right text-muted">
+								{% trans '$' %} {{ product.price_sell }}
+							</span>
+						</p>
+						<p class="clearfix">
+							<span class="float-left">
+								Price Cost
+							</span>
+							<span class="float-right text-muted">
+								{% trans '$' %} {{ product.price_cost }}
+							</span>
+						</p>
+						<p class="clearfix">
+							<span class="float-left">
+								Price Promo
+							</span>
+							<span class="float-right text-muted">
+								{% trans '$' %} {{ product.price_promo }}
+							</span>
+						</p>
+					</div>
 				</div>
 			</div>
-		</div>
 		</div>
 	</div>
 
