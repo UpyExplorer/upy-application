@@ -1,35 +1,14 @@
-{% extends 'layouts/default/page.html' %}
+{% extends 'layouts/default/container.html' %}
 
 {% load bootstrap4 %}
 {% load i18n %}
 
-{% block content %}
+{% block container %}
 
-    <div class="main-panel">
-        <div class="content-wrapper">
-        <div class="row">
-            <div class="col-lg-12 grid-margin stretch-card">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="container">
-							<h4 class="card-title">{{ view_name }}</h4>
-							<p class="card-description">{{ view_path }}</p>
-							<hr>
-                            <!-- ====================CONTENT===================== -->
-                            <form method="post">
-                        
-                                {% csrf_token %}
-                                {% bootstrap_form form %}
-                        
-                                <button class="btn btn-success">{% trans 'Change' %}</button>
-                        
-                            </form>
-                            <!-- ====================CONTENT===================== -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+	<form method="post">
+		{% csrf_token %}
+		{% bootstrap_form form %}
+		<button class="btn btn-success">{% trans 'Change' %}</button>
+	</form>
 
 {% endblock %}

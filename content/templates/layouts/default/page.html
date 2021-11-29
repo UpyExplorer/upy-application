@@ -46,9 +46,6 @@
                         {% endif %}
                     </h6>
                     <ul class="navbar-nav navbar-nav-right">
-                        <li class="nav-item">
-                        </li>
-
                         <!-- <li class="nav-item nav-profile dropdown">
                             <a class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center" id="notificationDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
                                 <i class="mdi mdi-comment-question-outline mx-0"></i>
@@ -93,27 +90,6 @@
                                 </span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-                                <!-- <div class="border-bottom text-center pb-4" style="padding: 10px;">
-                                    <img src="{% static 'media/dashboard/user.jpg' %}" alt="profile" class="img-lg rounded-circle mb-3" style="border: 2px solid #d7d7d7;">
-                                    <div class="mb-3">
-                                        <h3>
-                                            {% if request.user.is_authenticated %}
-                                                {{ request.user.username }}
-                                            {% endif %}
-                                        </h3>
-                                    </div>
-
-                                    <div class="py-4" style="padding-left: 25px; padding-right: 25px;">
-                                        <p class="clearfix">
-                                        <span class="float-left">
-                                            Status
-                                        </span>
-                                        <span class="float-right text-muted">
-                                            Active
-                                        </span>
-                                    </div>
-                                </div> -->
-
                                 <a class="dropdown-item">
                                     <i class="mdi mdi-heart text-primary"></i>
                                         {% trans 'Update Pro' %}
@@ -142,25 +118,6 @@
                 {% bootstrap_messages %}
                 {% block content %}
 
-                    <!-- <div class="main-panel">
-                        <div class="content-wrapper">
-                        <div class="row">
-                            <div class="col-lg-12 grid-margin stretch-card">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="container">
-											<h4 class="card-title">{{ view_name }}</h4>
-											<p class="card-description">{{ view_path }}</p>
-											====================CONTENT=====================
-											<hr>
-											====================CONTENT=====================
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-
                 {% endblock %}
 
                     <footer class="footer" style="position: sticky; bottom: 75px; right: 10px; height: 15px;">
@@ -188,8 +145,8 @@
         <script src="{% static 'js/todolist.js' %}"></script>
         <!-- endinject -->
         <!-- Custom js for this page-->
-				<script src="{% static 'vendor/datatables.net/jquery.dataTables.js' %}"></script> 
-				<script src="{% static 'vendor/datatables.net-bs4/dataTables.bootstrap4.js' %}"></script>
+		<script src="{% static 'vendor/datatables.net/jquery.dataTables.js' %}"></script> 
+		<script src="{% static 'vendor/datatables.net-bs4/dataTables.bootstrap4.js' %}"></script>
         <script src="{% static 'js/data-table.js' %}"></script>
         <!-- End custom js for this page-->
     </body>
