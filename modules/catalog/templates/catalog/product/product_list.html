@@ -8,26 +8,23 @@
 
 {% block option %}
 
-	<div class="col-12 grid-margin stretch-card">
+	<div class="col-12 grid-margin stretch-card" style="margin-bottom: 15px;">
 		<div class="card">
-			<div class="card-body">
-				<div class="navbar-menu-wrapper navbar-search-wrapper d-none d-lg-flex align-items-center">
-					<ul class="navbar-nav mr-lg-2"></ul>
-					<ul class="navbar-nav mr-lg-2">
-						<li class="nav-item nav-search d-none d-lg-block">
-							<div class="input-group">
-								<input type="text" class="form-control" placeholder="{% trans 'Search Here...' %}" aria-label="search" aria-describedby="search">
-							</div>
-						</li>
-					</ul>
-					<ul class="navbar-nav navbar-nav-right">
-						<li class="nav-item">
-							<button type="button" class="btn btn-success btn-icon">
-								<i class="mdi mdi-plus-box"></i>
+			<div class="card-body" style="padding-bottom: 15px; padding-top: 15px;">
+
+				<div class="container">
+					<div class="row">
+						<div class="col-4">
+							<input type="text" class="form-control" placeholder="Pesquise Aqui..." aria-label="search" aria-describedby="search" style="float: left;height: 34px;">
+						</div>
+						<div class="col-8">
+							<button type="button" class="btn btn-success btn-sm" style="float: right;">
+								<i class="mdi mdi-plus-box"></i> {% trans 'Add Product' %}
 							</button>
-						</li>
-					</ul>
+						</div>
+					</div>
 				</div>
+
 			</div>
 		</div>
 	</div>
@@ -80,7 +77,7 @@
 											</div>
 										</td>
 										<td>{{ product.sku }}</td>
-										<td>{{ product.price_sell }}</td>
+										<td>{{ product.price_sell|floatformat:2 }}</td>
 										<td>
 											<div class="btn-group">
 												<button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{% trans 'Options' %}</button>

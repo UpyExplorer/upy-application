@@ -6,6 +6,33 @@
 
 {% get_current_language as language_code %}
 
+{% block option %}
+
+	<div class="col-12 grid-margin stretch-card" style="margin-bottom: 15px;">
+		<div class="card">
+			<div class="card-body" style="padding-bottom: 15px; padding-top: 15px;">
+
+				<div class="container">
+					<div class="row">
+					  	<div class="col">
+							<div class="bd-example">
+								<button type="button" class="btn btn-warning btn-sm" style="float: right; margin-left: 5px;">
+									<i class="mdi mdi-plus-box"></i> {% trans 'Edit Product' %}
+								</button>
+								<button type="button" class="btn btn-danger btn-sm" style="float: right;">
+									<i class="mdi mdi-plus-box"></i> {% trans 'Delete' %}
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+{% endblock %}
+
 {% block container %}
 
 	<div class="col-md-4 grid-margin stretch-card">
@@ -28,7 +55,7 @@
 								{% trans 'Price Sell' %}:
 							</span>
 							<span class="float-right text-muted">
-								{% trans '$' %} {{ product.price_sell }}
+								{% trans '$' %} <b>{{ product.price_sell|floatformat:2 }}</b>
 							</span>
 						</p>
 						<p class="clearfix">
@@ -36,7 +63,7 @@
 								{% trans 'Price Cost' %}:
 							</span>
 							<span class="float-right text-muted">
-								{% trans '$' %} {{ product.price_cost }}
+								{% trans '$' %} <b>{{ product.price_cost|floatformat:2 }}</b>
 							</span>
 						</p>
 						<p class="clearfix">
@@ -44,7 +71,7 @@
 								{% trans 'Price Promo' %}:
 							</span>
 							<span class="float-right text-muted">
-								{% trans '$' %} {{ product.price_promo }}
+								{% trans '$' %} <b>{{ product.price_promo|floatformat:2 }}</b>
 							</span>
 						</p>
 					</div>
@@ -53,7 +80,7 @@
 		</div>
 	</div>
 
-	<div class="col-md-8 grid-margin stretch-card">
+	<div class="col-md-8 grid-margin stretch-card" style="padding-left: 0px;">
 		<div class="card">
 			<div class="card-body">
 				<ul class="nav nav-tabs" id="myTab" role="tablist">
