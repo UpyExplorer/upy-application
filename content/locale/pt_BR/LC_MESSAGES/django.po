@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-29 20:51-0300\n"
+"POT-Creation-Date: 2021-11-29 23:17-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -99,6 +99,7 @@ msgid "Catalog"
 msgstr "Catálogo"
 
 #: content/templates/layouts/menu.html:31
+#: modules/catalog/templates/catalog/product/product_detail.html:89
 msgid "Product"
 msgstr "Produto"
 
@@ -453,46 +454,55 @@ msgstr "Produto"
 msgid "Product Edit"
 msgstr "Produto"
 
-#: modules/catalog/templates/catalog/product/product_detail.html:28
-#: modules/catalog/templates/catalog/product/product_list.html:49
+#: modules/catalog/templates/catalog/product/product_detail.html:20
+msgid "Edit Product"
+msgstr "Editar Produto"
+
+#: modules/catalog/templates/catalog/product/product_detail.html:23
+#: venv/lib/python3.9/site-packages/django/forms/formsets.py:417
+msgid "Delete"
+msgstr "Excluir"
+
+#: modules/catalog/templates/catalog/product/product_detail.html:55
+#: modules/catalog/templates/catalog/product/product_list.html:47
 msgid "Price Sell"
 msgstr "Preço de Venda"
 
-#: modules/catalog/templates/catalog/product/product_detail.html:31
-#: modules/catalog/templates/catalog/product/product_detail.html:39
-#: modules/catalog/templates/catalog/product/product_detail.html:47
+#: modules/catalog/templates/catalog/product/product_detail.html:58
+#: modules/catalog/templates/catalog/product/product_detail.html:66
+#: modules/catalog/templates/catalog/product/product_detail.html:74
 msgid "$"
 msgstr "R$"
 
-#: modules/catalog/templates/catalog/product/product_detail.html:36
+#: modules/catalog/templates/catalog/product/product_detail.html:63
 msgid "Price Cost"
 msgstr "Preço de Custo"
 
-#: modules/catalog/templates/catalog/product/product_detail.html:44
+#: modules/catalog/templates/catalog/product/product_detail.html:71
 msgid "Price Promo"
 msgstr "Preço Promocional"
 
-#: modules/catalog/templates/catalog/product/product_list.html:19
-msgid "Search Here..."
-msgstr "Pesquise Aqui..."
+#: modules/catalog/templates/catalog/product/product_list.html:23
+msgid "Add Product"
+msgstr "Adicionar Produto"
 
-#: modules/catalog/templates/catalog/product/product_list.html:47
+#: modules/catalog/templates/catalog/product/product_list.html:45
 msgid "Name"
 msgstr "Nome"
 
-#: modules/catalog/templates/catalog/product/product_list.html:48
+#: modules/catalog/templates/catalog/product/product_list.html:46
 msgid "Sku"
 msgstr "Sku"
 
-#: modules/catalog/templates/catalog/product/product_list.html:86
+#: modules/catalog/templates/catalog/product/product_list.html:84
 msgid "Options"
 msgstr "Opções"
 
-#: modules/catalog/templates/catalog/product/product_list.html:88
+#: modules/catalog/templates/catalog/product/product_list.html:86
 msgid "View"
 msgstr "Visualizar"
 
-#: modules/catalog/templates/catalog/product/product_list.html:89
+#: modules/catalog/templates/catalog/product/product_list.html:87
 msgid "Edit"
 msgstr "Editar"
 
@@ -1085,10 +1095,6 @@ msgstr[1] ""
 #: venv/lib/python3.9/site-packages/django/forms/formsets.py:405
 #: venv/lib/python3.9/site-packages/django/forms/formsets.py:412
 msgid "Order"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/forms/formsets.py:417
-msgid "Delete"
 msgstr ""
 
 #: venv/lib/python3.9/site-packages/django/forms/models.py:763
@@ -1912,6 +1918,9 @@ msgstr ""
 #: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_revision_confirmation.html:27
 msgid "Object_id"
 msgstr ""
+
+#~ msgid "Search Here..."
+#~ msgstr "Pesquise Aqui..."
 
 #~ msgid "Register"
 #~ msgstr "Cadastrar-se"
