@@ -44,9 +44,9 @@
 						<table class="table table-striped dataTable"> 
 							<thead>
 								<tr role="row">
-									<th width="70%" style="padding-bottom: 10px;padding-top: 10px;">{% trans 'Name' %}</th>
-									<th width="10%" style="padding-bottom: 10px;padding-top: 10px;">{% trans 'Sku' %}</th>
-									<th width="20%" style="padding-bottom: 10px;padding-top: 10px;">{% trans 'Price Sell' %}</th>
+									<th width="50%" style="padding-bottom: 10px;padding-top: 10px;">{% trans 'Name' %}</th>
+									<th width="25%" style="padding-bottom: 10px;padding-top: 10px;">{% trans 'Sku' %}</th>
+									<th width="25%" style="padding-bottom: 10px;padding-top: 10px;">{% trans 'Price Sell' %}</th>
 									<th></th>
 								</tr>
 								</thead>
@@ -85,8 +85,8 @@
 											<div class="btn-group">
 												<button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{% trans 'Options' %}</button>
 												<div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 44px, 0px);">
-													<a class="dropdown-item">{% trans 'View' %}</a>
-													<a class="dropdown-item">{% trans 'Edit' %}</a>
+													<a class="dropdown-item" style="cursor: pointer;" href="{{ product.get_absolute_url }}">{% trans 'View' %}</a>
+													<a class="dropdown-item" style="cursor: pointer;">{% trans 'Edit' %}</a>
 												</div>                          
 											</div>
 										</td>
