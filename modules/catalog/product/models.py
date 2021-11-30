@@ -22,6 +22,8 @@ class Product(models.Model):
     detail_height = models.DecimalField(max_digits=8, decimal_places=5, null=True)
     active = models.BooleanField(null=False, default=False)
     video_url = models.TextField(blank=True, null=True)
+    type = models.CharField(max_length=25, blank=False, null=True)
+    stock = models.DecimalField(max_digits=11, decimal_places=7, null=True, default=0)
 
     def get_absolute_url(self):
         return "/catalog/product/{id}".format(id = self.id)

@@ -22,7 +22,7 @@
         <link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
     </head>
-    <body>
+    <body class="sidebar-icon-only">
         <div class="container-scroller d-flex">
             <!-- Menu -->
             {% include 'layouts/menu.html' %}
@@ -82,7 +82,7 @@
 
                         <li class="nav-item nav-profile dropdown">
                             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown" aria-expanded="false" >
-                                <img src="{% static 'media/dashboard/user.jpg' %}" style="border: 2px solid #c4c4c4;" alt="profile" class="profile-img">
+                                <img src="{% static 'media/icon/icon-user.png' %}" style="width: auto; height: 50px;" alt="profile" class="profile-img">
                                 <span class="nav-profile-name">
                                     {% if request.user.is_authenticated %}
                                         {{ request.user.username }}
@@ -120,7 +120,7 @@
 
                 {% endblock %}
 
-                    <footer class="footer" style="position: sticky; bottom: 75px; right: 10px; height: 15px;">
+                    <footer class="footer" style="position: sticky; bottom: 75px; right: 10px; height: 15px; margin-top: 35px;">
                         <div class="card">
                         <div class="card-body">
                             <div class="d-sm-flex justify-content-center justify-content-sm-between py-2">
@@ -136,7 +136,7 @@
 
         <!-- base:js -->
         <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
-				<script src="{% static 'vendor/js/vendor.bundle.base.js' %}"></script>
+		<script src="{% static 'vendor/js/vendor.bundle.base.js' %}"></script>
         <!-- inject:js -->
         <script src="{% static 'js/off-canvas.js' %}"></script> 
         <script src="{% static 'js/hoverable-collapse.js' %}"></script>
@@ -148,6 +148,7 @@
 		<script src="{% static 'vendor/datatables.net/jquery.dataTables.js' %}"></script> 
 		<script src="{% static 'vendor/datatables.net-bs4/dataTables.bootstrap4.js' %}"></script>
         <script src="{% static 'js/data-table.js' %}"></script>
+		<script src="{% static 'js/tabs.js' %}"></script>
         <!-- End custom js for this page-->
     </body>
 </html>

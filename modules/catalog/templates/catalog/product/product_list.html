@@ -8,26 +8,23 @@
 
 {% block option %}
 
-	<div class="col-12 grid-margin stretch-card">
+	<div class="col-12 grid-margin stretch-card" style="margin-bottom: 15px;">
 		<div class="card">
-			<div class="card-body">
-				<div class="navbar-menu-wrapper navbar-search-wrapper d-none d-lg-flex align-items-center">
-					<ul class="navbar-nav mr-lg-2"></ul>
-					<ul class="navbar-nav mr-lg-2">
-						<li class="nav-item nav-search d-none d-lg-block">
-							<div class="input-group">
-								<input type="text" class="form-control" placeholder="{% trans 'Search Here...' %}" aria-label="search" aria-describedby="search">
-							</div>
-						</li>
-					</ul>
-					<ul class="navbar-nav navbar-nav-right">
-						<li class="nav-item">
-							<button type="button" class="btn btn-success btn-icon">
-								<i class="mdi mdi-plus-box"></i>
+			<div class="card-body" style="padding-bottom: 15px; padding-top: 15px;">
+
+				<div class="container">
+					<div class="row">
+						<div class="col-4">
+							<input type="text" class="form-control" placeholder="Pesquise Aqui..." aria-label="search" aria-describedby="search" style="float: left;height: 34px;">
+						</div>
+						<div class="col-8">
+							<button type="button" class="btn btn-success btn-sm" style="float: right;">
+								<i class="mdi mdi-plus-box"></i> {% trans 'Add Product' %}
 							</button>
-						</li>
-					</ul>
+						</div>
+					</div>
 				</div>
+
 			</div>
 		</div>
 	</div>
@@ -37,16 +34,18 @@
 {% block container %}
 
 	{% if product_list %}
-		<div class="table-responsive">
+		<div class="table-responsive text-nowrap">
 			<div id="order-listing_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer" style="padding-left: 0px !important;">
 				<div class="row">
 					<div class="col-sm-12">
 						<table class="table table-striped dataTable"> 
 							<thead>
 								<tr role="row">
-									<th width="70%" style="padding-bottom: 10px;padding-top: 10px;">{% trans 'Name' %}</th>
-									<th width="10%" style="padding-bottom: 10px;padding-top: 10px;">{% trans 'Sku' %}</th>
-									<th width="20%" style="padding-bottom: 10px;padding-top: 10px;">{% trans 'Price Sell' %}</th>
+									<th width="40%" style="padding-bottom: 10px; padding-top: 10px;">{% trans 'Name' %}</th>
+									<th width="20%" style="padding-bottom: 10px; padding-top: 10px;">{% trans 'Sku' %}</th>
+									<th width="20%" style="padding-bottom: 10px; padding-top: 10px;">{% trans 'Price Sell' %}</th>
+									<th width="20%" style="padding-bottom: 10px; padding-top: 10px;">{% trans 'Stock' %}</th>
+									<th width="15%" style="padding-bottom: 10px; padding-top: 10px;">{% trans 'Created In' %}</th>
 									<th></th>
 								</tr>
 								</thead>
@@ -64,7 +63,7 @@
 																</label>
 															</div>
 															<div class="content" style="margin-left: 10px; margin-top: 3px;">
-																<span ><img src="{% static 'media/icon-product.png' %}" style="width: 35px !important"></span>
+																<span ><img src="{% static 'media/icon/icon-product.png' %}" style="width: 35px !important"></span>
 															</div>
 															<div class="content"style="margin-left: 10px;">
 																<p class="sender-name">
@@ -80,13 +79,15 @@
 											</div>
 										</td>
 										<td>{{ product.sku }}</td>
-										<td>{{ product.price_sell }}</td>
+										<td>{{ product.price_sell|floatformat:2 }}</td>
+										<td>{{ product.stock|floatformat:-2 }}</td>
+										<td>{{ product.creation_time|date:"M d, Y" }}</td>
 										<td>
 											<div class="btn-group">
 												<button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{% trans 'Options' %}</button>
 												<div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 44px, 0px);">
-													<a class="dropdown-item">{% trans 'View' %}</a>
-													<a class="dropdown-item">{% trans 'Edit' %}</a>
+													<a class="dropdown-item" style="cursor: pointer;" href="{{ product.get_absolute_url }}">{% trans 'View' %}</a>
+													<a class="dropdown-item" style="cursor: pointer;">{% trans 'Edit' %}</a>
 												</div>                          
 											</div>
 										</td>
