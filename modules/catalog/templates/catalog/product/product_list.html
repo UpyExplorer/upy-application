@@ -14,12 +14,9 @@
 
 				<div class="container">
 					<div class="row">
-						<div class="col-4">
-							<input type="text" class="form-control" placeholder="Pesquise Aqui..." aria-label="search" aria-describedby="search" style="float: left;height: 34px;">
-						</div>
-						<div class="col-8">
-							<button type="button" class="btn btn-success btn-sm" style="float: right;">
-								<i class="mdi mdi-plus-box"></i> {% trans 'Add Product' %}
+						<div class="col-12">
+							<button type="button" class="btn btn-success btn-sm" title="{% trans 'Add Product' %}" style="float: right;">
+								<i class="mdi mdi-plus-box"></i> 
 							</button>
 						</div>
 					</div>
@@ -85,7 +82,7 @@
 										<td>
 											<div class="btn-group">
 												<button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{% trans 'Options' %}</button>
-												<div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 44px, 0px);">
+												<div class="dropdown-menu" x-placement="bottom-start">
 													<a class="dropdown-item" style="cursor: pointer;" href="{{ product.get_absolute_url }}">{% trans 'View' %}</a>
 													<a class="dropdown-item" style="cursor: pointer;">{% trans 'Edit' %}</a>
 												</div>                          

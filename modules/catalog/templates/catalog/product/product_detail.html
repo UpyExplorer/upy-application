@@ -14,15 +14,13 @@
 
 				<div class="container">
 					<div class="row">
-					  	<div class="col">
-							<div class="bd-example">
-								<button type="button" class="btn btn-warning btn-sm" style="float: right; margin-left: 5px;">
-									<i class="mdi mdi-plus-box"></i> {% trans 'Edit Product' %}
-								</button>
-								<button type="button" class="btn btn-danger btn-sm" style="float: right;">
-									<i class="mdi mdi-plus-box"></i> {% trans 'Delete' %}
-								</button>
-							</div>
+					  	<div class="col-12">
+							<button type="button" class="btn btn-warning btn-sm" title="{% trans 'Edit Product' %}" style="float: right; margin-left: 5px;">
+								<i class="mdi mdi-lead-pencil"></i>
+							</button>
+							<button type="button" class="btn btn-danger btn-sm" title="{% trans 'Delete' %}" style="float: right;">
+								<i class="mdi mdi-delete"></i>
+							</button>
 						</div>
 					</div>
 				</div>
@@ -80,7 +78,7 @@
 		</div>
 	</div>
 
-	<div class="col-md-8 grid-margin stretch-card" style="padding-left: 0px;">
+	<div class="col-md-8 grid-margin stretch-card">
 		<div class="card">
 			<div class="card-body">
 				<ul class="nav nav-tabs" id="myTab" role="tablist">
