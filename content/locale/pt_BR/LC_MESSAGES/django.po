@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-29 23:17-0300\n"
+"POT-Creation-Date: 2021-11-29 23:49-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -464,7 +464,7 @@ msgid "Delete"
 msgstr "Excluir"
 
 #: modules/catalog/templates/catalog/product/product_detail.html:55
-#: modules/catalog/templates/catalog/product/product_list.html:47
+#: modules/catalog/templates/catalog/product/product_list.html:46
 msgid "Price Sell"
 msgstr "Preço de Venda"
 
@@ -482,27 +482,35 @@ msgstr "Preço de Custo"
 msgid "Price Promo"
 msgstr "Preço Promocional"
 
-#: modules/catalog/templates/catalog/product/product_list.html:23
+#: modules/catalog/templates/catalog/product/product_list.html:22
 msgid "Add Product"
 msgstr "Adicionar Produto"
 
-#: modules/catalog/templates/catalog/product/product_list.html:45
+#: modules/catalog/templates/catalog/product/product_list.html:44
 msgid "Name"
 msgstr "Nome"
 
-#: modules/catalog/templates/catalog/product/product_list.html:46
+#: modules/catalog/templates/catalog/product/product_list.html:45
 msgid "Sku"
 msgstr "Sku"
 
-#: modules/catalog/templates/catalog/product/product_list.html:84
+#: modules/catalog/templates/catalog/product/product_list.html:47
+msgid "Stock"
+msgstr "Estoque"
+
+#: modules/catalog/templates/catalog/product/product_list.html:48
+msgid "Created In"
+msgstr "Criado Em"
+
+#: modules/catalog/templates/catalog/product/product_list.html:87
 msgid "Options"
 msgstr "Opções"
 
-#: modules/catalog/templates/catalog/product/product_list.html:86
+#: modules/catalog/templates/catalog/product/product_list.html:89
 msgid "View"
 msgstr "Visualizar"
 
-#: modules/catalog/templates/catalog/product/product_list.html:87
+#: modules/catalog/templates/catalog/product/product_list.html:90
 msgid "Edit"
 msgstr "Editar"
 
