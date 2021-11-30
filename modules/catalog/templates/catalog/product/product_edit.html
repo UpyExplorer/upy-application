@@ -30,19 +30,22 @@
 
 {% block container %}
 
-	<!-- <form method="post">
-		{% csrf_token %}
-		
-		{{ form.non_field_errors }}
-		<div class="fieldWrapper">
-			{{ form.name.errors }}
-			<label for="{{ form.subject.name }}">Name:</label>
-			{{ form.name }}
-		</div>
-		<input type="submit" class="btn_save" style="display: none;">
-	</form> -->
-
 	<form method="post">
+		{% csrf_token %}
+		{% for field in form %}
+		<div class="fieldWrapper">
+			{{ field.errors }}
+			{{ field.label_tag }} {{ field }}
+			{% if field.help_text %}
+			<p class="help">{{ field.help_text|safe }}</p>
+			{% endif %}
+		</div>
+	{% endfor %}
+
+		<input type="submit" class="btn" >
+	</form>
+
+	<!-- <form method="post">
 		
 		{% csrf_token %}
 
@@ -73,6 +76,6 @@
             <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn btn_save" value="{% trans 'Update' %}">
         </div>
 
-	</form>
+	</form> -->
 
 {% endblock %}
