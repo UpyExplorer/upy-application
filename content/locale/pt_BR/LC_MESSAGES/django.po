@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-29 05:31-0300\n"
+"POT-Creation-Date: 2021-11-29 20:51-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,7 +38,7 @@ msgstr "Você é um convidado"
 
 #: content/templates/dashboard/log_in.html:40
 #: content/templates/dashboard/sign_up.html:40
-#: content/templates/layouts/default/page.html:170
+#: content/templates/layouts/default/page.html:127
 msgid "All Rights Reserved"
 msgstr "Todos os direitos reservados"
 
@@ -46,29 +46,28 @@ msgstr "Todos os direitos reservados"
 msgid "Welcome back"
 msgstr "Bem vindo"
 
-#: content/templates/layouts/default/page.html:70
+#: content/templates/layouts/default/page.html:67
 msgid "Notifications"
 msgstr "Notificações"
 
-#: content/templates/layouts/default/page.html:79
+#: content/templates/layouts/default/page.html:76
 msgid "Welcome to System!"
 msgstr "Bem vindo ao Sistema!"
 
-#: content/templates/layouts/default/page.html:119
+#: content/templates/layouts/default/page.html:95
 #: content/templates/layouts/menu.html:69
 msgid "Update Pro"
 msgstr "Melhorar Conta"
 
-#: content/templates/layouts/default/page.html:125
-#: content/templates/main/change_language.html:18
+#: content/templates/layouts/default/page.html:101
 msgid "Change language"
 msgstr "Alterar Idioma"
 
-#: content/templates/layouts/default/page.html:131
+#: content/templates/layouts/default/page.html:107
 msgid "Logout"
 msgstr "Sair"
 
-#: content/templates/layouts/default/page.html:171
+#: content/templates/layouts/default/page.html:128
 msgid "Version"
 msgstr "Versão"
 
@@ -119,14 +118,14 @@ msgstr "Alterar Perfil"
 msgid "Change email"
 msgstr "Alterar E-mail"
 
-#: content/templates/main/change_language.html:27
+#: content/templates/main/change_language.html:17
 msgid "Select the language"
 msgstr "Selecionar Idioma"
 
-#: content/templates/main/change_language.html:37
-#: modules/account/templates/account/profile/change_email.html:24
-#: modules/account/templates/account/profile/change_password.html:24
-#: modules/account/templates/account/profile/change_profile.html:24
+#: content/templates/main/change_language.html:27
+#: modules/account/templates/account/profile/change_email.html:11
+#: modules/account/templates/account/profile/change_password.html:11
+#: modules/account/templates/account/profile/change_profile.html:11
 #: modules/account/templates/account/restore_password_confirm.html:21
 #: venv/lib/python3.9/site-packages/django/forms/widgets.py:405
 #: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_revision_confirmation.html:24
@@ -437,48 +436,63 @@ msgstr "Sua senha foi modificada."
 msgid "Your password has been set. You may go ahead and login now."
 msgstr "Sua senha foi definida. Você pode ir em frente e entrar agora."
 
-#: modules/catalog/product/views.py:22 modules/catalog/product/views.py:34
-#: modules/catalog/product/views.py:54
+#: modules/catalog/product/views.py:19 modules/catalog/product/views.py:41
+#: modules/catalog/product/views.py:70
 msgid "Dashboard / Catalog / Product"
 msgstr "Painel de Controle / Catálogo / Produto"
 
-#: modules/catalog/product/views.py:23
+#: modules/catalog/product/views.py:20
 msgid "Product List"
 msgstr "Produto"
 
-#: modules/catalog/product/views.py:35
+#: modules/catalog/product/views.py:42
 msgid "Product View"
 msgstr "Produto"
 
-#: modules/catalog/product/views.py:55
+#: modules/catalog/product/views.py:69
 msgid "Product Edit"
 msgstr "Produto"
 
-#: modules/catalog/templates/catalog/product/product_list.html:23
-msgid "Search Here..."
-msgstr "Pesquise Aqui..."
-
-#: modules/catalog/templates/catalog/product/product_list.html:55
-msgid "Name"
-msgstr "Nome"
-
-#: modules/catalog/templates/catalog/product/product_list.html:56
-msgid "Sku"
-msgstr "Sku"
-
-#: modules/catalog/templates/catalog/product/product_list.html:57
+#: modules/catalog/templates/catalog/product/product_detail.html:28
+#: modules/catalog/templates/catalog/product/product_list.html:49
 msgid "Price Sell"
 msgstr "Preço de Venda"
 
-#: modules/catalog/templates/catalog/product/product_list.html:94
+#: modules/catalog/templates/catalog/product/product_detail.html:31
+#: modules/catalog/templates/catalog/product/product_detail.html:39
+#: modules/catalog/templates/catalog/product/product_detail.html:47
+msgid "$"
+msgstr "R$"
+
+#: modules/catalog/templates/catalog/product/product_detail.html:36
+msgid "Price Cost"
+msgstr "Preço de Custo"
+
+#: modules/catalog/templates/catalog/product/product_detail.html:44
+msgid "Price Promo"
+msgstr "Preço Promocional"
+
+#: modules/catalog/templates/catalog/product/product_list.html:19
+msgid "Search Here..."
+msgstr "Pesquise Aqui..."
+
+#: modules/catalog/templates/catalog/product/product_list.html:47
+msgid "Name"
+msgstr "Nome"
+
+#: modules/catalog/templates/catalog/product/product_list.html:48
+msgid "Sku"
+msgstr "Sku"
+
+#: modules/catalog/templates/catalog/product/product_list.html:86
 msgid "Options"
 msgstr "Opções"
 
-#: modules/catalog/templates/catalog/product/product_list.html:96
+#: modules/catalog/templates/catalog/product/product_list.html:88
 msgid "View"
 msgstr "Visualizar"
 
-#: modules/catalog/templates/catalog/product/product_list.html:97
+#: modules/catalog/templates/catalog/product/product_list.html:89
 msgid "Edit"
 msgstr "Editar"
 
@@ -487,6 +501,14 @@ msgstr "Editar"
 #: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_revision_confirmation.html:6
 msgid "Home"
 msgstr "Início"
+
+#: modules/main/views.py:16
+msgid "Dashboard / Change Language"
+msgstr "Painel de Controle / Alterar Idioma"
+
+#: modules/main/views.py:17
+msgid "Change Language"
+msgstr "Alterar Idioma"
 
 #: venv/lib/python3.9/site-packages/bootstrap4/components.py:17
 #: venv/lib/python3.9/site-packages/bootstrap4/templates/bootstrap4/form_errors.html:3
