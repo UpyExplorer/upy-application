@@ -79,7 +79,7 @@
 											</div>
 										</td>
 										<td>{{ product.sku }}</td>
-										<td>{{ product.price_sell|floatformat:2 }}</td>
+										<td>{% trans '$' %} {{ product.price_sell|floatformat:2 }}</td>
 										<td>{{ product.stock|floatformat:-2 }}</td>
 										<td>{{ product.creation_time|date:"M d, Y" }}</td>
 										<td>
