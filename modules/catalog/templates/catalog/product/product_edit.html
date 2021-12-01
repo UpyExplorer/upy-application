@@ -30,7 +30,39 @@
 
 {% block container %}
 
-	<form method="post">
+<form method="post" novalidate>
+	{% csrf_token %}
+  
+	{{ form.non_field_errors }}
+  
+	{{ form.source.errors }}
+	{{ form.source }}
+  
+	<table border="1">
+  
+		<tr>
+			<th>{{ form.name.label_tag }}</th>
+			<td>
+			  {{ form.name.errors }}
+			  {{ form.name }}
+			</td>
+		  </tr>
+
+		  <tr>
+			<th>{{ form.sku.label_tag }}</th>
+			<td>
+			  {{ form.sku.errors }}
+			  {{ form.sku }}
+			</td>
+		  </tr>
+  
+
+  
+	</table>
+  
+	<button type="submit">Submit</button>
+  </form>
+	<!-- <form method="post">
 		{% csrf_token %}
 		{% for field in form %}
 		<div class="fieldWrapper">
@@ -43,7 +75,7 @@
 	{% endfor %}
 
 		<input type="submit" class="btn" >
-	</form>
+	</form> -->
 
 	<!-- <form method="post">
 		
