@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-29 23:49-0300\n"
+"POT-Creation-Date: 2021-12-01 23:10-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,9 +38,9 @@ msgstr "Você é um convidado"
 
 #: content/templates/dashboard/log_in.html:40
 #: content/templates/dashboard/sign_up.html:40
-#: content/templates/layouts/default/page.html:127
-msgid "All Rights Reserved"
-msgstr "Todos os direitos reservados"
+#: content/templates/layouts/footer.html:8
+msgid "All rights reserved for"
+msgstr "Todos os direitos reservados para"
 
 #: content/templates/layouts/default/page.html:45
 msgid "Welcome back"
@@ -57,7 +57,7 @@ msgstr "Bem vindo ao Sistema!"
 #: content/templates/layouts/default/page.html:95
 #: content/templates/layouts/menu.html:69
 msgid "Update Pro"
-msgstr "Melhorar Conta"
+msgstr "Atualizar Conta"
 
 #: content/templates/layouts/default/page.html:101
 msgid "Change language"
@@ -67,28 +67,22 @@ msgstr "Alterar Idioma"
 msgid "Logout"
 msgstr "Sair"
 
-#: content/templates/layouts/default/page.html:128
+#: content/templates/layouts/default/page_read.html:34
+msgid "Edit Product"
+msgstr "Editar Produto"
+
+#: content/templates/layouts/default/page_read.html:40
+#: venv/lib/python3.9/site-packages/django/forms/formsets.py:417
+msgid "Delete"
+msgstr "Excluir"
+
+#: content/templates/layouts/default/page_read.html:72
+msgid "Basic information"
+msgstr "Informações Básicas"
+
+#: content/templates/layouts/footer.html:9
 msgid "Version"
 msgstr "Versão"
-
-#: content/templates/layouts/default/pagination.html:9
-msgid "Page"
-msgstr "Página"
-
-#: content/templates/layouts/default/pagination.html:9
-msgid "of"
-msgstr "de"
-
-#: content/templates/layouts/default/pagination.html:16
-msgid "Previous"
-msgstr "Anterior"
-
-#: content/templates/layouts/default/pagination.html:20
-#: modules/account/templates/account/remind_username.html:15
-#: modules/account/templates/account/resend_activation_code.html:15
-#: modules/account/templates/account/restore_password.html:15
-msgid "Next"
-msgstr "Próximo"
 
 #: content/templates/layouts/menu.html:12 modules/dashboard/views.py:12
 msgid "Dashboard"
@@ -98,8 +92,7 @@ msgstr "Painel de Controle"
 msgid "Catalog"
 msgstr "Catálogo"
 
-#: content/templates/layouts/menu.html:31
-#: modules/catalog/templates/catalog/product/product_read.html:89
+#: content/templates/layouts/menu.html:31 modules/catalog/product/views.py:43
 msgid "Product"
 msgstr "Produto"
 
@@ -118,6 +111,25 @@ msgstr "Alterar Perfil"
 #: content/templates/layouts/menu.html:56 modules/account/utils.py:28
 msgid "Change email"
 msgstr "Alterar E-mail"
+
+#: content/templates/layouts/pagination.html:9
+msgid "Page"
+msgstr "Página"
+
+#: content/templates/layouts/pagination.html:9
+msgid "of"
+msgstr "de"
+
+#: content/templates/layouts/pagination.html:16
+msgid "Previous"
+msgstr "Anterior"
+
+#: content/templates/layouts/pagination.html:20
+#: modules/account/templates/account/remind_username.html:15
+#: modules/account/templates/account/resend_activation_code.html:15
+#: modules/account/templates/account/restore_password.html:15
+msgid "Next"
+msgstr "Próximo"
 
 #: content/templates/main/change_language.html:17
 msgid "Select the language"
@@ -438,7 +450,7 @@ msgid "Your password has been set. You may go ahead and login now."
 msgstr "Sua senha foi definida. Você pode ir em frente e entrar agora."
 
 #: modules/catalog/product/views.py:19 modules/catalog/product/views.py:41
-#: modules/catalog/product/views.py:70
+#: modules/catalog/product/views.py:80 modules/catalog/product/views.py:103
 msgid "Dashboard / Catalog / Product"
 msgstr "Painel de Controle / Catálogo / Produto"
 
@@ -450,31 +462,63 @@ msgstr "Produto"
 msgid "Product View"
 msgstr "Produto"
 
-#: modules/catalog/product/views.py:69
+#: modules/catalog/product/views.py:79 modules/catalog/product/views.py:102
 msgid "Product Edit"
 msgstr "Produto"
 
-#: modules/catalog/templates/catalog/product/product_read.html:20
-msgid "Edit Product"
-msgstr "Editar Produto"
+#: modules/catalog/templates/catalog/product/product_list.html:18
+msgid "Add Product"
+msgstr "Adicionar Produto"
 
-#: modules/catalog/templates/catalog/product/product_read.html:23
-#: venv/lib/python3.9/site-packages/django/forms/formsets.py:417
-msgid "Delete"
-msgstr "Excluir"
+#: modules/catalog/templates/catalog/product/product_list.html:41
+#: modules/catalog/templates/catalog/product/product_read.html:26
+msgid "Name"
+msgstr "Nome"
 
-#: modules/catalog/templates/catalog/product/product_read.html:55
-#: modules/catalog/templates/catalog/product/product_list.html:46
+#: modules/catalog/templates/catalog/product/product_list.html:42
+#: modules/catalog/templates/catalog/product/product_read.html:30
+msgid "Sku"
+msgstr "Sku"
+
+#: modules/catalog/templates/catalog/product/product_list.html:43
+#: modules/catalog/templates/catalog/product/product_read.html:57
 msgid "Price Sell"
 msgstr "Preço de Venda"
 
+#: modules/catalog/templates/catalog/product/product_list.html:44
+#: modules/catalog/templates/catalog/product/product_read.html:48
+msgid "Stock"
+msgstr "Estoque"
+
+#: modules/catalog/templates/catalog/product/product_list.html:45
+msgid "Created In"
+msgstr "Criado Em"
+
+#: modules/catalog/templates/catalog/product/product_list.html:79
 #: modules/catalog/templates/catalog/product/product_read.html:58
-#: modules/catalog/templates/catalog/product/product_read.html:66
-#: modules/catalog/templates/catalog/product/product_read.html:74
+#: modules/catalog/templates/catalog/product/product_read.html:65
+#: modules/catalog/templates/catalog/product/product_read.html:72
 msgid "$"
 msgstr "R$"
 
-#: modules/catalog/templates/catalog/product/product_read.html:63
+#: modules/catalog/templates/catalog/product/product_list.html:84
+#: modules/catalog/templates/catalog/product/product_read.html:39
+msgid "Options"
+msgstr "Opções"
+
+#: modules/catalog/templates/catalog/product/product_list.html:86
+msgid "View"
+msgstr "Visualizar"
+
+#: modules/catalog/templates/catalog/product/product_list.html:87
+msgid "Edit"
+msgstr "Editar"
+
+#: modules/catalog/templates/catalog/product/product_read.html:37
+msgid "Product Type"
+msgstr "Tipo de Produto"
+
+#: modules/catalog/templates/catalog/product/product_read.html:64
 msgid "Price Cost"
 msgstr "Preço de Custo"
 
@@ -482,37 +526,17 @@ msgstr "Preço de Custo"
 msgid "Price Promo"
 msgstr "Preço Promocional"
 
-#: modules/catalog/templates/catalog/product/product_list.html:22
-msgid "Add Product"
-msgstr "Adicionar Produto"
+#: modules/catalog/templates/catalog/product/product_read.html:80
+msgid "Description"
+msgstr "Descrição"
 
-#: modules/catalog/templates/catalog/product/product_list.html:44
-msgid "Name"
-msgstr "Nome"
+#: modules/catalog/templates/catalog/product/product_update.html:16
+msgid "Save Product"
+msgstr "Salvar Produto"
 
-#: modules/catalog/templates/catalog/product/product_list.html:45
-msgid "Sku"
-msgstr "Sku"
-
-#: modules/catalog/templates/catalog/product/product_list.html:47
-msgid "Stock"
-msgstr "Estoque"
-
-#: modules/catalog/templates/catalog/product/product_list.html:48
-msgid "Created In"
-msgstr "Criado Em"
-
-#: modules/catalog/templates/catalog/product/product_list.html:87
-msgid "Options"
-msgstr "Opções"
-
-#: modules/catalog/templates/catalog/product/product_list.html:89
-msgid "View"
-msgstr "Visualizar"
-
-#: modules/catalog/templates/catalog/product/product_list.html:90
-msgid "Edit"
-msgstr "Editar"
+#: modules/catalog/templates/catalog/product/product_update.html:75
+msgid "Update"
+msgstr "Atualizar"
 
 #: modules/dashboard/views.py:11
 #: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_changes_confirmation.html:6
@@ -1926,6 +1950,9 @@ msgstr ""
 #: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_revision_confirmation.html:27
 msgid "Object_id"
 msgstr ""
+
+#~ msgid "All Rights Reserved"
+#~ msgstr "Todos os direitos reservados"
 
 #~ msgid "Search Here..."
 #~ msgstr "Pesquise Aqui..."
