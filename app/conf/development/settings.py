@@ -88,7 +88,7 @@ STATICFILES_FINDERS = (
 )
 
 PIPELINE = {
-    'PIPELINE_ENABLED': False,
+    'PIPELINE_ENABLED': True,
     'JAVASCRIPT': {
         'app': {
             'source_filenames': (
@@ -115,6 +115,11 @@ PIPELINE = {
         },
     },
 }
+
+PIPELINE['COMPILERS'] = (
+  'pipeline.compilers.coffee.CoffeeScriptCompiler',
+  'pipeline.compilers.stylus.StylusCompiler',
+)
 
 MIDDLEWARE_CLASSES = (
    'django.middleware.gzip.GZipMiddleware',
