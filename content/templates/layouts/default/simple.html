@@ -15,11 +15,10 @@
         <link rel="icon" href="{% static 'favicon.ico' %}">
         <title>UpyExplorer</title>
 
-        <link rel="stylesheet" href="{% static 'mdi/css/materialdesignicons.min.css' %}">
-        <link rel="stylesheet" href="{% static 'css/vendor.bundle.base.css' %}">
+        <!-- CSS -->
+        {% include 'layouts/include_css.html' %}
+        <!-- CSS -->
 
-        <link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
-        <link rel="stylesheet" href="{% static 'css/style.css' %}">
     </head>
 
     <body>
@@ -41,15 +40,9 @@
             </div>
         </div>
 
-        <!-- base:js -->
-        <script src="{% static 'vendor/js/vendor.bundle.base.js' %}"></script>
-        <!-- inject:js -->
-        <script src="{% static 'js/components/off-canvas.js' %}"></script> 
-        <script src="{% static 'js/components/hoverable-collapse.js' %}"></script>
-        <script src="{% static 'js/components/template.js' %}"></script>
-        <!-- endinject -->
-        <!-- Custom js for this page-->
-        <script src="{% static 'js/components/dashboard.js' %}"></script> 
-        <!-- End custom js for this page-->
+        <!-- JS -->
+        {% include 'layouts/include_js.html' %}
+        <!-- JS -->
+
     </body>
 </html>

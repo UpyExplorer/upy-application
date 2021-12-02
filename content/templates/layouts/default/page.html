@@ -15,12 +15,10 @@
         <link rel="icon" href="{% static 'favicon.ico' %}">
         <title>UpyExplorer</title>
 
-        <link rel="stylesheet" href="{% static 'mdi/css/materialdesignicons.min.css' %}">
-        <link rel="stylesheet" href="{% static 'css/vendor.bundle.base.css' %}">
-        <link rel="stylesheet" href="{% static 'vendor/datatables.net-bs4/dataTables.bootstrap4.css' %}">
+        <!-- CSS -->
+        {% include 'layouts/include_css.html' %}
+        <!-- CSS -->
 
-        <link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
-        <link rel="stylesheet" href="{% static 'css/style.css' %}">
     </head>
     <body class="sidebar-icon-only">
         <div class="container-scroller d-flex">
@@ -127,25 +125,9 @@
             </div>
         </div>
 
-        <!-- base:js -->
-        <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
-		<script src="{% static 'vendor/js/vendor.bundle.base.js' %}"></script>
-        <!-- inject:js -->
-        <script src="{% static 'js/components/components/off-canvas.js' %}"></script> 
-        <script src="{% static 'js/components/components/hoverable-collapse.js' %}"></script>
-        <script src="{% static 'js/components/components/template.js' %}"></script>
-        <script src="{% static 'js/components/components/settings.js' %}"></script>
-        <script src="{% static 'js/components/components/todolist.js' %}"></script>
-        <!-- endinject -->
-        <!-- Custom js for this page-->
-		<script src="{% static 'vendor/datatables.net/jquery.dataTables.js' %}"></script> 
-		<script src="{% static 'vendor/datatables.net-bs4/dataTables.bootstrap4.js' %}"></script>
-        <script src="{% static 'js/components/components/data-table.js' %}"></script>
-		<script src="{% static 'js/components/components/tabs.js' %}"></script>
-        <!-- End custom js for this page-->
+        <!-- JS -->
+        {% include 'layouts/include_js.html' %}
+        <!-- JS -->
 
-        <!-- App -->
-        <script src="{% static 'js/app.js' %}"></script>
-        <!-- App -->
     </body>
 </html>
