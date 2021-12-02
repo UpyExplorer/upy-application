@@ -11,6 +11,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 DEBUG = os.environ.get('DEBUG')
+print("===========DEBUG===========")
+print(os.environ.get('DEBUG'))
+print("===========DEBUG===========")
 ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOSTS')]
 
 SITE_ID = 1
