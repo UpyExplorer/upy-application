@@ -1,7 +1,7 @@
 from django.views import generic
+from django.urls import reverse
 from django.shortcuts import Http404, redirect, render
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.views.generic import FormView, View
 from django.core.exceptions import PermissionDenied
 from modules.catalog.product.forms import ProductForm
 from modules.catalog.product.models import Product
@@ -14,13 +14,6 @@ class ProductListView(LoginRequiredMixin, generic.ListView):
     model = Product
     paginate_by = 5
 
-    def get_queryset(self):
-        if not self.request.user.has_perm('global_permissions.app_catalog_product_list'):
-            raise PermissionDenied
-
-        company_data_id = get_company_id(self.request.user.id)
-        return Product.objects.filter(company_data_id=company_data_id).all()
-
     def get_context_data(self, **kwargs):
         context = super(ProductListView, self).get_context_data(**kwargs)
         context['view_path'] = _('Dashboard / Catalog / Product')
@@ -28,20 +21,43 @@ class ProductListView(LoginRequiredMixin, generic.ListView):
 
         return context
 
+    def get_queryset(self):
+        if not self.request.user.has_perm('global_permissions.app_catalog_product_list'):
+            raise PermissionDenied
+
+        company_data_id = get_company_id(self.request.user.id)
+        return Product.objects.filter(company_data_id=company_data_id).all()
+
 
 class ProductDetailView(LoginRequiredMixin, generic.DetailView):
-    template_name = 'catalog/product/product_detail.html'
+    template_name = 'catalog/product/product_read.html'
     model = Product
 
     def get_context_data(self, **kwargs):
-        if not self.request.user.has_perm('global_permissions.app_catalog_product_detail'):
+        if not self.request.user.has_perm('global_permissions.app_catalog_product_read'):
             raise PermissionDenied
 
         context = super(ProductDetailView, self).get_context_data(**kwargs)
         context['view_path'] = _('Dashboard / Catalog / Product')
         context['view_name'] = _('Product View')
+        context['view_info'] = _('Product')
 
         return context
+
+    def get_object(self):
+        company_data_id = get_company_id(self.request.user.id)
+        object = Product.objects.filter(pk=self.kwargs['pk'], company_data_id=company_data_id).first()
+
+        if not object:
+            raise Http404('Product does not exist')
+
+        return object
+
+
+class ProductUpdateView(LoginRequiredMixin, generic.UpdateView):
+    template_name = 'catalog/product/product_update.html'
+    form_class = ProductForm
+    model = Product
 
     def get_object(self):
         company_data_id = get_company_id(self.request.user.id)
@@ -52,25 +68,41 @@ class ProductDetailView(LoginRequiredMixin, generic.DetailView):
 
         return product
 
-class ProductFormView(LoginRequiredMixin, View):
-    template_name = 'catalog/product/product_edit.html'
+    def get(self, *args, **kwargs):
+        if not self.request.user.has_perm('global_permissions.app_catalog_product_update'):
+            raise PermissionDenied
+
+        form = ProductForm(instance=self.get_object())
+
+        return render(self.request, self.template_name, {
+				"form": form,
+				"view_name": _('Product Edit'),
+				"view_path": _('Dashboard / Catalog / Product')
+			}
+		)
+
+
+class ProductView(LoginRequiredMixin, generic.View):
+    """
+	Implementation for tests - View
+	"""
+    template_name = 'catalog/product/product_update.html'
     form_class = ProductForm
 
-    def get_context_data(self, **kwargs):
-        if not self.request.user.has_perm('global_permissions.app_catalog_product_edit'):
-            raise PermissionDenied
-	
-        context = super(ProductFormView, self).get_context_data(**kwargs)
-        context['view_path'] = _('Dashboard / Catalog / Product')
-        context['view_name'] = _('Product Edit')
-
-        return context
-
     def get(self, *args, **kwargs):
+        if not self.request.user.has_perm('global_permissions.app_catalog_product_update'):
+            raise PermissionDenied
+
         company_data_id = get_company_id(self.request.user.id)
         instance = Product.objects.filter(pk=self.kwargs['pk'], company_data_id=company_data_id).first()
         form = ProductForm(instance=instance)
-        return render(self.request, self.template_name, {"form": form})
+
+        return render(self.request, self.template_name, {
+				"form": form,
+				"view_name": _('Product Edit'),
+				"view_path": _('Dashboard / Catalog / Product')
+			}
+		)
 
     def post(self, *args, **kwargs):
         company_data_id = get_company_id(self.request.user.id)
@@ -86,25 +118,28 @@ class ProductFormView(LoginRequiredMixin, View):
         return redirect('catalog:product_list')
 
 
-# class ProductFormView(LoginRequiredMixin, FormView):
-#     template_name = 'catalog/product/product_edit.html'
-#     form_class = ProductForm
-#     success_url = '/catalog/product/'
+class ProductFormView(LoginRequiredMixin, generic.FormView):
+    """
+	Implementation for tests - FormView
+	"""
+    template_name = 'catalog/product/product_update.html'
+    form_class = ProductForm
+    success_url = '/catalog/product/'
 
-    # def __init__(self, *args, **kwargs):
-    #     super().__init__()
+    def __init__(self, *args, **kwargs):
+        super().__init__()
 
-    # def get_initial(self):
-    #     company_data_id = get_company_id(self.request.user.id)
-    #     self.product = Product.objects.filter(pk=self.kwargs['pk'], company_data_id=company_data_id).first()
-    #     initial = super().get_initial()
-    #     initial['name'] = self.product.name
-    #     initial['sku'] = self.product.sku
-    #     return initial
+    def get_initial(self):
+        company_data_id = get_company_id(self.request.user.id)
+        self.product = Product.objects.filter(pk=self.kwargs['pk'], company_data_id=company_data_id).first()
+        initial = super().get_initial()
+        initial['name'] = self.product.name
+        initial['sku'] = self.product.sku
+        return initial
 
-    # def form_valid(self, form):
-    #     self.product.name = form.cleaned_data['name']
-    #     self.product.sku = form.cleaned_data['sku']
-    #     self.product.save()
+    def form_valid(self, form):
+        self.product.name = form.cleaned_data['name']
+        self.product.sku = form.cleaned_data['sku']
+        self.product.save()
 
-    #     return redirect('catalog:product_list')
+        return redirect('catalog:product_list')

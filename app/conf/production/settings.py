@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'whitenoise.runserver_nostatic',
+    'pipeline',
 
     # Vendor apps
     'bootstrap4',
@@ -74,7 +75,47 @@ MIDDLEWARE = [
     'models_logging.middleware.LoggingStackMiddleware',
 ]
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+STATICFILES_STORAGE = 'pipeline.storage.PipelineStorage'
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'pipeline.finders.PipelineFinder',
+)
+
+PIPELINE = {
+    'PIPELINE_ENABLED': True,
+    'JAVASCRIPT': {
+        'app': {
+            'source_filenames': (
+              'js/base_upyexplorer.js',
+            ),
+            'output_filename': 'js/main.min.js',
+        },
+        'components':{
+            'source_filenames': (
+              'js/components/dashboard.js',
+              'js/components/hoverable-collapse.js',
+              'js/components/settings.js',
+              'js/components/template.js',
+            ),
+            'output_filename': 'js/components/components.min.js',
+        }
+    },
+        'STYLESHEETS': {
+        'styles': {
+            'source_filenames': (
+              'css/base_upyexplorer.css',
+            ),
+            'output_filename': 'css/styles.min.css',
+        },
+    },
+}
+
+MIDDLEWARE_CLASSES = (
+   'django.middleware.gzip.GZipMiddleware',
+   'pipeline.middleware.MinifyHTMLMiddleware',
+)
 
 ROOT_URLCONF = 'app.urls'
 
@@ -164,7 +205,6 @@ STATICFILES_DIRS = [
 LOCALE_PATHS = [
     os.path.join(CONTENT_DIR, 'locale')
 ]
-print(LOCALE_PATHS)
 
 SIGN_UP_FIELDS = ['username', 'first_name', 'last_name', 'email', 'password1', 'password2']
 if DISABLE_USERNAME:

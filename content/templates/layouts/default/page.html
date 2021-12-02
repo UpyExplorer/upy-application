@@ -15,14 +15,12 @@
         <link rel="icon" href="{% static 'favicon.ico' %}">
         <title>UpyExplorer</title>
 
-        <link rel="stylesheet" href="{% static 'mdi/css/materialdesignicons.min.css' %}">
-        <link rel="stylesheet" href="{% static 'css/vendor.bundle.base.css' %}">
-        <link rel="stylesheet" href="{% static 'vendor/datatables.net-bs4/dataTables.bootstrap4.css' %}">
+        <!-- CSS -->
+        {% include 'layouts/include_css.html' %}
+        <!-- CSS -->
 
-        <link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
-        <link rel="stylesheet" href="{% static 'css/style.css' %}">
     </head>
-    <body>
+    <body class="sidebar-icon-only">
         <div class="container-scroller d-flex">
             <!-- Menu -->
             {% include 'layouts/menu.html' %}
@@ -46,9 +44,6 @@
                         {% endif %}
                     </h6>
                     <ul class="navbar-nav navbar-nav-right">
-                        <li class="nav-item">
-                        </li>
-
                         <!-- <li class="nav-item nav-profile dropdown">
                             <a class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center" id="notificationDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
                                 <i class="mdi mdi-comment-question-outline mx-0"></i>
@@ -85,7 +80,7 @@
 
                         <li class="nav-item nav-profile dropdown">
                             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown" aria-expanded="false" >
-                                <img src="{% static 'media/dashboard/user.jpg' %}" style="border: 2px solid #c4c4c4;" alt="profile" class="profile-img">
+                                <img src="{% static 'media/icon/icon-user.png' %}" style="width: auto; height: 50px;" alt="profile" class="profile-img">
                                 <span class="nav-profile-name">
                                     {% if request.user.is_authenticated %}
                                         {{ request.user.username }}
@@ -93,27 +88,6 @@
                                 </span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-                                <!-- <div class="border-bottom text-center pb-4" style="padding: 10px;">
-                                    <img src="{% static 'media/dashboard/user.jpg' %}" alt="profile" class="img-lg rounded-circle mb-3" style="border: 2px solid #d7d7d7;">
-                                    <div class="mb-3">
-                                        <h3>
-                                            {% if request.user.is_authenticated %}
-                                                {{ request.user.username }}
-                                            {% endif %}
-                                        </h3>
-                                    </div>
-
-                                    <div class="py-4" style="padding-left: 25px; padding-right: 25px;">
-                                        <p class="clearfix">
-                                        <span class="float-left">
-                                            Status
-                                        </span>
-                                        <span class="float-right text-muted">
-                                            Active
-                                        </span>
-                                    </div>
-                                </div> -->
-
                                 <a class="dropdown-item">
                                     <i class="mdi mdi-heart text-primary"></i>
                                         {% trans 'Update Pro' %}
@@ -142,55 +116,18 @@
                 {% bootstrap_messages %}
                 {% block content %}
 
-                    <!-- <div class="main-panel">
-                        <div class="content-wrapper">
-                        <div class="row">
-                            <div class="col-lg-12 grid-margin stretch-card">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="container">
-											<h4 class="card-title">{{ view_name }}</h4>
-											<p class="card-description">{{ view_path }}</p>
-											====================CONTENT=====================
-											<hr>
-											====================CONTENT=====================
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-
                 {% endblock %}
 
-                    <footer class="footer" style="position: sticky; bottom: 75px; right: 10px; height: 15px;">
-                        <div class="card">
-                        <div class="card-body">
-                            <div class="d-sm-flex justify-content-center justify-content-sm-between py-2">
-                            <p class="text-center text-sm-left d-block d-sm-inline-block mb-0">Copyright Upy-Explorer &copy; 2021  {% trans 'All Rights Reserved' %}.</p>
-                            <p class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center mb-0">{% trans 'Version' %} 1.0.0</p>
-                            </div>
-                        </div>
-                        </div>
-                    </footer>
+                <!-- Footer -->
+                {% include 'layouts/footer.html' %}
+                <!-- Footer -->
                 </div>
             </div>
         </div>
 
-        <!-- base:js -->
-        <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
-				<script src="{% static 'vendor/js/vendor.bundle.base.js' %}"></script>
-        <!-- inject:js -->
-        <script src="{% static 'js/off-canvas.js' %}"></script> 
-        <script src="{% static 'js/hoverable-collapse.js' %}"></script>
-        <script src="{% static 'js/template.js' %}"></script>
-        <script src="{% static 'js/settings.js' %}"></script>
-        <script src="{% static 'js/todolist.js' %}"></script>
-        <!-- endinject -->
-        <!-- Custom js for this page-->
-				<script src="{% static 'vendor/datatables.net/jquery.dataTables.js' %}"></script> 
-				<script src="{% static 'vendor/datatables.net-bs4/dataTables.bootstrap4.js' %}"></script>
-        <script src="{% static 'js/data-table.js' %}"></script>
-        <!-- End custom js for this page-->
+        <!-- JS -->
+        {% include 'layouts/include_js.html' %}
+        <!-- JS -->
+
     </body>
 </html>

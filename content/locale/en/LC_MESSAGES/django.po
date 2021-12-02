@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-29 05:24-0300\n"
+"POT-Creation-Date: 2021-12-01 23:10-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,57 +38,50 @@ msgstr ""
 
 #: content/templates/dashboard/log_in.html:40
 #: content/templates/dashboard/sign_up.html:40
-#: content/templates/layouts/default/page.html:170
-msgid "All Rights Reserved"
+#: content/templates/layouts/footer.html:8
+msgid "All rights reserved for"
 msgstr ""
 
 #: content/templates/layouts/default/page.html:45
 msgid "Welcome back"
 msgstr ""
 
-#: content/templates/layouts/default/page.html:70
+#: content/templates/layouts/default/page.html:67
 msgid "Notifications"
 msgstr ""
 
-#: content/templates/layouts/default/page.html:79
+#: content/templates/layouts/default/page.html:76
 msgid "Welcome to System!"
 msgstr ""
 
-#: content/templates/layouts/default/page.html:119
+#: content/templates/layouts/default/page.html:95
 #: content/templates/layouts/menu.html:69
 msgid "Update Pro"
 msgstr ""
 
-#: content/templates/layouts/default/page.html:125
-#: content/templates/main/change_language.html:18
+#: content/templates/layouts/default/page.html:101
 msgid "Change language"
 msgstr ""
 
-#: content/templates/layouts/default/page.html:131
+#: content/templates/layouts/default/page.html:107
 msgid "Logout"
 msgstr ""
 
-#: content/templates/layouts/default/page.html:171
+#: content/templates/layouts/default/page_read.html:34
+msgid "Edit Product"
+msgstr ""
+
+#: content/templates/layouts/default/page_read.html:40
+#: venv/lib/python3.9/site-packages/django/forms/formsets.py:417
+msgid "Delete"
+msgstr ""
+
+#: content/templates/layouts/default/page_read.html:72
+msgid "Basic information"
+msgstr ""
+
+#: content/templates/layouts/footer.html:9
 msgid "Version"
-msgstr ""
-
-#: content/templates/layouts/default/pagination.html:9
-msgid "Page"
-msgstr ""
-
-#: content/templates/layouts/default/pagination.html:9
-msgid "of"
-msgstr ""
-
-#: content/templates/layouts/default/pagination.html:16
-msgid "Previous"
-msgstr ""
-
-#: content/templates/layouts/default/pagination.html:20
-#: modules/account/templates/account/remind_username.html:15
-#: modules/account/templates/account/resend_activation_code.html:15
-#: modules/account/templates/account/restore_password.html:15
-msgid "Next"
 msgstr ""
 
 #: content/templates/layouts/menu.html:12 modules/dashboard/views.py:12
@@ -99,7 +92,7 @@ msgstr ""
 msgid "Catalog"
 msgstr ""
 
-#: content/templates/layouts/menu.html:31
+#: content/templates/layouts/menu.html:31 modules/catalog/product/views.py:43
 msgid "Product"
 msgstr ""
 
@@ -119,14 +112,33 @@ msgstr ""
 msgid "Change email"
 msgstr ""
 
-#: content/templates/main/change_language.html:27
+#: content/templates/layouts/pagination.html:9
+msgid "Page"
+msgstr ""
+
+#: content/templates/layouts/pagination.html:9
+msgid "of"
+msgstr ""
+
+#: content/templates/layouts/pagination.html:16
+msgid "Previous"
+msgstr ""
+
+#: content/templates/layouts/pagination.html:20
+#: modules/account/templates/account/remind_username.html:15
+#: modules/account/templates/account/resend_activation_code.html:15
+#: modules/account/templates/account/restore_password.html:15
+msgid "Next"
+msgstr ""
+
+#: content/templates/main/change_language.html:17
 msgid "Select the language"
 msgstr ""
 
-#: content/templates/main/change_language.html:37
-#: modules/account/templates/account/profile/change_email.html:24
-#: modules/account/templates/account/profile/change_password.html:24
-#: modules/account/templates/account/profile/change_profile.html:24
+#: content/templates/main/change_language.html:27
+#: modules/account/templates/account/profile/change_email.html:11
+#: modules/account/templates/account/profile/change_password.html:11
+#: modules/account/templates/account/profile/change_profile.html:11
 #: modules/account/templates/account/restore_password_confirm.html:21
 #: venv/lib/python3.9/site-packages/django/forms/widgets.py:405
 #: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_revision_confirmation.html:24
@@ -422,55 +434,107 @@ msgstr ""
 msgid "Your password has been set. You may go ahead and login now."
 msgstr ""
 
-#: modules/catalog/product/views.py:22 modules/catalog/product/views.py:34
-#: modules/catalog/product/views.py:54
+#: modules/catalog/product/views.py:19 modules/catalog/product/views.py:41
+#: modules/catalog/product/views.py:80 modules/catalog/product/views.py:103
 msgid "Dashboard / Catalog / Product"
 msgstr ""
 
-#: modules/catalog/product/views.py:23
+#: modules/catalog/product/views.py:20
 msgid "Product List"
 msgstr ""
 
-#: modules/catalog/product/views.py:35
+#: modules/catalog/product/views.py:42
 msgid "Product View"
 msgstr ""
 
-#: modules/catalog/product/views.py:55
+#: modules/catalog/product/views.py:79 modules/catalog/product/views.py:102
 msgid "Product Edit"
 msgstr ""
 
-#: modules/catalog/templates/catalog/product/product_list.html:23
-msgid "Search Here..."
+#: modules/catalog/templates/catalog/product/product_list.html:18
+msgid "Add Product"
 msgstr ""
 
-#: modules/catalog/templates/catalog/product/product_list.html:55
+#: modules/catalog/templates/catalog/product/product_list.html:41
+#: modules/catalog/templates/catalog/product/product_read.html:26
 msgid "Name"
 msgstr ""
 
-#: modules/catalog/templates/catalog/product/product_list.html:56
+#: modules/catalog/templates/catalog/product/product_list.html:42
+#: modules/catalog/templates/catalog/product/product_read.html:30
 msgid "Sku"
 msgstr ""
 
-#: modules/catalog/templates/catalog/product/product_list.html:57
+#: modules/catalog/templates/catalog/product/product_list.html:43
+#: modules/catalog/templates/catalog/product/product_read.html:57
 msgid "Price Sell"
 msgstr ""
 
-#: modules/catalog/templates/catalog/product/product_list.html:94
+#: modules/catalog/templates/catalog/product/product_list.html:44
+#: modules/catalog/templates/catalog/product/product_read.html:48
+msgid "Stock"
+msgstr ""
+
+#: modules/catalog/templates/catalog/product/product_list.html:45
+msgid "Created In"
+msgstr ""
+
+#: modules/catalog/templates/catalog/product/product_list.html:79
+#: modules/catalog/templates/catalog/product/product_read.html:58
+#: modules/catalog/templates/catalog/product/product_read.html:65
+#: modules/catalog/templates/catalog/product/product_read.html:72
+msgid "$"
+msgstr ""
+
+#: modules/catalog/templates/catalog/product/product_list.html:84
+#: modules/catalog/templates/catalog/product/product_read.html:39
 msgid "Options"
 msgstr ""
 
-#: modules/catalog/templates/catalog/product/product_list.html:96
+#: modules/catalog/templates/catalog/product/product_list.html:86
 msgid "View"
 msgstr ""
 
-#: modules/catalog/templates/catalog/product/product_list.html:97
+#: modules/catalog/templates/catalog/product/product_list.html:87
 msgid "Edit"
+msgstr ""
+
+#: modules/catalog/templates/catalog/product/product_read.html:37
+msgid "Product Type"
+msgstr ""
+
+#: modules/catalog/templates/catalog/product/product_read.html:64
+msgid "Price Cost"
+msgstr ""
+
+#: modules/catalog/templates/catalog/product/product_read.html:71
+msgid "Price Promo"
+msgstr ""
+
+#: modules/catalog/templates/catalog/product/product_read.html:80
+msgid "Description"
+msgstr ""
+
+#: modules/catalog/templates/catalog/product/product_update.html:16
+msgid "Save Product"
+msgstr ""
+
+#: modules/catalog/templates/catalog/product/product_update.html:75
+msgid "Update"
 msgstr ""
 
 #: modules/dashboard/views.py:11
 #: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_changes_confirmation.html:6
 #: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_revision_confirmation.html:6
 msgid "Home"
+msgstr ""
+
+#: modules/main/views.py:16
+msgid "Dashboard / Change Language"
+msgstr ""
+
+#: modules/main/views.py:17
+msgid "Change Language"
 msgstr ""
 
 #: venv/lib/python3.9/site-packages/bootstrap4/components.py:17
@@ -1048,10 +1112,6 @@ msgstr[1] ""
 #: venv/lib/python3.9/site-packages/django/forms/formsets.py:405
 #: venv/lib/python3.9/site-packages/django/forms/formsets.py:412
 msgid "Order"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/forms/formsets.py:417
-msgid "Delete"
 msgstr ""
 
 #: venv/lib/python3.9/site-packages/django/forms/models.py:763

@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'whitenoise.runserver_nostatic',
+    'pipeline',
 
     # Vendor apps
     'bootstrap4',
@@ -76,7 +77,54 @@ MIDDLEWARE = [
     'models_logging.middleware.LoggingStackMiddleware',
 ]
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+# STATICFILES_STORAGE = 'pipeline.storage.PipelineManifestStorage'
+# STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
+STATICFILES_STORAGE = 'pipeline.storage.PipelineStorage'
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'pipeline.finders.PipelineFinder',
+)
+
+PIPELINE = {
+    'PIPELINE_ENABLED': False,
+    'JAVASCRIPT': {
+        'app': {
+            'source_filenames': (
+              'js/base_upyexplorer.js',
+            ),
+            'output_filename': 'js/main.min.js',
+        },
+        'components':{
+            'source_filenames': (
+              'js/components/dashboard.js',
+              'js/components/hoverable-collapse.js',
+              'js/components/settings.js',
+              'js/components/template.js',
+            ),
+            'output_filename': 'js/components/components.min.js',
+        }
+    },
+        'STYLESHEETS': {
+        'styles': {
+            'source_filenames': (
+              'css/base_upyexplorer.css',
+            ),
+            'output_filename': 'css/styles.min.css',
+        },
+    },
+}
+
+PIPELINE['COMPILERS'] = (
+  'pipeline.compilers.coffee.CoffeeScriptCompiler',
+  'pipeline.compilers.stylus.StylusCompiler',
+)
+
+MIDDLEWARE_CLASSES = (
+   'django.middleware.gzip.GZipMiddleware',
+   'pipeline.middleware.MinifyHTMLMiddleware',
+)
 
 ROOT_URLCONF = 'app.urls'
 

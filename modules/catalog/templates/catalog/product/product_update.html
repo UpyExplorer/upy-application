@@ -1,0 +1,112 @@
+{% extends "layouts/default/container.html" %}
+
+{% load static %}
+{% load bootstrap4 %}
+{% load i18n %}
+
+{% block option %}
+
+	<div class="col-12 grid-margin stretch-card" style="margin-bottom: 15px;">
+		<div class="card">
+			<div class="card-body" style="padding-bottom: 15px; padding-top: 15px;">
+				<div class="container">
+					<div class="row">
+					  	<div class="col-12">
+							<div class="bd-example">
+								<button type="button" title="{% trans 'Save Product' %}" onclick="$('.btn_save').trigger('click');" class="btn btn-success btn-sm" style="float: right; margin-left: 5px;">
+									<i class="mdi mdi-content-save"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+{% endblock %}
+
+{% block container %}
+
+<form method="post" novalidate>
+	{% csrf_token %}
+  
+	{{ form.non_field_errors }}
+  
+	{{ form.source.errors }}
+	{{ form.source }}
+  
+	<table border="1">
+  
+		<tr>
+			<th>{{ form.name.label_tag }}</th>
+			<td>
+			  {{ form.name.errors }}
+			  {{ form.name }}
+			</td>
+		  </tr>
+
+		  <tr>
+			<th>{{ form.sku.label_tag }}</th>
+			<td>
+			  {{ form.sku.errors }}
+			  {{ form.sku }}
+			</td>
+		  </tr>
+  
+
+  
+	</table>
+  
+	<button type="submit">Submit</button>
+  </form>
+	<!-- <form method="post">
+		{% csrf_token %}
+		{% for field in form %}
+		<div class="fieldWrapper">
+			{{ field.errors }}
+			{{ field.label_tag }} {{ field }}
+			{% if field.help_text %}
+			<p class="help">{{ field.help_text|safe }}</p>
+			{% endif %}
+		</div>
+	{% endfor %}
+
+		<input type="submit" class="btn" >
+	</form> -->
+
+	<!-- <form method="post">
+		
+		{% csrf_token %}
+
+		{% load widget_tweaks %}
+
+        {% for hidden in form.hidden_fields %}
+            {{ hidden }}
+        {% endfor %}
+
+		{% for field in form.visible_fields %}
+
+			<div class="form-group">
+				<label for="{{ field.id_for_label }}">{{ field.label }}</label>
+				<div class="input-group">
+				{{ field|add_class:'form-control' }}
+				</div>
+				{% for error in field.errors %}
+					<span class="help-block" style="color: #b60909;">{{ error }}</span>
+				{% endfor %}
+				<div style="color: #a5a5a5; font-size: small;">
+					{{ field.help_text }}
+				</div>
+			</div>
+
+		{% endfor %}
+
+        <div class="mt-3">
+            <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn btn_save" value="{% trans 'Update' %}">
+        </div>
+
+	</form> -->
+
+{% endblock %}
