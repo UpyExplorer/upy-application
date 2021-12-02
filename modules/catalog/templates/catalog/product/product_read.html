@@ -1,0 +1,84 @@
+{% extends "layouts/default/page_read.html" %}
+
+{% load static %}
+{% load bootstrap4 %}
+{% load i18n %}
+
+{% get_current_language as language_code %}
+
+{% block square_left %}
+
+	<img src="{% static 'media/icon/icon-product.png' %}" alt="profile" class="img-lg rounded-circle mb-3">
+	<div class="mb-3">
+		<h3>{{ object.name }}</h3>
+		<div class="d-flex align-items-center justify-content-center">
+			<h5 class="mb-0 mr-2 text-muted">{{ object.sku }}</h5>
+		</div>
+	</div>
+	<p class="w-75 mx-auto mb-3">{{ object.description }}</p>
+
+{% endblock %}
+
+{% block square_right %}
+
+	<div class="form-row">
+		<div class="form-group col-md-8">
+			<label for="inputName">{% trans 'Name' %}:</label>
+			<input type="text" class="form-control" id="inputName" placeholder="Name" value="{{ object.name }}" readonly>
+		</div>
+		<div class="form-group col-md-4">
+			<label for="inputSku">{% trans 'Sku' %}:</label>
+			<input type="text" class="form-control" id="inputSku" placeholder="Sku" value="{{ object.sku }}" readonly>
+		</div>
+	</div>
+
+	<div class="form-row">
+		<div class="form-group col-md-8">
+			<label for="inputName">{% trans 'Product Type' %}:</label>
+			<div class="input-group-prepend">
+				<label class="input-group-text" for="inputGroupType">{% trans 'Options' %}</label>
+				<select class="custom-select" id="inputGroupType" style="height: 50px;" disabled>
+					<option value="1" selected>Standard</option>
+					<option value="2">Variation</option>
+					<option value="3">Kit</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group col-md-4">
+			<label for="inputSku">{% trans 'Stock' %}:</label>
+			<input type="text" class="form-control" id="inputSku" placeholder="Sku" value="{{ object.stock|floatformat:-2 }}" readonly>
+		</div>
+	</div>
+
+
+	<div class="form-row">
+		
+		<div class="form-group col-md-4">
+			<label for="inputPriceSell">{% trans 'Price Sell' %}:</label><div class="input-group-prepend">
+				<span class="input-group-text">{% trans '$' %}</span>
+				<span class="input-group-text">0.00</span><input type="text" class="form-control" value="{{ object.price_sell|floatformat:2 }}" readonly>
+			</div>
+		</div>
+
+		<div class="form-group col-md-4">
+			<label for="inputPriceSell">{% trans 'Price Cost' %}:</label><div class="input-group-prepend">
+				<span class="input-group-text">{% trans '$' %}</span>
+				<span class="input-group-text">0.00</span><input type="text" class="form-control" value="{{ object.price_cost|floatformat:2 }}" readonly>
+			</div>
+		</div>
+
+		<div class="form-group col-md-4">
+			<label for="inputPriceSell">{% trans 'Price Promo' %}:</label><div class="input-group-prepend">
+				<span class="input-group-text">{% trans '$' %}</span>
+				<span class="input-group-text">0.00</span><input type="text" class="form-control" value="{{ object.price_promo|floatformat:2 }}" readonly>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="form-group">
+		<label for="inputDescription">{% trans 'Description' %}:</label>
+		<textarea class="form-control" id="inputDescription" rows="3" readonly>{{ object.description }}</textarea>
+	</div>
+
+{% endblock %}

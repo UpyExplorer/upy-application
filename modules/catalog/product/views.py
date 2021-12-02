@@ -30,31 +30,32 @@ class ProductListView(LoginRequiredMixin, generic.ListView):
 
 
 class ProductDetailView(LoginRequiredMixin, generic.DetailView):
-    template_name = 'catalog/product/product_detail.html'
+    template_name = 'catalog/product/product_read.html'
     model = Product
 
     def get_context_data(self, **kwargs):
-        if not self.request.user.has_perm('global_permissions.app_catalog_product_detail'):
+        if not self.request.user.has_perm('global_permissions.app_catalog_product_read'):
             raise PermissionDenied
 
         context = super(ProductDetailView, self).get_context_data(**kwargs)
         context['view_path'] = _('Dashboard / Catalog / Product')
         context['view_name'] = _('Product View')
+        context['view_info'] = _('Product')
 
         return context
 
     def get_object(self):
         company_data_id = get_company_id(self.request.user.id)
-        product = Product.objects.filter(pk=self.kwargs['pk'], company_data_id=company_data_id).first()
+        object = Product.objects.filter(pk=self.kwargs['pk'], company_data_id=company_data_id).first()
 
-        if not product:
+        if not object:
             raise Http404('Product does not exist')
 
-        return product
+        return object
 
 
 class ProductUpdateView(LoginRequiredMixin, generic.UpdateView):
-    template_name = 'catalog/product/product_edit.html'
+    template_name = 'catalog/product/product_update.html'
     form_class = ProductForm
     model = Product
 
@@ -68,7 +69,7 @@ class ProductUpdateView(LoginRequiredMixin, generic.UpdateView):
         return product
 
     def get(self, *args, **kwargs):
-        if not self.request.user.has_perm('global_permissions.app_catalog_product_edit'):
+        if not self.request.user.has_perm('global_permissions.app_catalog_product_update'):
             raise PermissionDenied
 
         form = ProductForm(instance=self.get_object())
@@ -85,11 +86,11 @@ class ProductView(LoginRequiredMixin, generic.View):
     """
 	Implementation for tests - View
 	"""
-    template_name = 'catalog/product/product_edit.html'
+    template_name = 'catalog/product/product_update.html'
     form_class = ProductForm
 
     def get(self, *args, **kwargs):
-        if not self.request.user.has_perm('global_permissions.app_catalog_product_edit'):
+        if not self.request.user.has_perm('global_permissions.app_catalog_product_update'):
             raise PermissionDenied
 
         company_data_id = get_company_id(self.request.user.id)
@@ -121,7 +122,7 @@ class ProductFormView(LoginRequiredMixin, generic.FormView):
     """
 	Implementation for tests - FormView
 	"""
-    template_name = 'catalog/product/product_edit.html'
+    template_name = 'catalog/product/product_update.html'
     form_class = ProductForm
     success_url = '/catalog/product/'
 
