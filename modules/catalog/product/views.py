@@ -40,6 +40,7 @@ class ProductDetailView(LoginRequiredMixin, generic.DetailView):
         context = super(ProductDetailView, self).get_context_data(**kwargs)
         context['view_path'] = _('Dashboard / Catalog / Product')
         context['view_name'] = _('Product View')
+        context['view_info'] = _('Product')
 
         return context
 

@@ -21,7 +21,11 @@
 									<div class="col-12">
 
 										{% if perms.global_permissions.app_catalog_product_read %}
-											<button type="button" class="btn btn-primary btn-sm" title="Info" style="float: right; background: #3243c5;border-color: #3243c5; margin-right: 5px;">
+											<button 
+												type="button" 
+												class="btn btn-primary btn-sm"
+												data-toggle="tooltip" data-placement="top" title="{{ view_info }}"
+												style="float: right; background: #3243c5;border-color: #3243c5; margin-right: 5px;">
 												<i class="mdi mdi-comment-question-outline"></i>
 											</button>
 										{% endif %}
