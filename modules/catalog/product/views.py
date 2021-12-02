@@ -34,7 +34,7 @@ class ProductDetailView(LoginRequiredMixin, generic.DetailView):
     model = Product
 
     def get_context_data(self, **kwargs):
-        if not self.request.user.has_perm('global_permissions.app_catalog_product_readl'):
+        if not self.request.user.has_perm('global_permissions.app_catalog_product_read'):
             raise PermissionDenied
 
         context = super(ProductDetailView, self).get_context_data(**kwargs)
