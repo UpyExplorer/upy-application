@@ -2,6 +2,8 @@ import os
 
 DJANGO_ENV = os.environ.get('DJANGO_ENV')
 
+print(DJANGO_ENV)
+
 if DJANGO_ENV == 'production':
     from .conf.production.settings import *
 else:
