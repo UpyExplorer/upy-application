@@ -94,10 +94,11 @@ PIPELINE = {
         },
         'components':{
             'source_filenames': (
-              'js/components/dashboard.js',
-              'js/components/hoverable-collapse.js',
-              'js/components/settings.js',
-              'js/components/template.js',
+                'js/components/chart.js'
+                'js/components/dashboard.js',
+                'js/components/hoverable-collapse.js',
+                'js/components/off-canvas.js'
+                'js/components/template.js'
             ),
             'output_filename': 'js/components/components.min.js',
         }
@@ -111,6 +112,16 @@ PIPELINE = {
         },
     },
 }
+
+PIPELINE['JS_COMPRESSOR'] = 'pipeline.compressors.yuglify.YuglifyCompressor'
+PIPELINE['COMPILERS'] = (
+  'pipeline.compilers.less.LessCompiler',
+  'pipeline.compilers.stylus.StylusCompiler',
+)
+
+PIPELINE_JS_COMPRESSOR = 'pipeline.compressors.yuglify.YuglifyCompressor'
+PIPELINE_DISABLE_WRAPPER = True
+PIPELINE_ENABLED= True
 
 MIDDLEWARE_CLASSES = (
    'django.middleware.gzip.GZipMiddleware',
