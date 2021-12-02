@@ -14,6 +14,7 @@ DEBUG = os.environ.get('DEBUG')
 print("===========DEBUG===========")
 print(os.environ.get('DEBUG'))
 print("===========DEBUG===========")
+print(os.environ.get('DJANGO_ENV'))
 ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOSTS')]
 
 SITE_ID = 1
