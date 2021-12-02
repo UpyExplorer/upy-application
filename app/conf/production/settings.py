@@ -88,9 +88,9 @@ PIPELINE = {
     'JAVASCRIPT': {
         'app': {
             'source_filenames': (
-              'js/app.js',
+              'js/base_upyexplorer.js',
             ),
-            'output_filename': 'js/app.min.js',
+            'output_filename': 'js/main.min.js',
         },
         'components':{
             'source_filenames': (
@@ -105,7 +105,7 @@ PIPELINE = {
         'STYLESHEETS': {
         'styles': {
             'source_filenames': (
-              'css/styles.css',
+              'css/base_upyexplorer.css',
             ),
             'output_filename': 'css/styles.min.css',
         },
