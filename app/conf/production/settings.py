@@ -91,16 +91,6 @@ PIPELINE = {
               'js/base_upyexplorer.js',
             ),
             'output_filename': 'js/main.min.js',
-        },
-        'components':{
-            'source_filenames': (
-                'js/components/chart.js'
-                'js/components/dashboard.js',
-                'js/components/hoverable-collapse.js',
-                'js/components/off-canvas.js'
-                'js/components/template.js'
-            ),
-            'output_filename': 'js/components/components.min.js',
         }
     },
         'STYLESHEETS': {
