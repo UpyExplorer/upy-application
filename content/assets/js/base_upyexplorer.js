@@ -1,3 +1,3 @@
-function my_log(){
+window.my_log = function(){
 	console.log("UpyExplorer");
 }
