@@ -88,7 +88,7 @@ STATICFILES_FINDERS = (
 )
 
 PIPELINE = {
-    'PIPELINE_ENABLED': True,
+    'PIPELINE_ENABLED': False,
     'JAVASCRIPT': {
         'app': {
             'source_filenames': (
