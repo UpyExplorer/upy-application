@@ -99,7 +99,7 @@ msgid "Catalog"
 msgstr ""
 
 #: content/templates/layouts/menu.html:31
-#: modules/catalog/templates/catalog/product/product_detail.html:89
+#: modules/catalog/templates/catalog/product/product_read.html:89
 msgid "Product"
 msgstr ""
 
@@ -439,31 +439,31 @@ msgstr ""
 msgid "Product Edit"
 msgstr ""
 
-#: modules/catalog/templates/catalog/product/product_detail.html:20
+#: modules/catalog/templates/catalog/product/product_read.html:20
 msgid "Edit Product"
 msgstr ""
 
-#: modules/catalog/templates/catalog/product/product_detail.html:23
+#: modules/catalog/templates/catalog/product/product_read.html:23
 #: venv/lib/python3.9/site-packages/django/forms/formsets.py:417
 msgid "Delete"
 msgstr ""
 
-#: modules/catalog/templates/catalog/product/product_detail.html:55
+#: modules/catalog/templates/catalog/product/product_read.html:55
 #: modules/catalog/templates/catalog/product/product_list.html:46
 msgid "Price Sell"
 msgstr ""
 
-#: modules/catalog/templates/catalog/product/product_detail.html:58
-#: modules/catalog/templates/catalog/product/product_detail.html:66
-#: modules/catalog/templates/catalog/product/product_detail.html:74
+#: modules/catalog/templates/catalog/product/product_read.html:58
+#: modules/catalog/templates/catalog/product/product_read.html:66
+#: modules/catalog/templates/catalog/product/product_read.html:74
 msgid "$"
 msgstr ""
 
-#: modules/catalog/templates/catalog/product/product_detail.html:63
+#: modules/catalog/templates/catalog/product/product_read.html:63
 msgid "Price Cost"
 msgstr ""
 
-#: modules/catalog/templates/catalog/product/product_detail.html:71
+#: modules/catalog/templates/catalog/product/product_read.html:71
 msgid "Price Promo"
 msgstr ""
 

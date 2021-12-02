@@ -6,27 +6,16 @@
 
 {% get_current_language as language_code %}
 
-{% block option %}
-
-	<button type="button" class="btn btn-warning btn-sm" title="{% trans 'Edit Product' %}" style="float: right; margin-right: 5px;">
-		<i class="mdi mdi-lead-pencil"></i>
-	</button>
-	<button type="button" class="btn btn-danger btn-sm" title="{% trans 'Delete' %}" style="float: right; margin-right: 5px;">
-		<i class="mdi mdi-delete"></i>
-	</button>
-
-{% endblock %}
-
 {% block square_left %}
 
 	<img src="{% static 'media/icon/icon-product.png' %}" alt="profile" class="img-lg rounded-circle mb-3">
 	<div class="mb-3">
-		<h3>{{ product.name }}</h3>
+		<h3>{{ object.name }}</h3>
 		<div class="d-flex align-items-center justify-content-center">
-			<h5 class="mb-0 mr-2 text-muted">{{ product.sku }}</h5>
+			<h5 class="mb-0 mr-2 text-muted">{{ object.sku }}</h5>
 		</div>
 	</div>
-	<p class="w-75 mx-auto mb-3">{{ product.description }}</p>
+	<p class="w-75 mx-auto mb-3">{{ object.description }}</p>
 
 {% endblock %}
 
@@ -35,11 +24,11 @@
 	<div class="form-row">
 		<div class="form-group col-md-8">
 			<label for="inputName">{% trans 'Name' %}:</label>
-			<input type="text" class="form-control" id="inputName" placeholder="Name" value="{{ product.name }}" readonly>
+			<input type="text" class="form-control" id="inputName" placeholder="Name" value="{{ object.name }}" readonly>
 		</div>
 		<div class="form-group col-md-4">
 			<label for="inputSku">{% trans 'Sku' %}:</label>
-			<input type="text" class="form-control" id="inputSku" placeholder="Sku" value="{{ product.sku }}" readonly>
+			<input type="text" class="form-control" id="inputSku" placeholder="Sku" value="{{ object.sku }}" readonly>
 		</div>
 	</div>
 
@@ -57,7 +46,7 @@
 		</div>
 		<div class="form-group col-md-4">
 			<label for="inputSku">{% trans 'Estoque' %}:</label>
-			<input type="text" class="form-control" id="inputSku" placeholder="Sku" value="{{ product.stock|floatformat:-2 }}" readonly>
+			<input type="text" class="form-control" id="inputSku" placeholder="Sku" value="{{ object.stock|floatformat:-2 }}" readonly>
 		</div>
 	</div>
 
@@ -67,21 +56,21 @@
 		<div class="form-group col-md-4">
 			<label for="inputPriceSell">{% trans 'Price Sell' %}:</label><div class="input-group-prepend">
 				<span class="input-group-text">{% trans '$' %}</span>
-				<span class="input-group-text">0.00</span><input type="text" class="form-control" value="{{ product.price_sell|floatformat:2 }}" readonly>
+				<span class="input-group-text">0.00</span><input type="text" class="form-control" value="{{ object.price_sell|floatformat:2 }}" readonly>
 			</div>
 		</div>
 
 		<div class="form-group col-md-4">
 			<label for="inputPriceSell">{% trans 'Price Cost' %}:</label><div class="input-group-prepend">
 				<span class="input-group-text">{% trans '$' %}</span>
-				<span class="input-group-text">0.00</span><input type="text" class="form-control" value="{{ product.price_cost|floatformat:2 }}" readonly>
+				<span class="input-group-text">0.00</span><input type="text" class="form-control" value="{{ object.price_cost|floatformat:2 }}" readonly>
 			</div>
 		</div>
 
 		<div class="form-group col-md-4">
 			<label for="inputPriceSell">{% trans 'Price Promo' %}:</label><div class="input-group-prepend">
 				<span class="input-group-text">{% trans '$' %}</span>
-				<span class="input-group-text">0.00</span><input type="text" class="form-control" value="{{ product.price_promo|floatformat:2 }}" readonly>
+				<span class="input-group-text">0.00</span><input type="text" class="form-control" value="{{ object.price_promo|floatformat:2 }}" readonly>
 			</div>
 		</div>
 
@@ -89,7 +78,7 @@
 
 	<div class="form-group">
 		<label for="inputDescription">Description:</label>
-		<textarea class="form-control" id="inputDescription" rows="3" readonly>{{ product.description }}</textarea>
+		<textarea class="form-control" id="inputDescription" rows="3" readonly>{{ object.description }}</textarea>
 	</div>
 
 {% endblock %}

@@ -19,12 +19,25 @@
 							<div class="container">
 								<div class="row">
 									<div class="col-12">
-										<button type="button" class="btn btn-primary btn-sm" title="Info" style="float: right; background: #3243c5;border-color: #3243c5; margin-right: 5px;">
-											<i class="mdi mdi-comment-question-outline"></i>
-										</button>
-										{% block option %}
 
-										{% endblock %}
+										{% if perms.global_permissions.app_catalog_product_read %}
+											<button type="button" class="btn btn-primary btn-sm" title="Info" style="float: right; background: #3243c5;border-color: #3243c5; margin-right: 5px;">
+												<i class="mdi mdi-comment-question-outline"></i>
+											</button>
+										{% endif %}
+
+										{% if perms.global_permissions.app_catalog_product_update %}
+											<a href="{{ object.get_absolute_url }}/edit" type="button" class="btn btn-warning btn-sm" title="{% trans 'Edit Product' %}" style="float: right; margin-right: 5px;">
+												<i class="mdi mdi-lead-pencil"></i>
+											</a>
+										{% endif %}
+
+										{% if perms.global_permissions.app_catalog_product_delete %}
+											<a href="{{ object.get_absolute_url }}" type="button" class="btn btn-danger btn-sm" title="{% trans 'Delete' %}" style="float: right; margin-right: 5px;">
+												<i class="mdi mdi-delete"></i>
+											</a>
+										{% endif %}
+
 									</div>
 								</div>
 							</div>
