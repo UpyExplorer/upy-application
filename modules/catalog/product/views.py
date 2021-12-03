@@ -83,3 +83,21 @@ class ProductUpdateView(LoginRequiredMixin, generic.UpdateView):
                 "view_info": _('Product'),
 			}
 		)
+
+class ProductCreateView(LoginRequiredMixin, generic.CreateView):
+    template_name = 'catalog/product/product_update.html'
+    form_class = ProductForm
+
+    def post(self, request, *args, **kwargs):
+        company_data_id = get_company_id(self.request.user.id)
+
+        if self.request.method == "POST":
+            form = self.form_class(self.request.POST)
+            object = form.save()
+
+            product = Product.objects.get(id=object.id)
+            product.company_data_id = company_data_id
+            product.save()
+
+            return redirect(product.get_absolute_url())
+        return redirect('catalog:product_list')
