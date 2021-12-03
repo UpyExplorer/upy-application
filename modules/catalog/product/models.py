@@ -5,6 +5,12 @@ from modules.company.models import Data
 
 
 class Product(models.Model):
+    ITEM_TYPE = (
+        ('1','Standard'),
+        ('2','Variation'),
+        ('3','Kit'),
+    )
+
     company_data = models.ForeignKey(Data, on_delete=models.SET_NULL, null=True)
     creation_time = models.DateTimeField(default=datetime.now, null=True)
     name = models.CharField(max_length=100, blank=False, null=False, default='Product')
@@ -22,7 +28,7 @@ class Product(models.Model):
     detail_height = models.DecimalField(max_digits=8, decimal_places=5, null=True)
     active = models.BooleanField(null=False, default=False)
     video_url = models.TextField(blank=True, null=True)
-    type = models.CharField(max_length=25, blank=False, null=True)
+    type = models.CharField(choices=ITEM_TYPE,max_length=1)
     stock = models.DecimalField(max_digits=11, decimal_places=7, null=True, default=0)
 
     def get_absolute_url(self):
