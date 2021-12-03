@@ -32,8 +32,22 @@
 
 		{% for field in form.visible_fields %}
 
-		{% if field.name == 'name' %}
-			<div class="form-group col-md-8">
+		{% if field.name == 'active' %}
+			<div class="form-group col-md-1">
+				<label for="{{ field.id_for_label }}">{{ field.label }}:</label>
+				<div class="input-group">
+				{{ field|add_class:'form-control' }}
+				</div>
+				{% for error in field.errors %}
+					<span class="help-block" style="color: #b60909;">{{ error }}</span>
+				{% endfor %}
+				<div style="color: #a5a5a5; font-size: small;">
+					{{ field.help_text }}
+				</div>
+			</div>
+
+		{% elif field.name == 'name' %}
+			<div class="form-group col-md-7">
 				<label for="{{ field.id_for_label }}">{{ field.label }}:</label>
 				<div class="input-group">
 				{{ field|add_class:'form-control' }}
