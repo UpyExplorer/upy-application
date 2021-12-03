@@ -8,6 +8,10 @@
     var sidebar = $('.sidebar');
     var navbar = $('.navbar').not('.top-navbar');
 
+
+    //Add active class to nav-link based on url dynamically
+    //Active class can be hard coded directly in html file also as required
+
     function addActiveClass(element) {
       if (current === "") {
         //for root url
@@ -63,6 +67,24 @@
 
     //checkbox and radios
     $(".form-check label,.form-radio label").append('<i class="input-helper"></i>');
-  
+
+
+    // fixed navbar on scroll
+    // $(window).scroll(function() {
+    //   if(window.matchMedia('(min-width: 991px)').matches) {
+    //     if ($(window).scrollTop() >= 197) {
+    //       $(navbar).addClass('navbar-mini fixed-top');
+    //       $(body).addClass('navbar-fixed-top');
+    //     } else {
+    //       $(navbar).removeClass('navbar-mini fixed-top');
+    //       $(body).removeClass('navbar-fixed-top');
+    //     }
+    //   }
+    //   if(window.matchMedia('(max-width: 991px)').matches) {
+    //     $(navbar).addClass('navbar-mini fixed-top');
+    //     $(body).addClass('navbar-fixed-top');
+    //   } 
+    // });
+
   });
 })(jQuery);

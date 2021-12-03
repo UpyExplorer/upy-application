@@ -11,7 +11,7 @@
         </div>
         <div class="col-sm-12 col-md-7">
             <div class="dataTables_paginate paging_simple_numbers" id="order-listing_paginate">
-                <div class="btn-group" role="group" aria-label="Basic example">
+                <div class="btn-group" role="group" aria-label="Basic example" style="float: right;">
                     {% if page_obj.has_previous %}
                         <a type="button"href="{{ request.path }}?page={{ page_obj.previous_page_number }}" class="btn btn-primary">{% trans 'Previous' %}</a>
                     {% endif %}

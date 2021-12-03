@@ -1,4 +1,4 @@
-{% extends "layouts/default/page_read.html" %}
+{% extends "layouts/default/page_view.html" %}
 
 {% load static %}
 {% load bootstrap4 %}
@@ -24,11 +24,11 @@
 	<div class="form-row">
 		<div class="form-group col-md-8">
 			<label for="inputName">{% trans 'Name' %}:</label>
-			<input type="text" class="form-control" id="inputName" placeholder="Name" value="{{ object.name }}" readonly>
+			<input type="text" class="form-control" id="inputName" placeholder="Name" value="{{ object.name }}" disabled>
 		</div>
 		<div class="form-group col-md-4">
 			<label for="inputSku">{% trans 'Sku' %}:</label>
-			<input type="text" class="form-control" id="inputSku" placeholder="Sku" value="{{ object.sku }}" readonly>
+			<input type="text" class="form-control" id="inputSku" placeholder="Sku" value="{{ object.sku }}" disabled>
 		</div>
 	</div>
 
@@ -36,8 +36,8 @@
 		<div class="form-group col-md-8">
 			<label for="inputName">{% trans 'Product Type' %}:</label>
 			<div class="input-group-prepend">
-				<label class="input-group-text" for="inputGroupType">{% trans 'Options' %}</label>
-				<select class="custom-select" id="inputGroupType" style="height: 50px;" disabled>
+				<label class="input-group-text" for="inputGroupType"style="margin: 1px; height: 45px;">{% trans 'Options' %}</label>
+				<select class="custom-select" id="inputGroupType" style="margin: 1px;height: 45px;" disabled>
 					<option value="1" selected>Standard</option>
 					<option value="2">Variation</option>
 					<option value="3">Kit</option>
@@ -46,7 +46,7 @@
 		</div>
 		<div class="form-group col-md-4">
 			<label for="inputSku">{% trans 'Stock' %}:</label>
-			<input type="text" class="form-control" id="inputSku" placeholder="Sku" value="{{ object.stock|floatformat:-2 }}" readonly>
+			<input type="text" class="form-control" id="inputSku" placeholder="Sku" value="{{ object.stock|floatformat:-2 }}" disabled>
 		</div>
 	</div>
 
@@ -56,21 +56,21 @@
 		<div class="form-group col-md-4">
 			<label for="inputPriceSell">{% trans 'Price Sell' %}:</label><div class="input-group-prepend">
 				<span class="input-group-text">{% trans '$' %}</span>
-				<span class="input-group-text">0.00</span><input type="text" class="form-control" value="{{ object.price_sell|floatformat:2 }}" readonly>
+				<span class="input-group-text">0.00</span><input type="text" class="form-control" value="{{ object.price_sell|floatformat:2 }}" disabled>
 			</div>
 		</div>
 
 		<div class="form-group col-md-4">
 			<label for="inputPriceSell">{% trans 'Price Cost' %}:</label><div class="input-group-prepend">
 				<span class="input-group-text">{% trans '$' %}</span>
-				<span class="input-group-text">0.00</span><input type="text" class="form-control" value="{{ object.price_cost|floatformat:2 }}" readonly>
+				<span class="input-group-text">0.00</span><input type="text" class="form-control" value="{{ object.price_cost|floatformat:2 }}" disabled>
 			</div>
 		</div>
 
 		<div class="form-group col-md-4">
 			<label for="inputPriceSell">{% trans 'Price Promo' %}:</label><div class="input-group-prepend">
 				<span class="input-group-text">{% trans '$' %}</span>
-				<span class="input-group-text">0.00</span><input type="text" class="form-control" value="{{ object.price_promo|floatformat:2 }}" readonly>
+				<span class="input-group-text">0.00</span><input type="text" class="form-control" value="{{ object.price_promo|floatformat:2 }}" disabled>
 			</div>
 		</div>
 
@@ -78,7 +78,7 @@
 
 	<div class="form-group">
 		<label for="inputDescription">{% trans 'Description' %}:</label>
-		<textarea class="form-control" id="inputDescription" rows="3" readonly>{{ object.description }}</textarea>
+		<textarea class="form-control" id="inputDescription" rows="3" disabled>{{ object.description }}</textarea>
 	</div>
 
 {% endblock %}

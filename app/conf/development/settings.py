@@ -95,15 +95,6 @@ PIPELINE = {
               'js/base_upyexplorer.js',
             ),
             'output_filename': 'js/main.min.js',
-        },
-        'components':{
-            'source_filenames': (
-              'js/components/dashboard.js',
-              'js/components/hoverable-collapse.js',
-              'js/components/settings.js',
-              'js/components/template.js',
-            ),
-            'output_filename': 'js/components/components.min.js',
         }
     },
         'STYLESHEETS': {
@@ -116,10 +107,15 @@ PIPELINE = {
     },
 }
 
+PIPELINE['JS_COMPRESSOR'] = 'pipeline.compressors.yuglify.YuglifyCompressor'
 PIPELINE['COMPILERS'] = (
-  'pipeline.compilers.coffee.CoffeeScriptCompiler',
+  'pipeline.compilers.less.LessCompiler',
   'pipeline.compilers.stylus.StylusCompiler',
 )
+
+PIPELINE_JS_COMPRESSOR = 'pipeline.compressors.yuglify.YuglifyCompressor'
+PIPELINE_DISABLE_WRAPPER = True
+PIPELINE_ENABLED= True
 
 MIDDLEWARE_CLASSES = (
    'django.middleware.gzip.GZipMiddleware',
