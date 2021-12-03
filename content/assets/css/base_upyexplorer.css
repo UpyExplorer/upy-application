@@ -10396,7 +10396,7 @@ pre code {
   color: #495057;
   background-color: #ffffff;
   background-clip: padding-box;
-  border: 1px solid #ced4da;
+  border: 1px solid #bfbfbf;
   border-radius: 2px;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -19990,7 +19990,7 @@ code {
 }
 
 .form-control {
-  border: 1px solid #f3f3f3;
+  border: 1px solid #bfbfbf;
   font-weight: 400;
   font-size: 0.875rem;
 }
