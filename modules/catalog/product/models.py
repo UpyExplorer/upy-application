@@ -28,7 +28,7 @@ class Product(models.Model):
     detail_height = models.DecimalField(max_digits=20, decimal_places=5, null=True)
     active = models.BooleanField(null=False, default=False)
     video_url = models.TextField(blank=True, null=True)
-    type = models.CharField(choices=ITEM_TYPE,max_length=1)
+    type = models.CharField(choices=ITEM_TYPE,max_length=1, null=True)
     stock = models.DecimalField(max_digits=11, decimal_places=7, null=True, default=0)
 
     def get_absolute_url(self):
