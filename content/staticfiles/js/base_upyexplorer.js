@@ -1,5 +1,10 @@
 window.addEventListener("load", function () {
 	try {
+
+		document.getElementById("btnSave").addEventListener("click", function() {
+			$('.btn_save').trigger('click');
+		});
+
 		document.getElementById("btnEdit").addEventListener("click", function() {
 			var inputs = document.getElementsByTagName("input");
 			var selects = document.getElementsByTagName("select");
