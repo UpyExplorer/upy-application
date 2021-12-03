@@ -63,8 +63,10 @@
 			{% elif field.name == 'price_sell' %}
 			<div class="form-group col-md-4">
 				<label for="{{ field.id_for_label }}">{{ field.label }}:</label>
-				<div class="input-group">
-				{{ field|add_class:'form-control' }}
+				<div class="input-group-prepend">
+					<span class="input-group-text-group-disabled">{% trans '$' %}</span>
+					<span class="input-group-text-group-disabled">0.00</span>
+					{{ field|add_class:'form-control' }}
 				</div>
 				{% for error in field.errors %}
 					<span class="help-block" style="color: #b60909;">{{ error }}</span>
@@ -75,10 +77,13 @@
 			</div>
 
 			{% elif field.name == 'price_cost' %}
+
 			<div class="form-group col-md-4">
 				<label for="{{ field.id_for_label }}">{{ field.label }}:</label>
-				<div class="input-group">
-				{{ field|add_class:'form-control' }}
+				<div class="input-group-prepend">
+					<span class="input-group-text-group-disabled">{% trans '$' %}</span>
+					<span class="input-group-text-group-disabled">0.00</span>
+					{{ field|add_class:'form-control' }}
 				</div>
 				{% for error in field.errors %}
 					<span class="help-block" style="color: #b60909;">{{ error }}</span>
@@ -91,8 +96,10 @@
 			{% elif field.name == 'price_promo' %}
 			<div class="form-group col-md-4">
 				<label for="{{ field.id_for_label }}">{{ field.label }}:</label>
-				<div class="input-group">
-				{{ field|add_class:'form-control' }}
+				<div class="input-group-prepend">
+					<span class="input-group-text-group-disabled">{% trans '$' %}</span>
+					<span class="input-group-text-group-disabled">0.00</span>
+					{{ field|add_class:'form-control' }}
 				</div>
 				{% for error in field.errors %}
 					<span class="help-block" style="color: #b60909;">{{ error }}</span>
