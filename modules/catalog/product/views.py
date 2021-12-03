@@ -18,6 +18,7 @@ class ProductListView(LoginRequiredMixin, generic.ListView):
         context = super(ProductListView, self).get_context_data(**kwargs)
         context['view_path'] = _('Dashboard / Catalog / Product')
         context['view_name'] = _('Product List')
+        context['view_info'] = _('Product')
 
         return context
 
@@ -72,74 +73,31 @@ class ProductUpdateView(LoginRequiredMixin, generic.UpdateView):
         if not self.request.user.has_perm('global_permissions.app_catalog_product_update'):
             raise PermissionDenied
 
-        form = ProductForm(instance=self.get_object())
+        object = self.get_object()
 
         return render(self.request, self.template_name, {
-				"form": form,
+				"object": object,
+				"form": ProductForm(instance=object),
+				"view_path": _('Dashboard / Catalog / Product'),
 				"view_name": _('Product Edit'),
-				"view_path": _('Dashboard / Catalog / Product')
+                "view_info": _('Product'),
 			}
 		)
 
-
-class ProductView(LoginRequiredMixin, generic.View):
-    """
-	Implementation for tests - View
-	"""
+class ProductCreateView(LoginRequiredMixin, generic.CreateView):
     template_name = 'catalog/product/product_update.html'
     form_class = ProductForm
 
-    def get(self, *args, **kwargs):
-        if not self.request.user.has_perm('global_permissions.app_catalog_product_update'):
-            raise PermissionDenied
-
+    def post(self, request, *args, **kwargs):
         company_data_id = get_company_id(self.request.user.id)
-        instance = Product.objects.filter(pk=self.kwargs['pk'], company_data_id=company_data_id).first()
-        form = ProductForm(instance=instance)
-
-        return render(self.request, self.template_name, {
-				"form": form,
-				"view_name": _('Product Edit'),
-				"view_path": _('Dashboard / Catalog / Product')
-			}
-		)
-
-    def post(self, *args, **kwargs):
-        company_data_id = get_company_id(self.request.user.id)
-        instance = Product.objects.filter(pk=self.kwargs['pk'], company_data_id=company_data_id).first()
 
         if self.request.method == "POST":
-            if instance:
-                form = self.form_class(self.request.POST, instance=instance)
-            else:
-                form = self.form_class(self.request.POST) 
-            form.save()
-            return redirect('catalog:product_list')
-        return redirect('catalog:product_list')
+            form = self.form_class(self.request.POST)
+            object = form.save()
 
+            product = Product.objects.get(id=object.id)
+            product.company_data_id = company_data_id
+            product.save()
 
-class ProductFormView(LoginRequiredMixin, generic.FormView):
-    """
-	Implementation for tests - FormView
-	"""
-    template_name = 'catalog/product/product_update.html'
-    form_class = ProductForm
-    success_url = '/catalog/product/'
-
-    def __init__(self, *args, **kwargs):
-        super().__init__()
-
-    def get_initial(self):
-        company_data_id = get_company_id(self.request.user.id)
-        self.product = Product.objects.filter(pk=self.kwargs['pk'], company_data_id=company_data_id).first()
-        initial = super().get_initial()
-        initial['name'] = self.product.name
-        initial['sku'] = self.product.sku
-        return initial
-
-    def form_valid(self, form):
-        self.product.name = form.cleaned_data['name']
-        self.product.sku = form.cleaned_data['sku']
-        self.product.save()
-
+            return redirect(product.get_absolute_url())
         return redirect('catalog:product_list')

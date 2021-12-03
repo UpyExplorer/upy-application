@@ -31,20 +31,14 @@
 											</button>
 										{% endif %}
 
-										{% if perms.global_permissions.app_catalog_product_save %}
-											<!-- <a type="button" id="btnSave" class="btn btn-success btn-sm" title="{% trans 'Save Product' %}" style="float: right; margin-right: 5px;">
-												<i class="mdi mdi-content-save"></i>
-											</a> -->
-										{% endif %}
-
 										{% if perms.global_permissions.app_catalog_product_update %}
-											<a type="button" id="btnEdit" class="btn btn-warning btn-sm" title="{% trans 'Edit Product' %}" style="float: right; margin-right: 5px;">
-												<i class="mdi mdi-lead-pencil"></i>
+											<a type="button" id="btnSave" class="btn btn-success btn-sm" title="{% trans 'Save Product' %}" style="float: right; margin-right: 5px; color: #ffffff;">
+												<i class="mdi mdi-content-save"></i>
 											</a>
 										{% endif %}
 
 										{% if perms.global_permissions.app_catalog_product_delete %}
-											<a type="button" id="btnDelete" class="btn btn-danger btn-sm" title="{% trans 'Delete' %}" style="float: right; margin-right: 5px;">
+											<a type="button" id="btnDelete" class="btn btn-danger btn-sm disabled" title="{% trans 'Delete' %}" style="float: right; margin-right: 5px; color: #ffffff;">
 												<i class="mdi mdi-delete"></i>
 											</a>
 										{% endif %}
@@ -75,7 +69,7 @@
 							<ul class="nav nav-tabs" id="myTab" role="tablist">
 								<li class="nav-item">
 									<a class="nav-link active" id="basic-tab" data-toggle="tab" href="#basic" role="tab" aria-controls="basic" aria-selected="true">
-										{% trans 'Basic information' %}
+										<b>{% trans 'Basic information' %}</b>
 									</a>
 								</li>
 							</ul>

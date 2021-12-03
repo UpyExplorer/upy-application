@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-01 23:10-0300\n"
+"POT-Creation-Date: 2021-12-03 02:52-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: app/conf/development/settings.py:148 app/conf/production/settings.py:147
+#: app/conf/development/settings.py:192 app/conf/production/settings.py:189
 msgid "Português-BR"
 msgstr "Português-BR"
 
-#: app/conf/development/settings.py:149 app/conf/production/settings.py:148
+#: app/conf/development/settings.py:193 app/conf/production/settings.py:190
 msgid "English"
 msgstr "Inglês"
 
@@ -36,47 +36,47 @@ msgstr "Seu nome de usuário é"
 msgid "You are a guest."
 msgstr "Você é um convidado"
 
-#: content/templates/dashboard/log_in.html:40
-#: content/templates/dashboard/sign_up.html:40
+#: content/templates/dashboard/log_in.html:39
+#: content/templates/dashboard/sign_up.html:39
 #: content/templates/layouts/footer.html:8
 msgid "All rights reserved for"
 msgstr "Todos os direitos reservados para"
 
-#: content/templates/layouts/default/page.html:45
+#: content/templates/layouts/default/page.html:46
 msgid "Welcome back"
 msgstr "Bem vindo"
 
-#: content/templates/layouts/default/page.html:67
+#: content/templates/layouts/default/page.html:68
 msgid "Notifications"
 msgstr "Notificações"
 
-#: content/templates/layouts/default/page.html:76
+#: content/templates/layouts/default/page.html:77
 msgid "Welcome to System!"
 msgstr "Bem vindo ao Sistema!"
 
-#: content/templates/layouts/default/page.html:95
+#: content/templates/layouts/default/page.html:96
 #: content/templates/layouts/menu.html:69
 msgid "Update Pro"
 msgstr "Atualizar Conta"
 
-#: content/templates/layouts/default/page.html:101
+#: content/templates/layouts/default/page.html:102
 msgid "Change language"
 msgstr "Alterar Idioma"
 
-#: content/templates/layouts/default/page.html:107
+#: content/templates/layouts/default/page.html:108
 msgid "Logout"
 msgstr "Sair"
 
-#: content/templates/layouts/default/page_read.html:34
-msgid "Edit Product"
-msgstr "Editar Produto"
+#: content/templates/layouts/default/page_view.html:35
+msgid "Save Product"
+msgstr "Salvar Produto"
 
-#: content/templates/layouts/default/page_read.html:40
+#: content/templates/layouts/default/page_view.html:41
 #: venv/lib/python3.9/site-packages/django/forms/formsets.py:417
 msgid "Delete"
 msgstr "Excluir"
 
-#: content/templates/layouts/default/page_read.html:72
+#: content/templates/layouts/default/page_view.html:72
 msgid "Basic information"
 msgstr "Informações Básicas"
 
@@ -92,7 +92,8 @@ msgstr "Painel de Controle"
 msgid "Catalog"
 msgstr "Catálogo"
 
-#: content/templates/layouts/menu.html:31 modules/catalog/product/views.py:43
+#: content/templates/layouts/menu.html:31 modules/catalog/product/views.py:21
+#: modules/catalog/product/views.py:44 modules/catalog/product/views.py:83
 msgid "Product"
 msgstr "Produto"
 
@@ -449,8 +450,16 @@ msgstr "Sua senha foi modificada."
 msgid "Your password has been set. You may go ahead and login now."
 msgstr "Sua senha foi definida. Você pode ir em frente e entrar agora."
 
-#: modules/catalog/product/views.py:19 modules/catalog/product/views.py:41
-#: modules/catalog/product/views.py:80 modules/catalog/product/views.py:103
+#: modules/catalog/product/forms.py:6
+msgid "Maximum 100 characters"
+msgstr "No máximo 100 caracteres"
+
+#: modules/catalog/product/forms.py:7
+msgid "No special characters allowed"
+msgstr "Não é permitido caracteres especiais"
+
+#: modules/catalog/product/views.py:19 modules/catalog/product/views.py:42
+#: modules/catalog/product/views.py:81
 msgid "Dashboard / Catalog / Product"
 msgstr "Painel de Controle / Catálogo / Produto"
 
@@ -458,59 +467,62 @@ msgstr "Painel de Controle / Catálogo / Produto"
 msgid "Product List"
 msgstr "Produto"
 
-#: modules/catalog/product/views.py:42
+#: modules/catalog/product/views.py:43
 msgid "Product View"
-msgstr "Produto"
+msgstr "Visualizar Produto"
 
-#: modules/catalog/product/views.py:79 modules/catalog/product/views.py:102
+#: modules/catalog/product/views.py:82
 msgid "Product Edit"
-msgstr "Produto"
+msgstr "Editar Produto"
 
-#: modules/catalog/templates/catalog/product/product_list.html:18
+#: modules/catalog/templates/catalog/product/product_list.html:30
 msgid "Add Product"
 msgstr "Adicionar Produto"
 
-#: modules/catalog/templates/catalog/product/product_list.html:41
+#: modules/catalog/templates/catalog/product/product_list.html:53
 #: modules/catalog/templates/catalog/product/product_read.html:26
 msgid "Name"
 msgstr "Nome"
 
-#: modules/catalog/templates/catalog/product/product_list.html:42
+#: modules/catalog/templates/catalog/product/product_list.html:54
 #: modules/catalog/templates/catalog/product/product_read.html:30
 msgid "Sku"
 msgstr "Sku"
 
-#: modules/catalog/templates/catalog/product/product_list.html:43
+#: modules/catalog/templates/catalog/product/product_list.html:55
 #: modules/catalog/templates/catalog/product/product_read.html:57
 msgid "Price Sell"
 msgstr "Preço de Venda"
 
-#: modules/catalog/templates/catalog/product/product_list.html:44
+#: modules/catalog/templates/catalog/product/product_list.html:56
 #: modules/catalog/templates/catalog/product/product_read.html:48
 msgid "Stock"
 msgstr "Estoque"
 
-#: modules/catalog/templates/catalog/product/product_list.html:45
+#: modules/catalog/templates/catalog/product/product_list.html:57
 msgid "Created In"
 msgstr "Criado Em"
 
-#: modules/catalog/templates/catalog/product/product_list.html:79
+#: modules/catalog/templates/catalog/product/product_list.html:91
 #: modules/catalog/templates/catalog/product/product_read.html:58
 #: modules/catalog/templates/catalog/product/product_read.html:65
 #: modules/catalog/templates/catalog/product/product_read.html:72
+#: modules/catalog/templates/catalog/product/product_update.html:67
+#: modules/catalog/templates/catalog/product/product_update.html:84
+#: modules/catalog/templates/catalog/product/product_update.html:100
 msgid "$"
 msgstr "R$"
 
-#: modules/catalog/templates/catalog/product/product_list.html:84
+#: modules/catalog/templates/catalog/product/product_list.html:96
 #: modules/catalog/templates/catalog/product/product_read.html:39
 msgid "Options"
 msgstr "Opções"
 
-#: modules/catalog/templates/catalog/product/product_list.html:86
+#: modules/catalog/templates/catalog/product/product_list.html:98
 msgid "View"
 msgstr "Visualizar"
 
-#: modules/catalog/templates/catalog/product/product_list.html:87
+#: modules/catalog/templates/catalog/product/product_list.html:99
 msgid "Edit"
 msgstr "Editar"
 
@@ -529,14 +541,6 @@ msgstr "Preço Promocional"
 #: modules/catalog/templates/catalog/product/product_read.html:80
 msgid "Description"
 msgstr "Descrição"
-
-#: modules/catalog/templates/catalog/product/product_update.html:16
-msgid "Save Product"
-msgstr "Salvar Produto"
-
-#: modules/catalog/templates/catalog/product/product_update.html:75
-msgid "Update"
-msgstr "Atualizar"
 
 #: modules/dashboard/views.py:11
 #: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_changes_confirmation.html:6
@@ -1950,6 +1954,12 @@ msgstr ""
 #: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_revision_confirmation.html:27
 msgid "Object_id"
 msgstr ""
+
+#~ msgid "Edit Product"
+#~ msgstr "Editar Produto"
+
+#~ msgid "Update"
+#~ msgstr "Atualizar"
 
 #~ msgid "All Rights Reserved"
 #~ msgstr "Todos os direitos reservados"
