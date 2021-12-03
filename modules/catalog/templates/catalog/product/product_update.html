@@ -29,57 +29,6 @@
 
 {% block square_right %}
 
-<!-- <form method="post" novalidate>
-	{% csrf_token %}
-  
-	{{ form.non_field_errors }}
-  
-	{{ form.source.errors }}
-	{{ form.source }}
-  
-	<table border="1">
-  
-		<tr>
-			<th>{{ form.name.label_tag }}</th>
-			<td>
-			  {{ form.name.errors }}
-			  {{ form.name }}
-			</td>
-		  </tr>
-
-		  <tr>
-			<th>{{ form.sku.label_tag }}</th>
-			<td>
-			  {{ form.sku.errors }}
-			  {{ form.sku }}
-			</td>
-		  </tr>
-  
-
-  
-	</table>
-  
-	<button type="submit">Submit</button>
-  </form> -->
-
-
-
-
-	<!-- <form method="post">
-		{% csrf_token %}
-		{% for field in form %}
-		<div class="fieldWrapper">
-			{{ field.errors }}
-			{{ field.label_tag }} {{ field }}
-			{% if field.help_text %}
-			<p class="help">{{ field.help_text|safe }}</p>
-			{% endif %}
-		</div>
-	{% endfor %}
-
-		<input type="submit" class="btn" >
-	</form> -->
-
 	<form method="post">
 		
 		{% csrf_token %}
@@ -93,7 +42,36 @@
 
 		{% for field in form.visible_fields %}
 
-			<div class="form-group col-md-6">
+		{% if field.name == 'name' %}
+			<div class="form-group col-md-8">
+				<label for="{{ field.id_for_label }}">{{ field.label }}</label>
+				<div class="input-group">
+				{{ field|add_class:'form-control' }}
+				</div>
+				{% for error in field.errors %}
+					<span class="help-block" style="color: #b60909;">{{ error }}</span>
+				{% endfor %}
+				<div style="color: #a5a5a5; font-size: small;">
+					{{ field.help_text }}
+				</div>
+			</div>
+		
+		{% elif field.name == 'sku' %}
+			<div class="form-group col-md-4">
+				<label for="{{ field.id_for_label }}">{{ field.label }}</label>
+				<div class="input-group">
+				{{ field|add_class:'form-control' }}
+				</div>
+				{% for error in field.errors %}
+					<span class="help-block" style="color: #b60909;">{{ error }}</span>
+				{% endfor %}
+				<div style="color: #a5a5a5; font-size: small;">
+					{{ field.help_text }}
+				</div>
+			</div>
+		
+			{% elif field.name == 'price_sell' %}
+			<div class="form-group col-md-4">
 				<label for="{{ field.id_for_label }}">{{ field.label }}</label>
 				<div class="input-group">
 				{{ field|add_class:'form-control' }}
@@ -105,13 +83,68 @@
 					{{ field.help_text }}
 				</div> -->
 			</div>
-		
+
+			{% elif field.name == 'price_cost' %}
+			<div class="form-group col-md-4">
+				<label for="{{ field.id_for_label }}">{{ field.label }}</label>
+				<div class="input-group">
+				{{ field|add_class:'form-control' }}
+				</div>
+				{% for error in field.errors %}
+					<span class="help-block" style="color: #b60909;">{{ error }}</span>
+				{% endfor %}
+				<!-- <div style="color: #a5a5a5; font-size: small;">
+					{{ field.help_text }}
+				</div> -->
+			</div>
+
+			{% elif field.name == 'price_promo' %}
+			<div class="form-group col-md-4">
+				<label for="{{ field.id_for_label }}">{{ field.label }}</label>
+				<div class="input-group">
+				{{ field|add_class:'form-control' }}
+				</div>
+				{% for error in field.errors %}
+					<span class="help-block" style="color: #b60909;">{{ error }}</span>
+				{% endfor %}
+				<!-- <div style="color: #a5a5a5; font-size: small;">
+					{{ field.help_text }}
+				</div> -->
+			</div>
+
+			{% elif field.name == 'description' %}
+			<div class="form-group col-md-12">
+				<label for="{{ field.id_for_label }}">{{ field.label }}</label>
+				<div class="input-group">
+				{{ field|add_class:'form-control' }}
+				</div>
+				{% for error in field.errors %}
+					<span class="help-block" style="color: #b60909;">{{ error }}</span>
+				{% endfor %}
+				<!-- <div style="color: #a5a5a5; font-size: small;">
+					{{ field.help_text }}
+				</div> -->
+			</div>
+
+			{% else %}
+				<div class="form-group col-md-6">
+					<label for="{{ field.id_for_label }}">{{ field.label }}</label>
+					<div class="input-group">
+					{{ field|add_class:'form-control' }}
+					</div>
+					{% for error in field.errors %}
+						<span class="help-block" style="color: #b60909;">{{ error }}</span>
+					{% endfor %}
+					<!-- <div style="color: #a5a5a5; font-size: small;">
+						{{ field.help_text }}
+					</div> -->
+				</div>
+			{% endif %}
+
+
 		{% endfor %}
 	</div>
-        <div class="mt-3">
-            <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn btn_save" value="{% trans 'Update' %}">
-        </div>
-
+	<button type="submit"class="btn_save" style="visibility: hidden;"></button>
 	</form>
 
 {% endblock %}
