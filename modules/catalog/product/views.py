@@ -73,10 +73,11 @@ class ProductUpdateView(LoginRequiredMixin, generic.UpdateView):
         if not self.request.user.has_perm('global_permissions.app_catalog_product_update'):
             raise PermissionDenied
 
-        form = ProductForm(instance=self.get_object())
+        object = self.get_object()
 
         return render(self.request, self.template_name, {
-				"form": form,
+				"object": object,
+				"form": ProductForm(instance=object),
 				"view_path": _('Dashboard / Catalog / Product'),
 				"view_name": _('Product Edit'),
                 "view_info": _('Product'),
