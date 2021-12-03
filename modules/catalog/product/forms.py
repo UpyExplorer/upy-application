@@ -5,7 +5,7 @@ from modules.catalog.product.models import Product
 class ProductForm(forms.ModelForm):
     name = forms.CharField(label=_("Nome"), help_text=_("Maximum 100 characters"))
     sku = forms.CharField(label=_("Sku"), help_text=_("No special characters allowed"))
-    type = forms.CharField(label=_("Tipo"))
+    type = forms.ChoiceField(label=_("Tipo"), choices=Product.ITEM_TYPE)
     stock = forms.DecimalField(label=_("Estoque"))
     price_sell = forms.DecimalField(label=_("Preço de Venda"))
     price_cost = forms.DecimalField(label=_("Preço de Custo"))
