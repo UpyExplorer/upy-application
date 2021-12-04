@@ -15,15 +15,56 @@
 							<p class="card-description">{{ view_path }}</p>
 							<!-- ====================CONTENT===================== -->
 							<hr>
-								{% if request.user.is_authenticated %}
-
-									{% trans 'Your username is' %} <b>{{ request.user.username }}</b>.
-							
-								{% else %}
-							
-									{% trans 'You are a guest.' %}
-							
-								{% endif %}
+							<div class="row">
+								<div class="col-md-3 grid-margin stretch-card">
+									<div class="card d-flex align-items-center" style="background: #d1d1d1;">
+										<div class="card-body py-5">
+											<div class="d-flex flex-row align-items-center flex-wrap justify-content-md-center justify-content-xl-start py-1">
+												<i class="mdi mdi-package-variant text-white icon-lg"></i>
+												<div class="ms-3 ml-md-0 ml-xl-3">
+													<h5 class="text-white font-weight-bold">{% trans 'Products' %}</h5>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 grid-margin stretch-card">
+									<div class="card d-flex align-items-center" style="background: #d1d1d1;">
+										<div class="card-body py-5">
+											<div class="d-flex flex-row align-items-center flex-wrap justify-content-md-center justify-content-xl-start py-1">
+												<i class="mdi mdi-shopping text-white icon-lg"></i>
+												<div class="ms-3 ml-md-0 ml-xl-3">
+													<h5 class="text-white font-weight-bold">{% trans 'Orders' %}</h5>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 grid-margin stretch-card">
+									<div class="card d-flex align-items-center" style="background: #d1d1d1;">
+										<div class="card-body py-5">
+											<div class="d-flex flex-row align-items-center flex-wrap justify-content-md-center justify-content-xl-start py-1">
+												<i class="mdi mdi-diamond text-white icon-lg"></i>
+												<div class="ms-3 ml-md-0 ml-xl-3">
+													<h5 class="text-white font-weight-bold">{% trans 'Ads' %}</h5>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-3 grid-margin stretch-card">
+									<div class="card d-flex align-items-center" style="background: #d1d1d1;">
+										<div class="card-body py-5">
+											<div class="d-flex flex-row align-items-center flex-wrap justify-content-md-center justify-content-xl-start py-1">
+												<i class="mdi mdi-apps text-white icon-lg"></i>
+												<div class="ms-3 ml-md-0 ml-xl-3">
+													<h5 class="text-white font-weight-bold">{% trans 'Applications' %}</h5>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 							<!-- ====================CONTENT===================== -->
 						</div>
 					</div>
