@@ -1,8 +1,4 @@
 $(function() {
-  /* ChartJS
-   * -------
-   * Data and config for chartjs
-   */
   'use strict';
   var data = {
     labels: ["2013", "2014", "2014", "2015", "2016", "2017"],
@@ -68,7 +64,6 @@ $(function() {
       ],
     }],
 
-    // These labels appear in the legend and in the tooltips when hovering different arcs
     labels: [
       'Pink',
       'Blue',
@@ -104,7 +99,7 @@ $(function() {
         'rgba(255, 159, 64, 1)'
       ],
       borderWidth: 1,
-      fill: true, // 3: no fill
+      fill: true,
     }]
   };
 
@@ -182,10 +177,8 @@ $(function() {
       }]
     }
   }
-  // Get context with jQuery - using jQuery's .get() method.
   if ($("#barChart").length) {
     var barChartCanvas = $("#barChart").get(0).getContext("2d");
-    // This will get the first returned node in the jQuery collection.
     var barChart = new Chart(barChartCanvas, {
       type: 'bar',
       data: data,

@@ -1,7 +1,7 @@
 {% extends "layouts/default/container.html" %}
 
 {% load static %}
-{% load bootstrap4 %}
+{% load bootstrap5 %}
 {% load i18n %}
 
 {% get_current_language as language_code %}
@@ -44,7 +44,7 @@
 
 	{% if product_list %}
 		<div class="table-responsive text-nowrap">
-			<div id="order-listing_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer" style="padding-left: 0px !important;">
+			<div id="order-listing_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap5 no-footer" style="padding-left: 0px !important;">
 				<div class="row">
 					<div class="col-sm-12">
 						<table class="table table-striped dataTable"> 
@@ -72,8 +72,17 @@
 																</label>
 															</div>
 															<div class="content" style="margin-left: 10px; margin-top: 3px;">
-																<span ><img src="{% static 'media/icon/icon-product.png' %}" style="width: 35px !important"></span>
+																<span>
+																	{% if product.active %}
+																		<img src="{% static 'media/icon/icon-product.png' %}"
+																		style="width: 35px !important;">
+																	{% else %}
+																		<img src="{% static 'media/icon/icon-product.png' %}"
+																		style="width: 35px !important; filter: grayscale(1);">
+																	{% endif %}
+																</span>
 															</div>
+															
 															<div class="content"style="margin-left: 10px;">
 																<p class="sender-name">
 																	{{ product.name }}
@@ -93,7 +102,7 @@
 										<td>{{ product.creation_time|date:"M d, Y" }}</td>
 										<td>
 											<div class="btn-group">
-												<button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{% trans 'Options' %}</button>
+												<button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{% trans 'Options' %}</button>
 												<div class="dropdown-menu" x-placement="bottom-start">
 													<a class="dropdown-item" style="cursor: pointer;" href="{{ product.get_absolute_url }}">{% trans 'View' %}</a>
 													<a class="dropdown-item" style="cursor: pointer;">{% trans 'Edit' %}</a>
@@ -106,11 +115,14 @@
 						</table>
 					</div>
 				</div>
-				{% block pagination %}
-					{% include "layouts/pagination.html" %}
-				{% endblock %}
+
 			</div>
+			
 		</div>
+		{% block pagination %}
+			{% include "layouts/modules/pagination.html" %}
+		{% endblock %}
+
 	{% else %}
 		<p>No products found in your database.</p>
 	{% endif %}

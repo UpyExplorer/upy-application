@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-03 02:53-0300\n"
+"POT-Creation-Date: 2021-12-04 02:22-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,33 +38,8 @@ msgstr ""
 
 #: content/templates/dashboard/log_in.html:39
 #: content/templates/dashboard/sign_up.html:39
-#: content/templates/layouts/footer.html:8
+#: content/templates/layouts/modules/footer.html:8
 msgid "All rights reserved for"
-msgstr ""
-
-#: content/templates/layouts/default/page.html:46
-msgid "Welcome back"
-msgstr ""
-
-#: content/templates/layouts/default/page.html:68
-msgid "Notifications"
-msgstr ""
-
-#: content/templates/layouts/default/page.html:77
-msgid "Welcome to System!"
-msgstr ""
-
-#: content/templates/layouts/default/page.html:96
-#: content/templates/layouts/menu.html:69
-msgid "Update Pro"
-msgstr ""
-
-#: content/templates/layouts/default/page.html:102
-msgid "Change language"
-msgstr ""
-
-#: content/templates/layouts/default/page.html:108
-msgid "Logout"
 msgstr ""
 
 #: content/templates/layouts/default/page_view.html:35
@@ -80,52 +55,78 @@ msgstr ""
 msgid "Basic information"
 msgstr ""
 
-#: content/templates/layouts/footer.html:9
+#: content/templates/layouts/modules/footer.html:9
 msgid "Version"
 msgstr ""
 
-#: content/templates/layouts/menu.html:12 modules/dashboard/views.py:12
+#: content/templates/layouts/modules/menu.html:13 modules/dashboard/views.py:12
 msgid "Dashboard"
 msgstr ""
 
-#: content/templates/layouts/menu.html:25
+#: content/templates/layouts/modules/menu.html:26
 msgid "Catalog"
 msgstr ""
 
-#: content/templates/layouts/menu.html:31 modules/catalog/product/views.py:21
-#: modules/catalog/product/views.py:44 modules/catalog/product/views.py:83
+#: content/templates/layouts/modules/menu.html:32
+#: modules/catalog/product/views.py:21 modules/catalog/product/views.py:44
+#: modules/catalog/product/views.py:84
 msgid "Product"
 msgstr ""
 
-#: content/templates/layouts/menu.html:42
+#: content/templates/layouts/modules/menu.html:43
 msgid "My Profile"
 msgstr ""
 
-#: content/templates/layouts/menu.html:48
+#: content/templates/layouts/modules/menu.html:49
 msgid "Change password"
 msgstr ""
 
-#: content/templates/layouts/menu.html:52
+#: content/templates/layouts/modules/menu.html:53
 msgid "Change profile"
 msgstr ""
 
-#: content/templates/layouts/menu.html:56 modules/account/utils.py:28
+#: content/templates/layouts/modules/menu.html:57 modules/account/utils.py:28
 msgid "Change email"
 msgstr ""
 
-#: content/templates/layouts/pagination.html:9
+#: content/templates/layouts/modules/menu.html:70
+#: content/templates/layouts/modules/navbar.html:61
+msgid "Update Pro"
+msgstr ""
+
+#: content/templates/layouts/modules/navbar.html:16
+msgid "Welcome back"
+msgstr ""
+
+#: content/templates/layouts/modules/navbar.html:33
+msgid "Notifications"
+msgstr ""
+
+#: content/templates/layouts/modules/navbar.html:42
+msgid "Welcome to System!"
+msgstr ""
+
+#: content/templates/layouts/modules/navbar.html:67
+msgid "Change language"
+msgstr ""
+
+#: content/templates/layouts/modules/navbar.html:73
+msgid "Logout"
+msgstr ""
+
+#: content/templates/layouts/modules/pagination.html:8
 msgid "Page"
 msgstr ""
 
-#: content/templates/layouts/pagination.html:9
+#: content/templates/layouts/modules/pagination.html:8
 msgid "of"
 msgstr ""
 
-#: content/templates/layouts/pagination.html:16
+#: content/templates/layouts/modules/pagination.html:15
 msgid "Previous"
 msgstr ""
 
-#: content/templates/layouts/pagination.html:20
+#: content/templates/layouts/modules/pagination.html:19
 #: modules/account/templates/account/remind_username.html:15
 #: modules/account/templates/account/resend_activation_code.html:15
 #: modules/account/templates/account/restore_password.html:15
@@ -436,15 +437,66 @@ msgid "Your password has been set. You may go ahead and login now."
 msgstr ""
 
 #: modules/catalog/product/forms.py:6
-msgid "Maximum 100 characters"
+msgid "Active"
 msgstr ""
 
 #: modules/catalog/product/forms.py:7
+#: modules/catalog/templates/catalog/product/product_list.html:53
+#: modules/catalog/templates/catalog/product/product_read.html:26
+msgid "Name"
+msgstr ""
+
+#: modules/catalog/product/forms.py:7
+msgid "Maximum 100 characters"
+msgstr ""
+
+#: modules/catalog/product/forms.py:8
+#: modules/catalog/templates/catalog/product/product_list.html:54
+#: modules/catalog/templates/catalog/product/product_read.html:30
+msgid "Sku"
+msgstr ""
+
+#: modules/catalog/product/forms.py:8
 msgid "No special characters allowed"
 msgstr ""
 
+#: modules/catalog/product/forms.py:9
+msgid "Type"
+msgstr ""
+
+#: modules/catalog/product/forms.py:10
+#: modules/catalog/templates/catalog/product/product_list.html:56
+#: modules/catalog/templates/catalog/product/product_read.html:48
+msgid "Stock"
+msgstr ""
+
+#: modules/catalog/product/forms.py:11
+#: modules/catalog/templates/catalog/product/product_list.html:55
+#: modules/catalog/templates/catalog/product/product_read.html:57
+msgid "Price Sell"
+msgstr ""
+
+#: modules/catalog/product/forms.py:12
+#: modules/catalog/templates/catalog/product/product_read.html:64
+msgid "Price Cost"
+msgstr ""
+
+#: modules/catalog/product/forms.py:13
+#: modules/catalog/templates/catalog/product/product_read.html:71
+msgid "Price Promo"
+msgstr ""
+
+#: modules/catalog/product/forms.py:15
+#: modules/catalog/templates/catalog/product/product_read.html:80
+msgid "Description"
+msgstr ""
+
+#: modules/catalog/product/forms.py:19
+msgid "Maximum 500 characters"
+msgstr ""
+
 #: modules/catalog/product/views.py:19 modules/catalog/product/views.py:42
-#: modules/catalog/product/views.py:81
+#: modules/catalog/product/views.py:82
 msgid "Dashboard / Catalog / Product"
 msgstr ""
 
@@ -456,75 +508,51 @@ msgstr ""
 msgid "Product View"
 msgstr ""
 
-#: modules/catalog/product/views.py:82
+#: modules/catalog/product/views.py:76
+msgid "Product not found!"
+msgstr ""
+
+#: modules/catalog/product/views.py:83
 msgid "Product Edit"
+msgstr ""
+
+#: modules/catalog/product/views.py:89 modules/catalog/product/views.py:107
+msgid "Product saved successfully!"
 msgstr ""
 
 #: modules/catalog/templates/catalog/product/product_list.html:30
 msgid "Add Product"
 msgstr ""
 
-#: modules/catalog/templates/catalog/product/product_list.html:53
-#: modules/catalog/templates/catalog/product/product_read.html:26
-msgid "Name"
-msgstr ""
-
-#: modules/catalog/templates/catalog/product/product_list.html:54
-#: modules/catalog/templates/catalog/product/product_read.html:30
-msgid "Sku"
-msgstr ""
-
-#: modules/catalog/templates/catalog/product/product_list.html:55
-#: modules/catalog/templates/catalog/product/product_read.html:57
-msgid "Price Sell"
-msgstr ""
-
-#: modules/catalog/templates/catalog/product/product_list.html:56
-#: modules/catalog/templates/catalog/product/product_read.html:48
-msgid "Stock"
-msgstr ""
-
 #: modules/catalog/templates/catalog/product/product_list.html:57
 msgid "Created In"
 msgstr ""
 
-#: modules/catalog/templates/catalog/product/product_list.html:91
+#: modules/catalog/templates/catalog/product/product_list.html:100
 #: modules/catalog/templates/catalog/product/product_read.html:58
 #: modules/catalog/templates/catalog/product/product_read.html:65
 #: modules/catalog/templates/catalog/product/product_read.html:72
-#: modules/catalog/templates/catalog/product/product_update.html:67
-#: modules/catalog/templates/catalog/product/product_update.html:84
-#: modules/catalog/templates/catalog/product/product_update.html:100
+#: modules/catalog/templates/catalog/product/product_update.html:81
+#: modules/catalog/templates/catalog/product/product_update.html:98
+#: modules/catalog/templates/catalog/product/product_update.html:114
 msgid "$"
 msgstr ""
 
-#: modules/catalog/templates/catalog/product/product_list.html:96
+#: modules/catalog/templates/catalog/product/product_list.html:105
 #: modules/catalog/templates/catalog/product/product_read.html:39
 msgid "Options"
 msgstr ""
 
-#: modules/catalog/templates/catalog/product/product_list.html:98
+#: modules/catalog/templates/catalog/product/product_list.html:107
 msgid "View"
 msgstr ""
 
-#: modules/catalog/templates/catalog/product/product_list.html:99
+#: modules/catalog/templates/catalog/product/product_list.html:108
 msgid "Edit"
 msgstr ""
 
 #: modules/catalog/templates/catalog/product/product_read.html:37
 msgid "Product Type"
-msgstr ""
-
-#: modules/catalog/templates/catalog/product/product_read.html:64
-msgid "Price Cost"
-msgstr ""
-
-#: modules/catalog/templates/catalog/product/product_read.html:71
-msgid "Price Promo"
-msgstr ""
-
-#: modules/catalog/templates/catalog/product/product_read.html:80
-msgid "Description"
 msgstr ""
 
 #: modules/dashboard/views.py:11
@@ -544,6 +572,9 @@ msgstr ""
 #: venv/lib/python3.9/site-packages/bootstrap4/components.py:17
 #: venv/lib/python3.9/site-packages/bootstrap4/templates/bootstrap4/form_errors.html:3
 #: venv/lib/python3.9/site-packages/bootstrap4/templates/bootstrap4/messages.html:4
+#: venv/lib/python3.9/site-packages/bootstrap5/components.py:17
+#: venv/lib/python3.9/site-packages/bootstrap5/templates/bootstrap5/form_errors.html:3
+#: venv/lib/python3.9/site-packages/bootstrap5/templates/bootstrap5/messages.html:4
 msgid "close"
 msgstr ""
 

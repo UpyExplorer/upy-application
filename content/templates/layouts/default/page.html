@@ -1,6 +1,6 @@
 {% load static %}
-{% load bootstrap4 %}
 {% load i18n %}
+{% load bootstrap5 %}
 
 {% get_current_language as language_code %}
 
@@ -16,115 +16,37 @@
         <title>UpyExplorer</title>
 
         <!-- CSS -->
-        {% include 'layouts/include_css.html' %}
+        {% include 'layouts/includes/include_css.html' %}
         <!-- CSS -->
+
         <!-- JS -->
-        {% include 'layouts/include_js.html' %}
+        {% include 'layouts/includes/include_js.html' %}
         <!-- JS -->
 
     </head>
     <body class="sidebar-icon-only">
         <div class="container-scroller d-flex">
             <!-- Menu -->
-            {% include 'layouts/menu.html' %}
+            {% include 'layouts/modules/menu.html' %}
             <!-- Menu -->
 
             <div class="container-fluid page-body-wrapper">
-                <nav class="navbar col-lg-12 col-12 px-0 py-0 py-lg-4 d-flex flex-row"> 
-                <!-- <nav class="navbar top-navbar col-lg-12 col-12 p-0">  -->
-                    <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
-                        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
-                            <span class="mdi mdi-menu"></span>
-                        </button>
-                    <div class="navbar-brand-wrapper">
-                        <a class="navbar-brand brand-logo" style="margin-left: 5px !important;">
-                        <img src="{% static 'media/upy-explorer.png' %}" style="width: 150px;" alt="logo" class="mobile-logo"/>
-                        </a>
-                    </div>
-                    <h6 class="font-weight-bold mb-0 d-none d-md-block mt-1" style="padding-bottom: 3px;">
-                        {% if request.user.is_authenticated %}
-                        {% trans 'Welcome back' %}, {{ request.user.username }}
-                        {% endif %}
-                    </h6>
-                    <ul class="navbar-nav navbar-nav-right">
-                        <!-- <li class="nav-item nav-profile dropdown">
-                            <a class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center" id="notificationDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-                                <i class="mdi mdi-comment-question-outline mx-0"></i>
-                            </a>
-                        </li> -->
+                <!-- Navbar -->
+                {% include 'layouts/modules/navbar.html' %}
+                <!-- Navbar -->
 
-                        <li class="nav-item nav-profile dropdown">
-                            <a class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center" id="notificationDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-                                <i class="mdi mdi-bell mx-0"></i>
-                            </a>
-                        </li>
+                <!-- Messages -->
+                {% include 'layouts/modules/messages.html' %}
+                <!-- Messages -->
 
-                        <li class="nav-item nav-profile dropdown">
-                            <a class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center" id="notificationDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-                                <i class="mdi mdi-email-open mx-0"></i>
-                                <span class="count bg-warning">1</span>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
-                                <p class="mb-0 font-weight-normal float-left dropdown-header">{% trans 'Notifications' %}</p>
-                              
-                                <a class="dropdown-item preview-item">
-                                    <div class="preview-thumbnail">
-                                        <div class="preview-icon bg-info">
-                                            <i class="mdi mdi-account-box mx-0"></i>
-                                        </div>
-                                    </div>
-                                    <div class="preview-item-content">
-                                        <h6 class="preview-subject font-weight-normal">{% trans 'Welcome to System!' %}</h6>
-                                        <p class="font-weight-light small-text mb-0 text-muted">UpyExplorer</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </li>
-
-                        <li class="nav-item nav-profile dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown" aria-expanded="false" >
-                                <img src="{% static 'media/icon/icon-user.png' %}" style="width: auto; height: 50px;" alt="profile" class="profile-img">
-                                <span class="nav-profile-name">
-                                    {% if request.user.is_authenticated %}
-                                        {{ request.user.username }}
-                                    {% endif %}
-                                </span>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-                                <a class="dropdown-item">
-                                    <i class="mdi mdi-heart text-primary"></i>
-                                        {% trans 'Update Pro' %}
-                                </a>
-                                
-                                {% if perms.global_permissions.app_account_language_view %}
-                                    <a class="dropdown-item" href="{% url 'change_language' %}">
-                                        <i class="mdi mdi-web"></i>
-                                            {% trans 'Change language' %}
-                                    </a>
-                                {% endif %}
-
-                                <a class="dropdown-item" href="{% url 'account:log_out' %}">
-                                    <i class="mdi mdi-logout"></i>
-                                        {% trans 'Logout' %}
-                                </a>
-                            </div>
-                        </li>
-
-                    </ul>
-                        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
-                            <span class="mdi mdi-menu"></span>
-                        </button>
-                    </div>
-                </nav>
-                {% bootstrap_messages %}
                 {% block content %}
 
                 {% endblock %}
 
                 <!-- Footer -->
-                {% include 'layouts/footer.html' %}
+                {% include 'layouts/modules/footer.html' %}
                 <!-- Footer -->
-                </div>
+
             </div>
         </div>
 

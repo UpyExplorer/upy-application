@@ -1,11 +1,10 @@
+{% load static %}
 {% load i18n %}
 
-{% get_current_language as language_code %}
-
 {% if is_paginated %}
-    <div class="row" style="margin-top: 5px; margin-bottom: 25px">
+    <div class="row" style="margin-top: 25px; margin-bottom: 25px">
         <div class="col-sm-12 col-md-5">
-            <div class="dataTables_info" id="order-listing_info" role="status" aria-live="polite">
+            <div class="dataTables_info" id="order-listing_info" role="status" aria-live="polite" style="margin: 15px;">
                 {% trans 'Page' %} {{ page_obj.number }} {% trans 'of' %} {{ page_obj.paginator.num_pages }}
             </div>
         </div>

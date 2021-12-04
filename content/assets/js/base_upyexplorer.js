@@ -1,6 +1,5 @@
-window.addEventListener("load", function () {
+window.addEventListener("load", function () {	
 	try {
-
 		document.getElementById("btnSave").addEventListener("click", function() {
 			$('.btn_save').trigger('click');
 		});
@@ -22,7 +21,6 @@ window.addEventListener("load", function () {
 		});
 
 	}catch (e) {
-		console.log(e);
 	}
 	
 	function btnDisabled(object){
@@ -34,3 +32,46 @@ window.addEventListener("load", function () {
 	}
 
 });
+
+window.toastrDefaultSuccess = function(title, text){
+	setMessage();
+	toastr["success"](title, text)
+}
+
+window.toastrDefaultInfo = function(title, text){
+	setMessage();
+	toastr["info"](title, text)
+}
+
+window.toastrDefaultError = function(title, text){
+	setMessage();
+	toastr["error"](title, text)
+}
+
+window.toastrDefaultWarning = function(title, text){
+	setMessage();
+	toastr["warning"](title, text)
+}
+
+window.setMessage = function(type=null, title=null, text=null){
+	toastr.options = {
+		"closeButton": true,
+		"debug": false,
+		"newestOnTop": false,
+		"progressBar": true,
+		"positionClass": "toast-top-right",
+		"preventDuplicates": true,
+		"onclick": null,
+		"showDuration": "300",
+		"hideDuration": "1000",
+		"timeOut": "5000",
+		"extendedTimeOut": "1000",
+		"showEasing": "swing",
+		"hideEasing": "linear",
+		"showMethod": "fadeIn",
+		"hideMethod": "fadeOut"
+	}
+	if(type != null){
+		toastr[type](title, text)
+	}
+}
