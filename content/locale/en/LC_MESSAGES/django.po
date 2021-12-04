@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-04 02:22-0300\n"
+"POT-Creation-Date: 2021-12-04 06:38-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,14 +26,20 @@ msgstr ""
 msgid "English"
 msgstr ""
 
-#: content/templates/dashboard/index.html:20
-#: content/templates/main/index.html:9
-msgid "Your username is"
+#: content/templates/dashboard/index.html:25
+msgid "Products"
 msgstr ""
 
-#: content/templates/dashboard/index.html:24
-#: content/templates/main/index.html:13
-msgid "You are a guest."
+#: content/templates/dashboard/index.html:37
+msgid "Orders"
+msgstr ""
+
+#: content/templates/dashboard/index.html:49
+msgid "Ads"
+msgstr ""
+
+#: content/templates/dashboard/index.html:61
+msgid "Applications"
 msgstr ""
 
 #: content/templates/dashboard/log_in.html:39
@@ -89,11 +95,6 @@ msgstr ""
 msgid "Change email"
 msgstr ""
 
-#: content/templates/layouts/modules/menu.html:70
-#: content/templates/layouts/modules/navbar.html:61
-msgid "Upgrade to Pro"
-msgstr ""
-
 #: content/templates/layouts/modules/navbar.html:16
 msgid "Welcome back"
 msgstr ""
@@ -104,6 +105,10 @@ msgstr ""
 
 #: content/templates/layouts/modules/navbar.html:42
 msgid "Welcome to System!"
+msgstr ""
+
+#: content/templates/layouts/modules/navbar.html:61
+msgid "Upgrade to Pro"
 msgstr ""
 
 #: content/templates/layouts/modules/navbar.html:67
@@ -145,6 +150,14 @@ msgstr ""
 #: venv/lib/python3.9/site-packages/django/forms/widgets.py:405
 #: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_revision_confirmation.html:24
 msgid "Change"
+msgstr ""
+
+#: content/templates/main/index.html:9
+msgid "Your username is"
+msgstr ""
+
+#: content/templates/main/index.html:13
+msgid "You are a guest."
 msgstr ""
 
 #: modules/account/forms.py:18
@@ -532,9 +545,9 @@ msgstr ""
 #: modules/catalog/templates/catalog/product/product_read.html:58
 #: modules/catalog/templates/catalog/product/product_read.html:65
 #: modules/catalog/templates/catalog/product/product_read.html:72
-#: modules/catalog/templates/catalog/product/product_update.html:81
-#: modules/catalog/templates/catalog/product/product_update.html:98
-#: modules/catalog/templates/catalog/product/product_update.html:114
+#: modules/catalog/templates/catalog/product/product_update.html:84
+#: modules/catalog/templates/catalog/product/product_update.html:101
+#: modules/catalog/templates/catalog/product/product_update.html:117
 msgid "$"
 msgstr ""
 
