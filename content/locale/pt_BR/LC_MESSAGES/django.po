@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-03 21:48-0300\n"
+"POT-Creation-Date: 2021-12-04 01:19-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,34 +38,9 @@ msgstr "Você é um convidado"
 
 #: content/templates/dashboard/log_in.html:39
 #: content/templates/dashboard/sign_up.html:39
-#: content/templates/layouts/footer.html:8
+#: content/templates/layouts/modules/footer.html:8
 msgid "All rights reserved for"
 msgstr "Todos os direitos reservados para"
-
-#: content/templates/layouts/default/page.html:46
-msgid "Welcome back"
-msgstr "Bem vindo"
-
-#: content/templates/layouts/default/page.html:68
-msgid "Notifications"
-msgstr "Notificações"
-
-#: content/templates/layouts/default/page.html:77
-msgid "Welcome to System!"
-msgstr "Bem vindo ao Sistema!"
-
-#: content/templates/layouts/default/page.html:96
-#: content/templates/layouts/menu.html:69
-msgid "Update Pro"
-msgstr "Atualizar Conta"
-
-#: content/templates/layouts/default/page.html:102
-msgid "Change language"
-msgstr "Alterar Idioma"
-
-#: content/templates/layouts/default/page.html:108
-msgid "Logout"
-msgstr "Sair"
 
 #: content/templates/layouts/default/page_view.html:35
 msgid "Save Product"
@@ -80,52 +55,78 @@ msgstr "Excluir"
 msgid "Basic information"
 msgstr "Informações Básicas"
 
-#: content/templates/layouts/footer.html:9
+#: content/templates/layouts/modules/footer.html:9
 msgid "Version"
 msgstr "Versão"
 
-#: content/templates/layouts/menu.html:12 modules/dashboard/views.py:12
+#: content/templates/layouts/modules/menu.html:13 modules/dashboard/views.py:12
 msgid "Dashboard"
 msgstr "Painel de Controle"
 
-#: content/templates/layouts/menu.html:25
+#: content/templates/layouts/modules/menu.html:26
 msgid "Catalog"
 msgstr "Catálogo"
 
-#: content/templates/layouts/menu.html:31 modules/catalog/product/views.py:21
-#: modules/catalog/product/views.py:44 modules/catalog/product/views.py:83
+#: content/templates/layouts/modules/menu.html:32
+#: modules/catalog/product/views.py:21 modules/catalog/product/views.py:44
+#: modules/catalog/product/views.py:83
 msgid "Product"
 msgstr "Produto"
 
-#: content/templates/layouts/menu.html:42
+#: content/templates/layouts/modules/menu.html:43
 msgid "My Profile"
 msgstr "Meu Perfil"
 
-#: content/templates/layouts/menu.html:48
+#: content/templates/layouts/modules/menu.html:49
 msgid "Change password"
 msgstr "Alterar Senha"
 
-#: content/templates/layouts/menu.html:52
+#: content/templates/layouts/modules/menu.html:53
 msgid "Change profile"
 msgstr "Alterar Perfil"
 
-#: content/templates/layouts/menu.html:56 modules/account/utils.py:28
+#: content/templates/layouts/modules/menu.html:57 modules/account/utils.py:28
 msgid "Change email"
 msgstr "Alterar E-mail"
 
-#: content/templates/layouts/pagination.html:9
+#: content/templates/layouts/modules/menu.html:70
+#: content/templates/layouts/modules/navbar.html:61
+msgid "Update Pro"
+msgstr "Atualizar Conta"
+
+#: content/templates/layouts/modules/navbar.html:16
+msgid "Welcome back"
+msgstr "Bem vindo"
+
+#: content/templates/layouts/modules/navbar.html:33
+msgid "Notifications"
+msgstr "Notificações"
+
+#: content/templates/layouts/modules/navbar.html:42
+msgid "Welcome to System!"
+msgstr "Bem vindo ao Sistema!"
+
+#: content/templates/layouts/modules/navbar.html:67
+msgid "Change language"
+msgstr "Alterar Idioma"
+
+#: content/templates/layouts/modules/navbar.html:73
+msgid "Logout"
+msgstr "Sair"
+
+#: content/templates/layouts/modules/pagination.html:8
 msgid "Page"
 msgstr "Página"
 
-#: content/templates/layouts/pagination.html:9
+#: content/templates/layouts/modules/pagination.html:8
 msgid "of"
 msgstr "de"
 
-#: content/templates/layouts/pagination.html:16
+#: content/templates/layouts/modules/pagination.html:15
 msgid "Previous"
 msgstr "Anterior"
 
-#: content/templates/layouts/pagination.html:20
+#: content/templates/layouts/modules/pagination.html:19
 #: modules/account/templates/account/remind_username.html:15
 #: modules/account/templates/account/resend_activation_code.html:15
 #: modules/account/templates/account/restore_password.html:15
@@ -500,10 +501,16 @@ msgstr "Preço de Custo"
 msgid "Price Promo"
 msgstr "Preço Promocional"
 
-#: modules/catalog/product/forms.py:14
+#: modules/catalog/product/forms.py:15
 #: modules/catalog/templates/catalog/product/product_read.html:80
 msgid "Description"
 msgstr "Descrição"
+
+#: modules/catalog/product/forms.py:19
+#, fuzzy
+#| msgid "Maximum 100 characters"
+msgid "Maximum 500 characters"
+msgstr "No máximo 100 caracteres"
 
 #: modules/catalog/product/views.py:19 modules/catalog/product/views.py:42
 #: modules/catalog/product/views.py:81
@@ -521,6 +528,10 @@ msgstr "Visualizar Produto"
 #: modules/catalog/product/views.py:82
 msgid "Product Edit"
 msgstr "Editar Produto"
+
+#: modules/catalog/product/views.py:88
+msgid "Saved successfully"
+msgstr "Salvo com sucesso"
 
 #: modules/catalog/templates/catalog/product/product_list.html:30
 msgid "Add Product"
