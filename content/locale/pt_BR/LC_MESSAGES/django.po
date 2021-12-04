@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-04 01:19-0300\n"
+"POT-Creation-Date: 2021-12-04 02:22-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -69,7 +69,7 @@ msgstr "Catálogo"
 
 #: content/templates/layouts/modules/menu.html:32
 #: modules/catalog/product/views.py:21 modules/catalog/product/views.py:44
-#: modules/catalog/product/views.py:83
+#: modules/catalog/product/views.py:84
 msgid "Product"
 msgstr "Produto"
 
@@ -513,7 +513,7 @@ msgid "Maximum 500 characters"
 msgstr "No máximo 100 caracteres"
 
 #: modules/catalog/product/views.py:19 modules/catalog/product/views.py:42
-#: modules/catalog/product/views.py:81
+#: modules/catalog/product/views.py:82
 msgid "Dashboard / Catalog / Product"
 msgstr "Painel de Controle / Catálogo / Produto"
 
@@ -525,13 +525,17 @@ msgstr "Produto"
 msgid "Product View"
 msgstr "Visualizar Produto"
 
-#: modules/catalog/product/views.py:82
+#: modules/catalog/product/views.py:76
+msgid "Product not found!"
+msgstr "Produto não encontrado!"
+
+#: modules/catalog/product/views.py:83
 msgid "Product Edit"
 msgstr "Editar Produto"
 
-#: modules/catalog/product/views.py:88
-msgid "Saved successfully"
-msgstr "Salvo com sucesso"
+#: modules/catalog/product/views.py:89 modules/catalog/product/views.py:107
+msgid "Product saved successfully!"
+msgstr "Produto salvo com sucesso!"
 
 #: modules/catalog/templates/catalog/product/product_list.html:30
 msgid "Add Product"
@@ -541,7 +545,7 @@ msgstr "Adicionar Produto"
 msgid "Created In"
 msgstr "Criado Em"
 
-#: modules/catalog/templates/catalog/product/product_list.html:91
+#: modules/catalog/templates/catalog/product/product_list.html:100
 #: modules/catalog/templates/catalog/product/product_read.html:58
 #: modules/catalog/templates/catalog/product/product_read.html:65
 #: modules/catalog/templates/catalog/product/product_read.html:72
@@ -551,16 +555,16 @@ msgstr "Criado Em"
 msgid "$"
 msgstr "R$"
 
-#: modules/catalog/templates/catalog/product/product_list.html:96
+#: modules/catalog/templates/catalog/product/product_list.html:105
 #: modules/catalog/templates/catalog/product/product_read.html:39
 msgid "Options"
 msgstr "Opções"
 
-#: modules/catalog/templates/catalog/product/product_list.html:98
+#: modules/catalog/templates/catalog/product/product_list.html:107
 msgid "View"
 msgstr "Visualizar"
 
-#: modules/catalog/templates/catalog/product/product_list.html:99
+#: modules/catalog/templates/catalog/product/product_list.html:108
 msgid "Edit"
 msgstr "Editar"
 
