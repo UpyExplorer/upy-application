@@ -19,6 +19,10 @@
         {% include 'layouts/includes/include_css.html' %}
         <!-- CSS -->
 
+        <!-- JS -->
+        {% include 'layouts/includes/include_js.html' %}
+        <!-- JS -->
+
     </head>
     <body class="sidebar-icon-only">
         <div class="container-scroller d-flex">
@@ -31,6 +35,10 @@
                 {% include 'layouts/modules/navbar.html' %}
                 <!-- Navbar -->
 
+                <!-- Messages -->
+                {% include 'layouts/modules/messages.html' %}
+                <!-- Messages -->
+
                 {% block content %}
 
                 {% endblock %}
@@ -41,10 +49,6 @@
 
             </div>
         </div>
-
-        <!-- JS -->
-        {% include 'layouts/includes/include_js.html' %}
-        <!-- JS -->
 
     </body>
 </html>
