@@ -11,7 +11,12 @@ class ProductForm(forms.ModelForm):
     price_sell = forms.DecimalField(label=_("Price Sell"))
     price_cost = forms.DecimalField(label=_("Price Cost"))
     price_promo = forms.DecimalField(label=_("Price Promo"))
-    description = forms.CharField(label=_("Description"))
+    description = forms.CharField(
+        label=_("Description"),
+        widget=forms.Textarea,
+        max_length=500,
+        help_text=_("Maximum 500 characters")
+    )
 
     class Meta:
         model = Product
