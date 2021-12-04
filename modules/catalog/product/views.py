@@ -1,5 +1,4 @@
 from django.views import generic
-from django.urls import reverse
 from django.shortcuts import Http404, redirect, render
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.exceptions import PermissionDenied
@@ -7,6 +6,7 @@ from modules.catalog.product.forms import ProductForm
 from modules.catalog.product.models import Product
 from modules.utils import get_company_id
 from django.utils.translation import gettext_lazy as _
+from django.contrib import messages
 
 
 class ProductListView(LoginRequiredMixin, generic.ListView):
@@ -83,6 +83,10 @@ class ProductUpdateView(LoginRequiredMixin, generic.UpdateView):
                 "view_info": _('Product'),
 			}
 		)
+
+    def post(self, request, *args, **kwargs):
+        messages.success(request, 'Form submission successful')
+        return super().post(request, *args, **kwargs)
 
 class ProductCreateView(LoginRequiredMixin, generic.CreateView):
     template_name = 'catalog/product/product_update.html'
