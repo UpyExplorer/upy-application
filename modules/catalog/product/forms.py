@@ -4,14 +4,14 @@ from modules.catalog.product.models import Product
 
 class ProductForm(forms.ModelForm):
     active = forms.BooleanField(label=_("Active"))
-    name = forms.CharField(label=_("Nome"), help_text=_("Maximum 100 characters"))
+    name = forms.CharField(label=_("Name"), help_text=_("Maximum 100 characters"))
     sku = forms.CharField(label=_("Sku"), help_text=_("No special characters allowed"))
-    type = forms.ChoiceField(label=_("Tipo"), choices=Product.ITEM_TYPE)
-    stock = forms.IntegerField(label=_("Estoque"))
-    price_sell = forms.DecimalField(label=_("Preço de Venda"))
-    price_cost = forms.DecimalField(label=_("Preço de Custo"))
-    price_promo = forms.DecimalField(label=_("Preço Promocional"))
-    description = forms.CharField(label=_("Descrição"))
+    type = forms.ChoiceField(label=_("Type"), choices=Product.ITEM_TYPE)
+    stock = forms.IntegerField(label=_("Stock"))
+    price_sell = forms.DecimalField(label=_("Price Sell"))
+    price_cost = forms.DecimalField(label=_("Price Cost"))
+    price_promo = forms.DecimalField(label=_("Price Promo"))
+    description = forms.CharField(label=_("Description"))
 
     class Meta:
         model = Product
