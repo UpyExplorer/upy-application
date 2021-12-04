@@ -8,12 +8,12 @@
 
 	<img src="{% static 'media/icon/icon-product.png' %}" alt="profile" class="img-lg rounded-circle mb-3">
 	<div class="mb-3">
-		<h3>{{ object.name }}</h3>
+		<h5>{{ object.name }}</h5>
 		<div class="d-flex align-items-center justify-content-center">
-			<h5 class="mb-0 mr-2 text-muted">{{ object.sku }}</h5>
+			<h6 class="mb-0 mr-2 text-muted">{{ object.sku }}</h6>
 		</div>
 	</div>
-	<p class="w-75 mx-auto mb-3">{{ object.description }}</p>
+	<hr>
 
 {% endblock %}
 
