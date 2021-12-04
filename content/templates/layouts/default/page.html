@@ -16,17 +16,14 @@
         <title>UpyExplorer</title>
 
         <!-- CSS -->
-        {% include 'layouts/include_css.html' %}
+        {% include 'layouts/modules/include_css.html' %}
         <!-- CSS -->
-        <!-- JS -->
-        {% include 'layouts/include_js.html' %}
-        <!-- JS -->
 
     </head>
     <body class="sidebar-icon-only">
         <div class="container-scroller d-flex">
             <!-- Menu -->
-            {% include 'layouts/menu.html' %}
+            {% include 'layouts/modules/menu.html' %}
             <!-- Menu -->
 
             <div class="container-fluid page-body-wrapper">
@@ -116,17 +113,20 @@
                         </button>
                     </div>
                 </nav>
-                {% bootstrap_messages %}
                 {% block content %}
 
                 {% endblock %}
 
                 <!-- Footer -->
-                {% include 'layouts/footer.html' %}
+                {% include 'layouts/modules/footer.html' %}
                 <!-- Footer -->
                 </div>
             </div>
         </div>
+
+        <!-- JS -->
+        {% include 'layouts/modules/include_js.html' %}
+        <!-- JS -->
 
     </body>
 </html>
