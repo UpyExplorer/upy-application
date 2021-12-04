@@ -72,8 +72,17 @@
 																</label>
 															</div>
 															<div class="content" style="margin-left: 10px; margin-top: 3px;">
-																<span ><img src="{% static 'media/icon/icon-product.png' %}" style="width: 35px !important"></span>
+																<span>
+																	{% if product.active %}
+																		<img src="{% static 'media/icon/icon-product.png' %}"
+																		style="width: 35px !important;">
+																	{% else %}
+																		<img src="{% static 'media/icon/icon-product.png' %}"
+																		style="width: 35px !important; filter: grayscale(1);">
+																	{% endif %}
+																</span>
 															</div>
+															
 															<div class="content"style="margin-left: 10px;">
 																<p class="sender-name">
 																	{{ product.name }}
@@ -93,7 +102,7 @@
 										<td>{{ product.creation_time|date:"M d, Y" }}</td>
 										<td>
 											<div class="btn-group">
-												<button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{% trans 'Options' %}</button>
+												<button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{% trans 'Options' %}</button>
 												<div class="dropdown-menu" x-placement="bottom-start">
 													<a class="dropdown-item" style="cursor: pointer;" href="{{ product.get_absolute_url }}">{% trans 'View' %}</a>
 													<a class="dropdown-item" style="cursor: pointer;">{% trans 'Edit' %}</a>
