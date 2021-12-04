@@ -91,7 +91,7 @@ msgstr ""
 
 #: content/templates/layouts/modules/menu.html:70
 #: content/templates/layouts/modules/navbar.html:61
-msgid "Update Pro"
+msgid "Upgrade to Pro"
 msgstr ""
 
 #: content/templates/layouts/modules/navbar.html:16
