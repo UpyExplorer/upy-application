@@ -85,7 +85,7 @@ class ProductUpdateView(LoginRequiredMixin, generic.UpdateView):
 		)
 
     def post(self, request, *args, **kwargs):
-        messages.success(request, 'Form submission successful')
+        messages.success(request, _('Saved successfully'))
         return super().post(request, *args, **kwargs)
 
 class ProductCreateView(LoginRequiredMixin, generic.CreateView):
