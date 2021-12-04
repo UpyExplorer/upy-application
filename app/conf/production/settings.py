@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     # Forms
     'widget_tweaks',
     'crispy_forms',
+	'bootstrap_modal_forms',
 
     # Permissions
     'global_permissions',

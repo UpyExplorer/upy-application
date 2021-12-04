@@ -108,3 +108,20 @@ class ProductCreateView(LoginRequiredMixin, generic.CreateView):
             return redirect(product.get_absolute_url())
 
         return redirect('catalog:product_list')
+
+
+class ProductDeleteView(LoginRequiredMixin, generic.edit.DeleteView):
+	model = Product
+	success_url = '/catalog/product'
+
+	def get_object(self):
+		company_data_id = get_company_id(self.request.user.id)
+		product = Product.objects.filter(pk=self.kwargs['pk'], company_data_id=company_data_id).first()
+
+		return product
+
+	def get(self, request, *args, **kwargs):
+		self.object = self.get_object()
+		context = self.get_context_data(object=self.object)
+
+		return self.render_to_response(context)
