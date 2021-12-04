@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-03 02:53-0300\n"
+"POT-Creation-Date: 2021-12-03 21:49-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -436,11 +436,58 @@ msgid "Your password has been set. You may go ahead and login now."
 msgstr ""
 
 #: modules/catalog/product/forms.py:6
-msgid "Maximum 100 characters"
+msgid "Active"
 msgstr ""
 
 #: modules/catalog/product/forms.py:7
+#: modules/catalog/templates/catalog/product/product_list.html:53
+#: modules/catalog/templates/catalog/product/product_read.html:26
+msgid "Name"
+msgstr ""
+
+#: modules/catalog/product/forms.py:7
+msgid "Maximum 100 characters"
+msgstr ""
+
+#: modules/catalog/product/forms.py:8
+#: modules/catalog/templates/catalog/product/product_list.html:54
+#: modules/catalog/templates/catalog/product/product_read.html:30
+msgid "Sku"
+msgstr ""
+
+#: modules/catalog/product/forms.py:8
 msgid "No special characters allowed"
+msgstr ""
+
+#: modules/catalog/product/forms.py:9
+msgid "Type"
+msgstr ""
+
+#: modules/catalog/product/forms.py:10
+#: modules/catalog/templates/catalog/product/product_list.html:56
+#: modules/catalog/templates/catalog/product/product_read.html:48
+msgid "Stock"
+msgstr ""
+
+#: modules/catalog/product/forms.py:11
+#: modules/catalog/templates/catalog/product/product_list.html:55
+#: modules/catalog/templates/catalog/product/product_read.html:57
+msgid "Price Sell"
+msgstr ""
+
+#: modules/catalog/product/forms.py:12
+#: modules/catalog/templates/catalog/product/product_read.html:64
+msgid "Price Cost"
+msgstr ""
+
+#: modules/catalog/product/forms.py:13
+#: modules/catalog/templates/catalog/product/product_read.html:71
+msgid "Price Promo"
+msgstr ""
+
+#: modules/catalog/product/forms.py:14
+#: modules/catalog/templates/catalog/product/product_read.html:80
+msgid "Description"
 msgstr ""
 
 #: modules/catalog/product/views.py:19 modules/catalog/product/views.py:42
@@ -464,26 +511,6 @@ msgstr ""
 msgid "Add Product"
 msgstr ""
 
-#: modules/catalog/templates/catalog/product/product_list.html:53
-#: modules/catalog/templates/catalog/product/product_read.html:26
-msgid "Name"
-msgstr ""
-
-#: modules/catalog/templates/catalog/product/product_list.html:54
-#: modules/catalog/templates/catalog/product/product_read.html:30
-msgid "Sku"
-msgstr ""
-
-#: modules/catalog/templates/catalog/product/product_list.html:55
-#: modules/catalog/templates/catalog/product/product_read.html:57
-msgid "Price Sell"
-msgstr ""
-
-#: modules/catalog/templates/catalog/product/product_list.html:56
-#: modules/catalog/templates/catalog/product/product_read.html:48
-msgid "Stock"
-msgstr ""
-
 #: modules/catalog/templates/catalog/product/product_list.html:57
 msgid "Created In"
 msgstr ""
@@ -492,9 +519,9 @@ msgstr ""
 #: modules/catalog/templates/catalog/product/product_read.html:58
 #: modules/catalog/templates/catalog/product/product_read.html:65
 #: modules/catalog/templates/catalog/product/product_read.html:72
-#: modules/catalog/templates/catalog/product/product_update.html:67
-#: modules/catalog/templates/catalog/product/product_update.html:84
-#: modules/catalog/templates/catalog/product/product_update.html:100
+#: modules/catalog/templates/catalog/product/product_update.html:81
+#: modules/catalog/templates/catalog/product/product_update.html:98
+#: modules/catalog/templates/catalog/product/product_update.html:114
 msgid "$"
 msgstr ""
 
@@ -515,18 +542,6 @@ msgstr ""
 msgid "Product Type"
 msgstr ""
 
-#: modules/catalog/templates/catalog/product/product_read.html:64
-msgid "Price Cost"
-msgstr ""
-
-#: modules/catalog/templates/catalog/product/product_read.html:71
-msgid "Price Promo"
-msgstr ""
-
-#: modules/catalog/templates/catalog/product/product_read.html:80
-msgid "Description"
-msgstr ""
-
 #: modules/dashboard/views.py:11
 #: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_changes_confirmation.html:6
 #: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_revision_confirmation.html:6
@@ -544,6 +559,9 @@ msgstr ""
 #: venv/lib/python3.9/site-packages/bootstrap4/components.py:17
 #: venv/lib/python3.9/site-packages/bootstrap4/templates/bootstrap4/form_errors.html:3
 #: venv/lib/python3.9/site-packages/bootstrap4/templates/bootstrap4/messages.html:4
+#: venv/lib/python3.9/site-packages/bootstrap5/components.py:17
+#: venv/lib/python3.9/site-packages/bootstrap5/templates/bootstrap5/form_errors.html:3
+#: venv/lib/python3.9/site-packages/bootstrap5/templates/bootstrap5/messages.html:4
 msgid "close"
 msgstr ""
 
