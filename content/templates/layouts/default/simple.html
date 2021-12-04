@@ -7,17 +7,18 @@
 <!DOCTYPE html>
 <html lang="{{ language_code }}">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="UpyExplorer">
-        <meta name="author" content="Fernando Celmer">
 
-        <link rel="icon" href="{% static 'favicon.ico' %}">
-        <title>UpyExplorer</title>
+        <!-- Meta -->
+        {% include 'layouts/modules/meta.html' %}
+        <!-- Meta -->
 
         <!-- CSS -->
         {% include 'layouts/includes/include_css.html' %}
         <!-- CSS -->
+
+        <!-- JS -->
+        {% include 'layouts/includes/include_js.html' %}
+        <!-- JS -->
 
     </head>
 
@@ -39,10 +40,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- JS -->
-        {% include 'layouts/includes/include_js.html' %}
-        <!-- JS -->
 
     </body>
 </html>

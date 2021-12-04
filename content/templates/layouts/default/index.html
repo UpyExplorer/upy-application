@@ -1,0 +1,29 @@
+{% load static %}
+{% load i18n %}
+{% load bootstrap5 %}
+
+{% get_current_language as language_code %}
+
+<!DOCTYPE html>
+<html lang="{{ language_code }}">
+    <head>
+
+        <!-- Meta -->
+        {% include 'layouts/modules/meta.html' %}
+        <!-- Meta -->
+
+        <!-- CSS -->
+        {% include 'layouts/includes/include_css.html' %}
+        <!-- CSS -->
+
+        <!-- JS -->
+        {% include 'layouts/includes/include_js.html' %}
+        <!-- JS -->
+
+    </head>
+
+    {% block body %}
+
+    {% endblock %}
+
+</html>
