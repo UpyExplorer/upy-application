@@ -19,6 +19,17 @@
 
 {% block square_right %}
 
+{% if messages %}
+
+<div class="alert alert-info alert-dismissible fade in">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+	{% for message in messages %}
+    <strong>Info!</strong> {{ message }}
+    {% endfor %}
+  </div>
+
+{% endif %}
+
 	<form method="post">
 		
 		{% csrf_token %}

@@ -3,7 +3,7 @@ from django.utils.translation import gettext_lazy as _
 from modules.catalog.product.models import Product
 
 class ProductForm(forms.ModelForm):
-    active = forms.BooleanField(label=_("Active"))
+    active = forms.BooleanField(label=_("Active"), required=False)
     name = forms.CharField(label=_("Name"), help_text=_("Maximum 100 characters"))
     sku = forms.CharField(label=_("Sku"), help_text=_("No special characters allowed"))
     type = forms.ChoiceField(label=_("Type"), choices=Product.ITEM_TYPE)
@@ -15,6 +15,7 @@ class ProductForm(forms.ModelForm):
         label=_("Description"),
         widget=forms.Textarea,
         max_length=500,
+        required=False,
         help_text=_("Maximum 500 characters")
     )
 
