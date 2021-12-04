@@ -7,10 +7,10 @@ class ProductForm(forms.ModelForm):
     name = forms.CharField(label=_("Name"), help_text=_("Maximum 100 characters"))
     sku = forms.CharField(label=_("Sku"), help_text=_("No special characters allowed"))
     type = forms.ChoiceField(label=_("Type"), choices=Product.ITEM_TYPE)
-    stock = forms.IntegerField(label=_("Stock"))
-    price_sell = forms.DecimalField(label=_("Price Sell"))
-    price_cost = forms.DecimalField(label=_("Price Cost"))
-    price_promo = forms.DecimalField(label=_("Price Promo"))
+    stock = forms.IntegerField(label=_("Stock"), initial=0)
+    price_sell = forms.DecimalField(label=_("Price Sell"), initial=0.0)
+    price_cost = forms.DecimalField(label=_("Price Cost"), initial=0.0)
+    price_promo = forms.DecimalField(label=_("Price Promo"), initial=0.0)
     description = forms.CharField(
         label=_("Description"),
         widget=forms.Textarea,
