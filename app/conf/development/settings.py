@@ -33,7 +33,6 @@ INSTALLED_APPS = [
     'bootstrap5',
 
     # Application apps
-    'modules.main',
     'modules.base',
     'modules.log',
     'modules.api',

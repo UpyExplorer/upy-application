@@ -8,7 +8,7 @@
 
         {% if perms.global_permissions.app_dashboard %}
             <li class="nav-item active">
-                <a class="nav-link" href="{% url 'dashboard' %}" style="height: 65px;">
+                <a class="nav-link" href="{% url 'dashboard:dashboard' %}" style="height: 65px;">
                     <i class="mdi mdi-view-quilt menu-icon"></i>
                     <span class="menu-title">{% trans 'Dashboard' %}</span>
                 </a>

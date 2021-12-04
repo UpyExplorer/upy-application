@@ -62,7 +62,7 @@
 				</a>
 				
 				{% if perms.global_permissions.app_account_language_view %}
-					<a class="dropdown-item" href="{% url 'change_language' %}">
+					<a class="dropdown-item" href="{% url 'dashboard:change_language' %}">
 						<i class="mdi mdi-web"></i>
 							{% trans 'Change language' %}
 					</a>
