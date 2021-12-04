@@ -33,27 +33,27 @@ window.addEventListener("load", function () {
 
 });
 
-function toastrDefaultSuccess(title, text){
+window.toastrDefaultSuccess = function(title, text){
 	setMessage();
 	toastr["success"](title, text)
 }
 
-function toastrDefaultInfo(title, text){
+window.toastrDefaultInfo = function(title, text){
 	setMessage();
 	toastr["info"](title, text)
 }
 
-function toastrDefaultError(title, text){
+window.toastrDefaultError = function(title, text){
 	setMessage();
 	toastr["error"](title, text)
 }
 
-function toastrDefaultWarning(title, text){
+window.toastrDefaultWarning = function(title, text){
 	setMessage();
 	toastr["warning"](title, text)
 }
 
-function setMessage(type=null, title=null, text=null){
+window.setMessage = function(type=null, title=null, text=null){
 	toastr.options = {
 		"closeButton": true,
 		"debug": false,
