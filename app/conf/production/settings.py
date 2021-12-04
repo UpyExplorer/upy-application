@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'modules.account',
     'modules.dashboard',
     'modules.company',
-    'modules.order',
+    'modules.sale',
     'modules.catalog',
 
     # Forms
