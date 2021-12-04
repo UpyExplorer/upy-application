@@ -1,26 +1,8 @@
-{% load static %}
-{% load bootstrap5 %}
+{% extends "layouts/default/index.html" %}
+
 {% load i18n %}
 
-{% get_current_language as language_code %}
-
-<!DOCTYPE html>
-<html lang="{{ language_code }}">
-    <head>
-
-        <!-- Meta -->
-        {% include 'layouts/modules/meta.html' %}
-        <!-- Meta -->
-
-        <!-- CSS -->
-        {% include 'layouts/includes/include_css.html' %}
-        <!-- CSS -->
-
-        <!-- JS -->
-        {% include 'layouts/includes/include_js.html' %}
-        <!-- JS -->
-
-    </head>
+{% block body %}
 
     <body>
         <div class="container-scroller d-flex">
@@ -29,17 +11,19 @@
                     <div class="row w-100 mx-0">
                         <div class="col-lg-4 mx-auto">
                             <div class="auth-form-light text-left py-5 px-4 px-sm-5">
-                            {% bootstrap_messages %}
 
-                            {% block content %}
-                                No content.
-                            {% endblock %}
+                                {% bootstrap_messages %}
+
+                                {% block content %}
+                                
+                                {% endblock %}
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </body>
-</html>
+
+{% endblock %}

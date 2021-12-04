@@ -1,32 +1,18 @@
-{% load static %}
+{% extends "layouts/default/index.html" %}
+
 {% load i18n %}
-{% load bootstrap5 %}
 
-{% get_current_language as language_code %}
+{% block body %}
 
-<!DOCTYPE html>
-<html lang="{{ language_code }}">
-    <head>
-        <!-- Meta -->
-        {% include 'layouts/modules/meta.html' %}
-        <!-- Meta -->
-
-        <!-- CSS -->
-        {% include 'layouts/includes/include_css.html' %}
-        <!-- CSS -->
-
-        <!-- JS -->
-        {% include 'layouts/includes/include_js.html' %}
-        <!-- JS -->
-
-    </head>
     <body class="sidebar-icon-only">
         <div class="container-scroller d-flex">
+
             <!-- Menu -->
             {% include 'layouts/modules/menu.html' %}
             <!-- Menu -->
 
             <div class="container-fluid page-body-wrapper">
+
                 <!-- Navbar -->
                 {% include 'layouts/modules/navbar.html' %}
                 <!-- Navbar -->
@@ -45,6 +31,6 @@
 
             </div>
         </div>
-
     </body>
-</html>
+
+{% endblock %}

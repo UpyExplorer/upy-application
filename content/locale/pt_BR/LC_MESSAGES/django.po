@@ -48,16 +48,16 @@ msgstr "Aplicativos"
 msgid "All rights reserved for"
 msgstr "Todos os direitos reservados para"
 
-#: content/templates/layouts/default/page_view.html:35
+#: content/templates/layouts/default/block.html:35
 msgid "Save Product"
 msgstr "Salvar Produto"
 
-#: content/templates/layouts/default/page_view.html:41
+#: content/templates/layouts/default/block.html:41
 #: venv/lib/python3.9/site-packages/django/forms/formsets.py:417
 msgid "Delete"
 msgstr "Excluir"
 
-#: content/templates/layouts/default/page_view.html:72
+#: content/templates/layouts/default/block.html:72
 msgid "Basic information"
 msgstr "Informações Básicas"
 
