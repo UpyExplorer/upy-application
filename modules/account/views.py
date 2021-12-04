@@ -48,6 +48,12 @@ class GuestOnlyView(View):
 class LogInView(GuestOnlyView, FormView):
     template_name = 'account/log_in.html'
 
+    def get_context_data(self, **kwargs):
+        context = super(LogInView, self).get_context_data(**kwargs)
+        context['half_bg'] = 'login-half-bg'
+
+        return context
+
     @staticmethod
     def get_form_class(**kwargs):
         if settings.DISABLE_USERNAME or settings.LOGIN_VIA_EMAIL:
@@ -94,6 +100,12 @@ class LogInView(GuestOnlyView, FormView):
 class SignUpView(GuestOnlyView, FormView):
     template_name = 'account/sign_up.html'
     form_class = SignUpForm
+
+    def get_context_data(self, **kwargs):
+        context = super(SignUpView, self).get_context_data(**kwargs)
+        context['half_bg'] = 'register-half-bg'
+
+        return context
 
     def form_valid(self, form):
         request = self.request
