@@ -30,7 +30,7 @@ INSTALLED_APPS = [
     'pipeline',
 
     # Vendor apps
-    'bootstrap4',
+    'bootstrap5',
 
     # Application apps
     'modules.main',
@@ -62,7 +62,7 @@ LOGGING_MODELS  = (
     'django.contrib.auth',
 )
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

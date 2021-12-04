@@ -1,7 +1,7 @@
 {% extends "layouts/default/container.html" %}
 
 {% load static %}
-{% load bootstrap4 %}
+{% load bootstrap5 %}
 {% load i18n %}
 
 {% get_current_language as language_code %}
@@ -44,7 +44,7 @@
 
 	{% if product_list %}
 		<div class="table-responsive text-nowrap">
-			<div id="order-listing_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer" style="padding-left: 0px !important;">
+			<div id="order-listing_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap5 no-footer" style="padding-left: 0px !important;">
 				<div class="row">
 					<div class="col-sm-12">
 						<table class="table table-striped dataTable"> 
@@ -106,11 +106,14 @@
 						</table>
 					</div>
 				</div>
-				{% block pagination %}
-					{% include "layouts/pagination.html" %}
-				{% endblock %}
+
 			</div>
+			
 		</div>
+		{% block pagination %}
+			{% include "layouts/pagination.html" %}
+		{% endblock %}
+
 	{% else %}
 		<p>No products found in your database.</p>
 	{% endif %}
