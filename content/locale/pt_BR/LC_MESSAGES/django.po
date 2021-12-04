@@ -470,7 +470,7 @@ msgstr "Ativo"
 
 #: modules/catalog/product/forms.py:7
 #: modules/catalog/templates/catalog/product/product_list.html:53
-#: modules/catalog/templates/catalog/product/product_read.html:26
+#: modules/catalog/templates/catalog/product/product_detail.html:26
 msgid "Name"
 msgstr "Nome"
 
@@ -480,7 +480,7 @@ msgstr "No máximo 100 caracteres"
 
 #: modules/catalog/product/forms.py:8
 #: modules/catalog/templates/catalog/product/product_list.html:54
-#: modules/catalog/templates/catalog/product/product_read.html:30
+#: modules/catalog/templates/catalog/product/product_detail.html:30
 msgid "Sku"
 msgstr "Sku"
 
@@ -494,28 +494,28 @@ msgstr "Tipo"
 
 #: modules/catalog/product/forms.py:10
 #: modules/catalog/templates/catalog/product/product_list.html:56
-#: modules/catalog/templates/catalog/product/product_read.html:48
+#: modules/catalog/templates/catalog/product/product_detail.html:48
 msgid "Stock"
 msgstr "Estoque"
 
 #: modules/catalog/product/forms.py:11
 #: modules/catalog/templates/catalog/product/product_list.html:55
-#: modules/catalog/templates/catalog/product/product_read.html:57
+#: modules/catalog/templates/catalog/product/product_detail.html:57
 msgid "Price Sell"
 msgstr "Preço de Venda"
 
 #: modules/catalog/product/forms.py:12
-#: modules/catalog/templates/catalog/product/product_read.html:64
+#: modules/catalog/templates/catalog/product/product_detail.html:64
 msgid "Price Cost"
 msgstr "Preço de Custo"
 
 #: modules/catalog/product/forms.py:13
-#: modules/catalog/templates/catalog/product/product_read.html:71
+#: modules/catalog/templates/catalog/product/product_detail.html:71
 msgid "Price Promo"
 msgstr "Preço Promocional"
 
 #: modules/catalog/product/forms.py:15
-#: modules/catalog/templates/catalog/product/product_read.html:80
+#: modules/catalog/templates/catalog/product/product_detail.html:80
 msgid "Description"
 msgstr "Descrição"
 
@@ -557,9 +557,9 @@ msgid "Created In"
 msgstr "Criado Em"
 
 #: modules/catalog/templates/catalog/product/product_list.html:100
-#: modules/catalog/templates/catalog/product/product_read.html:58
-#: modules/catalog/templates/catalog/product/product_read.html:65
-#: modules/catalog/templates/catalog/product/product_read.html:72
+#: modules/catalog/templates/catalog/product/product_detail.html:58
+#: modules/catalog/templates/catalog/product/product_detail.html:65
+#: modules/catalog/templates/catalog/product/product_detail.html:72
 #: modules/catalog/templates/catalog/product/product_update.html:84
 #: modules/catalog/templates/catalog/product/product_update.html:101
 #: modules/catalog/templates/catalog/product/product_update.html:117
@@ -567,7 +567,7 @@ msgid "$"
 msgstr "R$"
 
 #: modules/catalog/templates/catalog/product/product_list.html:105
-#: modules/catalog/templates/catalog/product/product_read.html:39
+#: modules/catalog/templates/catalog/product/product_detail.html:39
 msgid "Options"
 msgstr "Opções"
 
@@ -579,7 +579,7 @@ msgstr "Visualizar"
 msgid "Edit"
 msgstr "Editar"
 
-#: modules/catalog/templates/catalog/product/product_read.html:37
+#: modules/catalog/templates/catalog/product/product_detail.html:37
 msgid "Product Type"
 msgstr "Tipo de Produto"
 
