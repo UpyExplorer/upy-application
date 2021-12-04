@@ -507,10 +507,8 @@ msgid "Description"
 msgstr "Descrição"
 
 #: modules/catalog/product/forms.py:19
-#, fuzzy
-#| msgid "Maximum 100 characters"
 msgid "Maximum 500 characters"
-msgstr "No máximo 100 caracteres"
+msgstr "No máximo 500 caracteres"
 
 #: modules/catalog/product/views.py:19 modules/catalog/product/views.py:42
 #: modules/catalog/product/views.py:82
