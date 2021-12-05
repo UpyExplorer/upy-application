@@ -128,20 +128,34 @@
 
 			{% elif field.name == 'description' %}
 			<div class="form-group col-md-12">
-				<label for="{{ field.id_for_label }}">{{ field.label }}:</label>
-				<div class="input-group">
-				{{ field|add_class:'form-control' }}
-				</div>
-				{% for error in field.errors %}
-					<span class="help-block" style="color: #b60909;">{{ error }}</span>
-				{% endfor %}
-				<div style="color: #a5a5a5; font-size: small;">
-					{{ field.help_text }}
+				<div class="card-body" style="padding: 0px;">
+					<ul class="nav nav-tabs" id="myTab" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link active" id="basic-tab" data-toggle="tab" href="#basic" role="tab" aria-controls="basic" aria-selected="true">
+								<b>{{ field.label }}</b>
+							</a>
+						</li>
+					</ul>
+					<div class="tab-content" id="myTabContent">
+						<div class="tab-pane fade show active" id="basic" role="tabpanel" aria-labelledby="basic-tab">
+							<div style="margin-top: 20px;">		
+								<div class="input-group">
+									{{ field|add_class:'form-control' }}
+									</div>
+									{% for error in field.errors %}
+										<span class="help-block" style="color: #b60909;">{{ error }}</span>
+									{% endfor %}
+									<div style="color: #a5a5a5; font-size: small;">
+										{{ field.help_text }}
+									</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 
 			{% else %}
-				<div class="form-group col-md-6">
+				<div class="form-group col-md-4">
 					<label for="{{ field.id_for_label }}">{{ field.label }}:</label>
 					<div class="input-group">
 					{{ field|add_class:'form-control' }}
