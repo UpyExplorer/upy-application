@@ -4,6 +4,10 @@ window.addEventListener("load", function () {
 			$('.btn_save').trigger('click');
 		});
 
+		document.getElementById("btnDelete").addEventListener("click", function() {
+			$('.btn_delete').trigger('click');
+		});
+
 		document.getElementById("btnEdit").addEventListener("click", function() {
 			var inputs = document.getElementsByTagName("input");
 			var selects = document.getElementsByTagName("select");
