@@ -20,7 +20,8 @@ class ProductListView(BaseUpy, LoginRequiredMixin, generic.ListView):
         context['view_path'] = _('Dashboard / Catalog / Product')
         context['view_name'] = _('Product List')
         context['view_info'] = _('Product')
-        context['option_create'] = True
+        context['btn_info'] = True
+        context['btn_create'] = True
 
         return context
 
@@ -36,14 +37,14 @@ class ProductDetailView(BaseUpy, LoginRequiredMixin, generic.DetailView):
     model = Product
 
     def get_context_data(self, **kwargs):
-        if not self.request.user.has_perm('global_permissions.app_catalog_product_read'):
+        if not self.request.user.has_perm('global_permissions.app_catalog_product_detail'):
             raise PermissionDenied
 
         context = super(ProductDetailView, self).get_context_data(**kwargs)
         context['view_path'] = _('Dashboard / Catalog / Product')
         context['view_name'] = _('Product View')
         context['view_info'] = _('Product')
-        context['option_detail'] = True
+        context['btn_info'] = True
 
         return context
 
@@ -82,8 +83,9 @@ class ProductUpdateView(BaseUpy, LoginRequiredMixin, generic.UpdateView):
 				"view_path": _('Dashboard / Catalog / Product'),
 				"view_name": _('Product Edit'),
                 "view_info": _('Product'),
-                "option_update": True,
-                "option_delete": True
+                "btn_info": True,
+                "btn_save": True,
+                "btn_delete": True
 			}
 		)
 
@@ -96,14 +98,15 @@ class ProductCreateView(BaseUpy, LoginRequiredMixin, generic.CreateView):
     form_class = ProductForm
 
     def get_context_data(self, **kwargs):
-        if not self.request.user.has_perm('global_permissions.app_catalog_product_read'):
+        if not self.request.user.has_perm('global_permissions.app_catalog_product_create'):
             raise PermissionDenied
 
         context = super(ProductCreateView, self).get_context_data(**kwargs)
         context['view_path'] = _('Dashboard / Catalog / Product')
         context['view_name'] = _('Product View')
         context['view_info'] = _('Product')
-        context['option_create'] = True
+        context['btn_info'] = True
+        context['btn_save'] = True
 
         return context
 
@@ -134,6 +137,9 @@ class ProductDeleteView(BaseUpy, LoginRequiredMixin, BSModalDeleteView):
         return product
 
     def get(self, request, *args, **kwargs):
+        if not self.request.user.has_perm('global_permissions.app_catalog_product_delete'):
+            raise PermissionDenied
+    
         self.object = self.get_object()
         context = self.get_context_data(object=self.object)
 

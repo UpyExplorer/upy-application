@@ -8,7 +8,7 @@
                 <div class="row">
                     <div class="col-12">
 
-                        {% if perms.global_permissions.app_catalog_product_read %}
+                        {% if btn_info %}
                             <button 
                                 type="button" id="btnInfo" class="btn btn-primary btn-sm"
                                 data-toggle="tooltip" data-placement="top" title="{{ view_info }}"
@@ -18,7 +18,7 @@
                         {% endif %}
 
                         {% if perms.global_permissions.app_catalog_product_update %}
-                            {% if option_update %}
+                            {% if btn_save %}
                                 <a type="button" id="btnSave" class="btn btn-success btn-sm" title="{% trans 'Save Product' %}" style="float: right; margin-right: 5px; color: #ffffff;">
                                     <i class="mdi mdi-content-save"></i>
                                 </a>
@@ -26,7 +26,7 @@
                         {% endif %}
 
                         {% if perms.global_permissions.app_catalog_product_delete %}
-                            {% if option_delete %}
+                            {% if btn_delete %}
                                 <a type="button" id="btnDelete" class="btn btn-danger btn-sm" title="{% trans 'Delete' %}" style="float: right; margin-right: 5px; color: #ffffff;">
                                     <i class="mdi mdi-delete"></i>
                                 </a>
@@ -34,7 +34,7 @@
                         {% endif %}
 
                         {% if perms.global_permissions.app_catalog_product_create %}
-                            {% if option_create %}
+                            {% if btn_create %}
                                 <a href="{% url 'catalog:product_create' %}" type="button" class="btn btn-warning btn-sm" title="{% trans 'Add Product' %}" style="float: right; margin-right: 5px; color: #ffffff;">
                                     <i class="mdi mdi-plus-box"></i> 
                                 </a>
