@@ -7,6 +7,7 @@ from modules.catalog.product.forms import ProductForm
 from modules.catalog.product.models import Product
 from django.utils.translation import gettext_lazy as _
 from django.contrib import messages
+from bootstrap_modal_forms.generic import BSModalDeleteView
 
 
 class ProductListView(BaseUpy, LoginRequiredMixin, generic.ListView):
@@ -103,3 +104,21 @@ class ProductCreateView(BaseUpy, LoginRequiredMixin, generic.CreateView):
             return redirect(product.get_absolute_url())
 
         return redirect('catalog:product_list')
+
+
+class ProductDeleteView(BaseUpy, LoginRequiredMixin, BSModalDeleteView):
+    model = Product
+    template_name = 'catalog/product/product_delete.html'
+    success_url = '/catalog/product'
+    success_message = _('Product was deleted')
+
+    def get_object(self):
+        product = Product.objects.filter(pk=self.kwargs['pk'], company_data_id=self.company_id()).first()
+
+        return product
+
+    def get(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        context = self.get_context_data(object=self.object)
+
+        return self.render_to_response(context)
