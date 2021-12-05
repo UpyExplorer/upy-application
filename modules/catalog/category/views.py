@@ -7,7 +7,7 @@ from django.utils.translation import gettext_lazy as _
 
 
 class CategoryListView(BaseUpy, LoginRequiredMixin, generic.ListView):
-    template_name = 'catalog/category/list.html'
+    template_name = 'catalog/category/category_list.html'
     model = Category
     paginate_by = 5
 
@@ -16,6 +16,7 @@ class CategoryListView(BaseUpy, LoginRequiredMixin, generic.ListView):
         context['view_path'] = _('Dashboard / Catalog / Category')
         context['view_name'] = _('Category List')
         context['view_info'] = _('Category')
+        context['btn_info'] = True
 
         return context
 
