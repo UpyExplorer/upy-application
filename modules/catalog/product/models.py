@@ -61,16 +61,6 @@ class Product(models.Model):
         return "/catalog/product/{id}".format(id = self.id)
 
 
-class Category(models.Model):
-    company_data = models.ForeignKey(Data, on_delete=models.SET_NULL, null=True)
-    creation_time = models.DateTimeField(default=datetime.now, null=True)
-    name = models.CharField(max_length=100, blank=False, null=False, default='Category')
-    code = models.CharField(max_length=25, blank=False, null=True)
-
-    def get_absolute_url(self):
-        return "/catalog/category/{id}".format(id = self.id)
-
-
 class Image(models.Model):
     ITEM_FORMAT = (
         ('1','JPG'),
