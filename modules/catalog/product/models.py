@@ -49,7 +49,7 @@ class Product(models.Model):
     video_url = models.TextField(blank=True, null=True)
     type = models.CharField(choices=ITEM_TYPE,max_length=1, null=True)
     condition = models.CharField(choices=ITEM_CONDITION,max_length=1, null=True)
-    stock = models.DecimalField(max_digits=11, decimal_places=7, null=True, default=0)
+    stock = models.IntegerField(null=True, default=0)
     sold_quantity = models.IntegerField(null=True, default=0)
     currency = models.ForeignKey(Currency, on_delete=models.SET_NULL, null=True, default=None)
     warranty_option = models.CharField(choices=WARRANTY_OPTION,max_length=1, null=True)
