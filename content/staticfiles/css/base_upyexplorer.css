@@ -20731,7 +20731,7 @@ dl li {
 @media (max-width: 991px) {
   .navbar .navbar-menu-wrapper {
     margin-left: 5px;
-    margin-right: 15px;
+    /* margin-right: 15px; */
     height: 65px;
   }
 }
@@ -21169,6 +21169,11 @@ dl li {
       height: auto;
       overflow-y: auto;
       overflow-x: hidden;
+    }
+  }
+  @media (max-width: 1095px) {
+    .bug-margim {
+      margin-right: 100px;
     }
   }
   

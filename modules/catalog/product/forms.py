@@ -7,6 +7,7 @@ class ProductForm(forms.ModelForm):
     name = forms.CharField(label=_("Name"), help_text=_("Maximum 100 characters"))
     sku = forms.CharField(label=_("Sku"), help_text=_("No special characters allowed"))
     type = forms.ChoiceField(label=_("Type"), choices=Product.ITEM_TYPE)
+    condition = forms.ChoiceField(label=_("Condition"), choices=Product.ITEM_CONDITION)
     stock = forms.IntegerField(label=_("Stock"), initial=0)
     price_sell = forms.DecimalField(label=_("Price Sell"), initial=0.0)
     price_cost = forms.DecimalField(label=_("Price Cost"), initial=0.0)
@@ -21,6 +22,17 @@ class ProductForm(forms.ModelForm):
 
     class Meta:
         model = Product
-        fields = ['active','name', 'sku', 'type', 'stock', 'price_sell', 'price_cost', 'price_promo', 'description']
+        fields = [
+            'active',
+            'name',
+            'sku',
+            'type',
+            'condition',
+            'stock',
+            'price_sell',
+            'price_cost',
+            'price_promo',
+            'description',
+        ]
         exclude = ['creation_time', 'company_data', 'video_url']
 
