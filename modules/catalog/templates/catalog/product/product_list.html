@@ -50,8 +50,8 @@
 						<table class="table table-striped dataTable"> 
 							<thead>
 								<tr role="row">
-									<th width="60%" style="padding-bottom: 10px; padding-top: 10px;">{% trans 'Name' %}</th>
-									<th width="10%" style="padding-bottom: 10px; padding-top: 10px;">{% trans 'Sku' %}</th>
+									<th width="55%" style="padding-bottom: 10px; padding-top: 10px;">{% trans 'Name' %}</th>
+									<th width="15%" style="padding-bottom: 10px; padding-top: 10px;">{% trans 'Sku' %}</th>
 									<th width="10%" style="padding-bottom: 10px; padding-top: 10px;">{% trans 'Price Sell' %}</th>
 									<th width="20%" style="padding-bottom: 10px; padding-top: 10px;">{% trans 'Stock' %}</th>
 									<th width="10%" style="padding-bottom: 10px; padding-top: 10px;">{% trans 'Created In' %}</th>
@@ -61,7 +61,7 @@
 								<tbody>
 									{% for product in product_list %}
 									<tr>
-										<td>
+										<td class="py-1">
 											<div class="row">
 												<div class="col-xl-2 col-3 col-sm-3">
 													<div class="row">
@@ -90,8 +90,8 @@
 												<div class="col-xl-10 col-9 col-sm-9">
 													<div class="row">
 														<div class="col-sm">
-															<p style="margin-right: 100px;" data-toggle="tooltip" data-placement="top" title="{{ product.name }}">
-																{{ product.name|slice:":35" }}
+															<p class="bug-margim" data-toggle="tooltip" data-placement="top" title="{{ product.name }}">
+																{{ product.name|slice:":40" }}...
 															</p>
 														</div>
 													</div>

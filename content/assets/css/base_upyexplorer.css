@@ -21171,6 +21171,11 @@ dl li {
       overflow-x: hidden;
     }
   }
+  @media (max-width: 1095px) {
+    .bug-margim {
+      margin-right: 100px;
+    }
+  }
   
   .email-wrapper .mail-sidebar .menu-bar .menu-items {
     padding: 0;
