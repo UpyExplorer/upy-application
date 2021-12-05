@@ -33,6 +33,13 @@
                         {% endif %}
                     </ul>
                 </div>
+                <div class="collapse" id="ui-product">
+                    <ul class="nav flex-column sub-menu">
+                        {% if perms.global_permissions.app_catalog_category_list %}
+                            <li class="nav-item"> <a class="nav-link" href="{% url 'catalog:category_list' %}">{% trans 'Category' %}</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
             </li>
         {% endif %}
 
