@@ -1,8 +1,12 @@
-(function($) {
-  'use strict';
-  $(function() {
-    $('[data-toggle="offcanvas"]').on("click", function() {
-      $('.sidebar-offcanvas').toggleClass('active')
+window.addEventListener("load", function () {
+
+  (function($) {
+    'use strict';
+    $(function() {
+      $('[data-toggle="offcanvas"]').on("click", function() {
+        $('.sidebar-offcanvas').toggleClass('active')
+      });
     });
-  });
-})(jQuery);
+  })(jQuery);
+
+});
