@@ -88,6 +88,9 @@ class LogInView(GuestOnlyView, FormView):
 
         login(request, form.user_cache)
 
+        company_data = Relationship.objects.filter(user=form.user_cache.id).first()
+        request.session['company_data_id'] = company_data.company_data_id
+
         redirect_to = request.POST.get(REDIRECT_FIELD_NAME, request.GET.get(REDIRECT_FIELD_NAME))
         url_is_safe = is_safe_url(redirect_to, allowed_hosts=request.get_host(), require_https=request.is_secure())
 
