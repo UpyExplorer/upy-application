@@ -1,0 +1,88 @@
+{% extends "layouts/default/container.html" %}
+
+{% load static %}
+{% load bootstrap5 %}
+{% load i18n %}
+
+{% block option %}
+
+	<div class="col-12 grid-margin stretch-card" style="margin-bottom: 15px;">
+		<div class="card">
+			<div class="card-body" style="padding-bottom: 15px; padding-top: 15px;">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+
+							{% if perms.global_permissions.app_catalog_product_read %}
+								<button 
+									type="button"
+									id="btnInfo"
+									class="btn btn-primary btn-sm"
+									data-toggle="tooltip" data-placement="top" title="{{ view_info }}"
+									style="float: right; background: #3243c5;border-color: #3243c5; margin-right: 5px;">
+									<i class="mdi mdi-comment-question-outline"></i>
+								</button>
+							{% endif %}
+
+							{% if perms.global_permissions.app_catalog_product_update %}
+								<a href="{% url 'catalog:product_create' %}" type="button" class="btn btn-warning btn-sm" title="{% trans 'Add Product' %}" style="float: right; margin-right: 5px; color: #ffffff;">
+									<i class="mdi mdi-plus-box"></i> 
+								</a>
+							{% endif %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}
+
+{% block container %}
+
+	{% if category_list %}
+		<div class="table-responsive text-nowrap">
+			<div id="order-listing_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap5 no-footer" style="padding-left: 0px !important;">
+				<div class="row">
+					<div class="col-sm-12">
+						<table class="table table-striped dataTable"> 
+							<thead>
+								<tr role="row">
+									<th width="95%" style="padding-bottom: 10px; padding-top: 10px;">{% trans 'Name' %}</th>
+									<th width="10%" style="padding-bottom: 10px; padding-top: 10px;">{% trans 'Created In' %}</th>
+									<th></th>
+								</tr>
+								</thead>
+								<tbody>
+									{% for category in category_list %}
+									<tr>
+										<td>{{ category.name }}</td>
+										<td>{{ category.creation_time|date:"M d, Y" }}</td>
+										<td>
+											<div class="btn-group">
+												<button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{% trans 'Options' %}</button>
+												<div class="dropdown-menu" x-placement="bottom-start">
+													<a class="dropdown-item" style="cursor: pointer;" href="{{ category.get_absolute_url }}">{% trans 'Edit' %}</a>
+													<a class="dropdown-item" style="cursor: no-drop;" disabled>{% trans 'Details' %}</a>
+												</div>                          
+											</div>
+										</td>
+								</tr>
+								{% endfor %}
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+			</div>
+			
+		</div>
+		{% block pagination %}
+			{% include "layouts/modules/pagination.html" %}
+		{% endblock %}
+
+	{% else %}
+		<p>No products found in your database.</p>
+	{% endif %}
+
+{% endblock %}
