@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-04 06:38-0300\n"
+"POT-Creation-Date: 2021-12-05 00:37-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,35 +18,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: app/conf/development/settings.py:192 app/conf/production/settings.py:189
+#: app/conf/development/settings.py:191 app/conf/production/settings.py:188
 msgid "Português-BR"
 msgstr "Português-BR"
 
-#: app/conf/development/settings.py:193 app/conf/production/settings.py:190
+#: app/conf/development/settings.py:192 app/conf/production/settings.py:189
 msgid "English"
 msgstr "Inglês"
-
-#: content/templates/dashboard/index.html:25
-msgid "Products"
-msgstr "Produtos"
-
-#: content/templates/dashboard/index.html:37
-msgid "Orders"
-msgstr "Pedidos"
-
-#: content/templates/dashboard/index.html:49
-msgid "Ads"
-msgstr "Anúncios"
-
-#: content/templates/dashboard/index.html:61
-msgid "Applications"
-msgstr "Aplicativos"
-
-#: content/templates/dashboard/log_in.html:39
-#: content/templates/dashboard/sign_up.html:39
-#: content/templates/layouts/modules/footer.html:8
-msgid "All rights reserved for"
-msgstr "Todos os direitos reservados para"
 
 #: content/templates/layouts/default/block.html:35
 msgid "Save Product"
@@ -60,6 +38,11 @@ msgstr "Excluir"
 #: content/templates/layouts/default/block.html:72
 msgid "Basic information"
 msgstr "Informações Básicas"
+
+#: content/templates/layouts/default/start.html:20
+#: content/templates/layouts/modules/footer.html:8
+msgid "All rights reserved for"
+msgstr "Todos os direitos reservados para"
 
 #: content/templates/layouts/modules/footer.html:9
 msgid "Version"
@@ -137,28 +120,6 @@ msgstr "Anterior"
 #: modules/account/templates/account/restore_password.html:15
 msgid "Next"
 msgstr "Próximo"
-
-#: content/templates/main/change_language.html:17
-msgid "Select the language"
-msgstr "Selecionar Idioma"
-
-#: content/templates/main/change_language.html:27
-#: modules/account/templates/account/profile/change_email.html:11
-#: modules/account/templates/account/profile/change_password.html:11
-#: modules/account/templates/account/profile/change_profile.html:11
-#: modules/account/templates/account/restore_password_confirm.html:21
-#: venv/lib/python3.9/site-packages/django/forms/widgets.py:405
-#: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_revision_confirmation.html:24
-msgid "Change"
-msgstr "Salvar"
-
-#: content/templates/main/index.html:9
-msgid "Your username is"
-msgstr "Seu nome de usuário é"
-
-#: content/templates/main/index.html:13
-msgid "You are a guest."
-msgstr "Você é um convidado"
 
 #: modules/account/forms.py:18
 msgid "Password"
@@ -317,6 +278,16 @@ msgstr "Obrigado por passar um tempo no site hoje."
 msgid "Login again"
 msgstr "Entrar novamente"
 
+#: modules/account/templates/account/profile/change_email.html:11
+#: modules/account/templates/account/profile/change_password.html:11
+#: modules/account/templates/account/profile/change_profile.html:11
+#: modules/account/templates/account/restore_password_confirm.html:21
+#: modules/dashboard/templates/dashboard/change_language.html:27
+#: venv/lib/python3.9/site-packages/django/forms/widgets.py:405
+#: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_revision_confirmation.html:24
+msgid "Change"
+msgstr "Salvar"
+
 #: modules/account/templates/account/remind_username.html:8
 msgid "Remind a username"
 msgstr "Lembre um nome de usuário"
@@ -388,79 +359,79 @@ msgstr "Ativação de perfil"
 msgid "Your username"
 msgstr "Seu nome de usuário"
 
-#: modules/account/views.py:144
+#: modules/account/views.py:156
 msgid "Error!"
 msgstr "Erro!"
 
-#: modules/account/views.py:163
+#: modules/account/views.py:175
 msgid ""
 "You are signed up. To activate the account, follow the link sent to the mail."
 msgstr ""
 "Você está inscrito. Para ativar a conta, siga o link enviado para o e-mail."
 
-#: modules/account/views.py:170
+#: modules/account/views.py:182
 msgid "You are successfully signed up!"
 msgstr "Você se inscreveu com sucesso!"
 
-#: modules/account/views.py:188
+#: modules/account/views.py:200
 msgid "You have successfully activated your account!"
 msgstr "Você ativou sua conta com sucesso!"
 
-#: modules/account/views.py:218
+#: modules/account/views.py:230
 msgid "A new activation code has been sent to your email address."
 msgstr "Um novo código de ativação foi enviado para o seu endereço de e-mail."
 
-#: modules/account/views.py:249
+#: modules/account/views.py:261
 msgid "Change Profile"
 msgstr "Alterar Perfil"
 
-#: modules/account/views.py:250
+#: modules/account/views.py:262
 msgid "Dashboard / My Profile / Change Profile"
 msgstr "Painel de Controle / Meu Perfil / Alterar Perfil"
 
-#: modules/account/views.py:274
+#: modules/account/views.py:286
 msgid "Profile data has been successfully updated."
 msgstr "Os dados do perfil foram atualizados com sucesso."
 
-#: modules/account/views.py:285
+#: modules/account/views.py:297
 msgid "Change Email"
 msgstr "Alterar E-mail"
 
-#: modules/account/views.py:286
+#: modules/account/views.py:298
 msgid "Dashboard / My Profile / Change Email"
 msgstr "Painel de Controle / Meu Perfil / Alterar E-mail"
 
-#: modules/account/views.py:322
+#: modules/account/views.py:334
 msgid "To complete the change of email address, click on the link sent to it."
 msgstr ""
 "Para concluir a alteração do endereço de e-mail, clique no link enviado para "
 "ele."
 
-#: modules/account/views.py:327
+#: modules/account/views.py:339
 msgid "Email successfully changed."
 msgstr "Email alterado com sucesso."
 
-#: modules/account/views.py:345
+#: modules/account/views.py:357
 msgid "You have successfully changed your email!"
 msgstr "Você alterou seu e-mail com sucesso!"
 
-#: modules/account/views.py:358
+#: modules/account/views.py:370
 msgid "Your username has been successfully sent to your email."
 msgstr "Seu nome de usuário foi enviado com sucesso para o seu e-mail."
 
-#: modules/account/views.py:368
+#: modules/account/views.py:380
 msgid "Change Password"
 msgstr "Alterar Senha"
 
-#: modules/account/views.py:369
+#: modules/account/views.py:381
 msgid "Dashboard / My Profile / Change Password"
 msgstr "Painel de Controle / Meu Perfil / Alterar Senha"
 
-#: modules/account/views.py:387
+#: modules/account/views.py:399
 msgid "Your password was changed."
 msgstr "Sua senha foi modificada."
 
-#: modules/account/views.py:399
+#: modules/account/views.py:411
 msgid "Your password has been set. You may go ahead and login now."
 msgstr "Sua senha foi definida. Você pode ir em frente e entrar agora."
 
@@ -469,8 +440,8 @@ msgid "Active"
 msgstr "Ativo"
 
 #: modules/catalog/product/forms.py:7
-#: modules/catalog/templates/catalog/product/product_list.html:53
 #: modules/catalog/templates/catalog/product/product_detail.html:26
+#: modules/catalog/templates/catalog/product/product_list.html:53
 msgid "Name"
 msgstr "Nome"
 
@@ -479,8 +450,8 @@ msgid "Maximum 100 characters"
 msgstr "No máximo 100 caracteres"
 
 #: modules/catalog/product/forms.py:8
-#: modules/catalog/templates/catalog/product/product_list.html:54
 #: modules/catalog/templates/catalog/product/product_detail.html:30
+#: modules/catalog/templates/catalog/product/product_list.html:54
 msgid "Sku"
 msgstr "Sku"
 
@@ -493,14 +464,14 @@ msgid "Type"
 msgstr "Tipo"
 
 #: modules/catalog/product/forms.py:10
-#: modules/catalog/templates/catalog/product/product_list.html:56
 #: modules/catalog/templates/catalog/product/product_detail.html:48
+#: modules/catalog/templates/catalog/product/product_list.html:56
 msgid "Stock"
 msgstr "Estoque"
 
 #: modules/catalog/product/forms.py:11
-#: modules/catalog/templates/catalog/product/product_list.html:55
 #: modules/catalog/templates/catalog/product/product_detail.html:57
+#: modules/catalog/templates/catalog/product/product_list.html:55
 msgid "Price Sell"
 msgstr "Preço de Venda"
 
@@ -522,6 +493,50 @@ msgstr "Descrição"
 #: modules/catalog/product/forms.py:19
 msgid "Maximum 500 characters"
 msgstr "No máximo 500 caracteres"
+
+#: modules/catalog/product/models.py:10
+msgid "Standard"
+msgstr "Padrão"
+
+#: modules/catalog/product/models.py:11
+msgid "Variation"
+msgstr "Variação"
+
+#: modules/catalog/product/models.py:12
+msgid "Kit"
+msgstr "Kit"
+
+#: modules/catalog/product/models.py:16
+msgid "New"
+msgstr "Novo"
+
+#: modules/catalog/product/models.py:17
+msgid "Used"
+msgstr "Usado"
+
+#: modules/catalog/product/models.py:21
+msgid "Seller warranty"
+msgstr "Garantia do vendedor"
+
+#: modules/catalog/product/models.py:22
+msgid "Factory warranty"
+msgstr "Garantia de fábrica"
+
+#: modules/catalog/product/models.py:23
+msgid "No warranty"
+msgstr "Sem garantia"
+
+#: modules/catalog/product/models.py:27
+msgid "Days"
+msgstr "Dias"
+
+#: modules/catalog/product/models.py:28
+msgid "Months"
+msgstr "Meses"
+
+#: modules/catalog/product/models.py:29
+msgid "Years"
+msgstr "Anos"
 
 #: modules/catalog/product/views.py:19 modules/catalog/product/views.py:42
 #: modules/catalog/product/views.py:82
@@ -548,6 +563,25 @@ msgstr "Editar Produto"
 msgid "Product saved successfully!"
 msgstr "Produto salvo com sucesso!"
 
+#: modules/catalog/templates/catalog/product/product_detail.html:37
+msgid "Product Type"
+msgstr "Tipo de Produto"
+
+#: modules/catalog/templates/catalog/product/product_detail.html:39
+#: modules/catalog/templates/catalog/product/product_list.html:105
+msgid "Options"
+msgstr "Opções"
+
+#: modules/catalog/templates/catalog/product/product_detail.html:58
+#: modules/catalog/templates/catalog/product/product_detail.html:65
+#: modules/catalog/templates/catalog/product/product_detail.html:72
+#: modules/catalog/templates/catalog/product/product_list.html:100
+#: modules/catalog/templates/catalog/product/product_update.html:84
+#: modules/catalog/templates/catalog/product/product_update.html:101
+#: modules/catalog/templates/catalog/product/product_update.html:117
+msgid "$"
+msgstr "R$"
+
 #: modules/catalog/templates/catalog/product/product_list.html:30
 msgid "Add Product"
 msgstr "Adicionar Produto"
@@ -556,44 +590,45 @@ msgstr "Adicionar Produto"
 msgid "Created In"
 msgstr "Criado Em"
 
-#: modules/catalog/templates/catalog/product/product_list.html:100
-#: modules/catalog/templates/catalog/product/product_detail.html:58
-#: modules/catalog/templates/catalog/product/product_detail.html:65
-#: modules/catalog/templates/catalog/product/product_detail.html:72
-#: modules/catalog/templates/catalog/product/product_update.html:84
-#: modules/catalog/templates/catalog/product/product_update.html:101
-#: modules/catalog/templates/catalog/product/product_update.html:117
-msgid "$"
-msgstr "R$"
-
-#: modules/catalog/templates/catalog/product/product_list.html:105
-#: modules/catalog/templates/catalog/product/product_detail.html:39
-msgid "Options"
-msgstr "Opções"
-
 #: modules/catalog/templates/catalog/product/product_list.html:107
-msgid "View"
-msgstr "Visualizar"
-
-#: modules/catalog/templates/catalog/product/product_list.html:108
 msgid "Edit"
 msgstr "Editar"
 
-#: modules/catalog/templates/catalog/product/product_detail.html:37
-msgid "Product Type"
-msgstr "Tipo de Produto"
+#: modules/catalog/templates/catalog/product/product_list.html:108
+msgid "Details"
+msgstr "Detalhes"
 
-#: modules/dashboard/views.py:11
+#: modules/dashboard/templates/dashboard/change_language.html:17
+msgid "Select the language"
+msgstr "Selecionar Idioma"
+
+#: modules/dashboard/templates/dashboard/index.html:24
+msgid "Products"
+msgstr "Produtos"
+
+#: modules/dashboard/templates/dashboard/index.html:36
+msgid "Orders"
+msgstr "Pedidos"
+
+#: modules/dashboard/templates/dashboard/index.html:48
+msgid "Ads"
+msgstr "Anúncios"
+
+#: modules/dashboard/templates/dashboard/index.html:60
+msgid "Applications"
+msgstr "Aplicativos"
+
+#: modules/dashboard/views.py:13
 #: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_changes_confirmation.html:6
 #: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_revision_confirmation.html:6
 msgid "Home"
 msgstr "Início"
 
-#: modules/main/views.py:16
+#: modules/dashboard/views.py:23
 msgid "Dashboard / Change Language"
 msgstr "Painel de Controle / Alterar Idioma"
 
-#: modules/main/views.py:17
+#: modules/dashboard/views.py:24
 msgid "Change Language"
 msgstr "Alterar Idioma"
 
@@ -1998,6 +2033,15 @@ msgstr ""
 #: venv/lib/python3.9/site-packages/models_logging/templates/models_logging/revert_revision_confirmation.html:27
 msgid "Object_id"
 msgstr ""
+
+#~ msgid "Your username is"
+#~ msgstr "Seu nome de usuário é"
+
+#~ msgid "You are a guest."
+#~ msgstr "Você é um convidado"
+
+#~ msgid "View"
+#~ msgstr "Visualizar"
 
 #~ msgid "Edit Product"
 #~ msgstr "Editar Produto"
