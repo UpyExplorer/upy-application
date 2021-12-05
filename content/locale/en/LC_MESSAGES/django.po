@@ -631,19 +631,19 @@ msgstr ""
 msgid "Select the language"
 msgstr ""
 
-#: modules/dashboard/templates/dashboard/index.html:24
+#: modules/dashboard/templates/dashboard/base.html:24
 msgid "Products"
 msgstr ""
 
-#: modules/dashboard/templates/dashboard/index.html:36
+#: modules/dashboard/templates/dashboard/base.html:36
 msgid "Orders"
 msgstr ""
 
-#: modules/dashboard/templates/dashboard/index.html:48
+#: modules/dashboard/templates/dashboard/base.html:48
 msgid "Ads"
 msgstr ""
 
-#: modules/dashboard/templates/dashboard/index.html:60
+#: modules/dashboard/templates/dashboard/base.html:60
 msgid "Applications"
 msgstr ""
 

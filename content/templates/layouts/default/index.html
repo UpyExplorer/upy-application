@@ -1,35 +1,36 @@
-{% load static %}
+{% extends "layouts/default/base.html" %}
+
 {% load i18n %}
-{% load bootstrap5 %}
 
-{% get_current_language as language_code %}
+{% block body %}
 
-<!DOCTYPE html>
-<html lang="{{ language_code }}">
-    <head>
+    <body class="sidebar-icon-only">
+        <div class="container-scroller d-flex">
 
-        <!-- Meta -->
-        {% include 'layouts/modules/meta.html' %}
-        <!-- Meta -->
+            <!-- Menu -->
+            {% include 'layouts/modules/menu.html' %}
+            <!-- Menu -->
 
-        <!-- CSS -->
-        {% include 'layouts/includes/include_css.html' %}
-        <!-- CSS -->
+            <div class="container-fluid page-body-wrapper">
 
-        <!-- JS -->
-        {% include 'layouts/includes/include_js.html' %}
-        <!-- JS -->
+                <!-- Navbar -->
+                {% include 'layouts/modules/navbar.html' %}
+                <!-- Navbar -->
 
-    </head>
+                <!-- Messages -->
+                {% include 'layouts/modules/messages.html' %}
+                <!-- Messages -->
 
-	<!-- Modal -->
-	{% include 'layouts/modules/modal.html' %}
-	<!-- Modal -->
+                {% block content %}
 
-    {% block body %}
-        <body class="sidebar-icon-only">
+                {% endblock %}
 
-        </body>
-    {% endblock %}
+                <!-- Footer -->
+                {% include 'layouts/modules/footer.html' %}
+                <!-- Footer -->
 
-</html>
+            </div>
+        </div>
+    </body>
+
+{% endblock %}

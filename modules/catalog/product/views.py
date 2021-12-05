@@ -20,6 +20,7 @@ class ProductListView(BaseUpy, LoginRequiredMixin, generic.ListView):
         context['view_path'] = _('Dashboard / Catalog / Product')
         context['view_name'] = _('Product List')
         context['view_info'] = _('Product')
+        context['option_create'] = True
 
         return context
 
@@ -42,6 +43,7 @@ class ProductDetailView(BaseUpy, LoginRequiredMixin, generic.DetailView):
         context['view_path'] = _('Dashboard / Catalog / Product')
         context['view_name'] = _('Product View')
         context['view_info'] = _('Product')
+        context['option_detail'] = True
 
         return context
 
@@ -80,6 +82,8 @@ class ProductUpdateView(BaseUpy, LoginRequiredMixin, generic.UpdateView):
 				"view_path": _('Dashboard / Catalog / Product'),
 				"view_name": _('Product Edit'),
                 "view_info": _('Product'),
+                "option_update": True,
+                "option_delete": True
 			}
 		)
 
@@ -90,6 +94,18 @@ class ProductUpdateView(BaseUpy, LoginRequiredMixin, generic.UpdateView):
 class ProductCreateView(BaseUpy, LoginRequiredMixin, generic.CreateView):
     template_name = 'catalog/product/product_update.html'
     form_class = ProductForm
+
+    def get_context_data(self, **kwargs):
+        if not self.request.user.has_perm('global_permissions.app_catalog_product_read'):
+            raise PermissionDenied
+
+        context = super(ProductCreateView, self).get_context_data(**kwargs)
+        context['view_path'] = _('Dashboard / Catalog / Product')
+        context['view_name'] = _('Product View')
+        context['view_info'] = _('Product')
+        context['option_create'] = True
+
+        return context
 
     def post(self, request, *args, **kwargs):
         if self.request.method == "POST":

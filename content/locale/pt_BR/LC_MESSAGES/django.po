@@ -646,19 +646,19 @@ msgstr "R$"
 msgid "Select the language"
 msgstr "Selecionar Idioma"
 
-#: modules/dashboard/templates/dashboard/index.html:24
+#: modules/dashboard/templates/dashboard/base.html:24
 msgid "Products"
 msgstr "Produtos"
 
-#: modules/dashboard/templates/dashboard/index.html:36
+#: modules/dashboard/templates/dashboard/base.html:36
 msgid "Orders"
 msgstr "Pedidos"
 
-#: modules/dashboard/templates/dashboard/index.html:48
+#: modules/dashboard/templates/dashboard/base.html:48
 msgid "Ads"
 msgstr "Anúncios"
 
-#: modules/dashboard/templates/dashboard/index.html:60
+#: modules/dashboard/templates/dashboard/base.html:60
 msgid "Applications"
 msgstr "Aplicativos"
 
