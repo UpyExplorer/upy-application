@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-05 00:37-0300\n"
+"POT-Creation-Date: 2021-12-05 01:52-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -464,33 +464,37 @@ msgid "Type"
 msgstr "Tipo"
 
 #: modules/catalog/product/forms.py:10
+msgid "Condition"
+msgstr "Condição"
+
+#: modules/catalog/product/forms.py:11
 #: modules/catalog/templates/catalog/product/product_detail.html:48
 #: modules/catalog/templates/catalog/product/product_list.html:56
 msgid "Stock"
 msgstr "Estoque"
 
-#: modules/catalog/product/forms.py:11
+#: modules/catalog/product/forms.py:12
 #: modules/catalog/templates/catalog/product/product_detail.html:57
 #: modules/catalog/templates/catalog/product/product_list.html:55
 msgid "Price Sell"
 msgstr "Preço de Venda"
 
-#: modules/catalog/product/forms.py:12
+#: modules/catalog/product/forms.py:13
 #: modules/catalog/templates/catalog/product/product_detail.html:64
 msgid "Price Cost"
 msgstr "Preço de Custo"
 
-#: modules/catalog/product/forms.py:13
+#: modules/catalog/product/forms.py:14
 #: modules/catalog/templates/catalog/product/product_detail.html:71
 msgid "Price Promo"
 msgstr "Preço Promocional"
 
-#: modules/catalog/product/forms.py:15
+#: modules/catalog/product/forms.py:16
 #: modules/catalog/templates/catalog/product/product_detail.html:80
 msgid "Description"
 msgstr "Descrição"
 
-#: modules/catalog/product/forms.py:19
+#: modules/catalog/product/forms.py:20
 msgid "Maximum 500 characters"
 msgstr "No máximo 500 caracteres"
 
