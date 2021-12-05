@@ -181,7 +181,7 @@
 		$(function () {
 			function deleteBookModalForm() {
 				$(".btn_delete").each(function () {
-					$(this).modalForm({formURL: "{% url 'catalog:product_delete' object.pk %}", isDeleteForm: true});
+					$(this).modalForm({formURL: "{{ object.delete_absolute_url }}", isDeleteForm: true});
 				});
 			}
 			deleteBookModalForm();

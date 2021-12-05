@@ -60,6 +60,9 @@ class Product(models.Model):
     def get_absolute_url(self):
         return "/catalog/product/{id}".format(id = self.id)
 
+    def delete_absolute_url(self):
+        return "/catalog/product/delete/{id}".format(id = self.id)
+
 
 class Image(models.Model):
     ITEM_FORMAT = (
