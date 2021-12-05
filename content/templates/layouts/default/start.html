@@ -1,0 +1,28 @@
+{% extends "layouts/default/index.html" %}
+
+{% load i18n %}
+
+{% block body %}
+
+    <body>
+        <div class="container-scroller d-flex">
+			<div class="container-fluid page-body-wrapper full-page-wrapper d-flex">
+				<div class="content-wrapper d-flex align-items-stretch auth auth-img-bg">
+					<div class="row flex-grow">
+                  		<div class="col-lg-6 d-flex align-items-center justify-content-center">
+                    		<div class="auth-form-transparent text-left p-3">
+								{% block content %}
+
+								{% endblock %}            
+							</div>
+						</div>
+						<div class="col-lg-6 {{ half_bg }} d-flex flex-row">
+							<p class="text-white font-weight-medium text-center flex-grow align-self-end">{% trans 'All rights reserved for' %} Upy-Explorer &copy; 2021</p>
+                  		</div>
+					</div>
+              	</div>
+			</div>
+		</div>
+	</body>
+
+{% endblock %}   

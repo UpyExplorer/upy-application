@@ -104,8 +104,8 @@
 											<div class="btn-group">
 												<button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{% trans 'Options' %}</button>
 												<div class="dropdown-menu" x-placement="bottom-start">
-													<a class="dropdown-item" style="cursor: pointer;" href="{{ product.get_absolute_url }}">{% trans 'View' %}</a>
-													<a class="dropdown-item" style="cursor: pointer;">{% trans 'Edit' %}</a>
+													<a class="dropdown-item" style="cursor: pointer;" href="{{ product.get_absolute_url }}">{% trans 'Edit' %}</a>
+													<a class="dropdown-item" style="cursor: no-drop;" disabled>{% trans 'Details' %}</a>
 												</div>                          
 											</div>
 										</td>

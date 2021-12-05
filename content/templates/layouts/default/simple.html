@@ -1,25 +1,8 @@
-{% load static %}
-{% load bootstrap5 %}
+{% extends "layouts/default/index.html" %}
+
 {% load i18n %}
 
-{% get_current_language as language_code %}
-
-<!DOCTYPE html>
-<html lang="{{ language_code }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="UpyExplorer">
-        <meta name="author" content="Fernando Celmer">
-
-        <link rel="icon" href="{% static 'favicon.ico' %}">
-        <title>UpyExplorer</title>
-
-        <!-- CSS -->
-        {% include 'layouts/includes/include_css.html' %}
-        <!-- CSS -->
-
-    </head>
+{% block body %}
 
     <body>
         <div class="container-scroller d-flex">
@@ -28,21 +11,15 @@
                     <div class="row w-100 mx-0">
                         <div class="col-lg-4 mx-auto">
                             <div class="auth-form-light text-left py-5 px-4 px-sm-5">
-                            {% bootstrap_messages %}
-
-                            {% block content %}
-                                No content.
-                            {% endblock %}
+                                {% block content %}
+                                
+                                {% endblock %}
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- JS -->
-        {% include 'layouts/includes/include_js.html' %}
-        <!-- JS -->
-
     </body>
-</html>
+
+    {% endblock %}

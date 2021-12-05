@@ -31,7 +31,7 @@ class ProductListView(LoginRequiredMixin, generic.ListView):
 
 
 class ProductDetailView(LoginRequiredMixin, generic.DetailView):
-    template_name = 'catalog/product/product_read.html'
+    template_name = 'catalog/product/product_detail.html'
     model = Product
 
     def get_context_data(self, **kwargs):
