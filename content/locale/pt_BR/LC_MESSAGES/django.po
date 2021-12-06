@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-05 00:37-0300\n"
+"POT-Creation-Date: 2021-12-05 07:36-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: app/conf/development/settings.py:191 app/conf/production/settings.py:188
+#: app/conf/development/settings.py:192 app/conf/production/settings.py:189
 msgid "Português-BR"
 msgstr "Português-BR"
 
-#: app/conf/development/settings.py:192 app/conf/production/settings.py:189
+#: app/conf/development/settings.py:193 app/conf/production/settings.py:190
 msgid "English"
 msgstr "Inglês"
 
@@ -31,6 +31,7 @@ msgid "Save Product"
 msgstr "Salvar Produto"
 
 #: content/templates/layouts/default/block.html:41
+#: modules/catalog/templates/catalog/product/product_delete.html:9
 #: venv/lib/python3.9/site-packages/django/forms/formsets.py:417
 msgid "Delete"
 msgstr "Excluir"
@@ -57,24 +58,29 @@ msgid "Catalog"
 msgstr "Catálogo"
 
 #: content/templates/layouts/modules/menu.html:32
-#: modules/catalog/product/views.py:21 modules/catalog/product/views.py:44
-#: modules/catalog/product/views.py:84
+#: modules/catalog/product/views.py:22 modules/catalog/product/views.py:44
+#: modules/catalog/product/views.py:82
 msgid "Product"
 msgstr "Produto"
 
-#: content/templates/layouts/modules/menu.html:43
+#: content/templates/layouts/modules/menu.html:35
+#: modules/catalog/category/views.py:18
+msgid "Category"
+msgstr "Categoria"
+
+#: content/templates/layouts/modules/menu.html:46
 msgid "My Profile"
 msgstr "Meu Perfil"
 
-#: content/templates/layouts/modules/menu.html:49
+#: content/templates/layouts/modules/menu.html:52
 msgid "Change password"
 msgstr "Alterar Senha"
 
-#: content/templates/layouts/modules/menu.html:53
+#: content/templates/layouts/modules/menu.html:56
 msgid "Change profile"
 msgstr "Alterar Perfil"
 
-#: content/templates/layouts/modules/menu.html:57 modules/account/utils.py:28
+#: content/templates/layouts/modules/menu.html:60 modules/account/utils.py:28
 msgid "Change email"
 msgstr "Alterar E-mail"
 
@@ -359,87 +365,96 @@ msgstr "Ativação de perfil"
 msgid "Your username"
 msgstr "Seu nome de usuário"
 
-#: modules/account/views.py:156
+#: modules/account/views.py:159
 msgid "Error!"
 msgstr "Erro!"
 
-#: modules/account/views.py:175
+#: modules/account/views.py:178
 msgid ""
 "You are signed up. To activate the account, follow the link sent to the mail."
 msgstr ""
 "Você está inscrito. Para ativar a conta, siga o link enviado para o e-mail."
 
-#: modules/account/views.py:182
+#: modules/account/views.py:185
 msgid "You are successfully signed up!"
 msgstr "Você se inscreveu com sucesso!"
 
-#: modules/account/views.py:200
+#: modules/account/views.py:203
 msgid "You have successfully activated your account!"
 msgstr "Você ativou sua conta com sucesso!"
 
-#: modules/account/views.py:230
+#: modules/account/views.py:233
 msgid "A new activation code has been sent to your email address."
 msgstr "Um novo código de ativação foi enviado para o seu endereço de e-mail."
 
-#: modules/account/views.py:261
+#: modules/account/views.py:264
 msgid "Change Profile"
 msgstr "Alterar Perfil"
 
-#: modules/account/views.py:262
+#: modules/account/views.py:265
 msgid "Dashboard / My Profile / Change Profile"
 msgstr "Painel de Controle / Meu Perfil / Alterar Perfil"
 
-#: modules/account/views.py:286
+#: modules/account/views.py:289
 msgid "Profile data has been successfully updated."
 msgstr "Os dados do perfil foram atualizados com sucesso."
 
-#: modules/account/views.py:297
+#: modules/account/views.py:300
 msgid "Change Email"
 msgstr "Alterar E-mail"
 
-#: modules/account/views.py:298
+#: modules/account/views.py:301
 msgid "Dashboard / My Profile / Change Email"
 msgstr "Painel de Controle / Meu Perfil / Alterar E-mail"
 
-#: modules/account/views.py:334
+#: modules/account/views.py:337
 msgid "To complete the change of email address, click on the link sent to it."
 msgstr ""
 "Para concluir a alteração do endereço de e-mail, clique no link enviado para "
 "ele."
 
-#: modules/account/views.py:339
+#: modules/account/views.py:342
 msgid "Email successfully changed."
 msgstr "Email alterado com sucesso."
 
-#: modules/account/views.py:357
+#: modules/account/views.py:360
 msgid "You have successfully changed your email!"
 msgstr "Você alterou seu e-mail com sucesso!"
 
-#: modules/account/views.py:370
+#: modules/account/views.py:373
 msgid "Your username has been successfully sent to your email."
 msgstr "Seu nome de usuário foi enviado com sucesso para o seu e-mail."
 
-#: modules/account/views.py:380
+#: modules/account/views.py:383
 msgid "Change Password"
 msgstr "Alterar Senha"
 
-#: modules/account/views.py:381
+#: modules/account/views.py:384
 msgid "Dashboard / My Profile / Change Password"
 msgstr "Painel de Controle / Meu Perfil / Alterar Senha"
 
-#: modules/account/views.py:399
+#: modules/account/views.py:402
 msgid "Your password was changed."
 msgstr "Sua senha foi modificada."
 
-#: modules/account/views.py:411
+#: modules/account/views.py:414
 msgid "Your password has been set. You may go ahead and login now."
 msgstr "Sua senha foi definida. Você pode ir em frente e entrar agora."
+
+#: modules/catalog/category/views.py:16
+msgid "Dashboard / Catalog / Category"
+msgstr "Painel de Controle / Catálogo / Categoria"
+
+#: modules/catalog/category/views.py:17
+msgid "Category List"
+msgstr "Categoria"
 
 #: modules/catalog/product/forms.py:6
 msgid "Active"
 msgstr "Ativo"
 
 #: modules/catalog/product/forms.py:7
+#: modules/catalog/templates/catalog/category/list.html:51
 #: modules/catalog/templates/catalog/product/product_detail.html:26
 #: modules/catalog/templates/catalog/product/product_list.html:53
 msgid "Name"
@@ -464,33 +479,37 @@ msgid "Type"
 msgstr "Tipo"
 
 #: modules/catalog/product/forms.py:10
+msgid "Condition"
+msgstr "Condição"
+
+#: modules/catalog/product/forms.py:11
 #: modules/catalog/templates/catalog/product/product_detail.html:48
 #: modules/catalog/templates/catalog/product/product_list.html:56
 msgid "Stock"
 msgstr "Estoque"
 
-#: modules/catalog/product/forms.py:11
+#: modules/catalog/product/forms.py:12
 #: modules/catalog/templates/catalog/product/product_detail.html:57
 #: modules/catalog/templates/catalog/product/product_list.html:55
 msgid "Price Sell"
 msgstr "Preço de Venda"
 
-#: modules/catalog/product/forms.py:12
+#: modules/catalog/product/forms.py:13
 #: modules/catalog/templates/catalog/product/product_detail.html:64
 msgid "Price Cost"
 msgstr "Preço de Custo"
 
-#: modules/catalog/product/forms.py:13
+#: modules/catalog/product/forms.py:14
 #: modules/catalog/templates/catalog/product/product_detail.html:71
 msgid "Price Promo"
 msgstr "Preço Promocional"
 
-#: modules/catalog/product/forms.py:15
+#: modules/catalog/product/forms.py:16
 #: modules/catalog/templates/catalog/product/product_detail.html:80
 msgid "Description"
 msgstr "Descrição"
 
-#: modules/catalog/product/forms.py:19
+#: modules/catalog/product/forms.py:20
 msgid "Maximum 500 characters"
 msgstr "No máximo 500 caracteres"
 
@@ -507,10 +526,12 @@ msgid "Kit"
 msgstr "Kit"
 
 #: modules/catalog/product/models.py:16
+#: modules/catalog/templates/catalog/product/product_list.html:104
 msgid "New"
 msgstr "Novo"
 
 #: modules/catalog/product/models.py:17
+#: modules/catalog/templates/catalog/product/product_list.html:106
 msgid "Used"
 msgstr "Usado"
 
@@ -538,12 +559,12 @@ msgstr "Meses"
 msgid "Years"
 msgstr "Anos"
 
-#: modules/catalog/product/views.py:19 modules/catalog/product/views.py:42
-#: modules/catalog/product/views.py:82
+#: modules/catalog/product/views.py:20 modules/catalog/product/views.py:42
+#: modules/catalog/product/views.py:80
 msgid "Dashboard / Catalog / Product"
 msgstr "Painel de Controle / Catálogo / Produto"
 
-#: modules/catalog/product/views.py:20
+#: modules/catalog/product/views.py:21
 msgid "Product List"
 msgstr "Produto"
 
@@ -551,70 +572,93 @@ msgstr "Produto"
 msgid "Product View"
 msgstr "Visualizar Produto"
 
-#: modules/catalog/product/views.py:76
+#: modules/catalog/product/views.py:74
 msgid "Product not found!"
 msgstr "Produto não encontrado!"
 
-#: modules/catalog/product/views.py:83
+#: modules/catalog/product/views.py:81
 msgid "Product Edit"
 msgstr "Editar Produto"
 
-#: modules/catalog/product/views.py:89 modules/catalog/product/views.py:107
+#: modules/catalog/product/views.py:87 modules/catalog/product/views.py:103
 msgid "Product saved successfully!"
 msgstr "Produto salvo com sucesso!"
+
+#: modules/catalog/product/views.py:113
+msgid "Product was deleted"
+msgstr "Produto foi deletado"
+
+#: modules/catalog/templates/catalog/category/list.html:28
+#: modules/catalog/templates/catalog/product/product_list.html:30
+msgid "Add Product"
+msgstr "Adicionar Produto"
+
+#: modules/catalog/templates/catalog/category/list.html:52
+#: modules/catalog/templates/catalog/product/product_list.html:57
+msgid "Created In"
+msgstr "Criado Em"
+
+#: modules/catalog/templates/catalog/category/list.html:63
+#: modules/catalog/templates/catalog/product/product_detail.html:39
+#: modules/catalog/templates/catalog/product/product_list.html:128
+msgid "Options"
+msgstr "Opções"
+
+#: modules/catalog/templates/catalog/category/list.html:65
+#: modules/catalog/templates/catalog/product/product_list.html:130
+msgid "Edit"
+msgstr "Editar"
+
+#: modules/catalog/templates/catalog/category/list.html:66
+#: modules/catalog/templates/catalog/product/product_list.html:131
+msgid "Details"
+msgstr "Detalhes"
+
+#: modules/catalog/templates/catalog/product/product_delete.html:15
+msgid "Are you sure you want to delete the product"
+msgstr "Tem certeza que deseja deletar o produto"
+
+#: modules/catalog/templates/catalog/product/product_delete.html:18
+#: venv/lib/python3.9/site-packages/django/forms/widgets.py:716
+msgid "No"
+msgstr "Não"
+
+#: modules/catalog/templates/catalog/product/product_delete.html:19
+#: venv/lib/python3.9/site-packages/django/forms/widgets.py:715
+msgid "Yes"
+msgstr "Sim"
 
 #: modules/catalog/templates/catalog/product/product_detail.html:37
 msgid "Product Type"
 msgstr "Tipo de Produto"
 
-#: modules/catalog/templates/catalog/product/product_detail.html:39
-#: modules/catalog/templates/catalog/product/product_list.html:105
-msgid "Options"
-msgstr "Opções"
-
 #: modules/catalog/templates/catalog/product/product_detail.html:58
 #: modules/catalog/templates/catalog/product/product_detail.html:65
 #: modules/catalog/templates/catalog/product/product_detail.html:72
-#: modules/catalog/templates/catalog/product/product_list.html:100
-#: modules/catalog/templates/catalog/product/product_update.html:84
-#: modules/catalog/templates/catalog/product/product_update.html:101
-#: modules/catalog/templates/catalog/product/product_update.html:117
+#: modules/catalog/templates/catalog/product/product_list.html:123
+#: modules/catalog/templates/catalog/product/product_update.html:85
+#: modules/catalog/templates/catalog/product/product_update.html:102
+#: modules/catalog/templates/catalog/product/product_update.html:118
 msgid "$"
 msgstr "R$"
-
-#: modules/catalog/templates/catalog/product/product_list.html:30
-msgid "Add Product"
-msgstr "Adicionar Produto"
-
-#: modules/catalog/templates/catalog/product/product_list.html:57
-msgid "Created In"
-msgstr "Criado Em"
-
-#: modules/catalog/templates/catalog/product/product_list.html:107
-msgid "Edit"
-msgstr "Editar"
-
-#: modules/catalog/templates/catalog/product/product_list.html:108
-msgid "Details"
-msgstr "Detalhes"
 
 #: modules/dashboard/templates/dashboard/change_language.html:17
 msgid "Select the language"
 msgstr "Selecionar Idioma"
 
-#: modules/dashboard/templates/dashboard/index.html:24
+#: modules/dashboard/templates/dashboard/base.html:24
 msgid "Products"
 msgstr "Produtos"
 
-#: modules/dashboard/templates/dashboard/index.html:36
+#: modules/dashboard/templates/dashboard/base.html:36
 msgid "Orders"
 msgstr "Pedidos"
 
-#: modules/dashboard/templates/dashboard/index.html:48
+#: modules/dashboard/templates/dashboard/base.html:48
 msgid "Ads"
 msgstr "Anúncios"
 
-#: modules/dashboard/templates/dashboard/index.html:60
+#: modules/dashboard/templates/dashboard/base.html:60
 msgid "Applications"
 msgstr "Aplicativos"
 
@@ -1263,14 +1307,6 @@ msgstr ""
 
 #: venv/lib/python3.9/site-packages/django/forms/widgets.py:714
 msgid "Unknown"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/forms/widgets.py:715
-msgid "Yes"
-msgstr ""
-
-#: venv/lib/python3.9/site-packages/django/forms/widgets.py:716
-msgid "No"
 msgstr ""
 
 #. Translators: Please do not add spaces around commas.

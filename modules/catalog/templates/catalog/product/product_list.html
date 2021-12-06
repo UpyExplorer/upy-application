@@ -1,44 +1,8 @@
-{% extends "layouts/default/container.html" %}
+{% extends "layouts/default/page.html" %}
 
 {% load static %}
 {% load bootstrap5 %}
 {% load i18n %}
-
-{% get_current_language as language_code %}
-
-{% block option %}
-
-	<div class="col-12 grid-margin stretch-card" style="margin-bottom: 15px;">
-		<div class="card">
-			<div class="card-body" style="padding-bottom: 15px; padding-top: 15px;">
-				<div class="container">
-					<div class="row">
-						<div class="col-12">
-
-							{% if perms.global_permissions.app_catalog_product_read %}
-								<button 
-									type="button"
-									id="btnInfo"
-									class="btn btn-primary btn-sm"
-									data-toggle="tooltip" data-placement="top" title="{{ view_info }}"
-									style="float: right; background: #3243c5;border-color: #3243c5; margin-right: 5px;">
-									<i class="mdi mdi-comment-question-outline"></i>
-								</button>
-							{% endif %}
-
-							{% if perms.global_permissions.app_catalog_product_update %}
-								<a href="{% url 'catalog:product_create' %}" type="button" class="btn btn-warning btn-sm" title="{% trans 'Add Product' %}" style="float: right; margin-right: 5px; color: #ffffff;">
-									<i class="mdi mdi-plus-box"></i> 
-								</a>
-							{% endif %}
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-{% endblock %}
 
 {% block container %}
 
@@ -50,11 +14,11 @@
 						<table class="table table-striped dataTable"> 
 							<thead>
 								<tr role="row">
-									<th width="40%" style="padding-bottom: 10px; padding-top: 10px;">{% trans 'Name' %}</th>
-									<th width="20%" style="padding-bottom: 10px; padding-top: 10px;">{% trans 'Sku' %}</th>
-									<th width="20%" style="padding-bottom: 10px; padding-top: 10px;">{% trans 'Price Sell' %}</th>
+									<th width="55%" style="padding-bottom: 10px; padding-top: 10px;">{% trans 'Name' %}</th>
+									<th width="15%" style="padding-bottom: 10px; padding-top: 10px;">{% trans 'Sku' %}</th>
+									<th width="10%" style="padding-bottom: 10px; padding-top: 10px;">{% trans 'Price Sell' %}</th>
 									<th width="20%" style="padding-bottom: 10px; padding-top: 10px;">{% trans 'Stock' %}</th>
-									<th width="15%" style="padding-bottom: 10px; padding-top: 10px;">{% trans 'Created In' %}</th>
+									<th width="10%" style="padding-bottom: 10px; padding-top: 10px;">{% trans 'Created In' %}</th>
 									<th></th>
 								</tr>
 								</thead>
@@ -62,36 +26,59 @@
 									{% for product in product_list %}
 									<tr>
 										<td class="py-1">
-											<div class="email-wrapper wrapper">
-												<div class="row align-items-stretch">
-													<div class="mail-list-container border-right">
-														<div class="mail-list">
+											<div class="row">
+												<div class="col-xl-2 col-3 col-sm-3">
+													<div class="row">
+														<div class="col-4 col-sm-2">
 															<div class="form-check">
 																<label class="form-check-label">
-																	<input type="checkbox" class="form-check-input"> <i class="input-helper"></i>
+																	<input type="checkbox" class="form-check-input">
+																	<i class="input-helper"></i>
+																	<i class="input-helper"></i>
 																</label>
 															</div>
-															<div class="content" style="margin-left: 10px; margin-top: 3px;">
-																<span>
-																	{% if product.active %}
-																		<img src="{% static 'media/icon/icon-product.png' %}"
-																		style="width: 35px !important;">
-																	{% else %}
-																		<img src="{% static 'media/icon/icon-product.png' %}"
-																		style="width: 35px !important; filter: grayscale(1);">
-																	{% endif %}
-																</span>
-															</div>
-															
-															<div class="content"style="margin-left: 10px;">
-																<p class="sender-name">
-																	{{ product.name }}
-																</p>
-																<p class="message_text">
+														</div> 
+														<div class="col-4 col-sm-2">
+															<span>
+																{% if product.active %}
+																	<img src="{% static 'media/icon/icon-product.png' %}"
+																	style="width: 35px !important;">
+																{% else %}
+																	<img src="{% static 'media/icon/icon-product.png' %}"
+																	style="width: 35px !important; filter: grayscale(1);">
+																{% endif %}
+															</span>
+														</div> 
+													</div>      
+												</div>
+												<div class="col-xl-10 col-9 col-sm-9">
+													<div class="row">
+														<div class="col-sm">
+															<p class="bug-margim" data-toggle="tooltip" data-placement="top" title="{{ product.name }}">
+																{{ product.name|slice:":40" }}...
+															</p>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-sm-6">
+															<div class="row">
+																<div class="col-xl-4 col-lg-6 col-sm-6">
+																	<h6><span class="badge badge-light">
+																		{% if product.condition == '1' %}
+																			<b>{% trans 'New' %}</b>
+																		{% else %}
+																			<b>{% trans 'Used' %}</b>
+																		{% endif %}
+																	</span></h6>
+																</div>
+																<div class="col-xl-8 col-lg-6 col-sm-6">
+																<p style="font-weight: 600; color: #979797;">
 																	ID: {{ product.id }}
 																</p>
+																</div>
 															</div>
 														</div>
+														<div class="col-sm-6"></div>
 													</div>
 												</div>
 											</div>

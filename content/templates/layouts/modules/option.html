@@ -1,0 +1,49 @@
+{% load static %}
+{% load i18n %}
+
+<div class="col-12 grid-margin stretch-card" style="margin-bottom: 15px;">
+    <div class="card">
+        <div class="card-body" style="padding-bottom: 15px; padding-top: 15px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+
+                        {% if btn_info %}
+                            <button 
+                                type="button" id="btnInfo" class="btn btn-primary btn-sm"
+                                data-toggle="tooltip" data-placement="top" title="{{ view_info }}"
+                                style="float: right; background: #3243c5;border-color: #3243c5; margin-right: 5px;">
+                                <i class="mdi mdi-comment-question-outline"></i>
+                            </button>
+                        {% endif %}
+
+                        {% if perms.global_permissions.app_catalog_product_update %}
+                            {% if btn_save %}
+                                <a type="button" id="btnSave" class="btn btn-success btn-sm" title="{% trans 'Save Product' %}" style="float: right; margin-right: 5px; color: #ffffff;">
+                                    <i class="mdi mdi-content-save"></i>
+                                </a>
+                            {% endif %}
+                        {% endif %}
+
+                        {% if perms.global_permissions.app_catalog_product_delete %}
+                            {% if btn_delete %}
+                                <a type="button" id="btnDelete" class="btn btn-danger btn-sm" title="{% trans 'Delete' %}" style="float: right; margin-right: 5px; color: #ffffff;">
+                                    <i class="mdi mdi-delete"></i>
+                                </a>
+                            {% endif %}
+                        {% endif %}
+
+                        {% if perms.global_permissions.app_catalog_product_create %}
+                            {% if btn_create %}
+                                <a href="{% url 'catalog:product_create' %}" type="button" class="btn btn-warning btn-sm" title="{% trans 'Add Product' %}" style="float: right; margin-right: 5px; color: #ffffff;">
+                                    <i class="mdi mdi-plus-box"></i> 
+                                </a>
+                            {% endif %}
+                        {% endif %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

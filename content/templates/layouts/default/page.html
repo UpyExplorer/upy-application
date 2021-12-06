@@ -1,36 +1,49 @@
+
 {% extends "layouts/default/index.html" %}
 
+{% load static %}
+{% load bootstrap5 %}
 {% load i18n %}
 
-{% block body %}
+{% get_current_language as language_code %}
 
-    <body class="sidebar-icon-only">
-        <div class="container-scroller d-flex">
+{% block content %}
 
-            <!-- Menu -->
-            {% include 'layouts/modules/menu.html' %}
-            <!-- Menu -->
+	<div class="main-panel">
+		<div class="content-wrapper">
 
-            <div class="container-fluid page-body-wrapper">
+		<div class="row">
 
-                <!-- Navbar -->
-                {% include 'layouts/modules/navbar.html' %}
-                <!-- Navbar -->
+			<!-- ====================OPTION===================== -->
+			{% block option %}
 
-                <!-- Messages -->
-                {% include 'layouts/modules/messages.html' %}
-                <!-- Messages -->
+				<!-- Option -->
+				{% include 'layouts/modules/option.html' %}
+				<!-- Option -->
 
-                {% block content %}
+			{% endblock %}
+			<!-- ====================OPTION===================== -->
 
-                {% endblock %}
+			{% block square %}
 
-                <!-- Footer -->
-                {% include 'layouts/modules/footer.html' %}
-                <!-- Footer -->
+				<div class="col-lg-12 grid-margin stretch-card">
+					<div class="card">
+						<div class="card-body">
+							<h4 class="card-title">{{ view_name }}</h4>
+							<p class="card-description">{{ view_path }}</p>
+							<hr>
+							<!-- ====================CONTENT===================== -->
+							{% block container %}
 
-            </div>
-        </div>
-    </body>
+							{% endblock %}
+							<!-- ====================CONTENT===================== -->
+						</div>
+					</div>
+				</div>
+
+			{% endblock %}
+
+		</div>
+	</div>
 
 {% endblock %}
