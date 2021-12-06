@@ -53,3 +53,20 @@ class Customer(models.Model):
     address_state = models.CharField(max_length=100,blank=True, null=True)
     address_country = models.CharField(max_length=100,blank=True, null=True)
     address_postal_code = models.IntegerField(blank=True, null=True)
+
+
+class Seller(models.Model):
+    company_data = models.ForeignKey(Data, on_delete=models.SET_NULL, null=True)
+    creation_time = models.DateTimeField(default=datetime.now, null=True)
+    first_name = models.CharField(max_length=100,blank=True, null=True)
+    second_name = models.CharField(max_length=100,blank=True, null=True)
+    cpf_cnpj = models.IntegerField(blank=True, null=True)
+    nickname = models.CharField(max_length=50,blank=True, null=True)
+    email = models.CharField(max_length=100,blank=True, null=True)
+    phone = models.IntegerField(blank=True, null=True)
+    address_street = models.CharField(max_length=100,blank=True, null=True)
+    address_number = models.CharField(max_length=100,blank=True, null=True)
+    address_complement = models.CharField(max_length=100,blank=True, null=True)
+    address_state = models.CharField(max_length=100,blank=True, null=True)
+    address_country = models.CharField(max_length=100,blank=True, null=True)
+    address_postal_code = models.IntegerField(blank=True, null=True)
