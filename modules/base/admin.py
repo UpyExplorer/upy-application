@@ -28,7 +28,7 @@ class CategoryAdmin(admin.ModelAdmin):
     list_display = ['name', 'code']
 
 class PaymentTypeAdmin(admin.ModelAdmin):
-    list_display = ['payment_type', 'operation_type', 'code']
+    list_display = ['payment_type', 'operation_type', 'description', 'code', 'currency']
 
 admin.site.register(Configuration, ConfigurationAdmin)
 admin.site.register(Integration, IntegrationAdmin)
