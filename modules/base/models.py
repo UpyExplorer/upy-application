@@ -49,3 +49,4 @@ class PaymentType(ModelUpyBase):
     payment_type = models.CharField(max_length=100,blank=True, null=True)
     operation_type = models.CharField(max_length=100,blank=True, null=True)
     code = models.CharField(max_length=25, blank=False, null=True)
+    currency = models.ForeignKey(Currency, on_delete=models.SET_NULL, null=True)
