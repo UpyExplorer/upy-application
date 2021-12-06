@@ -5,16 +5,25 @@ from django.contrib.auth.models import Group
 from global_permissions.models import GlobalPermission
 
 
-class Configuration(models.Model):
+class ModelUpyBase(models.Model):
+
+    def get_queryset(self, request):
+        return super().get_queryset(request).using(self.using)
+ 
+    class Meta:
+        abstract = True
+
+class Configuration(ModelUpyBase):
     key = models.CharField(max_length=50,blank=True, null=True)
     description = models.CharField(max_length=50,blank=True, null=True)
     value = models.CharField(max_length=10,blank=True, null=True)
 
-class Integration(models.Model):
+
+class Integration(ModelUpyBase):
     code = models.CharField(max_length=20, unique=True)
 
 
-class Module(models.Model):
+class Module(ModelUpyBase):
     key = models.CharField(max_length=50,blank=True, null=True)
     description = models.CharField(max_length=50,blank=True, null=True)
     value = models.CharField(max_length=10,blank=True, null=True)
@@ -22,21 +31,21 @@ class Module(models.Model):
     global_permission = models.ForeignKey(GlobalPermission, on_delete=models.SET_NULL, null=True)
 
 
-class Plan(models.Model):
+class Plan(ModelUpyBase):
     code = models.CharField(max_length=20, unique=True)
     group = models.ForeignKey(Group, on_delete=models.SET_NULL, null=True)
 
-class Currency(models.Model):
+class Currency(ModelUpyBase):
     country_name = models.CharField(max_length=25, blank=False, null=False)
     currency_name = models.CharField(max_length=25, blank=False, null=False)
     code = models.CharField(max_length=5, blank=False, null=False)
     status = models.BooleanField(null=False, default=False)
 
-class Category(models.Model):
+class Category(ModelUpyBase):
     name = models.CharField(max_length=100, blank=False, null=False, default='Category')
     code = models.CharField(max_length=25, blank=False, null=True)
 
-class PaymentType(models.Model):
+class PaymentType(ModelUpyBase):
     payment_type = models.CharField(max_length=100,blank=True, null=True)
     operation_type = models.CharField(max_length=100,blank=True, null=True)
     code = models.CharField(max_length=25, blank=False, null=True)
