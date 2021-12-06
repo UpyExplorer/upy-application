@@ -1,4 +1,3 @@
-from os import execlpe
 from django.contrib import admin
 from modules.base.models import (
     Configuration,
