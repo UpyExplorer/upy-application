@@ -1,4 +1,3 @@
-from os import execlpe
 from django.contrib import admin
 from modules.base.models import (
     Configuration,
@@ -7,29 +6,34 @@ from modules.base.models import (
     Plan,
     Currency,
     Category,
-    PaymentType
+    PaymentType,
+    CreditOperator
 )
 
 class ConfigurationAdmin(admin.ModelAdmin):
-    list_display = ['key', 'description', 'value']
+    list_display = ['id', 'key', 'description', 'value']
 
 class IntegrationAdmin(admin.ModelAdmin):
-    list_display = ['code']
+    list_display = ['id', 'code']
 
 class ModuleAdmin(admin.ModelAdmin):
-    list_display = ['key', 'description', 'value', 'url', 'global_permission']
+    list_display = ['id', 'key', 'description', 'value', 'url', 'global_permission']
 
 class PlanAdmin(admin.ModelAdmin):
-    list_display = ['code', 'group']
+    list_display = ['id', 'code', 'group']
 
 class CurrencyAdmin(admin.ModelAdmin):
-    list_display = ['country_name', 'currency_name', 'code', 'status']
+    list_display = ['id', 'country_name', 'currency_name', 'code', 'status']
 
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = ['name', 'code']
+    list_display = ['id', 'name', 'code']
 
 class PaymentTypeAdmin(admin.ModelAdmin):
-    list_display = ['payment_type', 'operation_type', 'code']
+    list_display = ['id', 'payment_type', 'description', 'code', 'tag', 'currency']
+
+
+class CreditOperatorAdmin(admin.ModelAdmin):
+    list_display = ['id', 'operator_type', 'description', 'code', 'tag', 'currency']
 
 admin.site.register(Configuration, ConfigurationAdmin)
 admin.site.register(Integration, IntegrationAdmin)
@@ -38,3 +42,4 @@ admin.site.register(Plan, PlanAdmin)
 admin.site.register(Currency, CurrencyAdmin)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(PaymentType, PaymentTypeAdmin)
+admin.site.register(CreditOperator, CreditOperatorAdmin)
