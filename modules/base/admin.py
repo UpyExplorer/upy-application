@@ -10,25 +10,25 @@ from modules.base.models import (
 )
 
 class ConfigurationAdmin(admin.ModelAdmin):
-    list_display = ['key', 'description', 'value']
+    list_display = ['id', 'key', 'description', 'value']
 
 class IntegrationAdmin(admin.ModelAdmin):
-    list_display = ['code']
+    list_display = ['id', 'code']
 
 class ModuleAdmin(admin.ModelAdmin):
-    list_display = ['key', 'description', 'value', 'url', 'global_permission']
+    list_display = ['id', 'key', 'description', 'value', 'url', 'global_permission']
 
 class PlanAdmin(admin.ModelAdmin):
-    list_display = ['code', 'group']
+    list_display = ['id', 'code', 'group']
 
 class CurrencyAdmin(admin.ModelAdmin):
-    list_display = ['country_name', 'currency_name', 'code', 'status']
+    list_display = ['id', 'country_name', 'currency_name', 'code', 'status']
 
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = ['name', 'code']
+    list_display = ['id', 'name', 'code']
 
 class PaymentTypeAdmin(admin.ModelAdmin):
-    list_display = ['payment_type', 'operation_type', 'description', 'code', 'currency']
+    list_display = ['id', 'payment_type', 'description', 'code', 'currency']
 
 admin.site.register(Configuration, ConfigurationAdmin)
 admin.site.register(Integration, IntegrationAdmin)
