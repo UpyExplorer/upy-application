@@ -6,7 +6,8 @@ from modules.base.models import (
     Plan,
     Currency,
     Category,
-    PaymentType
+    PaymentType,
+    CreditOperator
 )
 
 class ConfigurationAdmin(admin.ModelAdmin):
@@ -28,7 +29,11 @@ class CategoryAdmin(admin.ModelAdmin):
     list_display = ['id', 'name', 'code']
 
 class PaymentTypeAdmin(admin.ModelAdmin):
-    list_display = ['id', 'payment_type', 'description', 'code', 'currency']
+    list_display = ['id', 'payment_type', 'description', 'code', 'tag', 'currency']
+
+
+class CreditOperatorAdmin(admin.ModelAdmin):
+    list_display = ['id', 'operator_type', 'description', 'code', 'tag', 'currency']
 
 admin.site.register(Configuration, ConfigurationAdmin)
 admin.site.register(Integration, IntegrationAdmin)
@@ -37,3 +42,4 @@ admin.site.register(Plan, PlanAdmin)
 admin.site.register(Currency, CurrencyAdmin)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(PaymentType, PaymentTypeAdmin)
+admin.site.register(CreditOperator, CreditOperatorAdmin)
