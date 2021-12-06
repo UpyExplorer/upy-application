@@ -119,15 +119,14 @@ PIPELINE = {
     },
 }
 
-PIPELINE['JS_COMPRESSOR'] = 'pipeline.compressors.yuglify.YuglifyCompressor'
+# PIPELINE['JS_COMPRESSOR'] = 'pipeline.compressors.yuglify.YuglifyCompressor'
+PIPELINE['JS_COMPRESSOR'] = 'pipeline.compressors.uglifyjs.UglifyJSCompressor'
 PIPELINE['COMPILERS'] = (
   'pipeline.compilers.less.LessCompiler',
   'pipeline.compilers.stylus.StylusCompiler',
 )
 
-PIPELINE_JS_COMPRESSOR = 'pipeline.compressors.yuglify.YuglifyCompressor'
-PIPELINE_DISABLE_WRAPPER = True
-PIPELINE_ENABLED= True
+PIPELINE_DISABLE_WRAPPER = False
 
 MIDDLEWARE_CLASSES = (
    'django.middleware.gzip.GZipMiddleware',
