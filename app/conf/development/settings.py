@@ -89,6 +89,11 @@ STATICFILES_FINDERS = (
 
 PIPELINE = {
     'PIPELINE_ENABLED': False,
+    'JS_COMPRESSOR': 'pipeline.compressors.uglifyjs.UglifyJSCompressor',
+    'COMPILERS': (
+        'pipeline.compilers.less.LessCompiler',
+        'pipeline.compilers.stylus.StylusCompiler',
+    ),
     'JAVASCRIPT': {
         'app': {
             'source_filenames': (
@@ -108,26 +113,18 @@ PIPELINE = {
             'output_filename': 'js/components/components.min.js',
         }
     },
-        'STYLESHEETS': {
+    'STYLESHEETS': {
         'styles': {
-            'source_filenames': (
-              'css/base_upyexplorer.css',
-              'css/upy_catalog.css',
-            ),
-            'output_filename': 'css/styles.min.css',
+        'source_filenames': (
+            'css/base_upyexplorer.css',
+            'css/upy_catalog.css',
+        ),
+        'output_filename': 'css/styles.min.css',
         },
     },
 }
 
-PIPELINE['JS_COMPRESSOR'] = 'pipeline.compressors.yuglify.YuglifyCompressor'
-PIPELINE['COMPILERS'] = (
-  'pipeline.compilers.less.LessCompiler',
-  'pipeline.compilers.stylus.StylusCompiler',
-)
-
-PIPELINE_JS_COMPRESSOR = 'pipeline.compressors.yuglify.YuglifyCompressor'
-PIPELINE_DISABLE_WRAPPER = True
-PIPELINE_ENABLED= True
+PIPELINE_DISABLE_WRAPPER = False
 
 MIDDLEWARE_CLASSES = (
    'django.middleware.gzip.GZipMiddleware',
