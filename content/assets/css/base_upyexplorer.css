@@ -20710,7 +20710,8 @@ dl li {
   -webkit-transition: background 0.25s ease;
   -moz-transition: background 0.25s ease;
   -ms-transition: background 0.25s ease;
-  background: url("../media/dashboard/navbar-cover.jpg") center center no-repeat;
+  /* background: url("../media/dashboard/navbar-cover.jpg") center center no-repeat; */
+  background: #ffffff;
   background-size: cover;
   height: 65px;
   width: auto;
