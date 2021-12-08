@@ -3,28 +3,28 @@
 
 <nav class="navbar col-lg-12 col-12 px-0 py-0 py-lg-4 d-flex flex-row"> 
 	<div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
-		<button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+		<button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize" style="color: #d3403f;">
 			<span class="mdi mdi-menu"></span>
 		</button>
 	<div class="navbar-brand-wrapper">
 		<a class="navbar-brand brand-logo" style="margin-left: 5px !important;">
-		<img src="{% static 'media/upy-explorer.png' %}" style="width: 150px;" alt="logo" class="mobile-logo"/>
+		<img src="{% static 'media/upy-explorer-logo-x.png' %}" style="width: 175px;" alt="logo" class="mobile-logo"/>
 		</a>
 	</div>
-	<h6 class="font-weight-bold mb-0 d-none d-md-block mt-1" style="padding-bottom: 3px;">
+	<!-- <h6 class="font-weight-bold mb-0 d-none d-md-block mt-1" style="padding-bottom: 3px; color: #d63047;">
 		{% if request.user.is_authenticated %}
 		{% trans 'Welcome back' %}, {{ request.user.username }}
 		{% endif %}
-	</h6>
+	</h6> -->
 	<ul class="navbar-nav navbar-nav-right">
 
-		<li class="nav-item nav-profile dropdown">
+		<li class="nav-item nav-profile dropdown" style="color: #d3403f;">
 			<a class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center" id="notificationDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
 				<i class="mdi mdi-bell mx-0"></i>
 			</a>
 		</li>
 
-		<li class="nav-item nav-profile dropdown">
+		<li class="nav-item nav-profile dropdown" style="color: #d3403f;">
 			<a class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center" id="notificationDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
 				<i class="mdi mdi-email-open mx-0"></i>
 				<span class="count bg-warning">1</span>
@@ -46,7 +46,7 @@
 			</div>
 		</li>
 
-		<li class="nav-item nav-profile dropdown">
+		<li class="nav-item nav-profile dropdown" style="color: #303030;">
 			<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown" aria-expanded="false" >
 				<img src="{% static 'media/icon/icon-user.png' %}" style="width: auto; height: 50px;" alt="profile" class="profile-img">
 				<span class="nav-profile-name">
@@ -75,7 +75,7 @@
 			</div>
 		</li>
 	</ul>
-		<button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+		<button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas" style="color: #303030;">
 			<span class="mdi mdi-menu"></span>
 		</button>
 	</div>
