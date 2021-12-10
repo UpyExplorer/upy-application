@@ -149,3 +149,9 @@ content/staticfiles/css/upy_base.css
 content/staticfiles/css/upy_catalog.css
 
 node_modules
+.ssh
+upy.pem
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
