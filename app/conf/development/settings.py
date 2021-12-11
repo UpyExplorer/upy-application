@@ -1,9 +1,12 @@
 import os
-import warnings
+import environ
 import dj_database_url
 
-from django.utils.translation import gettext_lazy as _
 from os.path import dirname
+from django.utils.translation import gettext_lazy as _
+
+env = environ.Env()
+environ.Env.read_env()
 
 # warnings.simplefilter('error', DeprecationWarning)
 
@@ -11,9 +14,9 @@ BASE_DIR = dirname(dirname(dirname(dirname(os.path.abspath(__file__)))))
 CONTENT_DIR = os.path.join(BASE_DIR, 'content')
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
-SECRET_KEY = 'SECRET_KEY'
+SECRET_KEY = env("DJANGO_SECRET_KEY")
 
-DEBUG = True
+DEBUG = env("DJANGO_DEBUG")
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 SITE_ID = 1
@@ -155,11 +158,11 @@ WSGI_APPLICATION = 'app.wsgi.application'
 
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 EMAIL_FILE_PATH = os.path.join(CONTENT_DIR, 'tmp/emails')
-EMAIL_HOST_USER = 'upyexplorer@gmail.com'
-DEFAULT_FROM_EMAIL = 'upyexplorer@gmail.com'
+EMAIL_HOST_USER = env("DJANGO_EMAIL_HOST_USER")
+DEFAULT_FROM_EMAIL = env("DJANGO_DEFAULT_FROM_EMAIL")
 
 DATABASES = {
-    'default': dj_database_url.config(default='mysql://u217473324_app_dev:XyvQhMH5@31.170.166.166/u217473324_app_dev')
+    'default': dj_database_url.config(default=env("DJANGO_DATABASE_URL"))
 }
 
 AUTH_PASSWORD_VALIDATORS = [
