@@ -9,4 +9,7 @@ environ.Env.read_env(BASE_DIR+"/.env")
 
 DJANGO_ENV = env("DJANGO_ENV")
 
-from .conf.production.settings import *
+if DJANGO_ENV == 'production':
+    from .conf.production.settings import *
+else:
+    from .conf.development.settings import *
