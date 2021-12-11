@@ -16,8 +16,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 SECRET_KEY = env("DJANGO_SECRET_KEY")
 
-DEBUG = env("DJANGO_DEBUG")
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+DEBUG = env.bool("DJANGO_DEBUG", False)
+ALLOWED_HOSTS = env.list("DJANGO_ALLOWED_HOSTS", default=['127.0.0.1', 'localhost'])
 
 SITE_ID = 1
 
