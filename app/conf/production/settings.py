@@ -1,21 +1,17 @@
 import os
-import environ
 import dj_database_url
 
 from os.path import dirname
 from django.utils.translation import gettext_lazy as _
 
-env = environ.Env()
-environ.Env.read_env()
-
 BASE_DIR = dirname(dirname(dirname(dirname(os.path.abspath(__file__)))))
 CONTENT_DIR = os.path.join(BASE_DIR, 'content')
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
-SECRET_KEY = env("DJANGO_SECRET_KEY")
+SECRET_KEY = "123Teste"
 
-DEBUG = env("DJANGO_DEBUG")
-ALLOWED_HOSTS = env("DJANGO_ALLOWED_HOSTS")
+DEBUG = False
+ALLOWED_HOSTS = ["upy-application.us-east-2.elasticbeanstalk.com"]
 
 SITE_ID = 1
 DISABLE_COLLECTSTATIC = 1
@@ -155,16 +151,16 @@ WSGI_APPLICATION = 'app.wsgi.application'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-EMAIL_HOST = env("DJANGO_EMAIL_HOST")
-EMAIL_HOST_USER = env("DJANGO_EMAIL_HOST_USER")
-DEFAULT_FROM_EMAIL = env("DJANGO_DEFAULT_FROM_EMAIL")
-EMAIL_HOST_PASSWORD = env("DJANGO_EMAIL_HOST_PASSWORD")
-EMAIL_PORT = env("DJANGO_EMAIL_PORT")
+EMAIL_HOST = os.environ.get('EMAIL_HOST')
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+EMAIL_PORT = os.environ.get('EMAIL_PORT')
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 
 DATABASES = {
-    'default': dj_database_url.config(default=env("DJANGO_DATABASE_URL"))
+    'default': dj_database_url.config(default="mysql://u217473324_app:yoeGCoy8T@31.170.166.166/u217473324_app")
 }
 
 AUTH_PASSWORD_VALIDATORS = [
