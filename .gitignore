@@ -157,3 +157,4 @@ upy.pem
 !.elasticbeanstalk/*.global.yml
 
 .env-dev
+.env-prod
