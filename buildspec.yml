@@ -1,0 +1,12 @@
+version: 0.1
+
+environment_variables:
+  pre_build:
+    commands:
+      - echo Pre Build
+  build:
+    commands:
+      - echo Build
+  post_build:
+    commands:
+      - echo Build completed on `date`
