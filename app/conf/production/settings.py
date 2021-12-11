@@ -8,10 +8,10 @@ BASE_DIR = dirname(dirname(dirname(dirname(os.path.abspath(__file__)))))
 CONTENT_DIR = os.path.join(BASE_DIR, 'content')
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
 
-DEBUG = False
-ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOSTS')]
+DEBUG = os.getenv("DJANGO_DEBUG")
+ALLOWED_HOSTS = [os.getenv("DJANGO_ALLOWED_HOSTS")]
 
 SITE_ID = 1
 DISABLE_COLLECTSTATIC = 1
@@ -151,16 +151,16 @@ WSGI_APPLICATION = 'app.wsgi.application'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-EMAIL_HOST = os.environ.get('EMAIL_HOST')
-EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
-DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
-EMAIL_PORT = os.environ.get('EMAIL_PORT')
+EMAIL_HOST = os.getenv('EMAIL_HOST')
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
+DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
+EMAIL_PORT = os.getenv('EMAIL_PORT')
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 
 DATABASES = {
-    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
+    'default': dj_database_url.config(default=os.getenv("DJANGO_DATABASE_URL"))
 }
 
 AUTH_PASSWORD_VALIDATORS = [
