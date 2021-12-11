@@ -1,1 +1,1 @@
-web: gunicorn app.wsgi:application --log-file - --log-level debug
+web: gunicorn app.wsgi:application --bind :8000 --workers 3 --threads 2 --log-file - --log-level debug
