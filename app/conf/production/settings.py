@@ -8,10 +8,10 @@ BASE_DIR = dirname(dirname(dirname(dirname(os.path.abspath(__file__)))))
 CONTENT_DIR = os.path.join(BASE_DIR, 'content')
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = "123Teste"
 
 DEBUG = False
-ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOSTS')]
+ALLOWED_HOSTS = ["upy-application.us-east-2.elasticbeanstalk.com"]
 
 SITE_ID = 1
 DISABLE_COLLECTSTATIC = 1
@@ -160,7 +160,7 @@ EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 
 DATABASES = {
-    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
+    'default': dj_database_url.config(default="mysql://u217473324_app:yoeGCoy8T@31.170.166.166/u217473324_app")
 }
 
 AUTH_PASSWORD_VALIDATORS = [
