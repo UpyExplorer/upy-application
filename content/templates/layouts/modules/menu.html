@@ -37,6 +37,23 @@
             </li>
         {% endif %}
 
+        {% if perms.global_permissions.app_sale %}
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-toggle="collapse" href="#ui-sale" aria-expanded="false" aria-controls="ui-sale">
+                    <i class="mdi mdi-cart-outline menu-icon"></i>
+                        <span class="menu-title">{% trans 'Sale' %}</span>
+                    <i class="menu-arrow"></i>
+                </a>
+                <div class="collapse" id="ui-sale">
+                    <ul class="nav flex-column sub-menu">
+                        {% if perms.global_permissions.app_sale_order_list %}
+                            <li class="nav-item"> <a class="nav-link" href="{% url 'sale:order_list' %}">{% trans 'Order' %}</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </li>
+        {% endif %}
+
         {% if perms.global_permissions.app_account %}
             <li class="nav-item">
                 <a class="nav-link collapsed" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
