@@ -10,3 +10,9 @@ class BaseApplication(ModelUpyBase):
 
     class Meta:
         db_table = 'base_application'
+
+class ApplicationLink(ModelUpyBase):
+    code = models.CharField(max_length=25, blank=False, null=True)
+
+    class Meta:
+        db_table = 'application_link'
