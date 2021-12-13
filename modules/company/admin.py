@@ -1,14 +1,14 @@
 from django.contrib import admin
 from modules.company.models import (
-    Data,
-    Configuration,
-    Relationship,
+    CompanyData,
+    CompanyConfiguration,
+    CompanyRelationship,
     Customer,
     Seller
 )
 
-admin.site.register(Data)
-admin.site.register(Configuration)
-admin.site.register(Relationship)
+admin.site.register(CompanyData)
+admin.site.register(CompanyConfiguration)
+admin.site.register(CompanyRelationship)
 admin.site.register(Customer)
 admin.site.register(Seller)

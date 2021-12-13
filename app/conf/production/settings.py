@@ -16,42 +16,6 @@ ALLOWED_HOSTS = [os.getenv("DJANGO_ALLOWED_HOSTS")]
 SITE_ID = 1
 DISABLE_COLLECTSTATIC = 1
 
-INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'django.contrib.sites',
-    'whitenoise.runserver_nostatic',
-    'pipeline',
-
-    # Vendor apps
-    'bootstrap5',
-
-    # Application apps
-    'modules.base',
-    'modules.log',
-    'modules.api',
-    'modules.account',
-    'modules.dashboard',
-    'modules.company',
-    'modules.sale',
-    'modules.catalog',
-
-    # Forms
-    'widget_tweaks',
-    'crispy_forms',
-	'bootstrap_modal_forms',
-
-    # Permissions
-    'global_permissions',
-
-    # Logs
-    'models_logging',
-]
-
 LOGGING_MODELS  = (
     'modules.base',
     'modules.api',
