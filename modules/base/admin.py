@@ -1,6 +1,6 @@
 from django.contrib import admin
 from modules.base.models import (
-    Configuration,
+    CompanyConfiguration,
     Integration,
     Module,
     Plan,
@@ -35,7 +35,7 @@ class PaymentTypeAdmin(admin.ModelAdmin):
 class CreditOperatorAdmin(admin.ModelAdmin):
     list_display = ['id', 'operator_type', 'description', 'code', 'tag', 'currency']
 
-admin.site.register(Configuration, ConfigurationAdmin)
+admin.site.register(CompanyConfiguration, ConfigurationAdmin)
 admin.site.register(Integration, IntegrationAdmin)
 admin.site.register(Module, ModuleAdmin)
 admin.site.register(Plan, PlanAdmin)

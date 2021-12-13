@@ -28,18 +28,22 @@ class CompanyData(ModelUpyBase):
     class Meta:
         db_table = 'company_data'
 
-class Configuration(models.Model):
+class CompanyConfiguration(models.Model):
     company_data = models.ForeignKey(CompanyData, on_delete=models.SET_NULL, null=True)
     key = models.CharField(max_length=50,blank=True, null=True)
     description = models.CharField(max_length=50,blank=True, null=True)
     value = models.CharField(max_length=10,blank=True, null=True)
 
+    class Meta:
+        db_table = 'company_configuration'
 
-class Relationship(models.Model):
+class CompanyRelationship(models.Model):
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     company_data = models.ForeignKey(CompanyData, on_delete=models.SET_NULL, null=True)
     is_main = models.BooleanField(blank=True, null=True, default=True)
 
+    class Meta:
+        db_table = 'company_relationship'
 
 class Customer(models.Model):
     company_data = models.ForeignKey(CompanyData, on_delete=models.SET_NULL, null=True)

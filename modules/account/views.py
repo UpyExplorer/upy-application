@@ -30,8 +30,8 @@ from .forms import (
 )
 
 from modules.account.models import Activation
-from modules.base.models import Configuration as BaseConfiguration
-from modules.company.models import CompanyData, Configuration, Relationship
+from modules.base.models import CompanyConfiguration as BaseConfiguration
+from modules.company.models import CompanyData, CompanyConfiguration, CompanyRelationship
 
 from django.contrib.auth.models import Group
 
@@ -88,7 +88,7 @@ class LogInView(GuestOnlyView, FormView):
 
         login(request, form.user_cache)
 
-        company_data = Relationship.objects.filter(user=form.user_cache.id).first()
+        company_data = CompanyRelationship.objects.filter(user=form.user_cache.id).first()
         request.session['company_data_id'] = company_data.company_data_id
 
         redirect_to = request.POST.get(REDIRECT_FIELD_NAME, request.GET.get(REDIRECT_FIELD_NAME))
@@ -137,7 +137,7 @@ class SignUpView(GuestOnlyView, FormView):
             params = BaseConfiguration.objects.all()
             
             for config in params:
-                configuration = Configuration(
+                configuration = CompanyConfiguration(
                     key=config.key,
                     description=config.description,
                     value=config.value,
@@ -149,8 +149,8 @@ class SignUpView(GuestOnlyView, FormView):
             user_group = Group.objects.get(name='Default')
             user.groups.add(user_group)
 
-            # # Add Relationship
-            relationship = Relationship(company_data_id=data.id,user_id=user.id)
+            # # Add CompanyRelationship
+            relationship = CompanyRelationship(company_data_id=data.id,user_id=user.id)
             relationship.save()
 
             # ##### Implementation Initial
