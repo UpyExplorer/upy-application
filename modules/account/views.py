@@ -31,7 +31,7 @@ from .forms import (
 
 from modules.account.models import Activation
 from modules.base.models import Configuration as BaseConfiguration
-from modules.company.models import Data, Configuration, Relationship
+from modules.company.models import CompanyData, Configuration, Relationship
 
 from django.contrib.auth.models import Group
 
@@ -130,7 +130,7 @@ class SignUpView(GuestOnlyView, FormView):
             # ##### Implementation Initial
             
             # # Create CompanyData
-            data = Data(email=user.email)
+            data = CompanyData(email=user.email)
             data.save()
 
             # # Create Configurations

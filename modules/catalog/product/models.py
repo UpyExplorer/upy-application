@@ -1,7 +1,7 @@
 
 from datetime import datetime
 from django.db import models
-from modules.company.models import Data
+from modules.company.models import CompanyData
 from modules.base.models import Currency
 from django.utils.translation import gettext_lazy as _
 
@@ -29,7 +29,7 @@ class Product(models.Model):
         ('2', _('Years')),
     )
 
-    company_data = models.ForeignKey(Data, on_delete=models.SET_NULL, null=True)
+    company_data = models.ForeignKey(CompanyData, on_delete=models.SET_NULL, null=True)
     creation_time = models.DateTimeField(default=datetime.now, null=True)
     name = models.CharField(max_length=100, blank=False, null=False, default='Product')
     subtitle = models.CharField(max_length=100, blank=False, null=False, default='Subtitle')
@@ -71,7 +71,7 @@ class Image(models.Model):
         ('3','PNG'),
     )
 
-    company_data = models.ForeignKey(Data, on_delete=models.SET_NULL, null=True)
+    company_data = models.ForeignKey(CompanyData, on_delete=models.SET_NULL, null=True)
     creation_time = models.DateTimeField(default=datetime.now, null=True)
     product = models.ForeignKey(Product, on_delete=models.SET_NULL, null=True)
     original_name = models.CharField(max_length=100, blank=False, null=False)
@@ -86,7 +86,7 @@ class Image(models.Model):
 
 
 class Setting(models.Model):
-    company_data = models.ForeignKey(Data, on_delete=models.SET_NULL, null=True)
+    company_data = models.ForeignKey(CompanyData, on_delete=models.SET_NULL, null=True)
     product = models.ForeignKey(Product, on_delete=models.SET_NULL, null=True)
     key = models.CharField(max_length=50,blank=True, null=True)
     description = models.CharField(max_length=50,blank=True, null=True)
