@@ -1,13 +1,12 @@
 from django.contrib import admin
 from modules.base.models import (
-    Configuration,
-    Integration,
-    Module,
-    Plan,
-    Currency,
-    Category,
-    PaymentType,
-    CreditOperator
+    BaseConfiguration,
+    BaseModule,
+    BasePlan,
+    BaseCurrency,
+    BaseCategory,
+    BasePaymentType,
+    BaseCreditOperator
 )
 
 class ConfigurationAdmin(admin.ModelAdmin):
@@ -35,11 +34,10 @@ class PaymentTypeAdmin(admin.ModelAdmin):
 class CreditOperatorAdmin(admin.ModelAdmin):
     list_display = ['id', 'operator_type', 'description', 'code', 'tag', 'currency']
 
-admin.site.register(Configuration, ConfigurationAdmin)
-admin.site.register(Integration, IntegrationAdmin)
-admin.site.register(Module, ModuleAdmin)
-admin.site.register(Plan, PlanAdmin)
-admin.site.register(Currency, CurrencyAdmin)
-admin.site.register(Category, CategoryAdmin)
-admin.site.register(PaymentType, PaymentTypeAdmin)
-admin.site.register(CreditOperator, CreditOperatorAdmin)
+admin.site.register(BaseConfiguration, ConfigurationAdmin)
+admin.site.register(BaseModule, ModuleAdmin)
+admin.site.register(BasePlan, PlanAdmin)
+admin.site.register(BaseCurrency, CurrencyAdmin)
+admin.site.register(BaseCategory, CategoryAdmin)
+admin.site.register(BasePaymentType, PaymentTypeAdmin)
+admin.site.register(BaseCreditOperator, CreditOperatorAdmin)

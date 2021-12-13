@@ -3,9 +3,10 @@ from datetime import datetime
 from django.db import models
 from django.contrib.auth.models import User
 from django.contrib.auth.models import Group
+from modules.base.models import ModelUpyBase
 
 
-class Data(models.Model):
+class CompanyData(ModelUpyBase):
     plan = models.ForeignKey(Group, on_delete=models.SET_NULL, null=True, default=1)
     corporate_name = models.CharField(max_length=100,blank=True, null=True)
     corporate_code = models.IntegerField(blank=True, null=True)
@@ -24,22 +25,28 @@ class Data(models.Model):
     situation = models.DateField(blank=True, null=True)
     data_registration_status = models.DateField(blank=True, null=True)
 
+    class Meta:
+        db_table = 'company_data'
 
-class Configuration(models.Model):
-    company_data = models.ForeignKey(Data, on_delete=models.SET_NULL, null=True)
+class CompanyConfiguration(models.Model):
+    company_data = models.ForeignKey(CompanyData, on_delete=models.SET_NULL, null=True)
     key = models.CharField(max_length=50,blank=True, null=True)
     description = models.CharField(max_length=50,blank=True, null=True)
     value = models.CharField(max_length=10,blank=True, null=True)
 
+    class Meta:
+        db_table = 'company_configuration'
 
-class Relationship(models.Model):
+class CompanyRelationship(models.Model):
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
-    company_data = models.ForeignKey(Data, on_delete=models.SET_NULL, null=True)
+    company_data = models.ForeignKey(CompanyData, on_delete=models.SET_NULL, null=True)
     is_main = models.BooleanField(blank=True, null=True, default=True)
 
+    class Meta:
+        db_table = 'company_relationship'
 
 class Customer(models.Model):
-    company_data = models.ForeignKey(Data, on_delete=models.SET_NULL, null=True)
+    company_data = models.ForeignKey(CompanyData, on_delete=models.SET_NULL, null=True)
     creation_time = models.DateTimeField(default=datetime.now, null=True)
     first_name = models.CharField(max_length=100,blank=True, null=True)
     second_name = models.CharField(max_length=100,blank=True, null=True)
@@ -56,7 +63,7 @@ class Customer(models.Model):
 
 
 class Seller(models.Model):
-    company_data = models.ForeignKey(Data, on_delete=models.SET_NULL, null=True)
+    company_data = models.ForeignKey(CompanyData, on_delete=models.SET_NULL, null=True)
     creation_time = models.DateTimeField(default=datetime.now, null=True)
     first_name = models.CharField(max_length=100,blank=True, null=True)
     second_name = models.CharField(max_length=100,blank=True, null=True)
