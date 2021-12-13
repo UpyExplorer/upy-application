@@ -12,7 +12,8 @@ urlpatterns = [
     path('i18n/', include('django.conf.urls.i18n')),
     path('dashboard/', include('modules.dashboard.urls')),
     path('account/', include('modules.account.urls')),
-    path('catalog/', include('modules.catalog.urls'))
+    path('catalog/', include('modules.catalog.urls')),
+    path('sale/', include('modules.sale.urls'))
 ]
 
 if settings.DEBUG:
