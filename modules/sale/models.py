@@ -1,7 +1,7 @@
 from datetime import datetime
 from django.db import models
 from modules.company.models import CompanyData, Customer, Seller
-from modules.base.models import PaymentType
+from modules.base.models import BasePaymentType
 from modules.catalog.product.models import Product
 
 
@@ -11,7 +11,7 @@ class Payment(models.Model):
     payment_type = models.CharField(max_length=100,blank=True, null=True)
     operation_type = models.CharField(max_length=100,blank=True, null=True)
     code = models.CharField(max_length=25, blank=False, null=True)
-    payment_type = models.ForeignKey(PaymentType, on_delete=models.SET_NULL, null=True)
+    payment_type = models.ForeignKey(BasePaymentType, on_delete=models.SET_NULL, null=True)
 
 class Order(models.Model):
     company_data = models.ForeignKey(CompanyData, on_delete=models.SET_NULL, null=True)

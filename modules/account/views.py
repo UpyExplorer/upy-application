@@ -30,7 +30,7 @@ from .forms import (
 )
 
 from modules.account.models import Activation
-from modules.base.models import CompanyConfiguration as BaseConfiguration
+from modules.base.models import BaseConfiguration
 from modules.company.models import CompanyData, CompanyConfiguration, CompanyRelationship
 
 from django.contrib.auth.models import Group
@@ -145,7 +145,7 @@ class SignUpView(GuestOnlyView, FormView):
                 )
                 configuration.save()
             
-            # # Add Plan Group
+            # # Add BasePlan Group
             user_group = Group.objects.get(name='Default')
             user.groups.add(user_group)
 
