@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'modules.sale',
     'modules.catalog',
     'modules.application',
+    'modules.advertising',
 
     # Forms
     'widget_tweaks',
