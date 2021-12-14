@@ -27,6 +27,9 @@ class CompanyData(ModelUpyBase):
 
     class Meta:
         db_table = 'company_data'
+        verbose_name = 'Company Data'
+        verbose_name_plural = 'Company Data'
+
 
 class CompanyConfiguration(models.Model):
     company_data = models.ForeignKey(CompanyData, on_delete=models.SET_NULL, null=True)
@@ -36,6 +39,9 @@ class CompanyConfiguration(models.Model):
 
     class Meta:
         db_table = 'company_configuration'
+        verbose_name = 'Company Configuration'
+        verbose_name_plural = 'Company Configuration'
+
 
 class CompanyRelationship(models.Model):
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
@@ -44,6 +50,9 @@ class CompanyRelationship(models.Model):
 
     class Meta:
         db_table = 'company_relationship'
+        verbose_name = 'Company Relationship'
+        verbose_name_plural = 'Company Relationship'
+
 
 class Customer(models.Model):
     company_data = models.ForeignKey(CompanyData, on_delete=models.SET_NULL, null=True)
@@ -61,6 +70,10 @@ class Customer(models.Model):
     address_country = models.CharField(max_length=100,blank=True, null=True)
     address_postal_code = models.IntegerField(blank=True, null=True)
 
+    class Meta:
+        verbose_name = 'Customer'
+        verbose_name_plural = 'Customer'
+
 
 class Seller(models.Model):
     company_data = models.ForeignKey(CompanyData, on_delete=models.SET_NULL, null=True)
@@ -77,3 +90,7 @@ class Seller(models.Model):
     address_state = models.CharField(max_length=100,blank=True, null=True)
     address_country = models.CharField(max_length=100,blank=True, null=True)
     address_postal_code = models.IntegerField(blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'Seller'
+        verbose_name_plural = 'Seller'

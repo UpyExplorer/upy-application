@@ -12,6 +12,8 @@ class BaseApplication(ModelUpyBase):
 
     class Meta:
         db_table = 'base_application'
+        verbose_name = 'Base Application'
+        verbose_name_plural = 'Base Application'
 
 class ApplicationLink(ModelUpyBase):
     base_application = models.ForeignKey(BaseApplication, on_delete=models.SET_NULL, null=True)
@@ -20,3 +22,5 @@ class ApplicationLink(ModelUpyBase):
 
     class Meta:
         db_table = 'application_link'
+        verbose_name = 'Application Link'
+        verbose_name_plural = 'Application Link'
