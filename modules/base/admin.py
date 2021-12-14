@@ -12,20 +12,26 @@ from modules.base.models import (
 class ConfigurationAdmin(admin.ModelAdmin):
     list_display = ['id', 'key', 'description', 'value']
 
+
 class IntegrationAdmin(admin.ModelAdmin):
     list_display = ['id', 'code']
+
 
 class ModuleAdmin(admin.ModelAdmin):
     list_display = ['id', 'key', 'description', 'value', 'url', 'global_permission']
 
+
 class PlanAdmin(admin.ModelAdmin):
     list_display = ['id', 'code', 'group']
+
 
 class CurrencyAdmin(admin.ModelAdmin):
     list_display = ['id', 'country_name', 'currency_name', 'code', 'status']
 
+
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ['id', 'name', 'code']
+
 
 class PaymentTypeAdmin(admin.ModelAdmin):
     list_display = ['id', 'payment_type', 'description', 'code', 'tag', 'currency']
@@ -33,6 +39,7 @@ class PaymentTypeAdmin(admin.ModelAdmin):
 
 class CreditOperatorAdmin(admin.ModelAdmin):
     list_display = ['id', 'operator_type', 'description', 'code', 'tag', 'currency']
+
 
 admin.site.register(BaseConfiguration, ConfigurationAdmin)
 admin.site.register(BaseModule, ModuleAdmin)
