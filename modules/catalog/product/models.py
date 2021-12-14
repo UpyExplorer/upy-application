@@ -56,6 +56,10 @@ class Product(models.Model):
     warranty_time = models.CharField(choices=WARRANTY_TIME,max_length=1, null=True)
     warranty_value = models.IntegerField(null=True, default=0)
 
+    class Meta:
+        verbose_name = 'Catalog Product'
+        verbose_name_plural = 'Catalog Product'
+
 
     def get_absolute_url(self):
         return "/catalog/product/{id}".format(id = self.id)
@@ -81,6 +85,10 @@ class Image(models.Model):
     active = models.BooleanField(null=False, default=False)
     main = models.BooleanField(null=False, default=False)
 
+    class Meta:
+        verbose_name = 'Catalog Image'
+        verbose_name_plural = 'Catalog Image'
+
     def get_absolute_url(self):
         return "/catalog/image/{id}".format(id = self.id)
 
@@ -92,3 +100,7 @@ class Setting(models.Model):
     description = models.CharField(max_length=50,blank=True, null=True)
     value = models.CharField(max_length=10,blank=True, null=True)
     option_value = models.CharField(max_length=10,blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'Catalog Setting'
+        verbose_name_plural = 'Catalog Setting'

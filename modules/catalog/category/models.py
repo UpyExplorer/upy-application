@@ -12,5 +12,10 @@ class Category(models.Model):
     name = models.CharField(max_length=100, blank=False, null=False, default='Category')
     code = models.CharField(max_length=25, blank=False, null=True)
 
+    class Meta:
+        verbose_name = 'Catalog Category'
+        verbose_name_plural = 'Catalog Category'
+
+
     def get_absolute_url(self):
         return "/catalog/category/{id}".format(id = self.id)
