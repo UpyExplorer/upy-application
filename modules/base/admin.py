@@ -1,4 +1,5 @@
 from django.contrib import admin
+from app.base import get_field_list
 from modules.base.models import (
     BaseConfiguration,
     BaseModule,
@@ -10,35 +11,31 @@ from modules.base.models import (
 )
 
 class ConfigurationAdmin(admin.ModelAdmin):
-    list_display = ['id', 'key', 'description', 'value']
-
-
-class IntegrationAdmin(admin.ModelAdmin):
-    list_display = ['id', 'code']
+    list_display = get_field_list(BaseConfiguration)
 
 
 class ModuleAdmin(admin.ModelAdmin):
-    list_display = ['id', 'key', 'description', 'value', 'url', 'global_permission']
+    list_display = get_field_list(BaseModule)
 
 
 class PlanAdmin(admin.ModelAdmin):
-    list_display = ['id', 'code', 'group']
+    list_display = get_field_list(BasePlan)
 
 
 class CurrencyAdmin(admin.ModelAdmin):
-    list_display = ['id', 'country_name', 'currency_name', 'code', 'status']
+    list_display = get_field_list(BaseCurrency)
 
 
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = ['id', 'name', 'code']
+    list_display = get_field_list(BaseCategory)
 
 
 class PaymentTypeAdmin(admin.ModelAdmin):
-    list_display = ['id', 'payment_type', 'description', 'code', 'tag', 'currency']
+    list_display = get_field_list(BasePaymentType)
 
 
 class CreditOperatorAdmin(admin.ModelAdmin):
-    list_display = ['id', 'operator_type', 'description', 'code', 'tag', 'currency']
+    list_display = get_field_list(BaseCreditOperator)
 
 
 admin.site.register(BaseConfiguration, ConfigurationAdmin)

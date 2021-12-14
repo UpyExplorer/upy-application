@@ -1,15 +1,16 @@
 from django.contrib import admin
+from app.base import get_field_list
 from modules.application.models import (
    BaseApplication,
    ApplicationLink
 )
 
 class BaseApplicationAdmin(admin.ModelAdmin):
-    list_display = ['id', 'name', 'code', 'key', 'description', 'url']
+    list_display = get_field_list(BaseApplication)
 
 
 class ApplicationLinkAdmin(admin.ModelAdmin):
-    list_display = ['id', 'base_application', 'company_data', 'creation_time']
+    list_display = get_field_list(ApplicationLink)
 
 
 admin.site.register(BaseApplication, BaseApplicationAdmin)
