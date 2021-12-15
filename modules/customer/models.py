@@ -22,5 +22,6 @@ class Customer(ModelUpyBase):
     address_postal_code = models.IntegerField(blank=True, null=True)
 
     class Meta:
+        db_table = 'customer'
         verbose_name = 'Customer'
         verbose_name_plural = 'Customer'
