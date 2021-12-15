@@ -2,7 +2,6 @@
 from datetime import datetime
 from django.db import models
 from modules.company.models import CompanyData
-from modules.base.models import BaseCurrency
 from django.utils.translation import gettext_lazy as _
 
 
