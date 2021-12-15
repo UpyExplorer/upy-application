@@ -7,20 +7,9 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('seller', '0001_initial'),
-        ('customer', '0001_initial'),
         ('sale', '0004_auto_20211214_2104'),
     ]
 
     operations = [
-        migrations.AddField(
-            model_name='order',
-            name='cutomer',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='customer.customer'),
-        ),
-        migrations.AddField(
-            model_name='order',
-            name='seller',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='seller.seller'),
-        ),
+
     ]
