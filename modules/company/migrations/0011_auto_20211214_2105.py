@@ -10,10 +10,6 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RemoveField(
-            model_name='seller',
-            name='company_data',
-        ),
         migrations.DeleteModel(
             name='Customer',
         ),
