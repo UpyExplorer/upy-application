@@ -1,6 +1,8 @@
 from datetime import datetime
 from django.db import models
-from modules.company.models import CompanyData, Customer, Seller
+from modules.company.models import CompanyData
+from modules.customer.models import Customer
+from modules.seller.models import Seller
 from modules.base.models import BasePaymentType
 from modules.catalog.product.models import Product
 
