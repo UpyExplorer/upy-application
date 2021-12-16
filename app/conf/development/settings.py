@@ -125,7 +125,6 @@ PIPELINE = {
         'source_filenames': (
             'css/base_upyexplorer.css',
             'css/upy_base.css',
-            'css/upy_catalog.css',
         ),
         'output_filename': 'css/styles.min.css',
         },
