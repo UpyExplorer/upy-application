@@ -1,4 +1,15 @@
 
+/* ===== FORM PRODUCT ===== */
+
+.form-product-description-text {
+    font-family: 'Source Sans Pro' !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.3px !important;
+}
+
+/* ===== ===== */
+/* ===== FORM DEFAULT ===== */
+
 .form-check {
     margin-top: 5px;
     margin-bottom: 5px;
@@ -18,3 +29,51 @@
     height: 35px;
     margin-left: 0;
 }
+
+/* ===== ===== */
+/* ===== DASHBOARD ===== */
+
+.dash-card {
+    left: 0px;
+    right: 0.17px;
+    height: fit-content;
+    top: 0px;
+    bottom: 0.33px;
+    background: #FFFFFF;
+    box-shadow: 2px 2px 2px 0px #0000001f !important;
+}
+
+.dash-card-header {
+    padding-bottom: 0px;
+    background: #ffffff;
+}
+
+.dash-card-title {
+    font-weight: bolder;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    font-size: 35px;
+    color: #5c5c5c;
+}
+
+.dash-list-unstyled {
+    font-weight: 600;
+    font-size: 20px;
+    color: #6c6c6c;
+    margin-bottom: 5px;
+}
+
+.dash-line {
+    top: 0px;
+    bottom: 0px;
+    border-radius: 8.95833px;
+    height: 7px;
+    width: 100%;
+    background: #303030;
+}
+
+.dash-grid-margin {
+    margin-bottom: 0px !important;
+}
+
+/* ===== ===== */
