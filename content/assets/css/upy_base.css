@@ -1,0 +1,20 @@
+
+.form-check {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.form-check-input:checked {
+    background-color: #d3403f !important;
+    border-color: #303030 !important;
+    margin-top: 0px;
+    margin-left: 0px;
+    height: 35px;
+    width: 75px;
+}
+
+.form-switch .form-check-input {
+    width: 75px;
+    height: 35px;
+    margin-left: 0;
+}
