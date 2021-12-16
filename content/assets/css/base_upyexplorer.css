@@ -11997,8 +11997,8 @@ input[type="button"].btn-block {
   background-color: #e9ecef;
   border: 1px solid #ced4da;
   border-radius: 2px;
-  width: 50px;
-  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .input-group-text input[type="radio"],
