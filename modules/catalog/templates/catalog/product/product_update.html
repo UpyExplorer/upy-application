@@ -1,4 +1,4 @@
-{% extends "layouts/default/block.html" %}
+{% extends "layouts/default/page.html" %}
 
 {% load static %}
 {% load bootstrap5 %}
@@ -21,7 +21,7 @@
 
 {% endblock %}
 
-{% block square_right %}
+{% block container %}
 
 	<form method="post">
 		
@@ -39,9 +39,9 @@
 		{% if field.name == 'active' %}
 			<div class="form-group col-md-1">
 				<label for="{{ field.id_for_label }}">{{ field.label }}:</label>
-				<div class="input-group">
-				{{ field|add_class:'form-control' }}
-				</div>
+					<div class="form-check form-switch">
+						{{ field|add_class:'form-check-input'|attr:"type:checkbox" }}
+					</div>
 				{% for error in field.errors %}
 					<span class="help-block" style="color: #b60909;">{{ error }}</span>
 				{% endfor %}
