@@ -49,11 +49,11 @@
 }
 
 .dash-card-title {
-    font-weight: bolder;
+    font-weight: 900;
     margin-top: 5px;
     margin-bottom: 0px;
     font-size: 35px;
-    color: #5c5c5c;
+    color: #000000;
 }
 
 .dash-list-unstyled {
