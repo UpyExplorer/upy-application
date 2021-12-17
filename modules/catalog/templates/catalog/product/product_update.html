@@ -37,7 +37,7 @@
 		{% for field in form.visible_fields %}
 
 		{% if field.name == 'active' %}
-			<div class="form-group col-md-1">
+			<div class="form-group col-md-2 col-xl-1">
 				<label for="{{ field.id_for_label }}">{{ field.label }}:</label>
 					<div class="form-check form-switch">
 						{{ field|add_class:'form-check-input'|attr:"type:checkbox" }}
@@ -51,7 +51,7 @@
 			</div>
 
 		{% elif field.name == 'name' %}
-			<div class="form-group col-md-7">
+			<div class="form-group col-md-10 col-xl-11">
 				<label for="{{ field.id_for_label }}">{{ field.label }}:</label>
 				<div class="input-group">
 				{{ field|add_class:'form-control' }}

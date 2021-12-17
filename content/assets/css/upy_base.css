@@ -40,7 +40,7 @@
     top: 0px;
     bottom: 0.33px;
     background: #FFFFFF;
-    box-shadow: 2px 2px 2px 0px #0000001f !important;
+    /* box-shadow: 2px 2px 2px 0px #0000001f !important; */
 }
 
 .dash-card-header {
@@ -58,7 +58,7 @@
 
 .dash-list-unstyled {
     font-weight: 600;
-    font-size: 20px;
+    font-size: 15px;
     color: #6c6c6c;
     margin-bottom: 5px;
 }
@@ -67,13 +67,25 @@
     top: 0px;
     bottom: 0px;
     border-radius: 8.95833px;
-    height: 7px;
+    height: 2px;
     width: 100%;
     background: #303030;
 }
 
 .dash-grid-margin {
     margin-bottom: 0px !important;
+    padding-left: 2.5px;
+    padding-right: 2.5px;
+}
+
+.dash-row {
+    margin-left: 0px !important;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
 }
 
 /* ===== ===== */
+
+.table {
+    --bs-table-striped-bg: #fcfcfc !important;
+}
