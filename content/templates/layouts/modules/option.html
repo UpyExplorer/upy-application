@@ -5,14 +5,13 @@
     <div class="card" style="border-radius: 0.5rem;">
         <div class="card-body" style="padding-bottom: 15px; padding-top: 15px;">
             <div class="row">
-                <div class="col-xl-10 col-lg-9 col-md-8 d-none d-lg-block d-xl-block d-md-block">
-
+                <div class="col-xl-10 col-lg-9 col-md-8">
                     <h4 class="card-title">{{ view_name }}</h4>
                     <p class="card-description" style="margin-bottom: 0px;">{{ view_path }}</p>
 
                 </div>
-                <div class="col-md-auto ml-auto" style="margin-top: 5px;">
-
+                <div class="col-md-auto ml-auto" style="margin-top: 10px;">
+                    <hr class="d-block d-md-none d-lg-none d-xl-none"></hr>
                     {% if btn_info %}
                         <button 
                             type="button" id="btnInfo" class="btn btn-primary btn-sm"
