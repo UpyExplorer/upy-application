@@ -88,6 +88,23 @@
             </li>
         {% endif %}
 
+        {% if perms.global_permissions.app_advertising %}
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-toggle="collapse" href="#ui-advertising" aria-expanded="false" aria-controls="ui-advertising">
+                    <i class="mdi mdi-square-inc-cash menu-icon"></i>
+                        <span class="menu-title">{% trans 'Advertising' %}</span>
+                    <i class="menu-arrow"></i>
+                </a>
+                <div class="collapse" id="ui-advertising">
+                    <ul class="nav flex-column sub-menu">
+                        {% if perms.global_permissions.app_advertising_list %}
+                            <li class="nav-item"> <a class="nav-link" href="{% url 'advertising:advertising_list' %}">{% trans 'Registers List' %}</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </li>
+        {% endif %}
+
         {% if perms.global_permissions.app_account %}
             <li class="nav-item">
                 <a class="nav-link collapsed" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
