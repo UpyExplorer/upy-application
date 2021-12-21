@@ -18,9 +18,9 @@ def all_application_link():
 
     return options
 
-class AdvertisingLink(forms.Form):
+class AdvertisingLink(ModelUpyBase):
     product = models.ForeignKey(Product, on_delete=models.SET_NULL, null=True)
-    application_link = forms.ModelChoiceField(queryset=ApplicationLink.objects.filter().all())
+    application_link = models.ForeignKey(ApplicationLink, on_delete=models.SET_NULL, null=True)
     company_data = models.ForeignKey(CompanyData, on_delete=models.SET_NULL, null=True)
     creation_time = models.DateTimeField(default=datetime.now, null=True)
     status = models.BooleanField(null=False, default=False)
