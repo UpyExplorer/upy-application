@@ -27,4 +27,5 @@ class AdvertisingLink(forms.Form):
 
     class Meta:
         db_table = 'advertising_link'
-
+        verbose_name = 'Advertising Link'
+        verbose_name_plural = 'Advertising Link'
