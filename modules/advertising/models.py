@@ -13,3 +13,5 @@ class AdvertisingLink(ModelUpyBase):
 
     class Meta:
         db_table = 'advertising_link'
+        verbose_name = 'Advertising Link'
+        verbose_name_plural = 'Advertising Link'
