@@ -54,6 +54,23 @@
             </li>
         {% endif %}
 
+        {% if perms.global_permissions.app_customer %}
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-toggle="collapse" href="#ui-customer" aria-expanded="false" aria-controls="ui-customer">
+                    <i class="mdi mdi-account-check menu-icon"></i>
+                        <span class="menu-title">{% trans 'Customer' %}</span>
+                    <i class="menu-arrow"></i>
+                </a>
+                <div class="collapse" id="ui-customer">
+                    <ul class="nav flex-column sub-menu">
+                        {% if perms.global_permissions.app_customer_list %}
+                            <li class="nav-item"> <a class="nav-link" href="{% url 'customer:customer_list' %}">{% trans 'Registers List' %}</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </li>
+        {% endif %}
+
         {% if perms.global_permissions.app_account %}
             <li class="nav-item">
                 <a class="nav-link collapsed" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
