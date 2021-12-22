@@ -17,3 +17,6 @@ class AdsLink(ModelUpyBase):
         db_table = 'ads_link'
         verbose_name = 'Ads Link'
         verbose_name_plural = 'Ads Link'
+
+    def get_absolute_url(self):
+        return "/ads/{id}".format(id = self.id)
