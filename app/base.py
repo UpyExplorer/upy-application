@@ -1,3 +1,13 @@
+# coding=utf-8
+
+"""
+Source Base
+"""
+
+__all__ = ['BaseUpy']
+
+from django.forms import ModelChoiceField
+
 class BaseUpy():
 
     def company_id(self):
@@ -13,3 +23,7 @@ def get_field_list(model):
             field_list.append(item.name)
 
     return field_list
+
+class BaseChoiceField(ModelChoiceField):
+    def label_from_instance(self, obj):
+        return "%s" % obj.id
