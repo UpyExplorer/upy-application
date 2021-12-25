@@ -6,46 +6,54 @@
 
 {% block container %}
 
-	{% if baseapplication_list %}
-		<div class="table-responsive text-nowrap">
-			<div id="order-listing_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap5 no-footer" style="padding-left: 0px !important;">
-				<div class="row">
-					<div class="col-sm-12">
-						<table class="table table-striped dataTable"> 
-							<thead>
-								<tr role="row">
-									<th width="5%" style="padding-bottom: 10px; padding-top: 10px;">{% trans 'ID' %}</th>
-									<th width="95%" style="padding-bottom: 10px; padding-top: 10px;">{% trans 'Name' %}</th>
-									<th></th>
-								</tr>
-								</thead>
-								<tbody>
-									{% for baseapplication in baseapplication_list %}
-									<tr>
-										<td>{{ baseapplication.id }}</td>
-										<td>{{ baseapplication.name }}</td>
-										<td>
-											<div class="btn-group">
-												<button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{% trans 'Options' %}</button>
-												<div class="dropdown-menu" x-placement="bottom-start">
-													<a class="dropdown-item" style="cursor: no-drop;" disabled>{% trans 'Edit' %}</a>
-													<a class="dropdown-item" style="cursor: no-drop;" disabled>{% trans 'Details' %}</a>
-												</div>                          
-											</div>
-										</td>
-								</tr>
-								{% endfor %}
-							</tbody>
-						</table>
+	<style>
+	.ratings i {
+		color: #d3403f
+	}
+
+	.install span {
+		font-size: 12px
+	}
+
+	</style>
+	<div class="row">
+		{% if baseapplication_list %}
+
+		{% for baseapplication in baseapplication_list %}
+			<div class="col-4">
+				<div class="card mb-4 rounded-3 shadow-sm">
+					<div class="card-header py-3 d-flex flex-row mb-3">
+						<img src="{% static 'media/applications/'%}{{ baseapplication.image_name }}" width="70">
+							<div class="d-flex flex-column ml-2">
+								<a href="{{ baseapplication.url }}"><span>{{ baseapplication.name }}</span></a>
+								<span class="text-black-50">{{ baseapplication.type }}</span>
+								<span class="ratings">
+									<i class="mdi mdi-star"></i>
+									<i class="mdi mdi-star"></i>
+									<i class="mdi mdi-star"></i>
+									<i class="mdi mdi-star"></i>
+								</span>
+							</div>
+					</div>
+					<div class="card-body" style="padding-top: 0px;">
+						<ul class="list-unstyled">
+							<li>{{ baseapplication.description }}</li>
+						</ul>
+						<div class="d-flex justify-content-between install mt-3">
+							<span>Installed {{ baseapplication.Installed }} times</span>
+							<span class="text-primary">View&nbsp;
+								<i class="fa fa-angle-right"></i>
+							</span>
+						</div>
 					</div>
 				</div>
-
 			</div>
-			
-		</div>
-		{% block pagination %}
-			{% include "layouts/modules/pagination.html" %}
-		{% endblock %}
+		{% endfor %}
+	</div>
+
+	{% block pagination %}
+		{% include "layouts/modules/pagination.html" %}
+	{% endblock %}
 
 	{% else %}
 		<p>No ads found in your database.</p>
