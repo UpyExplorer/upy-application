@@ -32,12 +32,14 @@ class AdsLinkForm(forms.ModelForm):
 
         self.fields['product'] = ChoiceFieldProduct(
             widget=forms.Select,
-            queryset=product
+            queryset=product,
+            label=_("Product")
             )
 
         self.fields['application_link'] = ChoiceFieldApplication(
             widget=forms.Select,
-            queryset=application_link
+            queryset=application_link,
+            label=_("Application")
             )
 
 
