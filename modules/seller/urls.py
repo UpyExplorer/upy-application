@@ -8,7 +8,7 @@ from modules.seller.views import (
 app_name = 'seller'
 
 urlpatterns = [
-    path('seller/', SellerListView.as_view(), name='seller_list'),
+    path('', SellerListView.as_view(), name='seller_list'),
 ]
 
 if settings.DEBUG:

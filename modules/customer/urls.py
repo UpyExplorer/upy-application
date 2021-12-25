@@ -8,7 +8,7 @@ from modules.customer.views import (
 app_name = 'customer'
 
 urlpatterns = [
-    path('customer/', CustomerListView.as_view(), name='customer_list'),
+    path('', CustomerListView.as_view(), name='customer_list'),
 ]
 
 if settings.DEBUG:
