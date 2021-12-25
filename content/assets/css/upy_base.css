@@ -86,6 +86,17 @@
 }
 
 /* ===== ===== */
+/* ===== APPLICATION ===== */
+
+.app-ratings i {
+    color: #d3403f
+}
+
+.app-install span {
+    font-size: 12px
+}
+
+/* ===== ===== */
 
 .table {
     --bs-table-striped-bg: #fcfcfc !important;

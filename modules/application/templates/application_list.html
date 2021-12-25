@@ -6,16 +6,6 @@
 
 {% block container %}
 
-	<style>
-	.ratings i {
-		color: #d3403f
-	}
-
-	.install span {
-		font-size: 12px
-	}
-
-	</style>
 	<div class="row">
 		{% if baseapplication_list %}
 
@@ -27,7 +17,7 @@
 							<div class="d-flex flex-column ml-2">
 								<a href="{{ baseapplication.url }}"><span>{{ baseapplication.name }}</span></a>
 								<span class="text-black-50">{{ baseapplication.type }}</span>
-								<span class="ratings">
+								<span class="app-ratings">
 									<i class="mdi mdi-star"></i>
 									<i class="mdi mdi-star"></i>
 									<i class="mdi mdi-star"></i>
@@ -39,7 +29,7 @@
 						<ul class="list-unstyled">
 							<li>{{ baseapplication.description }}</li>
 						</ul>
-						<div class="d-flex justify-content-between install mt-3">
+						<div class="d-flex justify-content-between app-install mt-3">
 							<span>Installed {{ baseapplication.Installed }} times</span>
 							<span class="text-primary">View&nbsp;
 								<i class="fa fa-angle-right"></i>
