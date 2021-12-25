@@ -35,4 +35,4 @@ class ApplicationListView(BaseUpy, LoginRequiredMixin, generic.ListView):
         if not self.request.user.has_perm('global_permissions.app_application_list'):
             raise PermissionDenied
 
-        return BaseApplication.objects.order_by('-id').all()
+        return BaseApplication.objects.filter(status=True).order_by('id').all()
