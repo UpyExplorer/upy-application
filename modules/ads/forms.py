@@ -46,8 +46,8 @@ class AdsLinkForm(forms.ModelForm):
     class Meta:
         model = AdsLink
         fields = [
+            'status',
             'product',
-            'application_link',
-            'status'
+            'application_link'
             ]
         exclude = ['id', 'company_data', 'creation_time']
