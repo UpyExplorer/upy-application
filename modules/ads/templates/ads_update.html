@@ -1,0 +1,87 @@
+{% extends "layouts/default/page.html" %}
+
+{% load static %}
+{% load bootstrap5 %}
+{% load i18n %}
+
+{% block container %}
+
+	<form method="post">
+		
+		{% csrf_token %}
+
+		{% load widget_tweaks %}
+
+        {% for hidden in form.hidden_fields %}
+            {{ hidden }}
+        {% endfor %}
+		<div class="form-row">
+
+		<!-- <div class="form-group col-12">
+			<label for="{{ field.id_for_label }}">Status:</label>
+				<div class="form-check form-switch">
+					{% render_field form.status class="form-control form-check-input" type="checkbox" %}
+				</div>
+			{% for error in field.errors %}
+				<span class="help-block" style="color: #b60909;">{{ error }}</span>
+			{% endfor %}
+			<div style="color: #a5a5a5; font-size: small;">
+				{{ field.help_text }}
+			</div>
+		</div> -->
+
+		{% for field in form.visible_fields %}
+
+			{% if field.name == 'status' %}
+				<div class="form-group col-12">
+					<label for="{{ field.id_for_label }}">{{ field.label }}:</label>
+						<div class="form-check form-switch">
+							{{ field|add_class:'form-check-input'|attr:"type:checkbox" }}
+						</div>
+					{% for error in field.errors %}
+						<span class="help-block" style="color: #b60909;">{{ error }}</span>
+					{% endfor %}
+					<div style="color: #a5a5a5; font-size: small;">
+						{{ field.help_text }}
+					</div>
+				</div>
+			
+			{% else %}
+
+				<div class="form-group col-12">
+					<label for="{{ field.id_for_label }}">{{ field.label }}:</label>
+					<div class="input-group">
+						{{ field|add_class:'form-control' }}
+					</div>
+					{% for error in field.errors %}
+						<span class="help-block" style="color: #b60909;">{{ error }}</span>
+					{% endfor %}
+					<div style="color: #a5a5a5; font-size: small;">
+						{{ field.help_text }}
+					</div>
+				</div>
+
+			{% endif %}
+
+		{% endfor %}
+	</div>
+	<button type="submit" class="btn_save" style="visibility: hidden;"></button>
+	<button type="button" class="btn_delete" style="visibility: hidden;"></button>
+	</form>
+
+	<script type="text/javascript">
+		$(function () {
+			function deleteBookModalForm() {
+				$(".btn_delete").each(function () {
+					$(this).modalForm({formURL: "{{ object.delete_absolute_url }}", isDeleteForm: true});
+				});
+			}
+			deleteBookModalForm();
+  
+			function reinstantiateModalForms() {
+				deleteBookModalForm();
+			}
+		});
+	</script>
+	
+{% endblock %}

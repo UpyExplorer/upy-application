@@ -2,13 +2,15 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 
-from modules.advertising.views import (
-	AdvertisingListView,
+from modules.ads.views import (
+	AdsListView,
+    AdsUpdateView
 )
-app_name = 'advertising'
+app_name = 'ads'
 
 urlpatterns = [
-    path('', AdvertisingListView.as_view(), name='advertising_list'),
+    path('', AdsListView.as_view(), name='ads_list'),
+    path('<int:pk>', AdsUpdateView.as_view(), name='ads_update'),
 ]
 
 if settings.DEBUG:
