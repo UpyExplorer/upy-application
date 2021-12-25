@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-20 22:04-0300\n"
+"POT-Creation-Date: 2021-12-25 03:10-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -47,7 +47,7 @@ msgstr "Painel de Controle"
 msgid "Catalog"
 msgstr "Catálogo"
 
-#: content/templates/layouts/modules/menu.html:30
+#: content/templates/layouts/modules/menu.html:30 modules/ads/forms.py:36
 #: modules/catalog/product/views.py:22 modules/catalog/product/views.py:46
 #: modules/catalog/product/views.py:85 modules/catalog/product/views.py:107
 msgid "Product"
@@ -73,6 +73,7 @@ msgstr "Cliente"
 
 #: content/templates/layouts/modules/menu.html:67
 #: content/templates/layouts/modules/menu.html:84
+#: content/templates/layouts/modules/menu.html:101
 msgid "Registers List"
 msgstr "Lista de Registros"
 
@@ -80,19 +81,24 @@ msgstr "Lista de Registros"
 msgid "Seller"
 msgstr "Vendedor"
 
-#: content/templates/layouts/modules/menu.html:95
+#: content/templates/layouts/modules/menu.html:95 modules/ads/views.py:21
+#: modules/ads/views.py:58
+msgid "Ads"
+msgstr "Anúncios"
+
+#: content/templates/layouts/modules/menu.html:112
 msgid "My Profile"
 msgstr "Meu Perfil"
 
-#: content/templates/layouts/modules/menu.html:101
+#: content/templates/layouts/modules/menu.html:118
 msgid "Change password"
 msgstr "Alterar Senha"
 
-#: content/templates/layouts/modules/menu.html:105
+#: content/templates/layouts/modules/menu.html:122
 msgid "Change profile"
 msgstr "Alterar Perfil"
 
-#: content/templates/layouts/modules/menu.html:109 modules/account/utils.py:28
+#: content/templates/layouts/modules/menu.html:126 modules/account/utils.py:28
 msgid "Change email"
 msgstr "Alterar E-mail"
 
@@ -464,6 +470,73 @@ msgstr "Sua senha foi modificada."
 msgid "Your password has been set. You may go ahead and login now."
 msgstr "Sua senha foi definida. Você pode ir em frente e entrar agora."
 
+#: modules/ads/forms.py:42
+msgid "Application"
+msgstr "Aplicativo"
+
+#: modules/ads/templates/ads_list.html:17
+#: modules/customer/templates/customer_list.html:17
+#: modules/seller/templates/seller_list.html:17
+msgid "ID"
+msgstr ""
+
+#: modules/ads/templates/ads_list.html:18
+#: modules/catalog/templates/catalog/category/category_list.html:18
+#: modules/catalog/templates/catalog/product/product_list.html:21
+#: modules/customer/templates/customer_list.html:18
+#: modules/sale/templates/order/order_list.html:18
+#: modules/seller/templates/seller_list.html:18
+msgid "Created In"
+msgstr "Criado Em"
+
+#: modules/ads/templates/ads_list.html:29
+#: modules/catalog/templates/catalog/category/category_list.html:29
+#: modules/catalog/templates/catalog/product/product_detail.html:39
+#: modules/catalog/templates/catalog/product/product_list.html:92
+#: modules/customer/templates/customer_list.html:29
+#: modules/sale/templates/order/order_list.html:29
+#: modules/seller/templates/seller_list.html:29
+msgid "Options"
+msgstr "Opções"
+
+#: modules/ads/templates/ads_list.html:31
+#: modules/catalog/templates/catalog/category/category_list.html:31
+#: modules/catalog/templates/catalog/product/product_list.html:94
+#: modules/customer/templates/customer_list.html:31
+#: modules/sale/templates/order/order_list.html:31
+#: modules/seller/templates/seller_list.html:31
+msgid "Edit"
+msgstr "Editar"
+
+#: modules/ads/templates/ads_list.html:32
+#: modules/catalog/templates/catalog/category/category_list.html:32
+#: modules/catalog/templates/catalog/product/product_list.html:95
+#: modules/customer/templates/customer_list.html:32
+#: modules/sale/templates/order/order_list.html:32
+#: modules/seller/templates/seller_list.html:32
+msgid "Details"
+msgstr "Detalhes"
+
+#: modules/ads/views.py:19 modules/ads/views.py:56
+msgid "Dashboard / Ads"
+msgstr "Painel de Controle / Ads"
+
+#: modules/ads/views.py:20
+msgid "Ads List"
+msgstr "Ads"
+
+#: modules/ads/views.py:50
+msgid "Ads not found!"
+msgstr "Ads não encontrado!"
+
+#: modules/ads/views.py:57
+msgid "Ads Edit"
+msgstr "Editar"
+
+#: modules/ads/views.py:66
+msgid "Ads saved successfully!"
+msgstr "Ads salvo com sucesso!"
+
 #: modules/catalog/category/views.py:16
 msgid "Dashboard / Catalog / Category"
 msgstr "Painel de Controle / Catálogo / Categoria"
@@ -611,39 +684,6 @@ msgstr "Produto salvo com sucesso!"
 msgid "Product was deleted"
 msgstr "Produto foi deletado"
 
-#: modules/catalog/templates/catalog/category/category_list.html:18
-#: modules/catalog/templates/catalog/product/product_list.html:21
-#: modules/customer/templates/customer_list.html:18
-#: modules/sale/templates/order/order_list.html:18
-#: modules/seller/templates/seller_list.html:18
-msgid "Created In"
-msgstr "Criado Em"
-
-#: modules/catalog/templates/catalog/category/category_list.html:29
-#: modules/catalog/templates/catalog/product/product_detail.html:39
-#: modules/catalog/templates/catalog/product/product_list.html:92
-#: modules/customer/templates/customer_list.html:29
-#: modules/sale/templates/order/order_list.html:29
-#: modules/seller/templates/seller_list.html:29
-msgid "Options"
-msgstr "Opções"
-
-#: modules/catalog/templates/catalog/category/category_list.html:31
-#: modules/catalog/templates/catalog/product/product_list.html:94
-#: modules/customer/templates/customer_list.html:31
-#: modules/sale/templates/order/order_list.html:31
-#: modules/seller/templates/seller_list.html:31
-msgid "Edit"
-msgstr "Editar"
-
-#: modules/catalog/templates/catalog/category/category_list.html:32
-#: modules/catalog/templates/catalog/product/product_list.html:95
-#: modules/customer/templates/customer_list.html:32
-#: modules/sale/templates/order/order_list.html:32
-#: modules/seller/templates/seller_list.html:32
-msgid "Details"
-msgstr "Detalhes"
-
 #: modules/catalog/templates/catalog/product/product_delete.html:15
 msgid "Are you sure you want to delete the product"
 msgstr "Tem certeza que deseja deletar o produto"
@@ -669,11 +709,6 @@ msgstr "Tipo de Produto"
 #: modules/catalog/templates/catalog/product/product_update.html:118
 msgid "$"
 msgstr "R$"
-
-#: modules/customer/templates/customer_list.html:17
-#: modules/seller/templates/seller_list.html:17
-msgid "ID"
-msgstr ""
 
 #: modules/customer/views.py:16
 msgid "Dashboard / Customer"
@@ -740,12 +775,6 @@ msgstr "Vendedores"
 
 #~ msgid "Orders"
 #~ msgstr "Pedidos"
-
-#~ msgid "Ads"
-#~ msgstr "Anúncios"
-
-#~ msgid "Applications"
-#~ msgstr "Aplicativos"
 
 #~ msgid "This field is required."
 #~ msgstr "Este campo é obrigatório."
