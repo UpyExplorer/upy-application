@@ -13,7 +13,10 @@ urlpatterns = [
     path('dashboard/', include('modules.dashboard.urls')),
     path('account/', include('modules.account.urls')),
     path('catalog/', include('modules.catalog.urls')),
-    path('sale/', include('modules.sale.urls'))
+    path('sale/', include('modules.sale.urls')),
+    path('seller/', include('modules.seller.urls')),
+    path('customer/', include('modules.customer.urls')),
+    path('ads/', include('modules.ads.urls'))
 ]
 
 if settings.DEBUG:

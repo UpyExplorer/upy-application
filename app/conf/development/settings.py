@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'modules.sale',
     'modules.catalog',
     'modules.application',
-    'modules.advertising',
+    'modules.ads',
     'modules.seller',
     'modules.customer',
 

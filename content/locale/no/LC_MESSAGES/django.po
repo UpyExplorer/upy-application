@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-25 03:10-0300\n"
+"POT-Creation-Date: 2021-12-20 22:03-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,249 +16,240 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: app/conf/development/settings.py:208 app/conf/production/settings.py:202
 msgid "Português-BR"
-msgstr "Português-BR"
+msgstr ""
 
 #: app/conf/development/settings.py:209 app/conf/production/settings.py:203
 msgid "English"
-msgstr "Inglês"
+msgstr ""
 
 #: content/templates/layouts/default/block.html:32
 msgid "Basic information"
-msgstr "Informações Básicas"
+msgstr ""
 
 #: content/templates/layouts/default/start.html:24
 #: content/templates/layouts/modules/footer.html:8
 msgid "All rights reserved for"
-msgstr "Todos os direitos reservados para"
+msgstr ""
 
 #: content/templates/layouts/modules/footer.html:9
 msgid "Version"
-msgstr "Versão"
+msgstr ""
 
 #: content/templates/layouts/modules/menu.html:11 modules/dashboard/views.py:12
 msgid "Dashboard"
-msgstr "Painel de Controle"
+msgstr ""
 
 #: content/templates/layouts/modules/menu.html:24
 msgid "Catalog"
-msgstr "Catálogo"
+msgstr ""
 
-#: content/templates/layouts/modules/menu.html:30 modules/ads/forms.py:36
+#: content/templates/layouts/modules/menu.html:30
 #: modules/catalog/product/views.py:22 modules/catalog/product/views.py:46
 #: modules/catalog/product/views.py:85 modules/catalog/product/views.py:107
 msgid "Product"
-msgstr "Produto"
+msgstr ""
 
 #: content/templates/layouts/modules/menu.html:33
 #: modules/catalog/category/views.py:18
 msgid "Category"
-msgstr "Categoria"
+msgstr ""
 
 #: content/templates/layouts/modules/menu.html:44
 msgid "Sale"
-msgstr "Venda"
+msgstr ""
 
 #: content/templates/layouts/modules/menu.html:50
 #: modules/sale/order/views.py:18
 msgid "Order"
-msgstr "Pedido"
+msgstr ""
 
 #: content/templates/layouts/modules/menu.html:61 modules/customer/views.py:18
 msgid "Customer"
-msgstr "Cliente"
+msgstr ""
 
 #: content/templates/layouts/modules/menu.html:67
 #: content/templates/layouts/modules/menu.html:84
-#: content/templates/layouts/modules/menu.html:101
 msgid "Registers List"
-msgstr "Lista de Registros"
+msgstr ""
 
 #: content/templates/layouts/modules/menu.html:78 modules/seller/views.py:18
 msgid "Seller"
-msgstr "Vendedor"
+msgstr ""
 
-#: content/templates/layouts/modules/menu.html:95 modules/ads/views.py:21
-#: modules/ads/views.py:58
-msgid "Ads"
-msgstr "Anúncios"
-
-#: content/templates/layouts/modules/menu.html:112
+#: content/templates/layouts/modules/menu.html:95
 msgid "My Profile"
-msgstr "Meu Perfil"
+msgstr ""
 
-#: content/templates/layouts/modules/menu.html:118
+#: content/templates/layouts/modules/menu.html:101
 msgid "Change password"
-msgstr "Alterar Senha"
+msgstr ""
 
-#: content/templates/layouts/modules/menu.html:122
+#: content/templates/layouts/modules/menu.html:105
 msgid "Change profile"
-msgstr "Alterar Perfil"
+msgstr ""
 
-#: content/templates/layouts/modules/menu.html:126 modules/account/utils.py:28
+#: content/templates/layouts/modules/menu.html:109 modules/account/utils.py:28
 msgid "Change email"
-msgstr "Alterar E-mail"
+msgstr ""
 
 #: content/templates/layouts/modules/navbar.html:16
 msgid "Welcome back"
-msgstr "Bem vindo"
+msgstr ""
 
 #: content/templates/layouts/modules/navbar.html:33
 msgid "Notifications"
-msgstr "Notificações"
+msgstr ""
 
 #: content/templates/layouts/modules/navbar.html:42
 msgid "Welcome to System!"
-msgstr "Bem vindo ao Sistema!"
+msgstr ""
 
 #: content/templates/layouts/modules/navbar.html:61
 msgid "Upgrade to Pro"
-msgstr "Atualizar Conta"
+msgstr ""
 
 #: content/templates/layouts/modules/navbar.html:67
 msgid "Change language"
-msgstr "Alterar Idioma"
+msgstr ""
 
 #: content/templates/layouts/modules/navbar.html:73
 msgid "Logout"
-msgstr "Sair"
+msgstr ""
 
 #: content/templates/layouts/modules/option.html:26
 msgid "Save Product"
-msgstr "Salvar Produto"
+msgstr ""
 
 #: content/templates/layouts/modules/option.html:34
 #: modules/catalog/templates/catalog/product/product_delete.html:9
 msgid "Delete"
-msgstr "Excluir"
+msgstr ""
 
 #: content/templates/layouts/modules/option.html:42
 msgid "Add Product"
-msgstr "Adicionar Produto"
+msgstr ""
 
 #: content/templates/layouts/modules/pagination.html:8
 msgid "Page"
-msgstr "Página"
+msgstr ""
 
 #: content/templates/layouts/modules/pagination.html:8
 msgid "of"
-msgstr "de"
+msgstr ""
 
 #: content/templates/layouts/modules/pagination.html:15
 msgid "Previous"
-msgstr "Anterior"
+msgstr ""
 
 #: content/templates/layouts/modules/pagination.html:19
 #: modules/account/templates/account/remind_username.html:15
 #: modules/account/templates/account/resend_activation_code.html:15
 #: modules/account/templates/account/restore_password.html:15
 msgid "Next"
-msgstr "Próximo"
+msgstr ""
 
 #: modules/account/forms.py:18
 msgid "Password"
-msgstr "Senha"
+msgstr ""
 
 #: modules/account/forms.py:24 modules/account/templates/account/log_in.html:76
 msgid "Remember me"
-msgstr "Lembrar-me"
+msgstr ""
 
 #: modules/account/forms.py:33
 msgid "You entered an invalid password."
-msgstr "Você digitou uma senha inválida."
+msgstr ""
 
 #: modules/account/forms.py:39
 msgid "Username"
-msgstr "Nome de usuário"
+msgstr ""
 
 #: modules/account/forms.py:52
 msgid "You entered an invalid username."
-msgstr "Você digitou um nome de usuário inválido."
+msgstr ""
 
 #: modules/account/forms.py:55 modules/account/forms.py:79
 #: modules/account/forms.py:103 modules/account/forms.py:190
 #: modules/account/forms.py:208 modules/account/forms.py:251
 msgid "This account is not active."
-msgstr "Esta conta não está ativa."
+msgstr ""
 
 #: modules/account/forms.py:63 modules/account/forms.py:115
 #: modules/account/forms.py:154 modules/account/forms.py:180
 #: modules/account/forms.py:221 modules/account/forms.py:241
 msgid "Email"
-msgstr "E-mail"
+msgstr ""
 
 #: modules/account/forms.py:76 modules/account/forms.py:161
 #: modules/account/forms.py:187 modules/account/forms.py:248
 msgid "You entered an invalid email address."
-msgstr "Você inseriu um endereço de e-mail inválido."
+msgstr ""
 
 #: modules/account/forms.py:87 modules/account/forms.py:128
 #: modules/account/forms.py:198
 msgid "Email or Username"
-msgstr "Email ou nome de usuário"
+msgstr ""
 
 #: modules/account/forms.py:100 modules/account/forms.py:135
 #: modules/account/forms.py:205
 msgid "You entered an invalid email address or username."
-msgstr "Você inseriu um endereço de e-mail ou nome de usuário inválido."
+msgstr ""
 
 #: modules/account/forms.py:115
 msgid "Required. Enter an existing email address."
-msgstr "Obrigatório. Insira um endereço de e-mail existente."
+msgstr ""
 
 #: modules/account/forms.py:122
 msgid "You can not use this email address."
-msgstr "Você não pode usar este endereço de e-mail."
+msgstr ""
 
 #: modules/account/forms.py:138 modules/account/forms.py:164
 msgid "This account has already been activated."
-msgstr "Esta conta já foi ativada."
+msgstr ""
 
 #: modules/account/forms.py:142 modules/account/forms.py:168
 msgid "Activation code not found."
-msgstr "Código de ativação não encontrado."
+msgstr ""
 
 #: modules/account/forms.py:146 modules/account/forms.py:172
 msgid ""
 "Activation code has already been sent. You can request a new code in 24 "
 "hours."
 msgstr ""
-"O código de ativação já foi enviado. Você pode solicitar um novo código em "
-"24 horas."
 
 #: modules/account/forms.py:216
 msgid "First name"
-msgstr "Primeiro nome"
+msgstr ""
 
 #: modules/account/forms.py:217
 msgid "Last name"
-msgstr "Último nome"
+msgstr ""
 
 #: modules/account/forms.py:231
 msgid "Please enter another email."
-msgstr "Por favor insira outro email."
+msgstr ""
 
 #: modules/account/forms.py:235
 msgid "You can not use this mail."
-msgstr "Você não pode usar este e-mail."
+msgstr ""
 
 #: modules/account/templates/account/emails/activate_profile.html:15
 #: modules/account/templates/account/emails/activate_profile.txt:3
 msgid "To activate your profile, please follow this link:"
-msgstr "Para ativar o seu perfil, siga este link:"
+msgstr ""
 
 #: modules/account/templates/account/emails/change_email.html:15
 #: modules/account/templates/account/emails/change_email.txt:3
 msgid "To change your current email address, please follow the link:"
-msgstr "Para alterar o seu endereço de e-mail atual, siga o link:"
+msgstr ""
 
 #: modules/account/templates/account/emails/forgotten_username.html:15
 #: modules/account/templates/account/emails/forgotten_username.txt:3
 msgid "Your username is:"
-msgstr "Seu nome de usuário é:"
+msgstr ""
 
 #: modules/account/templates/account/emails/restore_password_email.html:15
 #: modules/account/templates/account/emails/restore_password_email.txt:3
@@ -266,21 +257,19 @@ msgid ""
 "You received this email because you requested a password reset for your user "
 "account."
 msgstr ""
-"Você recebeu este e-mail porque solicitou uma redefinição de senha para sua "
-"conta de usuário."
 
 #: modules/account/templates/account/emails/restore_password_email.html:19
 #: modules/account/templates/account/emails/restore_password_email.txt:5
 msgid "Please, go to the following page and choose a new password:"
-msgstr "Por favor, vá para a seguinte página e escolha uma nova senha:"
+msgstr ""
 
 #: modules/account/templates/account/log_in.html:12
 msgid "Hello! let's get started"
-msgstr "Olá! vamos começar"
+msgstr ""
 
 #: modules/account/templates/account/log_in.html:13
 msgid "Sign in to continue."
-msgstr "Faça login para continuar."
+msgstr ""
 
 #: modules/account/templates/account/log_in.html:67
 #: modules/account/templates/account/remind_username.html:23
@@ -288,32 +277,32 @@ msgstr "Faça login para continuar."
 #: modules/account/templates/account/restore_password.html:23
 #: modules/account/templates/account/sign_up.html:130
 msgid "Login"
-msgstr "Entrar"
+msgstr ""
 
 #: modules/account/templates/account/log_in.html:82
 msgid "Forgot your password?"
-msgstr "Esqueceu sua senha?"
+msgstr ""
 
 #: modules/account/templates/account/log_in.html:86
 msgid "Don't have an account? "
-msgstr "Não tem conta?"
+msgstr ""
 
 #: modules/account/templates/account/log_in.html:86
 #: modules/account/templates/account/sign_up.html:126
 msgid "Create"
-msgstr "Criar"
+msgstr ""
 
 #: modules/account/templates/account/log_out.html:7
 msgid "Logged out"
-msgstr "Desconectado"
+msgstr ""
 
 #: modules/account/templates/account/log_out.html:10
 msgid "Thanks for spending some quality time with the site today."
-msgstr "Obrigado por passar um tempo no site hoje."
+msgstr ""
 
 #: modules/account/templates/account/log_out.html:14
 msgid "Login again"
-msgstr "Entrar novamente"
+msgstr ""
 
 #: modules/account/templates/account/profile/change_email.html:11
 #: modules/account/templates/account/profile/change_password.html:11
@@ -321,175 +310,299 @@ msgstr "Entrar novamente"
 #: modules/account/templates/account/restore_password_confirm.html:21
 #: modules/dashboard/templates/dashboard/change_language.html:27
 msgid "Change"
-msgstr "Salvar"
+msgstr ""
 
 #: modules/account/templates/account/remind_username.html:8
 msgid "Remind a username"
-msgstr "Lembre um nome de usuário"
+msgstr ""
 
 #: modules/account/templates/account/resend_activation_code.html:8
 msgid "Resend an activation code"
-msgstr "Reenviar um código de ativação"
+msgstr ""
 
 #: modules/account/templates/account/restore_password.html:8
 #: modules/account/templates/account/restore_password_confirm.html:8
 #: modules/account/templates/account/restore_password_done.html:7
 #: modules/account/utils.py:37
 msgid "Restore password"
-msgstr "Restaurar senha"
+msgstr ""
 
 #: modules/account/templates/account/restore_password_confirm.html:13
 msgid ""
 "Please enter your new password twice so we can verify you typed it in "
 "correctly."
 msgstr ""
-"Digite sua nova senha duas vezes para que possamos verificar se você a "
-"digitou corretamente."
 
 #: modules/account/templates/account/restore_password_confirm.html:28
 msgid ""
 "The password reset link was invalid, possibly because it has already been "
 "used. Please request a new password reset."
 msgstr ""
-"O link de redefinição de senha era inválido, possivelmente porque já foi "
-"usado. Solicite uma nova redefinição de senha."
 
 #: modules/account/templates/account/restore_password_done.html:10
 msgid ""
 "We've emailed you instructions for setting your password, if an account "
 "exists with the email you entered."
 msgstr ""
-"Enviamos por e-mail instruções para definir sua senha, se houver uma conta "
-"com o e-mail que você digitou."
 
 #: modules/account/templates/account/restore_password_done.html:11
 msgid "You should receive them shortly."
-msgstr "Você deve recebê-los em breve."
+msgstr ""
 
 #: modules/account/templates/account/restore_password_done.html:15
 msgid ""
 "If you don't receive an email, please make sure you've entered the address "
 "you signed up with, and check your spam folder."
 msgstr ""
-"Se você não receber um e-mail, certifique-se de inserir o endereço com o "
-"qual se inscreveu e verifique sua pasta de spam."
 
 #: modules/account/templates/account/sign_up.html:12
 msgid "New here?"
-msgstr "Novo aqui?"
+msgstr ""
 
 #: modules/account/templates/account/sign_up.html:13
 msgid "Join us today! It takes only few steps"
-msgstr "Junte-se a nós hoje! Leva apenas alguns passos"
+msgstr ""
 
 #: modules/account/templates/account/sign_up.html:130
 msgid "You already have an account?"
-msgstr "Você já tem uma conta?"
+msgstr ""
 
 #: modules/account/utils.py:19
 msgid "Profile activation"
-msgstr "Ativação de perfil"
+msgstr ""
 
 #: modules/account/utils.py:47
 msgid "Your username"
-msgstr "Seu nome de usuário"
+msgstr ""
 
 #: modules/account/views.py:159
 msgid "Error!"
-msgstr "Erro!"
+msgstr ""
 
 #: modules/account/views.py:178
 msgid ""
 "You are signed up. To activate the account, follow the link sent to the mail."
 msgstr ""
-"Você está inscrito. Para ativar a conta, siga o link enviado para o e-mail."
 
 #: modules/account/views.py:185
 msgid "You are successfully signed up!"
-msgstr "Você se inscreveu com sucesso!"
+msgstr ""
 
 #: modules/account/views.py:203
 msgid "You have successfully activated your account!"
-msgstr "Você ativou sua conta com sucesso!"
+msgstr ""
 
 #: modules/account/views.py:233
 msgid "A new activation code has been sent to your email address."
-msgstr "Um novo código de ativação foi enviado para o seu endereço de e-mail."
+msgstr ""
 
 #: modules/account/views.py:264
 msgid "Change Profile"
-msgstr "Alterar Perfil"
+msgstr ""
 
 #: modules/account/views.py:265
 msgid "Dashboard / My Profile / Change Profile"
-msgstr "Painel de Controle / Meu Perfil / Alterar Perfil"
+msgstr ""
 
 #: modules/account/views.py:289
 msgid "Profile data has been successfully updated."
-msgstr "Os dados do perfil foram atualizados com sucesso."
+msgstr ""
 
 #: modules/account/views.py:300
 msgid "Change Email"
-msgstr "Alterar E-mail"
+msgstr ""
 
 #: modules/account/views.py:301
 msgid "Dashboard / My Profile / Change Email"
-msgstr "Painel de Controle / Meu Perfil / Alterar E-mail"
+msgstr ""
 
 #: modules/account/views.py:337
 msgid "To complete the change of email address, click on the link sent to it."
 msgstr ""
-"Para concluir a alteração do endereço de e-mail, clique no link enviado para "
-"ele."
 
 #: modules/account/views.py:342
 msgid "Email successfully changed."
-msgstr "Email alterado com sucesso."
+msgstr ""
 
 #: modules/account/views.py:360
 msgid "You have successfully changed your email!"
-msgstr "Você alterou seu e-mail com sucesso!"
+msgstr ""
 
 #: modules/account/views.py:373
 msgid "Your username has been successfully sent to your email."
-msgstr "Seu nome de usuário foi enviado com sucesso para o seu e-mail."
+msgstr ""
 
 #: modules/account/views.py:383
 msgid "Change Password"
-msgstr "Alterar Senha"
+msgstr ""
 
 #: modules/account/views.py:384
 msgid "Dashboard / My Profile / Change Password"
-msgstr "Painel de Controle / Meu Perfil / Alterar Senha"
+msgstr ""
 
 #: modules/account/views.py:402
 msgid "Your password was changed."
-msgstr "Sua senha foi modificada."
+msgstr ""
 
 #: modules/account/views.py:414
 msgid "Your password has been set. You may go ahead and login now."
-msgstr "Sua senha foi definida. Você pode ir em frente e entrar agora."
-
-#: modules/ads/forms.py:42
-msgid "Application"
-msgstr "Aplicativo"
-
-#: modules/ads/templates/ads_list.html:17
-#: modules/customer/templates/customer_list.html:17
-#: modules/seller/templates/seller_list.html:17
-msgid "ID"
 msgstr ""
 
-#: modules/ads/templates/ads_list.html:18
+#: modules/catalog/category/views.py:16
+msgid "Dashboard / Catalog / Category"
+msgstr ""
+
+#: modules/catalog/category/views.py:17
+msgid "Category List"
+msgstr ""
+
+#: modules/catalog/product/forms.py:20
+msgid "Active"
+msgstr ""
+
+#: modules/catalog/product/forms.py:21
+#: modules/catalog/templates/catalog/category/category_list.html:17
+#: modules/catalog/templates/catalog/product/product_detail.html:26
+#: modules/catalog/templates/catalog/product/product_list.html:17
+msgid "Name"
+msgstr ""
+
+#: modules/catalog/product/forms.py:21
+msgid "Maximum 100 characters"
+msgstr ""
+
+#: modules/catalog/product/forms.py:22
+#: modules/catalog/templates/catalog/product/product_detail.html:30
+#: modules/catalog/templates/catalog/product/product_list.html:18
+msgid "Sku"
+msgstr ""
+
+#: modules/catalog/product/forms.py:22
+msgid "No special characters allowed"
+msgstr ""
+
+#: modules/catalog/product/forms.py:23
+msgid "Type"
+msgstr ""
+
+#: modules/catalog/product/forms.py:24
+msgid "Condition"
+msgstr ""
+
+#: modules/catalog/product/forms.py:25
+#: modules/catalog/templates/catalog/product/product_detail.html:48
+#: modules/catalog/templates/catalog/product/product_list.html:20
+msgid "Stock"
+msgstr ""
+
+#: modules/catalog/product/forms.py:26
+#: modules/catalog/templates/catalog/product/product_detail.html:57
+#: modules/catalog/templates/catalog/product/product_list.html:19
+msgid "Price Sell"
+msgstr ""
+
+#: modules/catalog/product/forms.py:27
+#: modules/catalog/templates/catalog/product/product_detail.html:64
+msgid "Price Cost"
+msgstr ""
+
+#: modules/catalog/product/forms.py:28
+#: modules/catalog/templates/catalog/product/product_detail.html:71
+msgid "Price Promo"
+msgstr ""
+
+#: modules/catalog/product/forms.py:30
+#: modules/catalog/templates/catalog/product/product_detail.html:80
+msgid "Description"
+msgstr ""
+
+#: modules/catalog/product/forms.py:34
+msgid "Maximum 500 characters"
+msgstr ""
+
+#: modules/catalog/product/models.py:10
+msgid "Standard"
+msgstr ""
+
+#: modules/catalog/product/models.py:11
+msgid "Variation"
+msgstr ""
+
+#: modules/catalog/product/models.py:12
+msgid "Kit"
+msgstr ""
+
+#: modules/catalog/product/models.py:16
+#: modules/catalog/templates/catalog/product/product_list.html:68
+msgid "New"
+msgstr ""
+
+#: modules/catalog/product/models.py:17
+#: modules/catalog/templates/catalog/product/product_list.html:70
+msgid "Used"
+msgstr ""
+
+#: modules/catalog/product/models.py:21
+msgid "Seller warranty"
+msgstr ""
+
+#: modules/catalog/product/models.py:22
+msgid "Factory warranty"
+msgstr ""
+
+#: modules/catalog/product/models.py:23
+msgid "No warranty"
+msgstr ""
+
+#: modules/catalog/product/models.py:27
+msgid "Days"
+msgstr ""
+
+#: modules/catalog/product/models.py:28
+msgid "Months"
+msgstr ""
+
+#: modules/catalog/product/models.py:29
+msgid "Years"
+msgstr ""
+
+#: modules/catalog/product/views.py:20 modules/catalog/product/views.py:44
+#: modules/catalog/product/views.py:83 modules/catalog/product/views.py:105
+msgid "Dashboard / Catalog / Product"
+msgstr ""
+
+#: modules/catalog/product/views.py:21
+msgid "Product List"
+msgstr ""
+
+#: modules/catalog/product/views.py:45 modules/catalog/product/views.py:106
+msgid "Product View"
+msgstr ""
+
+#: modules/catalog/product/views.py:77
+msgid "Product not found!"
+msgstr ""
+
+#: modules/catalog/product/views.py:84
+msgid "Product Edit"
+msgstr ""
+
+#: modules/catalog/product/views.py:93 modules/catalog/product/views.py:122
+msgid "Product saved successfully!"
+msgstr ""
+
+#: modules/catalog/product/views.py:132
+msgid "Product was deleted"
+msgstr ""
+
 #: modules/catalog/templates/catalog/category/category_list.html:18
 #: modules/catalog/templates/catalog/product/product_list.html:21
 #: modules/customer/templates/customer_list.html:18
 #: modules/sale/templates/order/order_list.html:18
 #: modules/seller/templates/seller_list.html:18
 msgid "Created In"
-msgstr "Criado Em"
+msgstr ""
 
-#: modules/ads/templates/ads_list.html:29
 #: modules/catalog/templates/catalog/category/category_list.html:29
 #: modules/catalog/templates/catalog/product/product_detail.html:39
 #: modules/catalog/templates/catalog/product/product_list.html:92
@@ -497,208 +610,39 @@ msgstr "Criado Em"
 #: modules/sale/templates/order/order_list.html:29
 #: modules/seller/templates/seller_list.html:29
 msgid "Options"
-msgstr "Opções"
+msgstr ""
 
-#: modules/ads/templates/ads_list.html:31
 #: modules/catalog/templates/catalog/category/category_list.html:31
 #: modules/catalog/templates/catalog/product/product_list.html:94
 #: modules/customer/templates/customer_list.html:31
 #: modules/sale/templates/order/order_list.html:31
 #: modules/seller/templates/seller_list.html:31
 msgid "Edit"
-msgstr "Editar"
+msgstr ""
 
-#: modules/ads/templates/ads_list.html:32
 #: modules/catalog/templates/catalog/category/category_list.html:32
 #: modules/catalog/templates/catalog/product/product_list.html:95
 #: modules/customer/templates/customer_list.html:32
 #: modules/sale/templates/order/order_list.html:32
 #: modules/seller/templates/seller_list.html:32
 msgid "Details"
-msgstr "Detalhes"
-
-#: modules/ads/views.py:19 modules/ads/views.py:56
-msgid "Dashboard / Ads"
-msgstr "Painel de Controle / Ads"
-
-#: modules/ads/views.py:20
-msgid "Ads List"
-msgstr "Ads"
-
-#: modules/ads/views.py:50
-msgid "Ads not found!"
-msgstr "Ads não encontrado!"
-
-#: modules/ads/views.py:57
-msgid "Ads Edit"
-msgstr "Editar"
-
-#: modules/ads/views.py:66
-msgid "Ads saved successfully!"
-msgstr "Ads salvo com sucesso!"
-
-#: modules/catalog/category/views.py:16
-msgid "Dashboard / Catalog / Category"
-msgstr "Painel de Controle / Catálogo / Categoria"
-
-#: modules/catalog/category/views.py:17
-msgid "Category List"
-msgstr "Categorias"
-
-#: modules/catalog/product/forms.py:20
-msgid "Active"
-msgstr "Ativo"
-
-#: modules/catalog/product/forms.py:21
-#: modules/catalog/templates/catalog/category/category_list.html:17
-#: modules/catalog/templates/catalog/product/product_detail.html:26
-#: modules/catalog/templates/catalog/product/product_list.html:17
-msgid "Name"
-msgstr "Nome"
-
-#: modules/catalog/product/forms.py:21
-msgid "Maximum 100 characters"
-msgstr "No máximo 100 caracteres"
-
-#: modules/catalog/product/forms.py:22
-#: modules/catalog/templates/catalog/product/product_detail.html:30
-#: modules/catalog/templates/catalog/product/product_list.html:18
-msgid "Sku"
-msgstr "Sku"
-
-#: modules/catalog/product/forms.py:22
-msgid "No special characters allowed"
-msgstr "Não é permitido caracteres especiais"
-
-#: modules/catalog/product/forms.py:23
-msgid "Type"
-msgstr "Tipo"
-
-#: modules/catalog/product/forms.py:24
-msgid "Condition"
-msgstr "Condição"
-
-#: modules/catalog/product/forms.py:25
-#: modules/catalog/templates/catalog/product/product_detail.html:48
-#: modules/catalog/templates/catalog/product/product_list.html:20
-msgid "Stock"
-msgstr "Estoque"
-
-#: modules/catalog/product/forms.py:26
-#: modules/catalog/templates/catalog/product/product_detail.html:57
-#: modules/catalog/templates/catalog/product/product_list.html:19
-msgid "Price Sell"
-msgstr "Preço de Venda"
-
-#: modules/catalog/product/forms.py:27
-#: modules/catalog/templates/catalog/product/product_detail.html:64
-msgid "Price Cost"
-msgstr "Preço de Custo"
-
-#: modules/catalog/product/forms.py:28
-#: modules/catalog/templates/catalog/product/product_detail.html:71
-msgid "Price Promo"
-msgstr "Preço Promocional"
-
-#: modules/catalog/product/forms.py:30
-#: modules/catalog/templates/catalog/product/product_detail.html:80
-msgid "Description"
-msgstr "Descrição"
-
-#: modules/catalog/product/forms.py:34
-msgid "Maximum 500 characters"
-msgstr "No máximo 500 caracteres"
-
-#: modules/catalog/product/models.py:10
-msgid "Standard"
-msgstr "Padrão"
-
-#: modules/catalog/product/models.py:11
-msgid "Variation"
-msgstr "Variação"
-
-#: modules/catalog/product/models.py:12
-msgid "Kit"
-msgstr "Kit"
-
-#: modules/catalog/product/models.py:16
-#: modules/catalog/templates/catalog/product/product_list.html:68
-msgid "New"
-msgstr "Novo"
-
-#: modules/catalog/product/models.py:17
-#: modules/catalog/templates/catalog/product/product_list.html:70
-msgid "Used"
-msgstr "Usado"
-
-#: modules/catalog/product/models.py:21
-msgid "Seller warranty"
-msgstr "Garantia do vendedor"
-
-#: modules/catalog/product/models.py:22
-msgid "Factory warranty"
-msgstr "Garantia de fábrica"
-
-#: modules/catalog/product/models.py:23
-msgid "No warranty"
-msgstr "Sem garantia"
-
-#: modules/catalog/product/models.py:27
-msgid "Days"
-msgstr "Dias"
-
-#: modules/catalog/product/models.py:28
-msgid "Months"
-msgstr "Meses"
-
-#: modules/catalog/product/models.py:29
-msgid "Years"
-msgstr "Anos"
-
-#: modules/catalog/product/views.py:20 modules/catalog/product/views.py:44
-#: modules/catalog/product/views.py:83 modules/catalog/product/views.py:105
-msgid "Dashboard / Catalog / Product"
-msgstr "Painel de Controle / Catálogo / Produto"
-
-#: modules/catalog/product/views.py:21
-msgid "Product List"
-msgstr "Produtos"
-
-#: modules/catalog/product/views.py:45 modules/catalog/product/views.py:106
-msgid "Product View"
-msgstr "Visualizar Produto"
-
-#: modules/catalog/product/views.py:77
-msgid "Product not found!"
-msgstr "Produto não encontrado!"
-
-#: modules/catalog/product/views.py:84
-msgid "Product Edit"
-msgstr "Editar Produto"
-
-#: modules/catalog/product/views.py:93 modules/catalog/product/views.py:122
-msgid "Product saved successfully!"
-msgstr "Produto salvo com sucesso!"
-
-#: modules/catalog/product/views.py:132
-msgid "Product was deleted"
-msgstr "Produto foi deletado"
+msgstr ""
 
 #: modules/catalog/templates/catalog/product/product_delete.html:15
 msgid "Are you sure you want to delete the product"
-msgstr "Tem certeza que deseja deletar o produto"
+msgstr ""
 
 #: modules/catalog/templates/catalog/product/product_delete.html:18
 msgid "No"
-msgstr "Não"
+msgstr ""
 
 #: modules/catalog/templates/catalog/product/product_delete.html:19
 msgid "Yes"
-msgstr "Sim"
+msgstr ""
 
 #: modules/catalog/templates/catalog/product/product_detail.html:37
 msgid "Product Type"
-msgstr "Tipo de Produto"
+msgstr ""
 
 #: modules/catalog/templates/catalog/product/product_detail.html:58
 #: modules/catalog/templates/catalog/product/product_detail.html:65
@@ -708,118 +652,69 @@ msgstr "Tipo de Produto"
 #: modules/catalog/templates/catalog/product/product_update.html:102
 #: modules/catalog/templates/catalog/product/product_update.html:118
 msgid "$"
-msgstr "R$"
+msgstr ""
+
+#: modules/customer/templates/customer_list.html:17
+#: modules/seller/templates/seller_list.html:17
+msgid "ID"
+msgstr ""
 
 #: modules/customer/views.py:16
 msgid "Dashboard / Customer"
-msgstr "Painel de Controle / Cliente"
+msgstr ""
 
 #: modules/customer/views.py:17
 msgid "Customer List"
-msgstr "Clientes"
+msgstr ""
 
 #: modules/dashboard/templates/dashboard/change_language.html:17
 msgid "Select the language"
-msgstr "Selecionar Idioma"
+msgstr ""
 
 #: modules/dashboard/templates/dashboard/index.html:15
 msgid "Approved Sales"
-msgstr "Vendas Aprovadas"
+msgstr ""
 
 #: modules/dashboard/templates/dashboard/index.html:27
 msgid "Canceled Sales"
-msgstr "Vendas Canceladas"
+msgstr ""
 
 #: modules/dashboard/templates/dashboard/index.html:39
 msgid "Active Products"
-msgstr "Produtos Ativos"
+msgstr ""
 
 #: modules/dashboard/templates/dashboard/index.html:51
 msgid "Active ads"
-msgstr "Anúncios Ativos"
+msgstr ""
 
 #: modules/dashboard/views.py:13
 msgid "Home"
-msgstr "Início"
+msgstr ""
 
 #: modules/dashboard/views.py:23
 msgid "Dashboard / Change Language"
-msgstr "Painel de Controle / Alterar Idioma"
+msgstr ""
 
 #: modules/dashboard/views.py:24
 msgid "Change Language"
-msgstr "Alterar Idioma"
+msgstr ""
 
 #: modules/sale/order/views.py:16
 msgid "Dashboard / Sale / Order"
-msgstr "Painel de Controle / Venda / Pedido"
+msgstr ""
 
 #: modules/sale/order/views.py:17
 msgid "Order List"
-msgstr "Pedidos"
+msgstr ""
 
 #: modules/sale/templates/order/order_list.html:17
 msgid "Total"
-msgstr "Total"
+msgstr ""
 
 #: modules/seller/views.py:16
 msgid "Dashboard / Seller"
-msgstr "Painel de Controle / Vendedor"
+msgstr ""
 
 #: modules/seller/views.py:17
 msgid "Seller List"
-msgstr "Vendedores"
-
-#~ msgid "Products"
-#~ msgstr "Produtos"
-
-#~ msgid "Orders"
-#~ msgstr "Pedidos"
-
-#~ msgid "This field is required."
-#~ msgstr "Este campo é obrigatório."
-
-#~ msgid "Enter a valid value."
-#~ msgstr "Digite um valor válido."
-
-#~ msgid "Revisions"
-#~ msgstr "Revisões"
-
-#~ msgid "Revision"
-#~ msgstr "Revisão"
-
-#~ msgid "Changes of object"
-#~ msgstr "Alterações de objeto"
-
-#~ msgid "Changed"
-#~ msgstr "Alterado"
-
-#~ msgid "User"
-#~ msgstr "Usuário"
-
-#~ msgid "Changed data"
-#~ msgstr "Dados alterados"
-
-#~ msgid "Your username is"
-#~ msgstr "Seu nome de usuário é"
-
-#~ msgid "You are a guest."
-#~ msgstr "Você é um convidado"
-
-#~ msgid "View"
-#~ msgstr "Visualizar"
-
-#~ msgid "Edit Product"
-#~ msgstr "Editar Produto"
-
-#~ msgid "Update"
-#~ msgstr "Atualizar"
-
-#~ msgid "All Rights Reserved"
-#~ msgstr "Todos os direitos reservados"
-
-#~ msgid "Search Here..."
-#~ msgstr "Pesquise Aqui..."
-
-#~ msgid "Forgot your username?"
-#~ msgstr "Esqueceu seu nome de usuário?"
+msgstr ""
