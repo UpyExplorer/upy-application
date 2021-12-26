@@ -1,4 +1,4 @@
-from app.base import BaseUpy
+from app.base import BaseViewUpy
 from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.exceptions import PermissionDenied
@@ -6,7 +6,7 @@ from modules.customer.models import Customer
 from django.utils.translation import gettext_lazy as _
 
 
-class CustomerListView(BaseUpy, LoginRequiredMixin, generic.ListView):
+class CustomerListView(BaseViewUpy, LoginRequiredMixin, generic.ListView):
     template_name = 'customer_list.html'
     model = Customer
     paginate_by = 5

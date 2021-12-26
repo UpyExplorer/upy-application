@@ -1,4 +1,4 @@
-from app.base import BaseUpy
+from app.base import BaseViewUpy
 from django.views import generic
 from django.shortcuts import Http404, redirect, render
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -10,7 +10,7 @@ from django.contrib import messages
 from bootstrap_modal_forms.generic import BSModalDeleteView
 
 
-class ProductListView(BaseUpy, LoginRequiredMixin, generic.ListView):
+class ProductListView(BaseViewUpy, LoginRequiredMixin, generic.ListView):
     template_name = 'catalog/product/product_list.html'
     model = Product
     paginate_by = 5
@@ -32,7 +32,7 @@ class ProductListView(BaseUpy, LoginRequiredMixin, generic.ListView):
         return Product.objects.filter(company_data_id=self.company_id()).order_by('-id').all()
 
 
-class ProductDetailView(BaseUpy, LoginRequiredMixin, generic.DetailView):
+class ProductDetailView(BaseViewUpy, LoginRequiredMixin, generic.DetailView):
     template_name = 'catalog/product/product_detail.html'
     model = Product
 
@@ -57,7 +57,7 @@ class ProductDetailView(BaseUpy, LoginRequiredMixin, generic.DetailView):
         return object
 
 
-class ProductUpdateView(BaseUpy, LoginRequiredMixin, generic.UpdateView):
+class ProductUpdateView(BaseViewUpy, LoginRequiredMixin, generic.UpdateView):
     template_name = 'catalog/product/product_update.html'
     form_class = ProductForm
     model = Product
@@ -93,7 +93,7 @@ class ProductUpdateView(BaseUpy, LoginRequiredMixin, generic.UpdateView):
         messages.success(request, _('Product saved successfully!'))
         return super().post(request, *args, **kwargs)
 
-class ProductCreateView(BaseUpy, LoginRequiredMixin, generic.CreateView):
+class ProductCreateView(BaseViewUpy, LoginRequiredMixin, generic.CreateView):
     template_name = 'catalog/product/product_update.html'
     form_class = ProductForm
 
@@ -125,7 +125,7 @@ class ProductCreateView(BaseUpy, LoginRequiredMixin, generic.CreateView):
         return redirect('catalog:product_list')
 
 
-class ProductDeleteView(BaseUpy, LoginRequiredMixin, BSModalDeleteView):
+class ProductDeleteView(BaseViewUpy, LoginRequiredMixin, BSModalDeleteView):
     model = Product
     template_name = 'catalog/product/product_delete.html'
     success_url = '/catalog/product'

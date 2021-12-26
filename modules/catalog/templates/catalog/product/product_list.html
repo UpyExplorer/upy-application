@@ -29,7 +29,7 @@
 											<div class="row">
 												<div class="col-xl-2 col-3 col-sm-3">
 													<div class="row">
-														<div class="col-4 col-sm-2">
+														<div class="col-4 col-sm-2" style="margin-top: 10px;">
 															<div class="form-check">
 																<label class="form-check-label">
 																	<input type="checkbox" class="form-check-input">
@@ -38,7 +38,7 @@
 																</label>
 															</div>
 														</div> 
-														<div class="col-4 col-sm-2">
+														<div class="col-4 col-sm-2" style="margin-top: 7px;">
 															<span>
 																{% if product.active %}
 																	<img src="{% static 'media/icon/icon-product.png' %}"
@@ -55,7 +55,7 @@
 													<div class="row">
 														<div class="col-sm">
 															<p class="bug-margim" data-toggle="tooltip" data-placement="top" title="{{ product.name }}">
-																{{ product.name|slice:":40" }}...
+																{{ product.get_name }}
 															</p>
 														</div>
 													</div>
