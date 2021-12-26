@@ -1,54 +1,93 @@
-{% extends "layouts/default/page.html" %}
+{% extends "layouts/default/table.html" %}
 
 {% load static %}
 {% load bootstrap5 %}
 {% load i18n %}
 
-{% block container %}
+{% if object_list %}
 
-	{% if order_list %}
-		<div class="table-responsive text-nowrap">
-			<div id="order-listing_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap5 no-footer" style="padding-left: 0px !important;">
+	{% block table_thead %}
+		<tr role="row">
+			<th width="85%" class="table-th">
+				
 				<div class="row">
-					<div class="col-sm-12">
-						<table class="table table-striped dataTable"> 
-							<thead>
-								<tr role="row">
-									<th width="95%" style="padding-bottom: 10px; padding-top: 10px;">{% trans 'Total' %}</th>
-									<th width="10%" style="padding-bottom: 10px; padding-top: 10px;">{% trans 'Created In' %}</th>
-									<th></th>
-								</tr>
-								</thead>
-								<tbody>
-									{% for order in order_list %}
-									<tr>
-										<td>{{ order.total|floatformat:2 }}</td>
-										<td>{{ order.creation_time|date:"M d, Y" }}</td>
-										<td>
-											<div class="btn-group">
-												<button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{% trans 'Options' %}</button>
-												<div class="dropdown-menu" x-placement="bottom-start">
-													<a class="dropdown-item" style="cursor: no-drop;" disabled>{% trans 'Edit' %}</a>
-													<a class="dropdown-item" style="cursor: no-drop;" disabled>{% trans 'Details' %}</a>
-												</div>                          
-											</div>
-										</td>
-								</tr>
-								{% endfor %}
-							</tbody>
-						</table>
+					<div class="col-2 col-xl-1 col-sm-2">
+						<div class="row">
+							<div class="col-4 col-sm-2">
+								{% trans 'ID' %}
+							</div> 
+						</div>      
+					</div>
+					<div class="col-xl-10 col-9 col-sm-9">
+						<div class="row">
+							<div class="col-sm">
+								{% trans 'Total' %}
+							</div>
+						</div>
 					</div>
 				</div>
-
-			</div>
-			
-		</div>
-		{% block pagination %}
-			{% include "layouts/modules/pagination.html" %}
-		{% endblock %}
-
-	{% else %}
-		<p>No orders found in your database.</p>
-	{% endif %}
-
-{% endblock %}
+				
+			</th>
+			<th width="10%" class="table-th">{% trans 'Created In' %}</th>
+			<th width="5%"></th>
+		</tr>
+	{% endblock %}
+	
+	{% block table_tbody %}
+		{% for object in object_list %}
+			<tr>
+				<td class="py-1">
+					<div class="row">
+						<div class="col-2 col-xl-1 col-sm-2">
+							<div class="row">
+								<div class="col-4 col-sm-2 table-checkbox">
+									<div class="form-check">
+										<label class="form-check-label">
+											<input type="checkbox" class="form-check-input" id="id_{{ object.id }}">
+											<i class="input-helper"></i>
+										</label>
+									</div>
+								</div> 
+							</div>      
+						</div>
+						<div class="col-xl-10 col-9 col-sm-9">
+							<div class="row">
+								<div class="col-sm">
+									<p class="bug-margim" data-toggle="tooltip" data-placement="top" title="">
+										R$ {{ object.total|floatformat:2 }}
+									</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="row">
+										<div class="col-xl-4 col-lg-6 col-sm-6">
+											<h6>
+												<span class="badge badge-light" style="padding: 0px;">
+													<b>ID: {{ object.id }}</b>
+												</span>
+											</h6>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</td>
+				<td>{{ object.creation_time|date:"M d, Y" }}</td>
+				<td>
+					<div class="btn-group">
+						<button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{% trans 'Options' %}</button>
+						<div class="dropdown-menu" x-placement="bottom-start">
+							<a class="dropdown-item" style="cursor: no-drop;" disabled>{% trans 'Edit' %}</a>
+							<a class="dropdown-item" style="cursor: no-drop;" disabled>{% trans 'Details' %}</a>
+						</div>                          
+					</div>
+				</td>
+			</tr>
+		{% endfor %}
+	{% endblock %}
+	
+{% else %}
+	<p>No sellers found in your database.</p>
+{% endif %}
