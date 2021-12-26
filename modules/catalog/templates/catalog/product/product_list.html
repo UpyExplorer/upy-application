@@ -1,117 +1,118 @@
-{% extends "layouts/default/page.html" %}
+{% extends "layouts/default/table.html" %}
 
 {% load static %}
 {% load bootstrap5 %}
 {% load i18n %}
 
-{% block container %}
+{% if object_list %}
 
-	{% if product_list %}
-		<div class="table-responsive text-nowrap">
-			<div id="order-listing_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap5 no-footer" style="padding-left: 0px !important;">
+	{% block table_thead %}
+		<tr role="row">
+			<th width="85%" class="table-th">
+			
 				<div class="row">
-					<div class="col-sm-12" style="padding-right: 0px;">
-						<table class="table table-striped dataTable"> 
-							<thead>
-								<tr role="row">
-									<th width="55%" class="table-th">{% trans 'Name' %}</th>
-									<th width="15%" class="table-th">{% trans 'Sku' %}</th>
-									<th width="10%" class="table-th">{% trans 'Price Sell' %}</th>
-									<th width="20%" class="table-th">{% trans 'Stock' %}</th>
-									<th width="10%" class="table-th">{% trans 'Created In' %}</th>
-									<th></th>
-								</tr>
-								</thead>
-								<tbody>
-									{% for product in product_list %}
-									<tr>
-										<td class="py-1">
-											<div class="row">
-												<div class="col-xl-2 col-3 col-sm-3">
-													<div class="row">
-														<div class="col-4 col-sm-2 table-checkbox">
-															<div class="form-check">
-																<label class="form-check-label">
-																	<input type="checkbox" class="form-check-input">
-																	<i class="input-helper"></i>
-																	<i class="input-helper"></i>
-																</label>
-															</div>
-														</div> 
-														<div class="col-4 col-sm-2" style="margin-top: 7px;">
-															<span>
-																{% if product.active %}
-																	<img src="{% static 'media/icon/icon-product.png' %}"
-																	style="width: 35px !important;">
-																{% else %}
-																	<img src="{% static 'media/icon/icon-product.png' %}"
-																	style="width: 35px !important; filter: grayscale(1);">
-																{% endif %}
-															</span>
-														</div> 
-													</div>      
-												</div>
-												<div class="col-xl-10 col-9 col-sm-9">
-													<div class="row">
-														<div class="col-sm">
-															<p class="bug-margim" data-toggle="tooltip" data-placement="top" title="{{ product.name }}">
-																{{ product.get_name }}
-															</p>
-														</div>
-													</div>
-													<div class="row">
-														<div class="col-sm-6">
-															<div class="row">
-																<div class="col-xl-4 col-lg-6 col-sm-6">
-																	<h6><span class="badge badge-light">
-																		{% if product.condition == '1' %}
-																			<b>{% trans 'New' %}</b>
-																		{% else %}
-																			<b>{% trans 'Used' %}</b>
-																		{% endif %}
-																	</span></h6>
-																</div>
-																<div class="col-xl-8 col-lg-6 col-sm-6">
-																<p style="font-weight: 600; color: #979797;">
-																	ID: {{ product.id }}
-																</p>
-																</div>
-															</div>
-														</div>
-														<div class="col-sm-6"></div>
-													</div>
-												</div>
-											</div>
-										</td>
-										<td>{{ product.sku }}</td>
-										<td>{% trans '$' %} {{ product.price_sell|floatformat:2 }}</td>
-										<td>{{ product.stock|floatformat:-2 }}</td>
-										<td>{{ product.creation_time|date:"M d, Y" }}</td>
-										<td>
-											<div class="btn-group">
-												<button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{% trans 'Options' %}</button>
-												<div class="dropdown-menu" x-placement="bottom-start">
-													<a class="dropdown-item" style="cursor: pointer;" href="{{ product.get_absolute_url }}">{% trans 'Edit' %}</a>
-													<a class="dropdown-item" style="cursor: no-drop;" disabled>{% trans 'Details' %}</a>
-												</div>                          
-											</div>
-										</td>
-								</tr>
-								{% endfor %}
-							</tbody>
-						</table>
+					<div class="col-xl-2 col-3 col-sm-3">
+						<div class="row">
+							<div class="col-4 col-sm-2">
+							</div> 
+						</div>      
+					</div>
+					<div class="col-xl-10 col-9 col-sm-9">
+						<div class="row">
+							<div class="col-sm">
+								{% trans 'Name' %}
+							</div>
+						</div>
 					</div>
 				</div>
 
-			</div>
-			
-		</div>
-		{% block pagination %}
-			{% include "layouts/modules/pagination.html" %}
-		{% endblock %}
-
-	{% else %}
-		<p>No products found in your database.</p>
-	{% endif %}
-
-{% endblock %}
+			</th>
+			<th width="15%" class="table-th">{% trans 'Sku' %}</th>
+			<th width="10%" class="table-th">{% trans 'Price Sell' %}</th>
+			<th width="20%" class="table-th">{% trans 'Stock' %}</th>
+			<th width="10%" class="table-th">{% trans 'Created In' %}</th>
+			<th></th>
+		</tr>
+	{% endblock %}
+	
+	{% block table_tbody %}
+		{% for object in object_list %}
+		<tr>
+			<td class="py-1">
+				<div class="row">
+					<div class="col-xl-2 col-3 col-sm-3">
+						<div class="row">
+							<div class="col-4 col-sm-2 table-checkbox">
+								<div class="form-check">
+									<label class="form-check-label">
+										<input type="checkbox" class="form-check-input">
+										<i class="input-helper"></i>
+										<i class="input-helper"></i>
+									</label>
+								</div>
+							</div> 
+							<div class="col-4 col-sm-2" style="margin-top: 7px;">
+								<span>
+									{% if object.active %}
+										<img src="{% static 'media/icon/icon-product.png' %}"
+										style="width: 35px !important;">
+									{% else %}
+										<img src="{% static 'media/icon/icon-product.png' %}"
+										style="width: 35px !important; filter: grayscale(1);">
+									{% endif %}
+								</span>
+							</div> 
+						</div>      
+					</div>
+					<div class="col-xl-10 col-9 col-sm-9">
+						<div class="row">
+							<div class="col-sm">
+								<p class="bug-margim" data-toggle="tooltip" data-placement="top" title="{{ object.name }}">
+									{{ object.get_name }}
+								</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="row">
+									<div class="col-xl-4 col-lg-6 col-sm-6">
+										<h6><span class="badge badge-light">
+											{% if object.condition == '1' %}
+												<b>{% trans 'New' %}</b>
+											{% else %}
+												<b>{% trans 'Used' %}</b>
+											{% endif %}
+										</span></h6>
+									</div>
+									<div class="col-xl-8 col-lg-6 col-sm-6">
+									<p style="font-weight: 600; color: #979797;">
+										ID: {{ object.id }}
+									</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6"></div>
+						</div>
+					</div>
+				</div>
+			</td>
+			<td>{{ object.sku }}</td>
+			<td>{% trans '$' %} {{ object.price_sell|floatformat:2 }}</td>
+			<td>{{ object.stock|floatformat:-2 }}</td>
+			<td>{{ object.creation_time|date:"M d, Y" }}</td>
+			<td>
+				<div class="btn-group">
+					<button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{% trans 'Options' %}</button>
+					<div class="dropdown-menu" x-placement="bottom-start">
+						<a class="dropdown-item" style="cursor: pointer;" href="{{ object.get_absolute_url }}">{% trans 'Edit' %}</a>
+						<a class="dropdown-item" style="cursor: no-drop;" disabled>{% trans 'Details' %}</a>
+					</div>                          
+				</div>
+			</td>
+	</tr>
+		{% endfor %}
+	{% endblock %}
+	
+{% else %}
+	<p>No sellers found in your database.</p>
+{% endif %}
