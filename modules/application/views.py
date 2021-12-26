@@ -4,7 +4,7 @@
 View Application
 """
 
-from app.base import BaseUpy
+from app.base import BaseViewUpy
 
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.exceptions import PermissionDenied
@@ -14,7 +14,7 @@ from django.views import generic
 from modules.application.models import BaseApplication
 
 
-class ApplicationListView(BaseUpy, LoginRequiredMixin, generic.ListView):
+class ApplicationListView(BaseViewUpy, LoginRequiredMixin, generic.ListView):
     """
     List View Application
     """

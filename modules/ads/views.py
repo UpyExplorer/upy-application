@@ -1,4 +1,4 @@
-from app.base import BaseUpy
+from app.base import BaseViewUpy
 from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.exceptions import PermissionDenied
@@ -9,7 +9,7 @@ from django.shortcuts import redirect, render
 from modules.ads.forms import AdsLinkForm
 
 
-class AdsListView(BaseUpy, LoginRequiredMixin, generic.ListView):
+class AdsListView(BaseViewUpy, LoginRequiredMixin, generic.ListView):
     template_name = 'ads_list.html'
     model = AdsLink
     paginate_by = 5
@@ -30,7 +30,7 @@ class AdsListView(BaseUpy, LoginRequiredMixin, generic.ListView):
         return AdsLink.objects.filter(company_data_id=self.company_id()).order_by('-id').all()
 
 
-class AdsUpdateView(BaseUpy, LoginRequiredMixin, generic.UpdateView):
+class AdsUpdateView(BaseViewUpy, LoginRequiredMixin, generic.UpdateView):
     template_name = 'ads_update.html'
     form_class = AdsLinkForm
     model = AdsLink

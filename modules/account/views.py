@@ -33,6 +33,12 @@ from modules.account.models import Activation
 from modules.base.models import BaseConfiguration
 from modules.company.models import CompanyData, CompanyConfiguration, CompanyRelationship
 
+from modules.catalog.category.models import Category
+from modules.customer.models import Customer
+from modules.seller.models import Seller
+
+from app.base import BaseViewUpy
+
 from django.contrib.auth.models import Group
 
 
@@ -100,7 +106,7 @@ class LogInView(GuestOnlyView, FormView):
         return redirect(settings.LOGIN_REDIRECT_URL)
 
 
-class SignUpView(GuestOnlyView, FormView):
+class SignUpView(BaseViewUpy, GuestOnlyView, FormView):
     template_name = 'account/sign_up.html'
     form_class = SignUpForm
 
@@ -126,35 +132,7 @@ class SignUpView(GuestOnlyView, FormView):
         try:
             # Create a user record
             user.save()
-            
-            # ##### Implementation Initial
-            
-            # # Create CompanyData
-            data = CompanyData(email=user.email)
-            data.save()
-
-            # # Create Configurations
-            params = BaseConfiguration.objects.all()
-            
-            for config in params:
-                configuration = CompanyConfiguration(
-                    key=config.key,
-                    description=config.description,
-                    value=config.value,
-                    company_data_id=data.id
-                )
-                configuration.save()
-            
-            # # Add BasePlan Group
-            user_group = Group.objects.get(name='Default')
-            user.groups.add(user_group)
-
-            # # Add CompanyRelationship
-            relationship = CompanyRelationship(company_data_id=data.id,user_id=user.id)
-            relationship.save()
-
-            # ##### Implementation Initial
-        
+            self.create_data(user)
         except:
             messages.error(request, _('Error!'))
             return redirect('account:sign_up')
