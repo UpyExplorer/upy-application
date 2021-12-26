@@ -7,11 +7,11 @@ from django.utils.translation import gettext_lazy as _
 
 class BaseApplication(ModelUpyBase):
     ITEM_TYPE = (
-        ('1', _('Marketplace')),
-        ('2', _('E-commerce')),
-        ('3', _('Payment')),
-        ('4', _('Management')),
-        ('5', _('Logistics'))
+        ('1', 'Marketplace'),
+        ('2', 'E-commerce'),
+        ('3', 'Payment'),
+        ('4', 'Management'),
+        ('5', 'Logistics')
     )
 
     name = models.CharField(max_length=100, blank=False, null=False, default='Application')
@@ -31,6 +31,22 @@ class BaseApplication(ModelUpyBase):
         db_table = 'base_application'
         verbose_name = 'Base Application'
         verbose_name_plural = 'Base Application'
+
+    def get_type(self):
+        items = {
+            '1':'Marketplace',
+            '2':'E-commerce',
+            '3':'Payment',
+            '4':'Management',
+            '5':'Logistics'
+            }
+        return items.get(str(self.type), None)
+
+    def get_stars(self):
+        stars = ""
+        for star in range(self.stars):
+            stars = stars + "<i class='mdi mdi-star'></i>"
+        return stars
 
 class ApplicationLink(ModelUpyBase):
     base_application = models.ForeignKey(BaseApplication, on_delete=models.SET_NULL, null=True)

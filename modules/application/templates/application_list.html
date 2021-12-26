@@ -16,12 +16,9 @@
 						<img src="{% static 'media/applications/'%}{{ baseapplication.image_name }}" width="70">
 							<div class="d-flex flex-column ml-2">
 								<a href="{{ baseapplication.url }}"><span>{{ baseapplication.name }}</span></a>
-								<span class="text-black-50">{{ baseapplication.type }}</span>
+								<span class="text-black-50">{{ baseapplication.get_type }}</span>
 								<span class="app-ratings">
-									<i class="mdi mdi-star"></i>
-									<i class="mdi mdi-star"></i>
-									<i class="mdi mdi-star"></i>
-									<i class="mdi mdi-star"></i>
+									{{ baseapplication.get_stars|safe }}
 								</span>
 							</div>
 					</div>
@@ -30,8 +27,8 @@
 							<li>{{ baseapplication.description }}</li>
 						</ul>
 						<div class="d-flex justify-content-between app-install mt-3">
-							<span>Installed {{ baseapplication.Installed }} times</span>
-							<span class="text-primary">View&nbsp;
+							<span>{% trans 'Installed' %} {{ baseapplication.Installed }} {% trans 'times' %}</span>
+							<span class="text-primary">{% trans 'To manage' %}&nbsp;
 								<i class="fa fa-angle-right"></i>
 							</span>
 						</div>
