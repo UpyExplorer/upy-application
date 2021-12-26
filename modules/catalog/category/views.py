@@ -1,4 +1,4 @@
-from app.base import BaseUpy
+from app.base import BaseViewUpy
 from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.exceptions import PermissionDenied
@@ -6,7 +6,7 @@ from modules.catalog.category.models import Category
 from django.utils.translation import gettext_lazy as _
 
 
-class CategoryListView(BaseUpy, LoginRequiredMixin, generic.ListView):
+class CategoryListView(BaseViewUpy, LoginRequiredMixin, generic.ListView):
     template_name = 'catalog/category/category_list.html'
     model = Category
     paginate_by = 5

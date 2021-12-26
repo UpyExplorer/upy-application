@@ -32,6 +32,9 @@ from .forms import (
 from modules.account.models import Activation
 from modules.base.models import BaseConfiguration
 from modules.company.models import CompanyData, CompanyConfiguration, CompanyRelationship
+from modules.catalog.category.models import Category
+from modules.customer.models import Customer
+from modules.seller.models import Seller
 
 from django.contrib.auth.models import Group
 
@@ -129,11 +132,11 @@ class SignUpView(GuestOnlyView, FormView):
             
             # ##### Implementation Initial
             
-            # # Create CompanyData
+            # Create CompanyData
             data = CompanyData(email=user.email)
             data.save()
 
-            # # Create Configurations
+            # Create Configurations
             params = BaseConfiguration.objects.all()
             
             for config in params:
@@ -145,11 +148,11 @@ class SignUpView(GuestOnlyView, FormView):
                 )
                 configuration.save()
             
-            # # Add BasePlan Group
-            user_group = Group.objects.get(name='Default')
+            # Add BasePlan Group
+            user_group = Group.objects.get(name='Free')
             user.groups.add(user_group)
 
-            # # Add CompanyRelationship
+            # Add CompanyRelationship
             relationship = CompanyRelationship(company_data_id=data.id,user_id=user.id)
             relationship.save()
 
