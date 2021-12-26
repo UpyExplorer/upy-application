@@ -1,9 +1,13 @@
+# coding=utf-8
+
 from datetime import datetime
+
 from django.db import models
-from modules.base.models import ModelUpyBase
-from modules.company.models import CompanyData
-from modules.catalog.product.models import Product
+
 from modules.application.models import ApplicationLink
+from modules.base.models import ModelUpyBase
+from modules.catalog.product.models import Product
+from modules.company.models import CompanyData
 
 
 class AdsLink(ModelUpyBase):

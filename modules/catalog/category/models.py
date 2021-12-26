@@ -1,8 +1,11 @@
+# coding=utf-8
 
 from datetime import datetime
+
 from django.db import models
-from modules.company.models import CompanyData
 from django.utils.translation import gettext_lazy as _
+
+from modules.company.models import CompanyData
 
 
 class Category(models.Model):
