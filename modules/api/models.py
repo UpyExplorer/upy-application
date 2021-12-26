@@ -1,5 +1,7 @@
 from django.db import models
+
 from modules.company.models import CompanyData
+
 
 class Token(models.Model):
     company_data = models.ForeignKey(CompanyData, on_delete=models.SET_NULL, null=True)

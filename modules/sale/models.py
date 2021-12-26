@@ -1,10 +1,12 @@
 from datetime import datetime
+
 from django.db import models
+
+from modules.base.models import BasePaymentType
+from modules.catalog.product.models import Product
 from modules.company.models import CompanyData
 from modules.customer.models import Customer
 from modules.seller.models import Seller
-from modules.base.models import BasePaymentType
-from modules.catalog.product.models import Product
 
 
 class Payment(models.Model):

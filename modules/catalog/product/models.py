@@ -8,6 +8,7 @@ from modules.base.models import BaseCurrency
 from modules.company.models import CompanyData
 from modules.catalog.category.models import Category
 
+
 class Product(models.Model):
     ITEM_TYPE = (
         ('1', _('Standard')),
