@@ -12,7 +12,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
 
-DEBUG = bool(os.getenv("DJANGO_DEBUG"))
+DEBUG = False
 ALLOWED_HOSTS = [os.getenv("DJANGO_ALLOWED_HOSTS")]
 
 SITE_ID = 1
