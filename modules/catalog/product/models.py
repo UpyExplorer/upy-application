@@ -66,6 +66,8 @@ class Product(models.Model):
         verbose_name = 'Catalog Product'
         verbose_name_plural = 'Catalog Product'
 
+    def get_name(self):
+        return str(self.name[0:50]) + "..." if len(self.name) > 50 else self.name
 
     def get_absolute_url(self):
         return "/catalog/product/{id}".format(id = self.id)
