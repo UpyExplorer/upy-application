@@ -17,6 +17,15 @@
             <p>Menu</p>
         </li>
 
+        {% if perms.global_permissions.app_application %}
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'application:application_list' %}">
+                    <i class="mdi mdi-cloud-sync menu-icon"></i>
+                        <span class="menu-title">{% trans 'Applications' %}</span>
+                </a>
+            </li>
+        {% endif %}
+
         {% if perms.global_permissions.app_catalog %}
             <li class="nav-item">
                 <a class="nav-link collapsed" data-toggle="collapse" href="#ui-product" aria-expanded="false" aria-controls="ui-product">
