@@ -1,9 +1,12 @@
 
 from datetime import datetime
+
 from django.db import models
-from modules.company.models import CompanyData
-from modules.base.models import BaseCurrency
 from django.utils.translation import gettext_lazy as _
+
+from modules.base.models import BaseCurrency
+from modules.company.models import CompanyData
+from modules.catalog.category.models import Category
 
 class Product(models.Model):
     ITEM_TYPE = (
@@ -30,6 +33,7 @@ class Product(models.Model):
     )
 
     company_data = models.ForeignKey(CompanyData, on_delete=models.SET_NULL, null=True)
+    category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True)
     creation_time = models.DateTimeField(default=datetime.now, null=True)
     name = models.CharField(max_length=100, blank=False, null=False, default='Product')
     subtitle = models.CharField(max_length=100, blank=False, null=False, default='Subtitle')
