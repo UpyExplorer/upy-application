@@ -65,52 +65,28 @@
 
         {% if perms.global_permissions.app_customer %}
             <li class="nav-item">
-                <a class="nav-link collapsed" data-toggle="collapse" href="#ui-customer" aria-expanded="false" aria-controls="ui-customer">
+                <a class="nav-link collapsed" href="{% url 'customer:customer_list' %}">
                     <i class="mdi mdi-account-check menu-icon"></i>
-                        <span class="menu-title">{% trans 'Customer' %}</span>
-                    <i class="menu-arrow"></i>
+                        <span class="menu-title">{% trans 'Customers' %}</span>
                 </a>
-                <div class="collapse" id="ui-customer">
-                    <ul class="nav flex-column sub-menu">
-                        {% if perms.global_permissions.app_customer_list %}
-                            <li class="nav-item"> <a class="nav-link" href="{% url 'customer:customer_list' %}">{% trans 'Registers List' %}</a></li>
-                        {% endif %}
-                    </ul>
-                </div>
             </li>
         {% endif %}
 
         {% if perms.global_permissions.app_seller %}
             <li class="nav-item">
-                <a class="nav-link collapsed" data-toggle="collapse" href="#ui-seller" aria-expanded="false" aria-controls="ui-seller">
+                <a class="nav-link collapsed" href="{% url 'seller:seller_list' %}">
                     <i class="mdi mdi-account-network menu-icon"></i>
-                        <span class="menu-title">{% trans 'Seller' %}</span>
-                    <i class="menu-arrow"></i>
+                        <span class="menu-title">{% trans 'Sellers' %}</span>
                 </a>
-                <div class="collapse" id="ui-seller">
-                    <ul class="nav flex-column sub-menu">
-                        {% if perms.global_permissions.app_seller_list %}
-                            <li class="nav-item"> <a class="nav-link" href="{% url 'seller:seller_list' %}">{% trans 'Registers List' %}</a></li>
-                        {% endif %}
-                    </ul>
-                </div>
             </li>
         {% endif %}
 
         {% if perms.global_permissions.app_ads %}
             <li class="nav-item">
-                <a class="nav-link collapsed" data-toggle="collapse" href="#ui-ads" aria-expanded="false" aria-controls="ui-ads">
+                <a class="nav-link collapsed" href="{% url 'ads:ads_list' %}">
                     <i class="mdi mdi-square-inc-cash menu-icon"></i>
                         <span class="menu-title">{% trans 'Ads' %}</span>
-                    <i class="menu-arrow"></i>
                 </a>
-                <div class="collapse" id="ui-ads">
-                    <ul class="nav flex-column sub-menu">
-                        {% if perms.global_permissions.app_ads_list %}
-                            <li class="nav-item"> <a class="nav-link" href="{% url 'ads:ads_list' %}">{% trans 'Registers List' %}</a></li>
-                        {% endif %}
-                    </ul>
-                </div>
             </li>
         {% endif %}
 
