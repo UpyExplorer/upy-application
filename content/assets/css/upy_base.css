@@ -100,3 +100,12 @@
 .table {
     --bs-table-striped-bg: #fcfcfc !important;
 }
+
+.table-checkbox {
+    margin-top: 10px;
+}
+
+.table-th {
+    padding-bottom: 10px !important;
+    padding-top: 10px !important;
+}
