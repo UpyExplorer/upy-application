@@ -1,13 +1,3 @@
-
-/* ===== FORM PRODUCT ===== */
-
-.form-product-description-text {
-    font-family: 'Source Sans Pro' !important;
-    font-weight: 500 !important;
-    letter-spacing: 0.3px !important;
-}
-
-/* ===== ===== */
 /* ===== FORM DEFAULT ===== */
 
 .form-check {
@@ -28,6 +18,15 @@
     width: 75px;
     height: 35px;
     margin-left: 0;
+}
+
+/* ===== ===== */
+/* ===== FORM PRODUCT ===== */
+
+.form-product-description-text {
+    font-family: 'Source Sans Pro' !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.3px !important;
 }
 
 /* ===== ===== */
@@ -83,6 +82,17 @@
     /* padding-right: 0px !important; */
     /* padding-left: 0px !important; */
     padding-left: 35px;
+}
+
+/* ===== ===== */
+/* ===== APPLICATION ===== */
+
+.app-ratings i {
+    color: #d3403f
+}
+
+.app-install span {
+    font-size: 12px
 }
 
 /* ===== ===== */
