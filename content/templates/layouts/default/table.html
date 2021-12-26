@@ -40,8 +40,8 @@
                             {% endblock %}
                         </thead>
                         <tbody>
-                            {% block table_tbody %}
-                                {% if object_list %}
+                            {% if object_list %}
+                                {% block table_tbody %}
                                     {% for object in object_list %}
                                         <tr>
                                             <td class="py-1">
@@ -96,16 +96,14 @@
                                             </td>
                                         </tr>
                                     {% endfor %}
-
-                                {% else %}
-                                    <tr>
-                                        <td>{% trans 'No data found in your database.' %}</td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                {% endif %}
-
-                            {% endblock %}
+                                {% endblock %}
+                            {% else %}
+                                <tr>
+                                    <td>{% trans 'No data found in your database.' %}</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            {% endif %}
                         </tbody>
                     </table>
                 </div>
