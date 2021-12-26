@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-25 03:10-0300\n"
+"POT-Creation-Date: 2021-12-25 21:11-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -470,7 +470,7 @@ msgstr "Sua senha foi modificada."
 msgid "Your password has been set. You may go ahead and login now."
 msgstr "Sua senha foi definida. Você pode ir em frente e entrar agora."
 
-#: modules/ads/forms.py:42
+#: modules/ads/forms.py:42 modules/application/views.py:29
 msgid "Application"
 msgstr "Aplicativo"
 
@@ -536,6 +536,26 @@ msgstr "Editar"
 #: modules/ads/views.py:66
 msgid "Ads saved successfully!"
 msgstr "Ads salvo com sucesso!"
+
+#: modules/application/templates/application_list.html:30
+msgid "Installed"
+msgstr "Instalado"
+
+#: modules/application/templates/application_list.html:30
+msgid "times"
+msgstr "vezes"
+
+#: modules/application/templates/application_list.html:31
+msgid "To manage"
+msgstr "Gerenciar"
+
+#: modules/application/views.py:27
+msgid "Dashboard / Application"
+msgstr "Painel de Controle / Aplicativo"
+
+#: modules/application/views.py:28
+msgid "Application List"
+msgstr "Aplicativo"
 
 #: modules/catalog/category/views.py:16
 msgid "Dashboard / Catalog / Category"
