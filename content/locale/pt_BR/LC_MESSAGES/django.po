@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-25 21:11-0300\n"
+"POT-Creation-Date: 2021-12-25 22:16-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -44,61 +44,59 @@ msgid "Dashboard"
 msgstr "Painel de Controle"
 
 #: content/templates/layouts/modules/menu.html:24
+msgid "Applications"
+msgstr "Aplicativos"
+
+#: content/templates/layouts/modules/menu.html:33
 msgid "Catalog"
 msgstr "Catálogo"
 
-#: content/templates/layouts/modules/menu.html:30 modules/ads/forms.py:36
+#: content/templates/layouts/modules/menu.html:39 modules/ads/forms.py:36
 #: modules/catalog/product/views.py:22 modules/catalog/product/views.py:46
 #: modules/catalog/product/views.py:85 modules/catalog/product/views.py:107
 msgid "Product"
 msgstr "Produto"
 
-#: content/templates/layouts/modules/menu.html:33
+#: content/templates/layouts/modules/menu.html:42
 #: modules/catalog/category/views.py:18
 msgid "Category"
 msgstr "Categoria"
 
-#: content/templates/layouts/modules/menu.html:44
+#: content/templates/layouts/modules/menu.html:53
 msgid "Sale"
 msgstr "Venda"
 
-#: content/templates/layouts/modules/menu.html:50
+#: content/templates/layouts/modules/menu.html:59
 #: modules/sale/order/views.py:18
 msgid "Order"
 msgstr "Pedido"
 
-#: content/templates/layouts/modules/menu.html:61 modules/customer/views.py:18
-msgid "Customer"
-msgstr "Cliente"
+#: content/templates/layouts/modules/menu.html:70
+msgid "Customers"
+msgstr "Clientes"
 
-#: content/templates/layouts/modules/menu.html:67
-#: content/templates/layouts/modules/menu.html:84
-#: content/templates/layouts/modules/menu.html:101
-msgid "Registers List"
-msgstr "Lista de Registros"
+#: content/templates/layouts/modules/menu.html:79
+msgid "Sellers"
+msgstr "Vendedores"
 
-#: content/templates/layouts/modules/menu.html:78 modules/seller/views.py:18
-msgid "Seller"
-msgstr "Vendedor"
-
-#: content/templates/layouts/modules/menu.html:95 modules/ads/views.py:21
+#: content/templates/layouts/modules/menu.html:88 modules/ads/views.py:21
 #: modules/ads/views.py:58
 msgid "Ads"
 msgstr "Anúncios"
 
-#: content/templates/layouts/modules/menu.html:112
+#: content/templates/layouts/modules/menu.html:97
 msgid "My Profile"
 msgstr "Meu Perfil"
 
-#: content/templates/layouts/modules/menu.html:118
+#: content/templates/layouts/modules/menu.html:103
 msgid "Change password"
 msgstr "Alterar Senha"
 
-#: content/templates/layouts/modules/menu.html:122
+#: content/templates/layouts/modules/menu.html:107
 msgid "Change profile"
 msgstr "Alterar Perfil"
 
-#: content/templates/layouts/modules/menu.html:126 modules/account/utils.py:28
+#: content/templates/layouts/modules/menu.html:111 modules/account/utils.py:28
 msgid "Change email"
 msgstr "Alterar E-mail"
 
@@ -738,6 +736,10 @@ msgstr "Painel de Controle / Cliente"
 msgid "Customer List"
 msgstr "Clientes"
 
+#: modules/customer/views.py:18
+msgid "Customer"
+msgstr "Cliente"
+
 #: modules/dashboard/templates/dashboard/change_language.html:17
 msgid "Select the language"
 msgstr "Selecionar Idioma"
@@ -789,6 +791,13 @@ msgstr "Painel de Controle / Vendedor"
 #: modules/seller/views.py:17
 msgid "Seller List"
 msgstr "Vendedores"
+
+#: modules/seller/views.py:18
+msgid "Seller"
+msgstr "Vendedor"
+
+#~ msgid "Registers List"
+#~ msgstr "Lista de Registros"
 
 #~ msgid "Products"
 #~ msgstr "Produtos"
