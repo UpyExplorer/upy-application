@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-27 01:24-0300\n"
+"POT-Creation-Date: 2021-12-27 01:27-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -107,7 +107,8 @@ msgid "Product"
 msgstr "Produto"
 
 #: content/templates/layouts/modules/menu.html:42
-#: modules/catalog/category/views.py:18 modules/catalog/product/forms.py:40
+#: modules/catalog/category/models.py:14 modules/catalog/category/views.py:18
+#: modules/catalog/product/forms.py:40
 msgid "Category"
 msgstr "Categoria"
 
@@ -561,10 +562,6 @@ msgstr "Painel de Controle / Aplicativo"
 #: modules/application/views.py:28
 msgid "Application List"
 msgstr "Aplicativo"
-
-#: modules/catalog/category/models.py:15
-msgid "CAT"
-msgstr ""
 
 #: modules/catalog/category/views.py:16
 msgid "Dashboard / Catalog / Category"
