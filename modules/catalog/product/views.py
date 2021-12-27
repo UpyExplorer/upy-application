@@ -79,7 +79,7 @@ class ProductUpdateView(BaseViewUpy, LoginRequiredMixin, generic.UpdateView):
 
         return render(self.request, self.template_name, {
 				"object": object,
-				"form": ProductForm(instance=object),
+				"form": ProductForm(instance=object, request=self.request),
 				"view_path": _('Dashboard / Catalog / Product'),
 				"view_name": _('Product Edit'),
                 "view_info": _('Product'),
@@ -97,11 +97,20 @@ class ProductCreateView(BaseViewUpy, LoginRequiredMixin, generic.CreateView):
     template_name = 'catalog/product/product_update.html'
     form_class = ProductForm
 
+    def get_form_kwargs(self):
+        """ Passes the request object to the form class.
+         This is necessary to only display members that belong to a given user"""
+
+        kwargs = super(ProductCreateView, self).get_form_kwargs()
+        kwargs['request'] = self.request
+        return kwargs
+
     def get_context_data(self, **kwargs):
         if not self.request.user.has_perm('global_permissions.app_catalog_product_create'):
             raise PermissionDenied
 
         context = super(ProductCreateView, self).get_context_data(**kwargs)
+        # context['form'] = ProductForm()
         context['view_path'] = _('Dashboard / Catalog / Product')
         context['view_name'] = _('Product View')
         context['view_info'] = _('Product')
@@ -109,6 +118,20 @@ class ProductCreateView(BaseViewUpy, LoginRequiredMixin, generic.CreateView):
         context['btn_save'] = True
 
         return context
+
+    # def get(self, *args, **kwargs):
+    #     if not self.request.user.has_perm('global_permissions.app_catalog_product_create'):
+    #         raise PermissionDenied
+
+    #     return render(self.request, self.template_name, {
+	# 			"form": ProductForm(),
+	# 			"view_path": _('Dashboard / Catalog / Product'),
+	# 			"view_name": _('Product Create'),
+    #             "view_info": _('Product'),
+    #             "btn_info": True,
+    #             "btn_save": True
+	# 		}
+	# 	)
 
     def post(self, request, *args, **kwargs):
         if self.request.method == "POST":
