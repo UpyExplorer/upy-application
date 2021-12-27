@@ -87,7 +87,16 @@ class BaseViewUpy():
     def company_id(self):
         """
         """
-        return self.request.session['company_data_id']
+        company_data_id = self.request.session.get('company_data_id')
+
+        if company_data_id:
+            return company_data_id
+        else:
+            company_relation = CompanyRelationship.objects.filter(user=self.request.user.id).first()
+            if company_relation:
+                return company_relation.company_data
+
+        return None
 
 
 class BaseChoiceField(ModelChoiceField):
