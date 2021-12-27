@@ -12,8 +12,10 @@ from modules.catalog.product.models import Product
 class StockLocale(models.Model):
     company_data = models.ForeignKey(CompanyData, on_delete=models.SET_NULL, null=True)
     creation_time = models.DateTimeField(default=datetime.now, null=True)
-    name = models.CharField(max_length=25, blank=False, null=False, default='Standard')
-    code = models.CharField(max_length=5, blank=False, null=True)
+    name = models.CharField(max_length=25, blank=False, null=False, default=_('Standard'))
+    code = models.CharField(max_length=5, blank=False, null=True, default='STD')
+    main = models.BooleanField(null=False, default=False)
+
 
     class Meta:
         db_table = 'catalog_stock_locale'
