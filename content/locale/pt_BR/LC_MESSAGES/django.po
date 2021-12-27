@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-26 19:00-0300\n"
+"POT-Creation-Date: 2021-12-27 01:24-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,23 +17,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-
-#: app/base.py:59 content/templates/layouts/modules/menu.html:42
-#: modules/catalog/category/views.py:18 modules/catalog/product/forms.py:40
-msgid "Category"
-msgstr "Categoria"
-
-#: app/base.py:67 app/base.py:69 modules/customer/views.py:18
-msgid "Customer"
-msgstr "Cliente"
-
-#: app/base.py:68 app/base.py:77
-msgid "Test"
-msgstr "Teste"
-
-#: app/base.py:76 app/base.py:78 modules/seller/views.py:18
-msgid "Seller"
-msgstr "Vendedor"
 
 #: app/conf/development/settings.py:208 app/conf/production/settings.py:204
 msgid "Português-BR"
@@ -123,7 +106,13 @@ msgstr "Catálogo"
 msgid "Product"
 msgstr "Produto"
 
+#: content/templates/layouts/modules/menu.html:42
+#: modules/catalog/category/views.py:18 modules/catalog/product/forms.py:40
+msgid "Category"
+msgstr "Categoria"
+
 #: content/templates/layouts/modules/menu.html:53
+#: modules/catalog/stock/models.py:30
 msgid "Sale"
 msgstr "Venda"
 
@@ -573,6 +562,10 @@ msgstr "Painel de Controle / Aplicativo"
 msgid "Application List"
 msgstr "Aplicativo"
 
+#: modules/catalog/category/models.py:15
+msgid "CAT"
+msgstr ""
+
 #: modules/catalog/category/views.py:16
 msgid "Dashboard / Catalog / Category"
 msgstr "Painel de Controle / Catálogo / Categoria"
@@ -638,7 +631,7 @@ msgstr "Descrição"
 msgid "Maximum 500 characters"
 msgstr "No máximo 500 caracteres"
 
-#: modules/catalog/product/models.py:15
+#: modules/catalog/product/models.py:15 modules/catalog/stock/models.py:15
 msgid "Standard"
 msgstr "Padrão"
 
@@ -713,6 +706,26 @@ msgstr "Produto salvo com sucesso!"
 msgid "Product was deleted"
 msgstr "Produto foi deletado"
 
+#: modules/catalog/stock/models.py:27
+msgid "Other"
+msgstr "Outro"
+
+#: modules/catalog/stock/models.py:28
+msgid "Input"
+msgstr "Entrada"
+
+#: modules/catalog/stock/models.py:29
+msgid "Exit"
+msgstr "Saída"
+
+#: modules/catalog/stock/models.py:31
+msgid "Purchase"
+msgstr "Compra"
+
+#: modules/catalog/stock/models.py:32
+msgid "Devolution"
+msgstr "Devolução"
+
 #: modules/catalog/templates/catalog/product/product_delete.html:15
 msgid "Are you sure you want to delete the product"
 msgstr "Tem certeza que deseja deletar o produto"
@@ -738,6 +751,15 @@ msgstr "Tipo de Produto"
 #: modules/catalog/templates/catalog/product/product_update.html:118
 msgid "$"
 msgstr "R$"
+
+#: modules/customer/models.py:15 modules/customer/models.py:18
+#: modules/customer/views.py:18
+msgid "Customer"
+msgstr "Cliente"
+
+#: modules/customer/models.py:16 modules/seller/models.py:16
+msgid "Test"
+msgstr "Teste"
 
 #: modules/customer/views.py:16
 msgid "Dashboard / Customer"
@@ -790,6 +812,11 @@ msgstr "Pedidos"
 #: modules/sale/templates/order/order_list.html:22
 msgid "Total"
 msgstr "Total"
+
+#: modules/seller/models.py:15 modules/seller/models.py:18
+#: modules/seller/views.py:18
+msgid "Seller"
+msgstr "Vendedor"
 
 #: modules/seller/views.py:16
 msgid "Dashboard / Seller"
