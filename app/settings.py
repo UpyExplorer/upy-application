@@ -1,3 +1,10 @@
+# coding=utf-8
+
+"""
+Source App
+"""
+
+
 import os
 import environ
 from os.path import dirname

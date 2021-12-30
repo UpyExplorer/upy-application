@@ -1,3 +1,9 @@
+# coding=utf-8
+
+"""
+Source App
+"""
+
 import os
 from django.contrib import admin
 from django.core.wsgi import get_wsgi_application
