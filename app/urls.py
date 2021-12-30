@@ -1,3 +1,9 @@
+# coding=utf-8
+
+"""
+Source App
+"""
+
 from django.contrib import admin
 from django.conf import settings
 from django.urls import path, include
