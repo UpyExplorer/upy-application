@@ -29,8 +29,6 @@ class Migration(migrations.Migration):
                 ('expiration_date', models.DateTimeField(null=True)),
                 ('date_last_updated', models.DateTimeField(null=True)),
                 ('company_data', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='company.data')),
-                ('cutomer', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='company.customer')),
-                ('seller', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='company.seller')),
             ],
         ),
         migrations.CreateModel(
