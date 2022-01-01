@@ -71,6 +71,9 @@ class Product(models.Model):
     warranty_value = models.IntegerField(null=True, default=0)
 
     class Meta:
+        """
+        Meta
+        """
         verbose_name = 'Catalog Product'
         verbose_name_plural = 'Catalog Product'
 
@@ -115,6 +118,9 @@ class Image(models.Model):
     main = models.BooleanField(null=False, default=False)
 
     class Meta:
+        """
+        Meta
+        """
         verbose_name = 'Catalog Image'
         verbose_name_plural = 'Catalog Image'
 
@@ -138,5 +144,8 @@ class Setting(models.Model):
     option_value = models.CharField(max_length=10,blank=True, null=True)
 
     class Meta:
+        """
+        Meta
+        """
         verbose_name = 'Catalog Setting'
         verbose_name_plural = 'Catalog Setting'
