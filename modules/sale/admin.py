@@ -1,3 +1,5 @@
+# coding=utf-8
+
 from django.contrib import admin
 from app.utils import get_field_list
 from modules.sale.models import (

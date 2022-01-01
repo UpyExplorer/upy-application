@@ -1,3 +1,5 @@
+# coding=utf-8
+
 from app.base import BaseViewUpy
 from django.views import generic
 from django.shortcuts import Http404, redirect, render
