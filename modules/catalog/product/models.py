@@ -75,12 +75,21 @@ class Product(models.Model):
         verbose_name_plural = 'Catalog Product'
 
     def get_name(self):
+        """
+        Get product name limiting 50 characters
+        """
         return str(self.name[0:50]) + "..." if len(self.name) > 50 else self.name
 
     def get_absolute_url(self):
+        """
+        Get URL
+        """
         return "/catalog/product/{id}".format(id = self.id)
 
     def delete_absolute_url(self):
+        """
+        URL to delete
+        """
         return "/catalog/product/delete/{id}".format(id = self.id)
 
 
@@ -110,6 +119,9 @@ class Image(models.Model):
         verbose_name_plural = 'Catalog Image'
 
     def get_absolute_url(self):
+        """
+        Get URL
+        """
         return "/catalog/image/{id}".format(id = self.id)
 
 
