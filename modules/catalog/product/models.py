@@ -11,6 +11,10 @@ from modules.catalog.category.models import Category
 
 
 class Product(models.Model):
+    """
+    Product
+    """
+    
     ITEM_TYPE = (
         ('1', _('Standard')),
         ('2', _('Variation')),
@@ -77,6 +81,10 @@ class Product(models.Model):
 
 
 class Image(models.Model):
+    """
+    Image
+    """
+
     ITEM_FORMAT = (
         ('1','JPG'),
         ('2','JPEG'),
@@ -102,6 +110,10 @@ class Image(models.Model):
 
 
 class Setting(models.Model):
+    """
+    Setting
+    """
+
     company_data = models.ForeignKey(CompanyData, on_delete=models.SET_NULL, null=True)
     product = models.ForeignKey(Product, on_delete=models.SET_NULL, null=True)
     key = models.CharField(max_length=50,blank=True, null=True)
