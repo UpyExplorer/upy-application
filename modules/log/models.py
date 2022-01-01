@@ -1,5 +1,9 @@
 # coding=utf-8
 
+"""
+Model Config
+"""
+
 from datetime import datetime
 from django.db import models
 from modules.company.models import CompanyData
