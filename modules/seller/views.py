@@ -14,6 +14,10 @@ from app.base import BaseViewUpy
 
 
 class SellerListView(BaseViewUpy, LoginRequiredMixin, generic.ListView):
+    """
+    Seller List
+    """
+
     template_name = 'seller_list.html'
     model = Seller
     paginate_by = 5

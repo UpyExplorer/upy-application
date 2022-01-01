@@ -11,6 +11,9 @@ from modules.seller.models import (
 )
 
 class SellerAdmin(admin.ModelAdmin):
+    """
+    Seller Admin
+    """
     list_display = get_field_list(Seller)
 
 
