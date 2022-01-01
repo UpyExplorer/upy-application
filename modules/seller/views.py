@@ -1,12 +1,23 @@
-from app.base import BaseViewUpy
+# coding=utf-8
+
+"""
+Module Docstring
+"""
+
 from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.exceptions import PermissionDenied
-from modules.seller.models import Seller
 from django.utils.translation import gettext_lazy as _
+
+from modules.seller.models import Seller
+from app.base import BaseViewUpy
 
 
 class SellerListView(BaseViewUpy, LoginRequiredMixin, generic.ListView):
+    """
+    Seller List
+    """
+
     template_name = 'seller_list.html'
     model = Seller
     paginate_by = 5

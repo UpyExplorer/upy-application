@@ -1,3 +1,8 @@
+# coding=utf-8
+
+"""
+Module Docstring
+"""
 
 from decimal import Decimal
 
