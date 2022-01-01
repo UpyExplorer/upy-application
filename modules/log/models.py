@@ -22,4 +22,3 @@ class service_error(models.Model):
     model_content = models.TextField()
     operation = models.CharField(max_length=1, null=True)
     registration_datetime = models.DateTimeField(default=datetime.now, null=True)
-    
