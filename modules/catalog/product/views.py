@@ -4,16 +4,17 @@
 Module Docstring
 """
 
-from app.base import BaseViewUpy
 from django.views import generic
 from django.shortcuts import Http404, redirect, render
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.exceptions import PermissionDenied
-from modules.catalog.product.forms import ProductForm
-from modules.catalog.product.models import Product
 from django.utils.translation import gettext_lazy as _
 from django.contrib import messages
 from bootstrap_modal_forms.generic import BSModalDeleteView
+
+from modules.catalog.product.forms import ProductForm
+from modules.catalog.product.models import Product
+from app.base import BaseViewUpy
 
 
 class ProductListView(BaseViewUpy, LoginRequiredMixin, generic.ListView):

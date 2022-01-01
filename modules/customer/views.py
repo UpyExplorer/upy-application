@@ -4,12 +4,13 @@
 Module Docstring
 """
 
-from app.base import BaseViewUpy
 from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.exceptions import PermissionDenied
-from modules.customer.models import Customer
 from django.utils.translation import gettext_lazy as _
+
+from modules.customer.models import Customer
+from app.base import BaseViewUpy
 
 
 class CustomerListView(BaseViewUpy, LoginRequiredMixin, generic.ListView):
