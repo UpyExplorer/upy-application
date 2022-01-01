@@ -18,7 +18,7 @@ class Product(models.Model):
     """
     Product
     """
-    
+
     ITEM_TYPE = (
         ('1', _('Standard')),
         ('2', _('Variation')),
