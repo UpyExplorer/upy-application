@@ -1,5 +1,9 @@
 # coding=utf-8
 
+"""
+Module Docstring
+"""
+
 from decimal import Decimal
 
 from django import forms
