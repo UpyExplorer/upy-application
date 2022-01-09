@@ -20,6 +20,7 @@ class AdsLink(ModelUpyBase):
     company_data = models.ForeignKey(CompanyData, on_delete=models.SET_NULL, null=True)
     creation_time = models.DateTimeField(default=datetime.now, null=True)
     status = models.BooleanField(null=False, default=False)
+    external_id = models.CharField(max_length=50, blank=True, null=True, db_index=True)
 
     class Meta:
         db_table = 'ads_link'
