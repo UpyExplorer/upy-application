@@ -6,7 +6,7 @@ from os.path import dirname
 from django.utils.translation import gettext_lazy as _
 from sentry_sdk.integrations.django import DjangoIntegration
 
-BASE_DIR = dirname(dirname(dirname(dirname(os.path.abspath(__file__)))))
+BASE_DIR = dirname(dirname(dirname(os.path.abspath(__file__))))
 CONTENT_DIR = os.path.join(BASE_DIR, 'content')
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
