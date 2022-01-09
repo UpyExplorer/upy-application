@@ -60,6 +60,10 @@ INSTALLED_APPS = [
 
     # Logs
     'models_logging',
+    
+    # Rest Framework
+    'rest_framework',
+    'rest_framework.authtoken',
 ]
 
 LOGGING_MODELS  = (
