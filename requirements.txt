@@ -13,7 +13,7 @@ django-cors-headers==3.10.1
 django-crispy-forms==1.13.0
 django-environ==0.8.1
 django-forms-bootstrap==3.1.0
-packages/django-global-permissions-0.2.5.tar.gz
+django-global-permissions==0.2.5
 django-models-logging==1.0.8
 django-mysql==4.3.0
 django-pipeline==2.0.7
