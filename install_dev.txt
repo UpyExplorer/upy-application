@@ -27,7 +27,7 @@ certifi==2021.10.8
 cffi==1.15.0
 charset-normalizer==2.0.9
 colorama==0.4.3
-cryptography==36.0.0
+cryptography==39.0.1
 css-html-js-minify==2.5.5
 blessed==1.19.0
 attrs==21.2.0
