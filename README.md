@@ -6,6 +6,16 @@
 
 ---
 
+## Commit Style
+- ⚙️ NO-TASK
+- 📝 PEP8
+- 📌 ISSUE
+- 🪲 BUG
+- 📘 DOCS
+- 📦 PyPI
+- ❤️️ TEST
+- ⚠️ SECURITY
+
 ### 🚀 Github
 
 - https://github.com/UpyExplorer
