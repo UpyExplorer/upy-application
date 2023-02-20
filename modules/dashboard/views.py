@@ -1,3 +1,9 @@
+# coding=utf-8
+
+"""
+Module Docstring
+"""
+
 from django.views.generic import TemplateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.exceptions import PermissionDenied

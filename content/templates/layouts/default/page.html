@@ -24,22 +24,23 @@
 			{% endblock %}
 			<!-- ====================OPTION===================== -->
 
-			{% block square %}
+			{% block sub_content %}
 
-				<div class="col-lg-12 grid-margin stretch-card">
-					<div class="card">
-						<div class="card-body">
-							<h4 class="card-title">{{ view_name }}</h4>
-							<p class="card-description">{{ view_path }}</p>
-							<hr>
-							<!-- ====================CONTENT===================== -->
-							{% block container %}
+				{% block square %}
 
-							{% endblock %}
-							<!-- ====================CONTENT===================== -->
+					<div class="col-lg-12 grid-margin stretch-card">
+						<div class="card">
+							<div class="card-body">
+								<!-- ====================CONTENT===================== -->
+								{% block container %}
+
+								{% endblock %}
+								<!-- ====================CONTENT===================== -->
+							</div>
 						</div>
 					</div>
-				</div>
+
+				{% endblock %}
 
 			{% endblock %}
 

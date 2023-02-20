@@ -1,5 +1,8 @@
 {
   "dependencies": {
-    "uglify-js": "^3.14.4"
+    "less": "^4.1.2",
+    "stylus-compiler": "^0.2.1",
+    "uglify-js": "^3.14.5",
+    "yuglify": "^2.0.0"
   }
 }

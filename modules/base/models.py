@@ -1,7 +1,12 @@
+# coding=utf-8
 
-from datetime import datetime
+"""
+Model Config
+"""
+
 from django.db import models
 from django.contrib.auth.models import Group
+
 from global_permissions.models import GlobalPermission
 
 

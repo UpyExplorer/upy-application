@@ -1,0 +1,49 @@
+{% extends "layouts/default/page.html" %}
+
+{% load static %}
+{% load bootstrap5 %}
+{% load i18n %}
+
+{% block container %}
+
+	{% if baseapplication_list %}
+		<div class="row">
+
+			{% for baseapplication in baseapplication_list %}
+				<div class="col-md-4">
+					<div class="card mb-4 rounded-3 shadow-sm">
+						<div class="card-header py-3 d-flex flex-row mb-3">
+							<img src="{% static 'media/applications/'%}{{ baseapplication.image_name }}" width="70">
+								<div class="d-flex flex-column ml-2">
+									<a href="{{ baseapplication.url }}"><span>{{ baseapplication.name }}</span></a>
+									<span class="text-black-50">{{ baseapplication.get_type }}</span>
+									<span class="app-ratings">
+										{{ baseapplication.get_stars|safe }}
+									</span>
+								</div>
+						</div>
+						<div class="card-body" style="padding-top: 0px;">
+							<ul class="list-unstyled">
+								<li>{{ baseapplication.description }}</li>
+							</ul>
+							<div class="d-flex justify-content-between app-install mt-3">
+								<span>{% trans 'Installed' %} {{ baseapplication.Installed }} {% trans 'times' %}</span>
+								<span class="text-primary">{% trans 'To manage' %}&nbsp;
+									<i class="fa fa-angle-right"></i>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+
+	{% block pagination %}
+		{% include "layouts/modules/pagination.html" %}
+	{% endblock %}
+
+	{% else %}
+		<p>No ads found in your database.</p>
+	{% endif %}
+
+{% endblock %}

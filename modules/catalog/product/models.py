@@ -1,11 +1,24 @@
+# coding=utf-8
+
+"""
+Model Config
+"""
 
 from datetime import datetime
+
 from django.db import models
-from modules.company.models import CompanyData
-from modules.base.models import BaseCurrency
 from django.utils.translation import gettext_lazy as _
 
+from modules.base.models import BaseCurrency
+from modules.company.models import CompanyData
+from modules.catalog.category.models import Category
+
+
 class Product(models.Model):
+    """
+    Product
+    """
+
     ITEM_TYPE = (
         ('1', _('Standard')),
         ('2', _('Variation')),
@@ -30,6 +43,7 @@ class Product(models.Model):
     )
 
     company_data = models.ForeignKey(CompanyData, on_delete=models.SET_NULL, null=True)
+    category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True)
     creation_time = models.DateTimeField(default=datetime.now, null=True)
     name = models.CharField(max_length=100, blank=False, null=False, default='Product')
     subtitle = models.CharField(max_length=100, blank=False, null=False, default='Subtitle')
@@ -57,18 +71,36 @@ class Product(models.Model):
     warranty_value = models.IntegerField(null=True, default=0)
 
     class Meta:
+        """
+        Meta
+        """
         verbose_name = 'Catalog Product'
         verbose_name_plural = 'Catalog Product'
 
+    def get_name(self):
+        """
+        Get product name limiting 50 characters
+        """
+        return str(self.name[0:50]) + "..." if len(self.name) > 50 else self.name
 
     def get_absolute_url(self):
+        """
+        Get URL
+        """
         return "/catalog/product/{id}".format(id = self.id)
 
     def delete_absolute_url(self):
+        """
+        URL to delete
+        """
         return "/catalog/product/delete/{id}".format(id = self.id)
 
 
 class Image(models.Model):
+    """
+    Image
+    """
+
     ITEM_FORMAT = (
         ('1','JPG'),
         ('2','JPEG'),
@@ -86,14 +118,24 @@ class Image(models.Model):
     main = models.BooleanField(null=False, default=False)
 
     class Meta:
+        """
+        Meta
+        """
         verbose_name = 'Catalog Image'
         verbose_name_plural = 'Catalog Image'
 
     def get_absolute_url(self):
+        """
+        Get URL
+        """
         return "/catalog/image/{id}".format(id = self.id)
 
 
 class Setting(models.Model):
+    """
+    Setting
+    """
+
     company_data = models.ForeignKey(CompanyData, on_delete=models.SET_NULL, null=True)
     product = models.ForeignKey(Product, on_delete=models.SET_NULL, null=True)
     key = models.CharField(max_length=50,blank=True, null=True)
@@ -102,5 +144,8 @@ class Setting(models.Model):
     option_value = models.CharField(max_length=10,blank=True, null=True)
 
     class Meta:
+        """
+        Meta
+        """
         verbose_name = 'Catalog Setting'
         verbose_name_plural = 'Catalog Setting'

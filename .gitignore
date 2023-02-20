@@ -158,3 +158,6 @@ upy.pem
 
 .env-dev
 .env-prod
+
+db_manager.cnf
+db_application.cnf

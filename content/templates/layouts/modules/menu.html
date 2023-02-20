@@ -17,6 +17,15 @@
             <p>Menu</p>
         </li>
 
+        {% if perms.global_permissions.app_application %}
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'application:application_list' %}">
+                    <i class="mdi mdi-cloud-sync menu-icon"></i>
+                        <span class="menu-title">{% trans 'Applications' %}</span>
+                </a>
+            </li>
+        {% endif %}
+
         {% if perms.global_permissions.app_catalog %}
             <li class="nav-item">
                 <a class="nav-link collapsed" data-toggle="collapse" href="#ui-product" aria-expanded="false" aria-controls="ui-product">
@@ -51,6 +60,33 @@
                         {% endif %}
                     </ul>
                 </div>
+            </li>
+        {% endif %}
+
+        {% if perms.global_permissions.app_customer %}
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="{% url 'customer:customer_list' %}">
+                    <i class="mdi mdi-account-check menu-icon"></i>
+                        <span class="menu-title">{% trans 'Customers' %}</span>
+                </a>
+            </li>
+        {% endif %}
+
+        {% if perms.global_permissions.app_seller %}
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="{% url 'seller:seller_list' %}">
+                    <i class="mdi mdi-account-network menu-icon"></i>
+                        <span class="menu-title">{% trans 'Sellers' %}</span>
+                </a>
+            </li>
+        {% endif %}
+
+        {% if perms.global_permissions.app_ads %}
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="{% url 'ads:ads_list' %}">
+                    <i class="mdi mdi-square-inc-cash menu-icon"></i>
+                        <span class="menu-title">{% trans 'Ads' %}</span>
+                </a>
             </li>
         {% endif %}
 
