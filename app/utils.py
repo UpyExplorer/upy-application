@@ -1,7 +1,7 @@
 # coding=utf-8
 
 """
-Source Utils
+Source App
 """
 
 __all__ = ['get_field_list']

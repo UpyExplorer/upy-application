@@ -1,5 +1,9 @@
 # coding=utf-8
 
+"""
+Model Config
+"""
+
 from datetime import datetime
 from django.db import models
 from modules.company.models import CompanyData
@@ -22,4 +26,3 @@ class service_error(models.Model):
     model_content = models.TextField()
     operation = models.CharField(max_length=1, null=True)
     registration_datetime = models.DateTimeField(default=datetime.now, null=True)
-    

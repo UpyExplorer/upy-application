@@ -1,3 +1,9 @@
+# coding=utf-8
+
+"""
+Module Docstring
+"""
+
 from django.contrib import messages
 from django.contrib.auth import login, authenticate, REDIRECT_FIELD_NAME
 from django.contrib.auth.tokens import default_token_generator
@@ -37,7 +43,7 @@ from modules.catalog.category.models import Category
 from modules.customer.models import Customer
 from modules.seller.models import Seller
 
-from app.base import BaseViewUpy
+from app.base import BaseUpy
 
 from django.contrib.auth.models import Group
 
@@ -106,7 +112,7 @@ class LogInView(GuestOnlyView, FormView):
         return redirect(settings.LOGIN_REDIRECT_URL)
 
 
-class SignUpView(BaseViewUpy, GuestOnlyView, FormView):
+class SignUpView(BaseUpy, GuestOnlyView, FormView):
     template_name = 'account/sign_up.html'
     form_class = SignUpForm
 

@@ -8,14 +8,3 @@ class Migration(migrations.Migration):
     dependencies = [
         ('sale', '0003_auto_20211213_2312'),
     ]
-
-    operations = [
-        migrations.RemoveField(
-            model_name='order',
-            name='cutomer',
-        ),
-        migrations.RemoveField(
-            model_name='order',
-            name='seller',
-        ),
-    ]

@@ -1,12 +1,19 @@
-from app.base import BaseViewUpy
+# coding=utf-8
+
+"""
+Module Docstring
+"""
+
 from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.exceptions import PermissionDenied
-from modules.ads.models import AdsLink
 from django.utils.translation import gettext_lazy as _
 from django.contrib import messages
 from django.shortcuts import redirect, render
+
+from modules.ads.models import AdsLink
 from modules.ads.forms import AdsLinkForm
+from app.base import BaseViewUpy
 
 
 class AdsListView(BaseViewUpy, LoginRequiredMixin, generic.ListView):
