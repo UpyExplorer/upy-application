@@ -16,7 +16,7 @@ class Migration(migrations.Migration):
         ),
         migrations.AlterModelTable(
             name='category',
-            table='base_category',
+            table='base_categorye',
         ),
         migrations.AlterModelTable(
             name='currency',

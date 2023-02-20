@@ -1,3 +1,9 @@
+# coding=utf-8
+
+"""
+Source App
+"""
+
 from django.contrib import admin
 from django.conf import settings
 from django.urls import path, include
@@ -13,7 +19,11 @@ urlpatterns = [
     path('dashboard/', include('modules.dashboard.urls')),
     path('account/', include('modules.account.urls')),
     path('catalog/', include('modules.catalog.urls')),
-    path('sale/', include('modules.sale.urls'))
+    path('sale/', include('modules.sale.urls')),
+    path('seller/', include('modules.seller.urls')),
+    path('customer/', include('modules.customer.urls')),
+    path('ads/', include('modules.ads.urls')),
+    path('application/', include('modules.application.urls'))
 ]
 
 if settings.DEBUG:

@@ -1,0 +1,111 @@
+/* ===== FORM DEFAULT ===== */
+
+.form-check {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.form-check-input:checked {
+    background-color: #d3403f !important;
+    border-color: #303030 !important;
+    margin-top: 0px;
+    margin-left: 0px;
+    height: 35px;
+    width: 75px;
+}
+
+.form-switch .form-check-input {
+    width: 75px;
+    height: 35px;
+    margin-left: 0;
+}
+
+/* ===== ===== */
+/* ===== FORM PRODUCT ===== */
+
+.form-product-description-text {
+    font-family: 'Source Sans Pro' !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.3px !important;
+}
+
+/* ===== ===== */
+/* ===== DASHBOARD ===== */
+
+.dash-card {
+    left: 0px;
+    right: 0.17px;
+    height: fit-content;
+    top: 0px;
+    bottom: 0.33px;
+    background: #FFFFFF;
+    /* box-shadow: 2px 2px 2px 0px #0000001f !important; */
+}
+
+.dash-card-header {
+    padding-bottom: 0px;
+    background: #ffffff;
+}
+
+.dash-card-title {
+    font-weight: 900;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    font-size: 35px;
+    color: #000000;
+}
+
+.dash-list-unstyled {
+    font-weight: 600;
+    font-size: 15px;
+    color: #6c6c6c;
+    margin-bottom: 5px;
+}
+
+.dash-line {
+    top: 0px;
+    bottom: 0px;
+    border-radius: 8.95833px;
+    height: 2px;
+    width: 100%;
+    background: #303030;
+}
+
+.dash-grid-margin {
+    margin-bottom: 0px !important;
+    padding-left: 2.5px;
+    padding-right: 2.5px;
+}
+
+.dash-row {
+    /* margin-left: 0px !important; */
+    /* padding-right: 0px !important; */
+    /* padding-left: 0px !important; */
+    padding-left: 35px;
+}
+
+/* ===== ===== */
+/* ===== APPLICATION ===== */
+
+.app-ratings i {
+    color: #d3403f
+}
+
+.app-install span {
+    font-size: 12px
+}
+
+/* ===== ===== */
+
+.table {
+    --bs-table-striped-bg: #fcfcfc !important;
+}
+
+.table-checkbox {
+    margin-top: 10px;
+}
+
+.table-th {
+    padding-bottom: 10px !important;
+    padding-top: 10px !important;
+}
