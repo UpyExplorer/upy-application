@@ -2,11 +2,16 @@
 {% load i18n %}
 
 <div class="col-12 grid-margin stretch-card" style="margin-bottom: 15px;">
-    <div class="card">
+    <div class="card" style="border-radius: 0.5rem;">
         <div class="card-body" style="padding-bottom: 15px; padding-top: 15px;">
             <div class="row">
-                <div class="col-12">
+                <div class="col-xl-8 col-lg-8 col-md-7">
+                    <h4 class="card-title">{{ view_name }}</h4>
+                    <p class="card-description" style="margin-bottom: 0px;">{{ view_path }}</p>
 
+                </div>
+                <div class="col-md-auto ml-auto" style="margin-top: 10px;">
+                    <hr class="d-block d-md-none d-lg-none d-xl-none"></hr>
                     {% if btn_info %}
                         <button 
                             type="button" id="btnInfo" class="btn btn-primary btn-sm"

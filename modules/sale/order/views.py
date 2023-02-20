@@ -1,12 +1,20 @@
-from app.base import BaseUpy
+# coding=utf-8
+
+"""
+Module Docstring
+"""
+
 from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.exceptions import PermissionDenied
-from modules.sale.models import Order
 from django.utils.translation import gettext_lazy as _
 
+from modules.sale.models import Order
+from app.base import BaseViewUpy
 
-class OrderListView(BaseUpy, LoginRequiredMixin, generic.ListView):
+
+
+class OrderListView(BaseViewUpy, LoginRequiredMixin, generic.ListView):
     template_name = 'order/order_list.html'
     model = Order
     paginate_by = 5

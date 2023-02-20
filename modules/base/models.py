@@ -1,7 +1,12 @@
+# coding=utf-8
 
-from datetime import datetime
+"""
+Model Config
+"""
+
 from django.db import models
 from django.contrib.auth.models import Group
+
 from global_permissions.models import GlobalPermission
 
 
@@ -20,6 +25,8 @@ class BaseConfiguration(ModelUpyBase):
 
     class Meta:
         db_table = 'base_configuration'
+        verbose_name = 'Base Configuration'
+        verbose_name_plural = 'Base Configuration'
 
 
 class BaseModule(ModelUpyBase):
@@ -31,7 +38,8 @@ class BaseModule(ModelUpyBase):
 
     class Meta:
         db_table = 'base_module'
-
+        verbose_name = 'Base Module'
+        verbose_name_plural = 'Base Module'
 
 class BasePlan(ModelUpyBase):
     code = models.CharField(max_length=20, unique=True)
@@ -39,6 +47,8 @@ class BasePlan(ModelUpyBase):
 
     class Meta:
         db_table = 'base_plan'
+        verbose_name = 'Base Plan'
+        verbose_name_plural = 'Base Plan'
 
 
 class BaseCurrency(ModelUpyBase):
@@ -49,6 +59,8 @@ class BaseCurrency(ModelUpyBase):
 
     class Meta:
         db_table = 'base_currency'
+        verbose_name = 'Base Currency'
+        verbose_name_plural = 'Base Currency'
 
 
 class BaseCategory(ModelUpyBase):
@@ -57,6 +69,8 @@ class BaseCategory(ModelUpyBase):
 
     class Meta:
         db_table = 'base_category'
+        verbose_name = 'Base Category'
+        verbose_name_plural = 'Base Category'
 
 
 class BasePaymentType(ModelUpyBase):
@@ -69,6 +83,8 @@ class BasePaymentType(ModelUpyBase):
 
     class Meta:
         db_table = 'base_payment_type'
+        verbose_name = 'Base Payment Type'
+        verbose_name_plural = 'Base Payment Type'
 
 
 class BaseCreditOperator(ModelUpyBase):
@@ -80,3 +96,5 @@ class BaseCreditOperator(ModelUpyBase):
 
     class Meta:
         db_table = 'base_credit_operator'
+        verbose_name = 'Base Credit Operator'
+        verbose_name_plural = 'Base Credit Operator'
