@@ -14,6 +14,7 @@
 - 📘 DOCS
 - 📦 PyPI
 - ❤️️ TEST
+- ⚠️ SECURITY
 
 ### 🚀 Github
 
