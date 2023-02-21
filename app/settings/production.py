@@ -1,26 +1,22 @@
 import os
-import environ
+# import sentry_sdk
 import dj_database_url
-import warnings
 
 from os.path import dirname
 from django.utils.translation import gettext_lazy as _
-
-env = environ.Env()
-environ.Env.read_env()
-
-# warnings.simplefilter('error', DeprecationWarning)
+# from sentry_sdk.integrations.django import DjangoIntegration
 
 BASE_DIR = dirname(dirname(dirname(os.path.abspath(__file__))))
 CONTENT_DIR = os.path.join(BASE_DIR, 'content')
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
-SECRET_KEY = env("DJANGO_SECRET_KEY")
+SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
 
-DEBUG = env.bool("DJANGO_DEBUG", False)
-ALLOWED_HOSTS = env.list("DJANGO_ALLOWED_HOSTS", default=['127.0.0.1', 'localhost'])
+DEBUG = bool(os.getenv("DJANGO_DEBUG", False))
+ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
 
 SITE_ID = 1
+DISABLE_COLLECTSTATIC = 1
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -59,7 +55,7 @@ INSTALLED_APPS = [
     'global_permissions',
 
     # Logs
-    'models_logging',
+    # 'models_logging',
     
     # Rest Framework
     'rest_framework',
@@ -86,12 +82,10 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
-    'models_logging.middleware.LoggingStackMiddleware',
+    # 'models_logging.middleware.LoggingStackMiddleware',
 ]
 
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
-# STATICFILES_STORAGE = 'pipeline.storage.PipelineManifestStorage'
-# STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
 STATICFILES_STORAGE = 'pipeline.storage.PipelineStorage'
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
@@ -100,7 +94,7 @@ STATICFILES_FINDERS = (
 )
 
 PIPELINE = {
-    'PIPELINE_ENABLED': False,
+    'PIPELINE_ENABLED': True,
     'JS_COMPRESSOR': 'pipeline.compressors.uglifyjs.UglifyJSCompressor',
     'COMPILERS': (
         'pipeline.compilers.less.LessCompiler',
@@ -165,13 +159,18 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'app.wsgi.application'
 
-EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
-EMAIL_FILE_PATH = os.path.join(CONTENT_DIR, 'tmp/emails')
-EMAIL_HOST_USER = env("DJANGO_EMAIL_HOST_USER")
-DEFAULT_FROM_EMAIL = env("DJANGO_DEFAULT_FROM_EMAIL")
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_HOST = os.getenv('DJANGO_EMAIL_HOST')
+EMAIL_HOST_USER = os.getenv('DJANGO_EMAIL_HOST_USER')
+DEFAULT_FROM_EMAIL = os.getenv('DJANGO_DEFAULT_FROM_EMAIL')
+EMAIL_HOST_PASSWORD = os.getenv('DJANGO_EMAIL_HOST_PASSWORD')
+EMAIL_PORT = os.getenv('DJANGO_EMAIL_PORT')
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True
 
 DATABASES = {
-    'default': dj_database_url.config(default=env("DJANGO_DATABASE_URL"))
+    'default': dj_database_url.config(default=os.getenv("DJANGO_DATABASE_URL"))
 }
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -189,20 +188,16 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-ENABLE_USER_ACTIVATION = False
-DISABLE_USERNAME = True
+ENABLE_USER_ACTIVATION = True
+DISABLE_USERNAME = False
 LOGIN_VIA_EMAIL = True
 LOGIN_VIA_EMAIL_OR_USERNAME = False
 LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_URL = 'account:log_in'
 USE_REMEMBER_ME = True
 
-RESTORE_PASSWORD_VIA_EMAIL_OR_USERNAME = False
-ENABLE_ACTIVATION_AFTER_EMAIL_CHANGE = True
-
-SIGN_UP_FIELDS = ['username', 'first_name', 'last_name', 'email', 'password1', 'password2']
-if DISABLE_USERNAME:
-    SIGN_UP_FIELDS = ['first_name', 'last_name', 'email', 'password1', 'password2']
+RESTORE_PASSWORD_VIA_EMAIL_OR_USERNAME = True
+EMAIL_ACTIVATION_AFTER_CHANGING = True
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
 
@@ -230,3 +225,14 @@ STATICFILES_DIRS = [
 LOCALE_PATHS = [
     os.path.join(CONTENT_DIR, 'locale')
 ]
+
+SIGN_UP_FIELDS = ['username', 'first_name', 'last_name', 'email', 'password1', 'password2']
+if DISABLE_USERNAME:
+    SIGN_UP_FIELDS = ['first_name', 'last_name', 'email', 'password1', 'password2']
+
+# sentry_sdk.init(
+#     dsn="https://1604a98438ee43c79d0a5c421c7c8d75@o1099218.ingest.sentry.io/6123760",
+#     integrations=[DjangoIntegration()],
+#     traces_sample_rate=1.0,
+#     send_default_pii=True
+# )
