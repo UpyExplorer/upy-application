@@ -49,7 +49,6 @@ class AdsLinkForm(forms.ModelForm):
             label=_("Application")
             )
 
-
     class Meta:
         model = AdsLink
         fields = [

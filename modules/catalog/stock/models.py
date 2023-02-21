@@ -20,7 +20,6 @@ class StockLocale(models.Model):
     code = models.CharField(max_length=5, blank=False, null=True, default='STD')
     main = models.BooleanField(null=False, default=False)
 
-
     class Meta:
         db_table = 'catalog_stock_locale'
         verbose_name = 'Catalog Stock Locale'
