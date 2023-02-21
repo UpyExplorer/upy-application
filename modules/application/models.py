@@ -5,9 +5,7 @@ Model Config
 """
 
 from datetime import datetime
-
 from django.db import models
-from django.utils.translation import gettext_lazy as _
 
 from modules.base.models import ModelUpyBase
 from modules.company.models import CompanyData

@@ -36,16 +36,8 @@ from .forms import (
 )
 
 from modules.account.models import Activation
-from modules.base.models import BaseConfiguration
-from modules.company.models import CompanyData, CompanyConfiguration, CompanyRelationship
-
-from modules.catalog.category.models import Category
-from modules.customer.models import Customer
-from modules.seller.models import Seller
-
+from modules.company.models import CompanyRelationship
 from app.base import BaseUpy
-
-from django.contrib.auth.models import Group
 
 
 class GuestOnlyView(View):
