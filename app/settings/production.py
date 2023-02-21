@@ -28,10 +28,8 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'whitenoise.runserver_nostatic',
     'pipeline',
-
     # Vendor apps
     'bootstrap5',
-
     # Application apps
     'modules.base',
     'modules.log',
@@ -45,24 +43,20 @@ INSTALLED_APPS = [
     'modules.ads',
     'modules.seller',
     'modules.customer',
-
     # Forms
     'widget_tweaks',
     'crispy_forms',
-	'bootstrap_modal_forms',
-
+    'bootstrap_modal_forms',
     # Permissions
     'global_permissions',
-
     # Logs
     # 'models_logging',
-    
     # Rest Framework
     'rest_framework',
     'rest_framework.authtoken',
 ]
 
-LOGGING_MODELS  = (
+LOGGING_MODELS = (
     'modules.base',
     'modules.api',
     'modules.account',
@@ -103,29 +97,29 @@ PIPELINE = {
     'JAVASCRIPT': {
         'app': {
             'source_filenames': (
-              'js/base_upyexplorer.js',
+                'js/base_upyexplorer.js',
             ),
             'output_filename': 'js/main.min.js',
         },
         'components': {
             'source_filenames': (
-              'js/components/chart.js',
-              'js/components/dashboard.js',
-              'js/components/hoverable-collapse.js',
-              'js/components/jquery.bootstrap.modal.forms.js',
-              'js/components/off-canvas.js',
-              'js/components/template.js',
+                'js/components/chart.js',
+                'js/components/dashboard.js',
+                'js/components/hoverable-collapse.js',
+                'js/components/jquery.bootstrap.modal.forms.js',
+                'js/components/off-canvas.js',
+                'js/components/template.js',
             ),
             'output_filename': 'js/components/components.min.js',
         }
     },
     'STYLESHEETS': {
         'styles': {
-        'source_filenames': (
-            'css/base_upyexplorer.css',
-            'css/upy_base.css',
-        ),
-        'output_filename': 'css/styles.min.css',
+            'source_filenames': (
+                'css/base_upyexplorer.css',
+                'css/upy_base.css',
+            ),
+            'output_filename': 'css/styles.min.css',
         },
     },
 }
@@ -133,8 +127,8 @@ PIPELINE = {
 PIPELINE_DISABLE_WRAPPER = False
 
 MIDDLEWARE_CLASSES = (
-   'django.middleware.gzip.GZipMiddleware',
-   'pipeline.middleware.MinifyHTMLMiddleware',
+    'django.middleware.gzip.GZipMiddleware',
+    'pipeline.middleware.MinifyHTMLMiddleware',
 )
 
 ROOT_URLCONF = 'app.urls'

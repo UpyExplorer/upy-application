@@ -45,7 +45,7 @@ class BaseUpy():
             user.groups.add(user_group)
 
             # Add CompanyRelationship
-            relationship = CompanyRelationship(company_data_id=data.id,user_id=user.id)
+            relationship = CompanyRelationship(company_data_id=data.id, user_id=user.id)
             relationship.save()
 
             # add Category
@@ -76,7 +76,7 @@ class BaseUpy():
             )
             stock_locale.save()
 
-        except:
+        except Exception:
             raise
 
 
