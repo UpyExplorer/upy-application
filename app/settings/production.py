@@ -1,10 +1,10 @@
 import os
-import sentry_sdk
+# import sentry_sdk
 import dj_database_url
 
 from os.path import dirname
 from django.utils.translation import gettext_lazy as _
-from sentry_sdk.integrations.django import DjangoIntegration
+# from sentry_sdk.integrations.django import DjangoIntegration
 
 BASE_DIR = dirname(dirname(dirname(os.path.abspath(__file__))))
 CONTENT_DIR = os.path.join(BASE_DIR, 'content')
@@ -55,7 +55,7 @@ INSTALLED_APPS = [
     'global_permissions',
 
     # Logs
-    'models_logging',
+    # 'models_logging',
     
     # Rest Framework
     'rest_framework',
@@ -82,7 +82,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
-    'models_logging.middleware.LoggingStackMiddleware',
+    # 'models_logging.middleware.LoggingStackMiddleware',
 ]
 
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
@@ -230,9 +230,9 @@ SIGN_UP_FIELDS = ['username', 'first_name', 'last_name', 'email', 'password1', '
 if DISABLE_USERNAME:
     SIGN_UP_FIELDS = ['first_name', 'last_name', 'email', 'password1', 'password2']
 
-sentry_sdk.init(
-    dsn="https://1604a98438ee43c79d0a5c421c7c8d75@o1099218.ingest.sentry.io/6123760",
-    integrations=[DjangoIntegration()],
-    traces_sample_rate=1.0,
-    send_default_pii=True
-)
+# sentry_sdk.init(
+#     dsn="https://1604a98438ee43c79d0a5c421c7c8d75@o1099218.ingest.sentry.io/6123760",
+#     integrations=[DjangoIntegration()],
+#     traces_sample_rate=1.0,
+#     send_default_pii=True
+# )
