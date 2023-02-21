@@ -100,6 +100,7 @@ class ProductUpdateView(BaseViewUpy, LoginRequiredMixin, generic.UpdateView):
         messages.success(request, _('Product saved successfully!'))
         return super().post(request, *args, **kwargs)
 
+
 class ProductCreateView(BaseViewUpy, LoginRequiredMixin, generic.CreateView):
     template_name = 'catalog/product/product_update.html'
     form_class = ProductForm

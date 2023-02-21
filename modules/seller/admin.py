@@ -10,6 +10,7 @@ from modules.seller.models import (
     Seller
 )
 
+
 class SellerAdmin(admin.ModelAdmin):
     """
     Seller Admin

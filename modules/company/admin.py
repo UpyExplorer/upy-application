@@ -12,6 +12,7 @@ from modules.company.models import (
     CompanyRelationship
 )
 
+
 class CompanyDataAdmin(admin.ModelAdmin):
     list_display = get_field_list(CompanyData)
 

@@ -56,6 +56,7 @@ class BaseApplication(ModelUpyBase):
             stars = stars + "<i class='mdi mdi-star'></i>"
         return stars
 
+
 class ApplicationLink(ModelUpyBase):
     base_application = models.ForeignKey(BaseApplication, on_delete=models.SET_NULL, null=True)
     company_data = models.ForeignKey(CompanyData, on_delete=models.SET_NULL, null=True)

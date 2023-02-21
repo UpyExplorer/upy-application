@@ -14,6 +14,7 @@ from modules.catalog.product.models import (
 from modules.catalog.category.models import Category
 from modules.catalog.stock.models import StockLocale, Stock
 
+
 class ProductAdmin(admin.ModelAdmin):
     list_display = get_field_list(Product)
 
@@ -32,6 +33,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 class StockLocaleAdmin(admin.ModelAdmin):
     list_display = get_field_list(StockLocale)
+
 
 class StockAdmin(admin.ModelAdmin):
     list_display = get_field_list(Stock)

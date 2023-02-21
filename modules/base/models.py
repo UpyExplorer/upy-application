@@ -18,6 +18,7 @@ class ModelUpyBase(models.Model):
     class Meta:
         abstract = True
 
+
 class BaseConfiguration(ModelUpyBase):
     key = models.CharField(max_length=50, blank=True, null=True)
     description = models.CharField(max_length=50, blank=True, null=True)
@@ -40,6 +41,7 @@ class BaseModule(ModelUpyBase):
         db_table = 'base_module'
         verbose_name = 'Base Module'
         verbose_name_plural = 'Base Module'
+
 
 class BasePlan(ModelUpyBase):
     code = models.CharField(max_length=20, unique=True)

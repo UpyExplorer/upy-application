@@ -10,6 +10,7 @@ from modules.api.models import (
     Token
 )
 
+
 class TokenAdmin(admin.ModelAdmin):
     list_display = get_field_list(Token)
 

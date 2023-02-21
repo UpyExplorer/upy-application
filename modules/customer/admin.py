@@ -10,6 +10,7 @@ from modules.customer.models import (
     Customer
 )
 
+
 class CustomerAdmin(admin.ModelAdmin):
     list_display = get_field_list(Customer)
 

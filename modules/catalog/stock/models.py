@@ -26,6 +26,7 @@ class StockLocale(models.Model):
         verbose_name = 'Catalog Stock Locale'
         verbose_name_plural = 'Catalog Stock Locale'
 
+
 class Stock(models.Model):
     ITEM_TYPE = (
         ('1', _('Other')),

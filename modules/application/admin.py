@@ -11,6 +11,7 @@ from modules.application.models import (
    ApplicationLink
 )
 
+
 class BaseApplicationAdmin(admin.ModelAdmin):
     list_display = [
         'name',

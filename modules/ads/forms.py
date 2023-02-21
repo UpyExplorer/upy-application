@@ -17,6 +17,7 @@ class ChoiceFieldProduct(BaseChoiceField):
     def label_from_instance(self, obj):
         return "%s" % obj.name
 
+
 class ChoiceFieldApplication(BaseChoiceField):
     def label_from_instance(self, obj):
         return "%s" % obj.base_application.name
