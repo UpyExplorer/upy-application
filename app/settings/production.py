@@ -29,12 +29,9 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'whitenoise.runserver_nostatic',
     'pipeline',
-    # Vendor apps
     'bootstrap5',
-    # Application apps
     'modules.base',
     'modules.log',
-    'modules.api',
     'modules.account',
     'modules.dashboard',
     'modules.company',
@@ -44,22 +41,14 @@ INSTALLED_APPS = [
     'modules.ads',
     'modules.seller',
     'modules.customer',
-    # Forms
     'widget_tweaks',
     'crispy_forms',
     'bootstrap_modal_forms',
-    # Permissions
-    'global_permissions',
-    # Logs
-    # 'models_logging',
-    # Rest Framework
-    'rest_framework',
-    'rest_framework.authtoken',
+    'global_permissions'
 ]
 
 LOGGING_MODELS = (
     'modules.base',
-    'modules.api',
     'modules.account',
     'modules.company',
     'django.contrib.auth',
