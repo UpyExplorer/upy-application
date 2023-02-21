@@ -161,3 +161,6 @@ upy.pem
 
 db_manager.cnf
 db_application.cnf
+
+# Database
+*.sqlite
