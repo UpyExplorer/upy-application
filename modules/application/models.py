@@ -42,11 +42,11 @@ class BaseApplication(ModelUpyBase):
 
     def get_type(self):
         items = {
-            '1':'Marketplace',
-            '2':'E-commerce',
-            '3':'Payment',
-            '4':'Management',
-            '5':'Logistics'
+            '1': 'Marketplace',
+            '2': 'E-commerce',
+            '3': 'Payment',
+            '4': 'Management',
+            '5': 'Logistics'
             }
         return items.get(str(self.type), None)
 
