@@ -12,7 +12,7 @@
 - 📌 ISSUE
 - 🪲 BUG
 - 📘 DOCS
-- 📦 PyPI
+- 📦 BUILD
 - ❤️️ TEST
 - ⚠️ SECURITY
 
