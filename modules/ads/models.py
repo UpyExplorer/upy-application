@@ -28,4 +28,4 @@ class AdsLink(ModelUpyBase):
         verbose_name_plural = 'Ads Link'
 
     def get_absolute_url(self):
-        return "/ads/{id}".format(id = self.id)
+        return "/ads/{id}".format(id=self.id)

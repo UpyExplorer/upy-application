@@ -87,13 +87,13 @@ class Product(models.Model):
         """
         Get URL
         """
-        return "/catalog/product/{id}".format(id = self.id)
+        return "/catalog/product/{id}".format(id=self.id)
 
     def delete_absolute_url(self):
         """
         URL to delete
         """
-        return "/catalog/product/delete/{id}".format(id = self.id)
+        return "/catalog/product/delete/{id}".format(id=self.id)
 
 
 class Image(models.Model):
@@ -128,7 +128,7 @@ class Image(models.Model):
         """
         Get URL
         """
-        return "/catalog/image/{id}".format(id = self.id)
+        return "/catalog/image/{id}".format(id=self.id)
 
 
 class Setting(models.Model):
