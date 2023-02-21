@@ -61,13 +61,13 @@ class Product(models.Model):
     detail_height = models.DecimalField(max_digits=20, decimal_places=5, null=True)
     active = models.BooleanField(null=False, default=False)
     video_url = models.TextField(blank=True, null=True)
-    type = models.CharField(choices=ITEM_TYPE,max_length=1, null=True)
-    condition = models.CharField(choices=ITEM_CONDITION,max_length=1, null=True)
+    type = models.CharField(choices=ITEM_TYPE, max_length=1, null=True)
+    condition = models.CharField(choices=ITEM_CONDITION, max_length=1, null=True)
     stock = models.IntegerField(null=True, default=0)
     sold_quantity = models.IntegerField(null=True, default=0)
     currency = models.ForeignKey(BaseCurrency, on_delete=models.SET_NULL, null=True, default=None)
-    warranty_option = models.CharField(choices=WARRANTY_OPTION,max_length=1, null=True)
-    warranty_time = models.CharField(choices=WARRANTY_TIME,max_length=1, null=True)
+    warranty_option = models.CharField(choices=WARRANTY_OPTION, max_length=1, null=True)
+    warranty_time = models.CharField(choices=WARRANTY_TIME, max_length=1, null=True)
     warranty_value = models.IntegerField(null=True, default=0)
 
     class Meta:
@@ -102,9 +102,9 @@ class Image(models.Model):
     """
 
     ITEM_FORMAT = (
-        ('1','JPG'),
-        ('2','JPEG'),
-        ('3','PNG'),
+        ('1', 'JPG'),
+        ('2', 'JPEG'),
+        ('3', 'PNG'),
     )
 
     company_data = models.ForeignKey(CompanyData, on_delete=models.SET_NULL, null=True)
@@ -113,7 +113,7 @@ class Image(models.Model):
     original_name = models.CharField(max_length=100, blank=False, null=False)
     fake_name = models.CharField(max_length=100, blank=False, null=False)
     url = models.TextField(blank=True, null=True)
-    image_format = models.CharField(choices=ITEM_FORMAT,max_length=1, null=True)
+    image_format = models.CharField(choices=ITEM_FORMAT, max_length=1, null=True)
     active = models.BooleanField(null=False, default=False)
     main = models.BooleanField(null=False, default=False)
 
@@ -138,10 +138,10 @@ class Setting(models.Model):
 
     company_data = models.ForeignKey(CompanyData, on_delete=models.SET_NULL, null=True)
     product = models.ForeignKey(Product, on_delete=models.SET_NULL, null=True)
-    key = models.CharField(max_length=50,blank=True, null=True)
-    description = models.CharField(max_length=50,blank=True, null=True)
-    value = models.CharField(max_length=10,blank=True, null=True)
-    option_value = models.CharField(max_length=10,blank=True, null=True)
+    key = models.CharField(max_length=50, blank=True, null=True)
+    description = models.CharField(max_length=50, blank=True, null=True)
+    value = models.CharField(max_length=10, blank=True, null=True)
+    option_value = models.CharField(max_length=10, blank=True, null=True)
 
     class Meta:
         """

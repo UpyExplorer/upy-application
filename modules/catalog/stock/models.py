@@ -38,7 +38,7 @@ class Stock(models.Model):
 
     company_data = models.ForeignKey(CompanyData, on_delete=models.SET_NULL, null=True)
     creation_time = models.DateTimeField(default=datetime.now, null=False)
-    type = models.CharField(choices=ITEM_TYPE,max_length=1, default=1, null=False)
+    type = models.CharField(choices=ITEM_TYPE, max_length=1, default=1, null=False)
     product = models.ForeignKey(Product, related_name='product', on_delete=models.SET_NULL, null=True)
     stock_locale = models.ForeignKey(StockLocale, on_delete=models.SET_NULL, null=True)
     model_class = models.CharField(max_length=15, blank=True, null=True)

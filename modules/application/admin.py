@@ -12,7 +12,15 @@ from modules.application.models import (
 )
 
 class BaseApplicationAdmin(admin.ModelAdmin):
-    list_display = ['name','code','description','url','type','Installed','stars', 'status']
+    list_display = [
+        'name',
+        'code',
+        'description',
+        'url',
+        'type',
+        'Installed',
+        'stars',
+        'status']
 
 
 class ApplicationLinkAdmin(admin.ModelAdmin):
