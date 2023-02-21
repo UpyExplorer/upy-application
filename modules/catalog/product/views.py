@@ -174,7 +174,7 @@ class ProductDeleteView(BaseViewUpy, LoginRequiredMixin, BSModalDeleteView):
     def get(self, request, *args, **kwargs):
         if not self.request.user.has_perm('global_permissions.app_catalog_product_delete'):
             raise PermissionDenied
-    
+
         self.object = self.get_object()
         context = self.get_context_data(object=self.object)
 

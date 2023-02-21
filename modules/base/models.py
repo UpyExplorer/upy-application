@@ -14,7 +14,7 @@ class ModelUpyBase(models.Model):
 
     def get_queryset(self, request):
         return super().get_queryset(request).using(self.using)
- 
+
     class Meta:
         abstract = True
 

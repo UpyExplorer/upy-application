@@ -131,7 +131,7 @@ class SignUpView(BaseUpy, GuestOnlyView, FormView):
             # Create a user record
             user.save()
             self.create_data(user)
-        except:
+        except Exception:
             messages.error(request, _('Error!'))
             return redirect('account:sign_up')
 

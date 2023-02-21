@@ -44,8 +44,7 @@ class BaseApplication(ModelUpyBase):
             '2': 'E-commerce',
             '3': 'Payment',
             '4': 'Management',
-            '5': 'Logistics'
-            }
+            '5': 'Logistics'}
         return items.get(str(self.type), None)
 
     def get_stars(self):

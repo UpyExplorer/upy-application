@@ -45,7 +45,7 @@ class Stock(models.Model):
     model_id = models.IntegerField(blank=True, null=True)
     quantity = models.IntegerField(null=True)
     new_stock = models.IntegerField(null=True)
-    
+
     class Meta:
         db_table = 'catalog_stock'
         verbose_name = 'Catalog Stock'
