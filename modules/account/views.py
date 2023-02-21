@@ -128,7 +128,7 @@ class SignUpView(BaseUpy, GuestOnlyView, FormView):
 
         if settings.DISABLE_USERNAME:
             # Set a temporary username
-            user.username = get_random_string()
+            user.username = get_random_string(10)
         else:
             user.username = form.cleaned_data['username']
 

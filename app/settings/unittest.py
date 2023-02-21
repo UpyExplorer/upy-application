@@ -1,5 +1,4 @@
 import os
-import dj_database_url
 import warnings
 
 from os.path import dirname
@@ -10,9 +9,9 @@ BASE_DIR = dirname(dirname(dirname(os.path.abspath(__file__))))
 CONTENT_DIR = os.path.join(BASE_DIR, 'content')
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
-SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
+SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", "KEY")
 
-DEBUG = bool(os.getenv("DJANGO_DEBUG", True))
+DEBUG = True
 ALLOWED_HOSTS = os.getenv(
     "DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
 
@@ -49,8 +48,6 @@ INSTALLED_APPS = [
     'bootstrap_modal_forms',
     # Permissions
     'global_permissions',
-    # Logs
-    # 'models_logging',
     # Rest Framework
     'rest_framework',
     'rest_framework.authtoken',
@@ -76,12 +73,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
-    # 'models_logging.middleware.LoggingStackMiddleware',
 ]
 
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
-# STATICFILES_STORAGE = 'pipeline.storage.PipelineManifestStorage'
-# STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
 STATICFILES_STORAGE = 'pipeline.storage.PipelineStorage'
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
@@ -161,8 +154,12 @@ EMAIL_HOST_USER = os.getenv("DJANGO_EMAIL_HOST_USER")
 DEFAULT_FROM_EMAIL = os.getenv("DJANGO_DEFAULT_FROM_EMAIL")
 
 DATABASES = {
-    'default': dj_database_url.config(default=os.getenv("DJANGO_DATABASE_URL"))
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'database.sqlite'
+    }
 }
+
 
 password_validation = 'django.contrib.auth.password_validation.'
 

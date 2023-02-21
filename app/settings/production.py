@@ -13,7 +13,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
 
 DEBUG = bool(os.getenv("DJANGO_DEBUG", False))
-ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
+ALLOWED_HOSTS = os.getenv(
+    "DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
 
 SITE_ID = 1
 DISABLE_COLLECTSTATIC = 1
@@ -28,10 +29,8 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'whitenoise.runserver_nostatic',
     'pipeline',
-
     # Vendor apps
     'bootstrap5',
-
     # Application apps
     'modules.base',
     'modules.log',
@@ -45,24 +44,20 @@ INSTALLED_APPS = [
     'modules.ads',
     'modules.seller',
     'modules.customer',
-
     # Forms
     'widget_tweaks',
     'crispy_forms',
-	'bootstrap_modal_forms',
-
+    'bootstrap_modal_forms',
     # Permissions
     'global_permissions',
-
     # Logs
     # 'models_logging',
-    
     # Rest Framework
     'rest_framework',
     'rest_framework.authtoken',
 ]
 
-LOGGING_MODELS  = (
+LOGGING_MODELS = (
     'modules.base',
     'modules.api',
     'modules.account',
@@ -103,29 +98,29 @@ PIPELINE = {
     'JAVASCRIPT': {
         'app': {
             'source_filenames': (
-              'js/base_upyexplorer.js',
+                'js/base_upyexplorer.js',
             ),
             'output_filename': 'js/main.min.js',
         },
         'components': {
             'source_filenames': (
-              'js/components/chart.js',
-              'js/components/dashboard.js',
-              'js/components/hoverable-collapse.js',
-              'js/components/jquery.bootstrap.modal.forms.js',
-              'js/components/off-canvas.js',
-              'js/components/template.js',
+                'js/components/chart.js',
+                'js/components/dashboard.js',
+                'js/components/hoverable-collapse.js',
+                'js/components/jquery.bootstrap.modal.forms.js',
+                'js/components/off-canvas.js',
+                'js/components/template.js',
             ),
             'output_filename': 'js/components/components.min.js',
         }
     },
     'STYLESHEETS': {
         'styles': {
-        'source_filenames': (
-            'css/base_upyexplorer.css',
-            'css/upy_base.css',
-        ),
-        'output_filename': 'css/styles.min.css',
+            'source_filenames': (
+                'css/base_upyexplorer.css',
+                'css/upy_base.css',
+            ),
+            'output_filename': 'css/styles.min.css',
         },
     },
 }
@@ -133,8 +128,8 @@ PIPELINE = {
 PIPELINE_DISABLE_WRAPPER = False
 
 MIDDLEWARE_CLASSES = (
-   'django.middleware.gzip.GZipMiddleware',
-   'pipeline.middleware.MinifyHTMLMiddleware',
+    'django.middleware.gzip.GZipMiddleware',
+    'pipeline.middleware.MinifyHTMLMiddleware',
 )
 
 ROOT_URLCONF = 'app.urls'
@@ -173,18 +168,20 @@ DATABASES = {
     'default': dj_database_url.config(default=os.getenv("DJANGO_DATABASE_URL"))
 }
 
+password_validation = 'django.contrib.auth.password_validation.'
+
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': password_validation + 'UserAttributeSimilarityValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': password_validation + 'MinimumLengthValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': password_validation + 'CommonPasswordValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': password_validation + 'NumericPasswordValidator',
     },
 ]
 
@@ -226,9 +223,21 @@ LOCALE_PATHS = [
     os.path.join(CONTENT_DIR, 'locale')
 ]
 
-SIGN_UP_FIELDS = ['username', 'first_name', 'last_name', 'email', 'password1', 'password2']
+SIGN_UP_FIELDS = [
+    'username',
+    'first_name',
+    'last_name',
+    'email',
+    'password1',
+    'password2']
+
 if DISABLE_USERNAME:
-    SIGN_UP_FIELDS = ['first_name', 'last_name', 'email', 'password1', 'password2']
+    SIGN_UP_FIELDS = [
+        'first_name',
+        'last_name',
+        'email',
+        'password1',
+        'password2']
 
 # sentry_sdk.init(
 #     dsn="https://1604a98438ee43c79d0a5c421c7c8d75@o1099218.ingest.sentry.io/6123760",
