@@ -30,7 +30,7 @@ class BaseUpy():
 
             # Create Configurations
             params = BaseConfiguration.objects.all()
-            
+
             for config in params:
                 configuration = CompanyConfiguration(
                     key=config.key,
@@ -39,7 +39,7 @@ class BaseUpy():
                     company_data_id=data.id
                 )
                 configuration.save()
-            
+
             # Add BasePlan Group
             user_group = Group.objects.get(name='Free')
             user.groups.add(user_group)
