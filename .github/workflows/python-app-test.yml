@@ -2,7 +2,7 @@ name: ❤️️ Unit Testing
 
 on:
   push:
-    branches: [ "develop" ]
+    branches: [ "code" ]
 
 jobs:
   build:
