@@ -1,8 +1,8 @@
 name: ❤️️ Unit Testing
 
 on:
-  push:
-    branches: [ "code" ]
+  pull_request:
+    branches: [ "develop" ]
 
 jobs:
   build:
