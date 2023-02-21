@@ -13,7 +13,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
 
 DEBUG = bool(os.getenv("DJANGO_DEBUG", False))
-ALLOWED_HOSTS = list(os.getenv("DJANGO_ALLOWED_HOSTS"))
+ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
 
 SITE_ID = 1
 DISABLE_COLLECTSTATIC = 1
