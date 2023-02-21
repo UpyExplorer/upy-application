@@ -12,7 +12,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", "KEY")
 
 DEBUG = True
-ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
+ALLOWED_HOSTS = os.getenv(
+    "DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
 
 SITE_ID = 1
 
@@ -159,18 +160,21 @@ DATABASES = {
     }
 }
 
+
+password_validation = 'django.contrib.auth.password_validation.'
+
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': password_validation + 'UserAttributeSimilarityValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': password_validation + 'MinimumLengthValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': password_validation + 'CommonPasswordValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': password_validation + 'NumericPasswordValidator',
     },
 ]
 
@@ -185,9 +189,21 @@ USE_REMEMBER_ME = True
 RESTORE_PASSWORD_VIA_EMAIL_OR_USERNAME = False
 ENABLE_ACTIVATION_AFTER_EMAIL_CHANGE = True
 
-SIGN_UP_FIELDS = ['username', 'first_name', 'last_name', 'email', 'password1', 'password2']
+SIGN_UP_FIELDS = [
+    'username',
+    'first_name',
+    'last_name',
+    'email',
+    'password1',
+    'password2']
+
 if DISABLE_USERNAME:
-    SIGN_UP_FIELDS = ['first_name', 'last_name', 'email', 'password1', 'password2']
+    SIGN_UP_FIELDS = [
+        'first_name',
+        'last_name',
+        'email',
+        'password1',
+        'password2']
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
 

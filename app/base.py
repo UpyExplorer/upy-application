@@ -10,7 +10,11 @@ from django.forms import ModelChoiceField
 from django.contrib.auth.models import Group
 
 from modules.base.models import BaseConfiguration
-from modules.company.models import CompanyData, CompanyConfiguration, CompanyRelationship
+from modules.company.models import (
+    CompanyData,
+    CompanyConfiguration,
+    CompanyRelationship
+)
 from modules.catalog.category.models import Category
 from modules.catalog.stock.models import StockLocale
 from modules.customer.models import Customer
@@ -45,7 +49,8 @@ class BaseUpy():
             user.groups.add(user_group)
 
             # Add CompanyRelationship
-            relationship = CompanyRelationship(company_data_id=data.id, user_id=user.id)
+            relationship = CompanyRelationship(
+                company_data_id=data.id, user_id=user.id)
             relationship.save()
 
             # add Category
@@ -91,7 +96,8 @@ class BaseViewUpy():
         if company_data_id:
             return company_data_id
         else:
-            company_relation = CompanyRelationship.objects.filter(user=self.request.user.id).first()
+            company_relation = CompanyRelationship.objects.filter(
+                user=self.request.user.id).first()
             if company_relation:
                 return company_relation.company_data
 
