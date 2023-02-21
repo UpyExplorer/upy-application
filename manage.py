@@ -1,6 +1,14 @@
 #!/usr/bin/env python
 import os
 import sys
+import logging
+
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except Exception as error:
+    logging.info(error)
+
 
 if __name__ == "__main__":
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "app.settings")
