@@ -7,7 +7,6 @@ Source Base
 __all__ = ['BaseViewUpy']
 
 from django.forms import ModelChoiceField
-from django.utils.translation import gettext_lazy as _
 from django.contrib.auth.models import Group
 
 from modules.base.models import BaseConfiguration
