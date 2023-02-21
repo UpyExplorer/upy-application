@@ -1,8 +1,8 @@
-name: ❤️️ Code Scan
+name: 📝️ Code Scan
 
 on:
-  pull_request:
-    branches: [ "upy" ]
+  push:
+    branches: [ "develop" ]
 
 jobs:
   build:
