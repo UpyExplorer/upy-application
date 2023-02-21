@@ -1,24 +1,19 @@
 import os
-import environ
 import dj_database_url
 import warnings
 
 from os.path import dirname
 from django.utils.translation import gettext_lazy as _
-
-env = environ.Env()
-environ.Env.read_env()
-
-# warnings.simplefilter('error', DeprecationWarning)
+warnings.simplefilter('error', DeprecationWarning)
 
 BASE_DIR = dirname(dirname(dirname(os.path.abspath(__file__))))
 CONTENT_DIR = os.path.join(BASE_DIR, 'content')
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
-SECRET_KEY = env("DJANGO_SECRET_KEY")
+SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
 
-DEBUG = env.bool("DJANGO_DEBUG", False)
-ALLOWED_HOSTS = env.list("DJANGO_ALLOWED_HOSTS", default=['127.0.0.1', 'localhost'])
+DEBUG = bool(os.getenv("DJANGO_DEBUG", False))
+ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", ['127.0.0.1', 'localhost'])
 
 SITE_ID = 1
 
@@ -59,7 +54,7 @@ INSTALLED_APPS = [
     'global_permissions',
 
     # Logs
-    'models_logging',
+    # 'models_logging',
     
     # Rest Framework
     'rest_framework',
@@ -86,7 +81,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
-    'models_logging.middleware.LoggingStackMiddleware',
+    # 'models_logging.middleware.LoggingStackMiddleware',
 ]
 
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
@@ -167,11 +162,11 @@ WSGI_APPLICATION = 'app.wsgi.application'
 
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 EMAIL_FILE_PATH = os.path.join(CONTENT_DIR, 'tmp/emails')
-EMAIL_HOST_USER = env("DJANGO_EMAIL_HOST_USER")
-DEFAULT_FROM_EMAIL = env("DJANGO_DEFAULT_FROM_EMAIL")
+EMAIL_HOST_USER = os.getenv("DJANGO_EMAIL_HOST_USER")
+DEFAULT_FROM_EMAIL = os.getenv("DJANGO_DEFAULT_FROM_EMAIL")
 
 DATABASES = {
-    'default': dj_database_url.config(default=env("DJANGO_DATABASE_URL"))
+    'default': dj_database_url.config(default=os.getenv("DJANGO_DATABASE_URL"))
 }
 
 AUTH_PASSWORD_VALIDATORS = [
