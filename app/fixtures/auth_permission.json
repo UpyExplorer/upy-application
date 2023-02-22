@@ -1,0 +1,300 @@
+[
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Account",
+            "content_type": [
+                "global_permissions",
+                "globalpermission"
+            ],
+            "codename": "app_account"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Account - Email View",
+            "content_type": [
+                "global_permissions",
+                "globalpermission"
+            ],
+            "codename": "app_account_change_email_view"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Account - Password View",
+            "content_type": [
+                "global_permissions",
+                "globalpermission"
+            ],
+            "codename": "app_account_change_password_view"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Account - Profile View",
+            "content_type": [
+                "global_permissions",
+                "globalpermission"
+            ],
+            "codename": "app_account_change_profile_view"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Account - Language View",
+            "content_type": [
+                "global_permissions",
+                "globalpermission"
+            ],
+            "codename": "app_account_language_view"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Dashboard",
+            "content_type": [
+                "global_permissions",
+                "globalpermission"
+            ],
+            "codename": "app_dashboard"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Catalog",
+            "content_type": [
+                "global_permissions",
+                "globalpermission"
+            ],
+            "codename": "app_catalog"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Product - List",
+            "content_type": [
+                "global_permissions",
+                "globalpermission"
+            ],
+            "codename": "app_catalog_product_list"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Product - Detail",
+            "content_type": [
+                "global_permissions",
+                "globalpermission"
+            ],
+            "codename": "app_catalog_product_detail"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Product - Update",
+            "content_type": [
+                "global_permissions",
+                "globalpermission"
+            ],
+            "codename": "app_catalog_product_update"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Product - Delete",
+            "content_type": [
+                "global_permissions",
+                "globalpermission"
+            ],
+            "codename": "app_catalog_product_delete"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Product - Create",
+            "content_type": [
+                "global_permissions",
+                "globalpermission"
+            ],
+            "codename": "app_catalog_product_create"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Sale",
+            "content_type": [
+                "global_permissions",
+                "globalpermission"
+            ],
+            "codename": "app_sale"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Sale - List",
+            "content_type": [
+                "global_permissions",
+                "globalpermission"
+            ],
+            "codename": "app_sale_order_list"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Customer",
+            "content_type": [
+                "global_permissions",
+                "globalpermission"
+            ],
+            "codename": "app_customer"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Customer - List",
+            "content_type": [
+                "global_permissions",
+                "globalpermission"
+            ],
+            "codename": "app_customer_list"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Seller",
+            "content_type": [
+                "global_permissions",
+                "globalpermission"
+            ],
+            "codename": "app_seller"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Seller - List",
+            "content_type": [
+                "global_permissions",
+                "globalpermission"
+            ],
+            "codename": "app_seller_list"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Ads",
+            "content_type": [
+                "global_permissions",
+                "globalpermission"
+            ],
+            "codename": "app_ads"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Ads - List",
+            "content_type": [
+                "global_permissions",
+                "globalpermission"
+            ],
+            "codename": "app_ads_list"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Application",
+            "content_type": [
+                "global_permissions",
+                "globalpermission"
+            ],
+            "codename": "app_application"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Application - List",
+            "content_type": [
+                "global_permissions",
+                "globalpermission"
+            ],
+            "codename": "app_application_list"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Category - List",
+            "content_type": [
+                "global_permissions",
+                "globalpermission"
+            ],
+            "codename": "app_catalog_category_list"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Category - Create",
+            "content_type": [
+                "global_permissions",
+                "globalpermission"
+            ],
+            "codename": "app_catalog_category_create"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Category - Delete",
+            "content_type": [
+                "global_permissions",
+                "globalpermission"
+            ],
+            "codename": "app_catalog_category_delete"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Category - Detail",
+            "content_type": [
+                "global_permissions",
+                "globalpermission"
+            ],
+            "codename": "app_catalog_category_detail"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Category - Update",
+            "content_type": [
+                "global_permissions",
+                "globalpermission"
+            ],
+            "codename": "app_catalog_category_update"
+        }
+    }
+    ]
+    

@@ -1,0 +1,128 @@
+[
+{
+    "model": "application.baseapplication",
+    "pk": 1,
+    "fields": {
+        "name": "Mercado Livre",
+        "code": "ML",
+        "key": "ML",
+        "description": "Soluções para que pessoas e empresas possam comprar, vender, pagar, anunciar e enviar produtos por meio da internet.",
+        "url": "https://www.mercadolivre.com.br/",
+        "image_name": "app_mercado_livre.png",
+        "image_url": null,
+        "image": null,
+        "type": "1",
+        "Installed": 0,
+        "stars": 5,
+        "status": true
+    }
+},
+{
+    "model": "application.baseapplication",
+    "pk": 2,
+    "fields": {
+        "name": "Amazon",
+        "code": "AMZ",
+        "key": "AMZ",
+        "description": "Venda seus produtos aos milhões de clientes que compram na Amazon todos os dias. Recursos para pequenas e grandes empresas.",
+        "url": "https://www.amazon.com.br/",
+        "image_name": "app_amazon.png",
+        "image_url": null,
+        "image": null,
+        "type": "1",
+        "Installed": 0,
+        "stars": 5,
+        "status": true
+    }
+},
+{
+    "model": "application.baseapplication",
+    "pk": 3,
+    "fields": {
+        "name": "Tray",
+        "code": "TRY",
+        "key": "TRY",
+        "description": "Maior e melhor plataforma de e-commerce do Brasil há mais de 18 anos. Crie a sua loja virtual com ecossistema completo.",
+        "url": "https://www.tray.com.br/",
+        "image_name": "app_tray.png",
+        "image_url": null,
+        "image": null,
+        "type": "2",
+        "Installed": 0,
+        "stars": 4,
+        "status": true
+    }
+},
+{
+    "model": "application.baseapplication",
+    "pk": 4,
+    "fields": {
+        "name": "Nuvemshop",
+        "code": "NSH",
+        "key": "NSH",
+        "description": "Com a Nuvemshop, você pode montar sua loja online sem dificuldades, com preços acessíveis e o suporte de um time estruturado focado em te apoiar.",
+        "url": "https://www.nuvemshop.com.br/",
+        "image_name": "app_nuvemshop.png",
+        "image_url": null,
+        "image": null,
+        "type": "2",
+        "Installed": 0,
+        "stars": 5,
+        "status": true
+    }
+},
+{
+    "model": "application.baseapplication",
+    "pk": 5,
+    "fields": {
+        "name": "Submarino",
+        "code": "SUB",
+        "key": "SUB",
+        "description": "Empresa brasileira de comércio eletrônico. Criada em 1999, foi uma das pioneiras do Brasil neste segmento.",
+        "url": "https://www.submarino.com.br/",
+        "image_name": "app_submarino.png",
+        "image_url": null,
+        "image": null,
+        "type": "2",
+        "Installed": 0,
+        "stars": 5,
+        "status": true
+    }
+},
+{
+    "model": "application.baseapplication",
+    "pk": 6,
+    "fields": {
+        "name": "Bling",
+        "code": "BLG",
+        "key": "BLG",
+        "description": "Sistema de Gestão empresarial ERP para micro e pequenas empresas que facilita a emissão de notas fiscais e boletos.",
+        "url": "https://blog.bling.com.br/",
+        "image_name": "app_bling.png",
+        "image_url": null,
+        "image": null,
+        "type": "4",
+        "Installed": 0,
+        "stars": 5,
+        "status": true
+    }
+},
+{
+    "model": "application.baseapplication",
+    "pk": 7,
+    "fields": {
+        "name": "Olist",
+        "code": "OLI",
+        "key": "OLI",
+        "description": "Olist é uma startup brasileira que atua no segmento de e-commerce.",
+        "url": "https://olist.com/",
+        "image_name": "app_olist.png",
+        "image_url": null,
+        "image": null,
+        "type": "2",
+        "Installed": 0,
+        "stars": 5,
+        "status": true
+    }
+}
+]

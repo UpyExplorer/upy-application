@@ -1,0 +1,11 @@
+[
+{
+    "model": "company.companyrelationship",
+    "pk": 1,
+    "fields": {
+        "user": 1,
+        "company_data": 1,
+        "is_main": true
+    }
+}
+]
