@@ -19,6 +19,7 @@ ALLOWED_HOSTS = os.getenv(
 SITE_ID = 1
 
 INSTALLED_APPS = [
+    'app',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -225,3 +226,6 @@ STATICFILES_DIRS = [
 LOCALE_PATHS = [
     os.path.join(CONTENT_DIR, 'locale')
 ]
+
+
+FIXTURE_DIRS = ['app/fixtures']

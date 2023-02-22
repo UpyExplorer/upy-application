@@ -20,6 +20,7 @@ SITE_ID = 1
 DISABLE_COLLECTSTATIC = 1
 
 INSTALLED_APPS = [
+    'app',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -236,3 +237,6 @@ if DISABLE_USERNAME:
 #     traces_sample_rate=1.0,
 #     send_default_pii=True
 # )
+
+
+FIXTURE_DIRS = ['app/fixtures']
