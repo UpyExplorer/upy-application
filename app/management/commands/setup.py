@@ -8,6 +8,7 @@ class Command(BaseCommand):
     fixtures = [
         'auth_group.json',
         'auth_permission.json',
+        'auth_group_permissions.json',
         'auth_user.json',
         'auth_user_groups.json',
         'base_application.json',
