@@ -1,0 +1,20 @@
+[
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "",
+        "last_login": "2023-01-01T00:00:00Z",
+        "is_superuser": true,
+        "username": "UpyExplorer",
+        "first_name": "Upy",
+        "last_name": "Explorer",
+        "email": "upyexplorer@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2023-01-01T00:00:00Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}
+]
