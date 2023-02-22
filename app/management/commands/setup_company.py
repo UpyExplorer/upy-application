@@ -1,4 +1,3 @@
-from django.core import management
 from django.core.management.base import BaseCommand
 from django.contrib.auth.models import User, Group
 
@@ -10,7 +9,6 @@ from modules.company.models import (
 )
 from modules.catalog.category.models import Category
 from modules.catalog.stock.models import StockLocale
-from modules.customer.models import Customer
 
 
 class Command(BaseCommand):
@@ -20,7 +18,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         user = User.objects.get(id=options.get('user_id')[0])
-        
+
         if not CompanyData.objects.filter(email=user.email):
             company_data = CompanyData(email=user.email)
             company_data.save()
