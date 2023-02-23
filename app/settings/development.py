@@ -145,7 +145,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'app.wsgi.application'
 
-EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 EMAIL_HOST = os.getenv('DJANGO_EMAIL_HOST')
 EMAIL_HOST_USER = os.getenv('DJANGO_EMAIL_HOST_USER')
@@ -154,8 +154,6 @@ EMAIL_HOST_PASSWORD = os.getenv('DJANGO_EMAIL_HOST_PASSWORD')
 EMAIL_PORT = os.getenv('DJANGO_EMAIL_PORT')
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
-
-EMAIL_FILE_PATH = os.path.join(CONTENT_DIR, 'tmp/emails')
 
 DATABASES = {
     'default': dj_database_url.config(default=os.getenv("DJANGO_DATABASE_URL"))
