@@ -155,6 +155,8 @@ EMAIL_PORT = os.getenv('DJANGO_EMAIL_PORT')
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 
+EMAIL_FILE_PATH = os.path.join(CONTENT_DIR, 'tmp/emails')
+
 DATABASES = {
     'default': dj_database_url.config(default=os.getenv("DJANGO_DATABASE_URL"))
 }
