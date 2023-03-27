@@ -8,13 +8,8 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 
-from modules.sale.order.views import (
-	OrderListView,
-)
+from modules.sale.order.views import OrderListView
 
-from modules.catalog.category.views import (
-    CategoryListView
-)
 
 app_name = 'sale'
 

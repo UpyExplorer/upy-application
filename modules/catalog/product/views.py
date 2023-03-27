@@ -84,21 +84,24 @@ class ProductUpdateView(BaseViewUpy, LoginRequiredMixin, generic.UpdateView):
             messages.warning(self.request, _('Product not found!'))
             return redirect('catalog:product_list')
 
-        return render(self.request, self.template_name, {
-				"object": object,
-				"form": ProductForm(instance=object, request=self.request),
-				"view_path": _('Dashboard / Catalog / Product'),
-				"view_name": _('Product Edit'),
+        return render(
+            self.request,
+            self.template_name, {
+                "object": object,
+                "form": ProductForm(instance=object, request=self.request),
+                "view_path": _('Dashboard / Catalog / Product'),
+                "view_name": _('Product Edit'),
                 "view_info": _('Product'),
                 "btn_info": True,
                 "btn_save": True,
                 "btn_delete": True
-			}
-		)
+            }
+        )
 
     def post(self, request, *args, **kwargs):
         messages.success(request, _('Product saved successfully!'))
         return super().post(request, *args, **kwargs)
+
 
 class ProductCreateView(BaseViewUpy, LoginRequiredMixin, generic.CreateView):
     template_name = 'catalog/product/product_update.html'
@@ -130,15 +133,17 @@ class ProductCreateView(BaseViewUpy, LoginRequiredMixin, generic.CreateView):
     #     if not self.request.user.has_perm('global_permissions.app_catalog_product_create'):
     #         raise PermissionDenied
 
-    #     return render(self.request, self.template_name, {
-	# 			"form": ProductForm(),
-	# 			"view_path": _('Dashboard / Catalog / Product'),
-	# 			"view_name": _('Product Create'),
+    #     return render(
+    #         self.request,
+    #         self.template_name, {
+    #             "form": ProductForm(),
+    #             "view_path": _('Dashboard / Catalog / Product'),
+    #             "view_name": _('Product Create'),
     #             "view_info": _('Product'),
     #             "btn_info": True,
     #             "btn_save": True
-	# 		}
-	# 	)
+    #             }
+    #         )
 
     def post(self, request, *args, **kwargs):
         if self.request.method == "POST":
@@ -169,7 +174,7 @@ class ProductDeleteView(BaseViewUpy, LoginRequiredMixin, BSModalDeleteView):
     def get(self, request, *args, **kwargs):
         if not self.request.user.has_perm('global_permissions.app_catalog_product_delete'):
             raise PermissionDenied
-    
+
         self.object = self.get_object()
         context = self.get_context_data(object=self.object)
 

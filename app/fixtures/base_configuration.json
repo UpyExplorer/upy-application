@@ -1,0 +1,11 @@
+[
+{
+    "model": "base.baseconfiguration",
+    "pk": 1,
+    "fields": {
+        "key": "config_test",
+        "description": "Configuration",
+        "value": "0"
+    }
+}
+]

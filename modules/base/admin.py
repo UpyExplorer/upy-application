@@ -16,6 +16,7 @@ from modules.base.models import (
     BaseCreditOperator
 )
 
+
 class ConfigurationAdmin(admin.ModelAdmin):
     list_display = get_field_list(BaseConfiguration)
 

@@ -20,4 +20,4 @@ jobs:
         pip install -r requirements-dev.txt --no-cache-dir
     - name: ❤️️ Run flake8
       run: |
-        flake8 app/ --count --show-source --statistics
+        flake8 app/ modules/ --count --show-source --statistics --ignore=E501

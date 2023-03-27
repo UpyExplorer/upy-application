@@ -57,17 +57,19 @@ class AdsUpdateView(BaseViewUpy, LoginRequiredMixin, generic.UpdateView):
             messages.warning(self.request, _('Ads not found!'))
             return redirect('ads:ads_list')
 
-        return render(self.request, self.template_name, {
-				"object": object,
-				"form": AdsLinkForm(instance=object),
-				"view_path": _('Dashboard / Ads'),
-				"view_name": _('Ads Edit'),
+        return render(
+            self.request,
+            self.template_name, {
+                "object": object,
+                "form": AdsLinkForm(instance=object),
+                "view_path": _('Dashboard / Ads'),
+                "view_name": _('Ads Edit'),
                 "view_info": _('Ads'),
                 "btn_info": True,
                 "btn_save": True,
                 "btn_delete": True
-			}
-		)
+            }
+        )
 
     def post(self, request, *args, **kwargs):
         messages.success(request, _('Ads saved successfully!'))

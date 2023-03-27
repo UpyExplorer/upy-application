@@ -19,6 +19,7 @@ ALLOWED_HOSTS = os.getenv(
 SITE_ID = 1
 
 INSTALLED_APPS = [
+    'app',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -28,12 +29,9 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'whitenoise.runserver_nostatic',
     'pipeline',
-    # Vendor apps
     'bootstrap5',
-    # Application apps
     'modules.base',
     'modules.log',
-    'modules.api',
     'modules.account',
     'modules.dashboard',
     'modules.company',
@@ -43,22 +41,14 @@ INSTALLED_APPS = [
     'modules.ads',
     'modules.seller',
     'modules.customer',
-    # Forms
     'widget_tweaks',
     'crispy_forms',
     'bootstrap_modal_forms',
-    # Permissions
-    'global_permissions',
-    # Logs
-    # 'models_logging',
-    # Rest Framework
-    'rest_framework',
-    'rest_framework.authtoken',
+    'global_permissions'
 ]
 
 LOGGING_MODELS = (
     'modules.base',
-    'modules.api',
     'modules.account',
     'modules.company',
     'django.contrib.auth',
@@ -155,10 +145,15 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'app.wsgi.application'
 
-EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
-EMAIL_FILE_PATH = os.path.join(CONTENT_DIR, 'tmp/emails')
-EMAIL_HOST_USER = os.getenv("DJANGO_EMAIL_HOST_USER")
-DEFAULT_FROM_EMAIL = os.getenv("DJANGO_DEFAULT_FROM_EMAIL")
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_HOST = os.getenv('DJANGO_EMAIL_HOST')
+EMAIL_HOST_USER = os.getenv('DJANGO_EMAIL_HOST_USER')
+DEFAULT_FROM_EMAIL = os.getenv('DJANGO_DEFAULT_FROM_EMAIL')
+EMAIL_HOST_PASSWORD = os.getenv('DJANGO_EMAIL_HOST_PASSWORD')
+EMAIL_PORT = os.getenv('DJANGO_EMAIL_PORT')
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True
 
 DATABASES = {
     'default': dj_database_url.config(default=os.getenv("DJANGO_DATABASE_URL"))
@@ -185,11 +180,13 @@ ENABLE_USER_ACTIVATION = False
 DISABLE_USERNAME = True
 LOGIN_VIA_EMAIL = True
 LOGIN_VIA_EMAIL_OR_USERNAME = False
-LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_URL = 'account:log_in'
 USE_REMEMBER_ME = True
 
-RESTORE_PASSWORD_VIA_EMAIL_OR_USERNAME = False
+LOGIN_REDIRECT_URL = 'dashboard'
+LOGOUT_REDIRECT_URL = 'account:log_in'
+
+RESTORE_PASSWORD_VIA_EMAIL_OR_USERNAME = True
 ENABLE_ACTIVATION_AFTER_EMAIL_CHANGE = True
 
 SIGN_UP_FIELDS = [
@@ -234,3 +231,6 @@ STATICFILES_DIRS = [
 LOCALE_PATHS = [
     os.path.join(CONTENT_DIR, 'locale')
 ]
+
+
+FIXTURE_DIRS = ['app/fixtures']

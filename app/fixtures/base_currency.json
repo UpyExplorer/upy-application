@@ -1,0 +1,22 @@
+[
+{
+    "model": "base.basecurrency",
+    "pk": 1,
+    "fields": {
+        "country_name": "Brazil",
+        "currency_name": "Brazilian real",
+        "code": "BRL",
+        "status": true
+    }
+},
+{
+    "model": "base.basecurrency",
+    "pk": 2,
+    "fields": {
+        "country_name": "United States\t",
+        "currency_name": "United States dollar\t",
+        "code": "USD",
+        "status": true
+    }
+}
+]

@@ -8,9 +8,9 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 
-from modules.customer.views import (
-	CustomerListView,
-)
+from modules.customer.views import CustomerListView
+
+
 app_name = 'customer'
 
 urlpatterns = [

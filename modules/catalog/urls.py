@@ -9,11 +9,11 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from modules.catalog.product.views import (
-	ProductListView,
-	ProductDetailView,
-	ProductUpdateView,
-	ProductCreateView,
-	ProductDeleteView
+    ProductListView,
+    ProductDetailView,
+    ProductUpdateView,
+    ProductCreateView,
+    ProductDeleteView
 )
 
 from modules.catalog.category.views import (

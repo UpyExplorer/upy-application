@@ -10,6 +10,7 @@ from modules.ads.models import (
     AdsLink
 )
 
+
 class AdsLinkAdmin(admin.ModelAdmin):
     list_display = get_field_list(AdsLink)
 

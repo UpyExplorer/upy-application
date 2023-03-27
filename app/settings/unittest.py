@@ -18,6 +18,7 @@ ALLOWED_HOSTS = os.getenv(
 SITE_ID = 1
 
 INSTALLED_APPS = [
+    'app',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -27,12 +28,9 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'whitenoise.runserver_nostatic',
     'pipeline',
-    # Vendor apps
     'bootstrap5',
-    # Application apps
     'modules.base',
     'modules.log',
-    'modules.api',
     'modules.account',
     'modules.dashboard',
     'modules.company',
@@ -42,20 +40,14 @@ INSTALLED_APPS = [
     'modules.ads',
     'modules.seller',
     'modules.customer',
-    # Forms
     'widget_tweaks',
     'crispy_forms',
     'bootstrap_modal_forms',
-    # Permissions
-    'global_permissions',
-    # Rest Framework
-    'rest_framework',
-    'rest_framework.authtoken',
+    'global_permissions'
 ]
 
 LOGGING_MODELS = (
     'modules.base',
-    'modules.api',
     'modules.account',
     'modules.company',
     'django.contrib.auth',
@@ -182,9 +174,11 @@ ENABLE_USER_ACTIVATION = False
 DISABLE_USERNAME = True
 LOGIN_VIA_EMAIL = True
 LOGIN_VIA_EMAIL_OR_USERNAME = False
-LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_URL = 'account:log_in'
 USE_REMEMBER_ME = True
+
+LOGIN_REDIRECT_URL = 'dashboard'
+LOGOUT_REDIRECT_URL = 'account:log_in'
 
 RESTORE_PASSWORD_VIA_EMAIL_OR_USERNAME = False
 ENABLE_ACTIVATION_AFTER_EMAIL_CHANGE = True
@@ -231,3 +225,5 @@ STATICFILES_DIRS = [
 LOCALE_PATHS = [
     os.path.join(CONTENT_DIR, 'locale')
 ]
+
+FIXTURE_DIRS = ['app/fixtures']

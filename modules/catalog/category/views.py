@@ -13,7 +13,6 @@ from modules.catalog.category.models import Category
 from app.base import BaseViewUpy
 
 
-
 class CategoryListView(BaseViewUpy, LoginRequiredMixin, generic.ListView):
     template_name = 'catalog/category/category_list.html'
     model = Category

@@ -28,11 +28,10 @@ class ProductForm(forms.ModelForm):
         try:
             self.request = kwargs.pop('request')
             query_category = Category.objects.filter(
-                company_data=self.request.session['company_data_id']
-                ).all()
+                company_data=self.request.session['company_data_id']).all()
 
             options = True
-        except:
+        except Exception:
             options = False
 
         if 'instance' in kwargs:
@@ -41,7 +40,7 @@ class ProductForm(forms.ModelForm):
                 kwargs['instance'].price_cost = kwargs['instance'].price_cost.quantize(Decimal('0.00'))
                 kwargs['instance'].price_promo = kwargs['instance'].price_promo.quantize(Decimal('0.00'))
 
-        super(ProductForm, self).__init__(*args, **kwargs) 
+        super(ProductForm, self).__init__(*args, **kwargs)
         self.fields['price_sell'].decimal_places = 2
         self.fields['price_cost'].decimal_places = 2
         self.fields['price_promo'].decimal_places = 2
@@ -50,8 +49,7 @@ class ProductForm(forms.ModelForm):
             self.fields['category'] = ChoiceFieldCategory(
                 widget=forms.Select,
                 queryset=query_category,
-                label=_("Category")
-                )
+                label=_("Category"))
 
     class Meta:
         model = Product

@@ -22,7 +22,7 @@ jobs:
         pip install -r requirements-dev.txt --no-cache-dir
     - name: ❤️️ Run Flake8
       run: |
-        flake8 app/ --count --show-source --statistics
+        flake8 app/ modules/ --count --show-source --statistics --ignore=E501
     - name: ❤️️ Run Tests
       run: |
         python manage.py test --settings app.settings.unittest

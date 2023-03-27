@@ -13,7 +13,6 @@ from modules.sale.models import Order
 from app.base import BaseViewUpy
 
 
-
 class OrderListView(BaseViewUpy, LoginRequiredMixin, generic.ListView):
     template_name = 'order/order_list.html'
     model = Order

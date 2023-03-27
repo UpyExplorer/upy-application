@@ -4,6 +4,7 @@
 Module Docstring
 """
 
+from django.db import transaction
 from django.contrib import messages
 from django.contrib.auth import login, authenticate, REDIRECT_FIELD_NAME
 from django.contrib.auth.tokens import default_token_generator
@@ -36,16 +37,10 @@ from .forms import (
 )
 
 from modules.account.models import Activation
-from modules.base.models import BaseConfiguration
-from modules.company.models import CompanyData, CompanyConfiguration, CompanyRelationship
-
-from modules.catalog.category.models import Category
-from modules.customer.models import Customer
-from modules.seller.models import Seller
-
+from modules.company.models import CompanyRelationship
 from app.base import BaseUpy
-
-from django.contrib.auth.models import Group
+from django.core import management
+from app.management.commands import setup_company
 
 
 class GuestOnlyView(View):
@@ -127,7 +122,6 @@ class SignUpView(BaseUpy, GuestOnlyView, FormView):
         user = form.save(commit=False)
 
         if settings.DISABLE_USERNAME:
-            # Set a temporary username
             user.username = get_random_string(10)
         else:
             user.username = form.cleaned_data['username']
@@ -136,14 +130,13 @@ class SignUpView(BaseUpy, GuestOnlyView, FormView):
             user.is_active = False
 
         try:
-            # Create a user record
-            user.save()
-            self.create_data(user)
-        except:
+            with transaction.atomic():
+                user.save()
+                management.call_command(setup_company.Command(), user.id)
+        except Exception:
             messages.error(request, _('Error!'))
             return redirect('account:sign_up')
 
-        # Change the username to the "user_ID" form
         if settings.DISABLE_USERNAME:
             user.username = f'user_{user.id}'
             user.save()
@@ -162,7 +155,6 @@ class SignUpView(BaseUpy, GuestOnlyView, FormView):
                 request, _('You are signed up. To activate the account, follow the link sent to the mail.'))
         else:
             raw_password = form.cleaned_data['password1']
-
             user = authenticate(username=user.username, password=raw_password)
             login(request, user)
 

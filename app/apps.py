@@ -7,6 +7,6 @@ Module Docstring
 from django.apps import AppConfig
 
 
-class BaseConfig(AppConfig):
-    name = 'modules.base'
+class BaseApp(AppConfig):
+    name = 'app'
     verbose_name = 'Upy-Base'
