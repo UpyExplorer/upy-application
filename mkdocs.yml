@@ -1,0 +1,29 @@
+site_name: UpyExplorer
+site_url: http://upyexplorer.com/
+repo_name: UpyExplorer/upy-application
+repo_url: https://github.com/UpyExplorer/upy-application
+
+nav:
+    - Home: index.md
+    - Installation: nav/installation.md
+    - Database: nav/database.md
+
+theme: 
+    name: material
+    logo: assets/upy-explorer-icon.jpeg
+    favicon: assets/upy-explorer-icon.jpeg
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight
+  - codehilite
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+
+extra_css:
+  - stylesheets/extra.css
