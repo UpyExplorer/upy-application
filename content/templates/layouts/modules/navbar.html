@@ -68,10 +68,11 @@
 					</a>
 				{% endif %}
 
-				<a class="dropdown-item" href="{% url 'account:log_out' %}">
-					<i class="mdi mdi-logout"></i>
-						{% trans 'Logout' %}
-				</a>
+				<form method="post" action="{% url 'account:log_out' %}">
+					{% csrf_token %}
+					<button class="dropdown-item" type="submit"><i class="mdi mdi-logout"></i>{% trans 'Logout' %}</button>
+				</form>
+
 			</div>
 		</li>
 	</ul>
