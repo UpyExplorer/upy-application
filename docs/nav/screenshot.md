@@ -2,12 +2,12 @@
 
 ## Login
 
-![](/nav/screenshot/image_login.png)
+![](https://raw.githubusercontent.com/UpyExplorer/upy-application/develop/screenshot/image_login.png)
 
 ## Dashboard
 
-![](/nav/screenshot/image_dashboard.png)
+![](https://raw.githubusercontent.com/UpyExplorer/upy-application/develop/screenshot/image_dashboard.png)
 
 ## List
 
-![](/nav/screenshot/image_list.png)
+![](https://raw.githubusercontent.com/UpyExplorer/upy-application/develop/screenshot/image_list.png)
