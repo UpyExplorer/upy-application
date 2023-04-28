@@ -14,9 +14,9 @@
 
 ## [Introduction](https://docs.linuxprofile.com/)
 
-**English**: Project started with the intention of creating a system to serve as a hub for the integration of services such as e-commerce products and ERPs. The system contains the base structure of records and database inspired by SaaS systems, which is software as a Service, it is a way of making software and technology solutions available through the internet, as a service. With a shared database structure.
+**English**: Project started with the objective of creating a web system to serve as a centralizer of integrations related to services related to physical and digital products for E-commerce and Integrated Management Systems. The system contains a base structure for generic registrations and also a database inspired by SaaS systems, which is software as a Service, which is a way of making software and technology solutions available over the internet, as a service. With a shared database structure.
 
-> **Português**: Projeto iniciado com o intuido de criar um sistema para servir como hub de integração de serviços como produtos para e-commerce e ERPs. O sistema contém a estrutura base de cadastros e banco de dados inspirados em sistemas SaaS que é um software as a Service, é uma forma de disponibilizar softwares e soluções de tecnologia por meio da internet, como um serviço. Com uma estrutura de banco de dados compartilhada.
+> **Português**: Projeto iniciado com o objetivo de criar um sistema web para servir como um centralizador de integrações referente a serviços ligados a produtos físicos e digitais para E-commerce e Sistemas de gestão Integrado. O sistema contém uma estrutura base para cadastros genéricos e também um banco de dados inspirados em sistemas SaaS que é um software as a Service, que é uma forma de disponibilizar softwares e soluções de tecnologia por meio da internet, como um serviço. Com uma estrutura de banco de dados compartilhada.
 
 ## Summary
 
