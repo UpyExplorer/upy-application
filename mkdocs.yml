@@ -6,6 +6,7 @@ repo_url: https://github.com/UpyExplorer/upy-application
 nav:
     - Home: index.md
     - Installation: nav/installation.md
+    - Screenshot: nav/screenshot/screenshot.md
     - Database: nav/database.md
 
 theme: 
