@@ -1,17 +1,18 @@
 #!/usr/bin/env python
 import os
 import sys
-import logging
 
-try:
-    from dotenv import load_dotenv
-    load_dotenv()
-except Exception as error:
-    logging.info(error)
+from os import getenv
+from dotenv import load_dotenv
 
 
 if __name__ == "__main__":
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "app.settings")
+    """Run administrative tasks."""
+    load_dotenv()
+
+    django_settings_module = getenv('DJANGO_SETTINGS_MODULE', 'app.settings.development')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', django_settings_module)
+
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
