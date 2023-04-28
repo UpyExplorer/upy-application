@@ -1,9 +1,10 @@
 import os
-import dj_database_url
 import warnings
+import dj_database_url as url
 
 from os.path import dirname
 from django.utils.translation import gettext_lazy as _
+
 warnings.simplefilter('error', DeprecationWarning)
 
 BASE_DIR = dirname(dirname(dirname(os.path.abspath(__file__))))
@@ -13,8 +14,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
 
 DEBUG = bool(os.getenv("DJANGO_DEBUG", True))
-ALLOWED_HOSTS = os.getenv(
-    "DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
+ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
 
 SITE_ID = 1
 
@@ -156,7 +156,7 @@ EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 
 DATABASES = {
-    'default': dj_database_url.config(default=os.getenv("DJANGO_DATABASE_URL"))
+    'default': url.config(default=os.getenv("DJANGO_DATABASE_URL", "sqlite:///./sql_app.db"))
 }
 
 password_validation = 'django.contrib.auth.password_validation.'
@@ -208,7 +208,6 @@ if DISABLE_USERNAME:
 MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
 
 USE_I18N = True
-USE_L10N = True
 LANGUAGE_CODE = 'pt-br'
 LANGUAGES = [
     ('pt-br', _('Português-BR')),

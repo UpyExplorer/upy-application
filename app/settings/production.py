@@ -1,6 +1,6 @@
 import os
 # import sentry_sdk
-import dj_database_url
+import dj_database_url as url
 
 from os.path import dirname
 from django.utils.translation import gettext_lazy as _
@@ -155,7 +155,7 @@ EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 
 DATABASES = {
-    'default': dj_database_url.config(default=os.getenv("DJANGO_DATABASE_URL"))
+    'default': url.config(default=os.getenv("DJANGO_DATABASE_URL"))
 }
 
 password_validation = 'django.contrib.auth.password_validation.'
@@ -191,7 +191,6 @@ EMAIL_ACTIVATION_AFTER_CHANGING = True
 MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
 
 USE_I18N = True
-USE_L10N = True
 LANGUAGE_CODE = 'pt-br'
 LANGUAGES = [
     ('pt-br', _('Português-BR')),
