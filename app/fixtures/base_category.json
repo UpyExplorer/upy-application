@@ -1,10 +1,10 @@
 [
-{
-    "model": "base.basecategory",
-    "pk": 1,
-    "fields": {
-        "name": "Category",
-        "code": "CAT"
+    {
+        "model": "base.basecategory",
+        "pk": 1,
+        "fields": {
+            "name": "Category",
+            "code": "CAT"
+        }
     }
-}
 ]

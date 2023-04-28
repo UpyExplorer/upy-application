@@ -1,42 +1,42 @@
 [
-{
-    "model": "base.baseplan",
-    "pk": 1,
-    "fields": {
-        "code": "FRE",
-        "group": [
-            "Plan - Free"
-        ]
+    {
+        "model": "base.baseplan",
+        "pk": 1,
+        "fields": {
+            "code": "FRE",
+            "group": [
+                "Plan - Free"
+            ]
+        }
+    },
+    {
+        "model": "base.baseplan",
+        "pk": 2,
+        "fields": {
+            "code": "LIT",
+            "group": [
+                "Plan - Lite"
+            ]
+        }
+    },
+    {
+        "model": "base.baseplan",
+        "pk": 3,
+        "fields": {
+            "code": "PLU",
+            "group": [
+                "Plan - Plus"
+            ]
+        }
+    },
+    {
+        "model": "base.baseplan",
+        "pk": 4,
+        "fields": {
+            "code": "PRE",
+            "group": [
+                "Plan - Premium"
+            ]
+        }
     }
-},
-{
-    "model": "base.baseplan",
-    "pk": 2,
-    "fields": {
-        "code": "LIT",
-        "group": [
-            "Plan - Lite"
-        ]
-    }
-},
-{
-    "model": "base.baseplan",
-    "pk": 3,
-    "fields": {
-        "code": "PLU",
-        "group": [
-            "Plan - Plus"
-        ]
-    }
-},
-{
-    "model": "base.baseplan",
-    "pk": 4,
-    "fields": {
-        "code": "PRE",
-        "group": [
-            "Plan - Premium"
-        ]
-    }
-}
 ]

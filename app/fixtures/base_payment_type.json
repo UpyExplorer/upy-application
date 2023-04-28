@@ -1,206 +1,206 @@
 [
-{
-    "model": "base.basepaymenttype",
-    "pk": 1,
-    "fields": {
-        "payment_type": "dinheiro",
-        "operation_type": null,
-        "description": "Dinheiro",
-        "code": "1",
-        "currency": 1,
-        "tag": "tPag"
+    {
+        "model": "base.basepaymenttype",
+        "pk": 1,
+        "fields": {
+            "payment_type": "dinheiro",
+            "operation_type": null,
+            "description": "Dinheiro",
+            "code": "1",
+            "currency": 1,
+            "tag": "tPag"
+        }
+    },
+    {
+        "model": "base.basepaymenttype",
+        "pk": 2,
+        "fields": {
+            "payment_type": "cheque",
+            "operation_type": null,
+            "description": "Cheque",
+            "code": "2",
+            "currency": 1,
+            "tag": "tPag"
+        }
+    },
+    {
+        "model": "base.basepaymenttype",
+        "pk": 3,
+        "fields": {
+            "payment_type": "cartao_de_credito",
+            "operation_type": null,
+            "description": "Cartão de Crédito",
+            "code": "3",
+            "currency": 1,
+            "tag": "tPag"
+        }
+    },
+    {
+        "model": "base.basepaymenttype",
+        "pk": 4,
+        "fields": {
+            "payment_type": "cartao_de_debito",
+            "operation_type": null,
+            "description": "Cartão de Débito",
+            "code": "4",
+            "currency": 1,
+            "tag": "tPag"
+        }
+    },
+    {
+        "model": "base.basepaymenttype",
+        "pk": 5,
+        "fields": {
+            "payment_type": "credito_de_loja",
+            "operation_type": null,
+            "description": "Crédito de Loja",
+            "code": "5",
+            "currency": 1,
+            "tag": "tPag"
+        }
+    },
+    {
+        "model": "base.basepaymenttype",
+        "pk": 6,
+        "fields": {
+            "payment_type": "vale_alimentacao",
+            "operation_type": null,
+            "description": "Vale Alimentação",
+            "code": "10",
+            "currency": 1,
+            "tag": "tPag"
+        }
+    },
+    {
+        "model": "base.basepaymenttype",
+        "pk": 7,
+        "fields": {
+            "payment_type": "vale_refeicao",
+            "operation_type": null,
+            "description": "Vale Refeição",
+            "code": "11",
+            "currency": 1,
+            "tag": "tPag"
+        }
+    },
+    {
+        "model": "base.basepaymenttype",
+        "pk": 8,
+        "fields": {
+            "payment_type": "vale_presente",
+            "operation_type": null,
+            "description": "Vale Presente",
+            "code": "12",
+            "currency": 1,
+            "tag": "tPag"
+        }
+    },
+    {
+        "model": "base.basepaymenttype",
+        "pk": 9,
+        "fields": {
+            "payment_type": "vale_combustível",
+            "operation_type": null,
+            "description": "Vale Combustível",
+            "code": "13",
+            "currency": 1,
+            "tag": "tPag"
+        }
+    },
+    {
+        "model": "base.basepaymenttype",
+        "pk": 10,
+        "fields": {
+            "payment_type": "duplicata_mercanti",
+            "operation_type": null,
+            "description": "Duplicata Mercanti",
+            "code": "14",
+            "currency": 1,
+            "tag": "tPag"
+        }
+    },
+    {
+        "model": "base.basepaymenttype",
+        "pk": 11,
+        "fields": {
+            "payment_type": "boleto_bancario",
+            "operation_type": null,
+            "description": "Boleto Bancário",
+            "code": "15",
+            "currency": 1,
+            "tag": "tPag"
+        }
+    },
+    {
+        "model": "base.basepaymenttype",
+        "pk": 12,
+        "fields": {
+            "payment_type": "deposito_bancario",
+            "operation_type": null,
+            "description": "Depósito Bancário",
+            "code": "16",
+            "currency": 1,
+            "tag": "tPag"
+        }
+    },
+    {
+        "model": "base.basepaymenttype",
+        "pk": 13,
+        "fields": {
+            "payment_type": "pagamento_instantaneo_pix",
+            "operation_type": null,
+            "description": "Pagamento Instantâneo (PIX)",
+            "code": "17",
+            "currency": 1,
+            "tag": "tPag"
+        }
+    },
+    {
+        "model": "base.basepaymenttype",
+        "pk": 14,
+        "fields": {
+            "payment_type": "transferencia_bancaria_carteira_digital",
+            "operation_type": null,
+            "description": "Transferência bancária, Carteira Digital",
+            "code": "18",
+            "currency": 1,
+            "tag": "tPag"
+        }
+    },
+    {
+        "model": "base.basepaymenttype",
+        "pk": 15,
+        "fields": {
+            "payment_type": "programa_de_fidelidade_cashback_credito_virtual",
+            "operation_type": null,
+            "description": "Programa de fidelidade, Cashback, Crédito Vir",
+            "code": "19",
+            "currency": 1,
+            "tag": "tPag"
+        }
+    },
+    {
+        "model": "base.basepaymenttype",
+        "pk": 16,
+        "fields": {
+            "payment_type": "sem_pagamento",
+            "operation_type": null,
+            "description": "Sem Pagamento",
+            "code": "90",
+            "currency": 1,
+            "tag": "tPag"
+        }
+    },
+    {
+        "model": "base.basepaymenttype",
+        "pk": 17,
+        "fields": {
+            "payment_type": "outros",
+            "operation_type": null,
+            "description": "Outros",
+            "code": "99",
+            "currency": 1,
+            "tag": "tPag"
+        }
     }
-},
-{
-    "model": "base.basepaymenttype",
-    "pk": 2,
-    "fields": {
-        "payment_type": "cheque",
-        "operation_type": null,
-        "description": "Cheque",
-        "code": "2",
-        "currency": 1,
-        "tag": "tPag"
-    }
-},
-{
-    "model": "base.basepaymenttype",
-    "pk": 3,
-    "fields": {
-        "payment_type": "cartao_de_credito",
-        "operation_type": null,
-        "description": "Cartão de Crédito",
-        "code": "3",
-        "currency": 1,
-        "tag": "tPag"
-    }
-},
-{
-    "model": "base.basepaymenttype",
-    "pk": 4,
-    "fields": {
-        "payment_type": "cartao_de_debito",
-        "operation_type": null,
-        "description": "Cartão de Débito",
-        "code": "4",
-        "currency": 1,
-        "tag": "tPag"
-    }
-},
-{
-    "model": "base.basepaymenttype",
-    "pk": 5,
-    "fields": {
-        "payment_type": "credito_de_loja",
-        "operation_type": null,
-        "description": "Crédito de Loja",
-        "code": "5",
-        "currency": 1,
-        "tag": "tPag"
-    }
-},
-{
-    "model": "base.basepaymenttype",
-    "pk": 6,
-    "fields": {
-        "payment_type": "vale_alimentacao",
-        "operation_type": null,
-        "description": "Vale Alimentação",
-        "code": "10",
-        "currency": 1,
-        "tag": "tPag"
-    }
-},
-{
-    "model": "base.basepaymenttype",
-    "pk": 7,
-    "fields": {
-        "payment_type": "vale_refeicao",
-        "operation_type": null,
-        "description": "Vale Refeição",
-        "code": "11",
-        "currency": 1,
-        "tag": "tPag"
-    }
-},
-{
-    "model": "base.basepaymenttype",
-    "pk": 8,
-    "fields": {
-        "payment_type": "vale_presente",
-        "operation_type": null,
-        "description": "Vale Presente",
-        "code": "12",
-        "currency": 1,
-        "tag": "tPag"
-    }
-},
-{
-    "model": "base.basepaymenttype",
-    "pk": 9,
-    "fields": {
-        "payment_type": "vale_combustível",
-        "operation_type": null,
-        "description": "Vale Combustível",
-        "code": "13",
-        "currency": 1,
-        "tag": "tPag"
-    }
-},
-{
-    "model": "base.basepaymenttype",
-    "pk": 10,
-    "fields": {
-        "payment_type": "duplicata_mercanti",
-        "operation_type": null,
-        "description": "Duplicata Mercanti",
-        "code": "14",
-        "currency": 1,
-        "tag": "tPag"
-    }
-},
-{
-    "model": "base.basepaymenttype",
-    "pk": 11,
-    "fields": {
-        "payment_type": "boleto_bancario",
-        "operation_type": null,
-        "description": "Boleto Bancário",
-        "code": "15",
-        "currency": 1,
-        "tag": "tPag"
-    }
-},
-{
-    "model": "base.basepaymenttype",
-    "pk": 12,
-    "fields": {
-        "payment_type": "deposito_bancario",
-        "operation_type": null,
-        "description": "Depósito Bancário",
-        "code": "16",
-        "currency": 1,
-        "tag": "tPag"
-    }
-},
-{
-    "model": "base.basepaymenttype",
-    "pk": 13,
-    "fields": {
-        "payment_type": "pagamento_instantaneo_pix",
-        "operation_type": null,
-        "description": "Pagamento Instantâneo (PIX)",
-        "code": "17",
-        "currency": 1,
-        "tag": "tPag"
-    }
-},
-{
-    "model": "base.basepaymenttype",
-    "pk": 14,
-    "fields": {
-        "payment_type": "transferencia_bancaria_carteira_digital",
-        "operation_type": null,
-        "description": "Transferência bancária, Carteira Digital",
-        "code": "18",
-        "currency": 1,
-        "tag": "tPag"
-    }
-},
-{
-    "model": "base.basepaymenttype",
-    "pk": 15,
-    "fields": {
-        "payment_type": "programa_de_fidelidade_cashback_credito_virtual",
-        "operation_type": null,
-        "description": "Programa de fidelidade, Cashback, Crédito Vir",
-        "code": "19",
-        "currency": 1,
-        "tag": "tPag"
-    }
-},
-{
-    "model": "base.basepaymenttype",
-    "pk": 16,
-    "fields": {
-        "payment_type": "sem_pagamento",
-        "operation_type": null,
-        "description": "Sem Pagamento",
-        "code": "90",
-        "currency": 1,
-        "tag": "tPag"
-    }
-},
-{
-    "model": "base.basepaymenttype",
-    "pk": 17,
-    "fields": {
-        "payment_type": "outros",
-        "operation_type": null,
-        "description": "Outros",
-        "code": "99",
-        "currency": 1,
-        "tag": "tPag"
-    }
-}
 ]

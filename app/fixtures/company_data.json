@@ -1,25 +1,25 @@
 [
-{
-    "model": "company.companydata",
-    "pk": 1,
-    "fields": {
-        "plan": 1,
-        "corporate_name": "UpyExplorer",
-        "corporate_code": null,
-        "email": "email@upyexplorer.com",
-        "active": true,
-        "registration_date": "2023-01-01T00:00:00Z",
-        "fantasy_name": null,
-        "opening_date": null,
-        "postage": null,
-        "legal_nature": null,
-        "option_by_mei": null,
-        "option_for_simple": null,
-        "simple_datao_ption": null,
-        "share_capital": 0.0,
-        "type": null,
-        "situation": null,
-        "data_registration_status": null
+    {
+        "model": "company.companydata",
+        "pk": 1,
+        "fields": {
+            "plan": 1,
+            "corporate_name": "UpyExplorer",
+            "corporate_code": null,
+            "email": "email@upyexplorer.com",
+            "active": true,
+            "registration_date": "2023-01-01T00:00:00Z",
+            "fantasy_name": null,
+            "opening_date": null,
+            "postage": null,
+            "legal_nature": null,
+            "option_by_mei": null,
+            "option_for_simple": null,
+            "simple_datao_ption": null,
+            "share_capital": 0.0,
+            "type": null,
+            "situation": null,
+            "data_registration_status": null
+        }
     }
-}
 ]

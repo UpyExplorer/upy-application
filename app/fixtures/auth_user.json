@@ -1,20 +1,21 @@
 [
-{
-    "model": "auth.user",
-    "pk": 1,
-    "fields": {
-        "password": "",
-        "last_login": "2023-01-01T00:00:00Z",
-        "is_superuser": true,
-        "username": "UpyExplorer",
-        "first_name": "Upy",
-        "last_name": "Explorer",
-        "email": "upyexplorer@gmail.com",
-        "is_staff": true,
-        "is_active": true,
-        "date_joined": "2023-01-01T00:00:00Z",
-        "groups": [],
-        "user_permissions": []
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$3oTkGrTSdskYTCjnnxdQ7K$EQJ+iqsI3Dsx62n4t4fjg6AvExZFKKsNQfo6PsLmvt8=",
+            "last_login": null,
+            "is_superuser": true,
+            "username": "upyexplorer",
+            "first_name": "",
+            "last_name": "",
+            "email": "email@upyexplorer.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2023-04-28T00:29:41.494Z",
+            "groups": [],
+            "user_permissions": []
+        }
     }
-}
-]
+    ]
+    
