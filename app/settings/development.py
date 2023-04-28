@@ -11,7 +11,7 @@ BASE_DIR = dirname(dirname(dirname(os.path.abspath(__file__))))
 CONTENT_DIR = os.path.join(BASE_DIR, 'content')
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
-SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
+SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", "KEY")
 
 DEBUG = bool(os.getenv("DJANGO_DEBUG", True))
 ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")

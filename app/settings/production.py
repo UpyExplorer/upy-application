@@ -1,10 +1,8 @@
 import os
-# import sentry_sdk
 import dj_database_url as url
 
 from os.path import dirname
 from django.utils.translation import gettext_lazy as _
-# from sentry_sdk.integrations.django import DjangoIntegration
 
 BASE_DIR = dirname(dirname(dirname(os.path.abspath(__file__))))
 CONTENT_DIR = os.path.join(BASE_DIR, 'content')
@@ -229,13 +227,5 @@ if DISABLE_USERNAME:
         'email',
         'password1',
         'password2']
-
-# sentry_sdk.init(
-#     dsn="https://1604a98438ee43c79d0a5c421c7c8d75@o1099218.ingest.sentry.io/6123760",
-#     integrations=[DjangoIntegration()],
-#     traces_sample_rate=1.0,
-#     send_default_pii=True
-# )
-
 
 FIXTURE_DIRS = ['app/fixtures']
