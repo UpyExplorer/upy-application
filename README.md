@@ -18,8 +18,8 @@
 
 ## Summary
 
-- [Installation](#)
-- [Database](#)
+- [Installation](https://upyexplorer.github.io/upy-application/nav/installation/)
+- [Database](https://upyexplorer.github.io/upy-application/nav/database/)
 
 ## Commit Style
 
