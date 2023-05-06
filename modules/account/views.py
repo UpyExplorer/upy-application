@@ -118,7 +118,6 @@ class SignUpView(BaseUpy, GuestOnlyView, FormView):
         return context
 
     def form_valid(self, form):
-        request = self.request
         user = form.save(commit=False)
 
         if settings.DISABLE_USERNAME:
@@ -134,36 +133,41 @@ class SignUpView(BaseUpy, GuestOnlyView, FormView):
                 user.save()
                 management.call_command(setup_company.Command(), user.id)
         except Exception:
-            messages.error(request, _('Error!'))
+            messages.error(
+                request=self.request,
+                message=_('Error!')
+            )
             return redirect('account:sign_up')
-
-        if settings.DISABLE_USERNAME:
-            user.username = f'user_{user.id}'
-            user.save()
 
         if settings.ENABLE_USER_ACTIVATION:
             code = get_random_string(20)
 
-            act = Activation()
-            act.code = code
-            act.user = user
-            act.save()
+            Activation(
+                code=code,
+                user=user
+            ).save()
 
-            send_activation_email(request, user.email, code)
+            send_activation_email(self.request, user.email, code)
 
             messages.success(
-                request, _('You are signed up. To activate the account, follow the link sent to the mail.'))
+                request=self.request,
+                message=_('You are signed up. To activate the account, follow the link sent to the mail.')
+            )
         else:
             raw_password = form.cleaned_data['password1']
             user = authenticate(username=user.username, password=raw_password)
-            login(request, user)
+            login(self.request, user)
 
-            messages.success(request, _('You are successfully signed up!'))
+            messages.success(
+                request=self.request,
+                message=_('You are successfully signed up!')
+            )
 
         return redirect('dashboard')
 
 
 class ActivateView(View):
+
     @staticmethod
     def get(request, code):
         act = get_object_or_404(Activation, code=code)
@@ -176,7 +180,10 @@ class ActivateView(View):
         # Remove the activation record
         act.delete()
 
-        messages.success(request, _('You have successfully activated your account!'))
+        messages.success(
+            request=request,
+            message=_('You have successfully activated your account!')
+        )
 
         return redirect('account:log_in')
 
@@ -199,14 +206,17 @@ class ResendActivationCodeView(GuestOnlyView, FormView):
 
         code = get_random_string(20)
 
-        act = Activation()
-        act.code = code
-        act.user = user
-        act.save()
+        Activation(
+            code=code,
+            user=user
+        ).save()
 
         send_activation_email(self.request, user.email, code)
 
-        messages.success(self.request, _('A new activation code has been sent to your email address.'))
+        messages.success(
+            request=self.request,
+            message=_('A new activation code has been sent to your email address.')
+        )
 
         return redirect('account:resend_activation_code')
 
@@ -262,7 +272,10 @@ class ChangeProfileView(LoginRequiredMixin, FormView):
         user.last_name = form.cleaned_data['last_name']
         user.save()
 
-        messages.success(self.request, _('Profile data has been successfully updated.'))
+        messages.success(
+            request=self.request,
+            message=_('Profile data has been successfully updated.')
+        )
 
         return redirect('account:change_profile')
 
@@ -302,25 +315,32 @@ class ChangeEmailView(LoginRequiredMixin, FormView):
         if settings.ENABLE_ACTIVATION_AFTER_EMAIL_CHANGE:
             code = get_random_string(20)
 
-            act = Activation()
-            act.code = code
-            act.user = user
-            act.email = email
-            act.save()
+            Activation(
+                code=code,
+                user=user,
+                email=email
+            ).save()
 
             send_activation_change_email(self.request, email, code)
 
-            messages.success(self.request, _('To complete the change of email address, click on the link sent to it.'))
+            messages.success(
+                request=self.request,
+                message=_('To complete the change of email address, click on the link sent to it.')
+            )
         else:
             user.email = email
             user.save()
 
-            messages.success(self.request, _('Email successfully changed.'))
+            messages.success(
+                request=self.request,
+                message=_('Email successfully changed.')
+            )
 
         return redirect('account:change_email')
 
 
 class ChangeEmailActivateView(View):
+
     @staticmethod
     def get(request, code):
         act = get_object_or_404(Activation, code=code)
@@ -333,7 +353,10 @@ class ChangeEmailActivateView(View):
         # Remove the activation record
         act.delete()
 
-        messages.success(request, _('You have successfully changed your email!'))
+        messages.success(
+            request=request,
+            message=_('You have successfully changed your email!')
+        )
 
         return redirect('account:change_email')
 
@@ -346,7 +369,10 @@ class RemindUsernameView(GuestOnlyView, FormView):
         user = form.user_cache
         send_forgotten_username_email(user.email, user.username)
 
-        messages.success(self.request, _('Your username has been successfully sent to your email.'))
+        messages.success(
+            request=self.request,
+            message=_('Your username has been successfully sent to your email.')
+        )
 
         return redirect('account:remind_username')
 
@@ -375,7 +401,10 @@ class ChangePasswordView(BasePasswordChangeView):
         # Re-authentication
         login(self.request, user)
 
-        messages.success(self.request, _('Your password was changed.'))
+        messages.success(
+            request=self.request,
+            message=_('Your password was changed.')
+        )
 
         return redirect('account:change_password')
 
@@ -387,7 +416,10 @@ class RestorePasswordConfirmView(BasePasswordResetConfirmView):
         # Change the password
         form.save()
 
-        messages.success(self.request, _('Your password has been set. You may go ahead and login now.'))
+        messages.success(
+            request=self.request,
+            message=_('Your password has been set. You may go ahead and login now.')
+        )
 
         return redirect('account:log_in')
 
