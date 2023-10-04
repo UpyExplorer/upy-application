@@ -1,6 +1,6 @@
 ![](/docs/assets/upy-explorer.png)
 
-![GitHub Org's stars](https://img.shields.io/github/stars/UpyExplorer?label=LinuxProfile&style=flat-square)
+![GitHub Org's stars](https://img.shields.io/github/stars/UpyExplorer?label=UpyExplorer&style=flat-square)
 ![GitHub last commit](https://img.shields.io/github/last-commit/UpyExplorer/upy-application?style=flat-square)
 
 ---
