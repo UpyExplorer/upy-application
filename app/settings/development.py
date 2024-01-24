@@ -29,7 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'whitenoise.runserver_nostatic',
     'pipeline',
-    'bootstrap5',
+    'bootstrap4',
     'modules.base',
     'modules.log',
     'modules.account',
@@ -54,7 +54,7 @@ LOGGING_MODELS = (
     'django.contrib.auth',
 )
 
-CRISPY_TEMPLATE_PACK = 'bootstrap5'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -72,7 +72,15 @@ MIDDLEWARE = [
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 # STATICFILES_STORAGE = 'pipeline.storage.PipelineManifestStorage'
 # STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
-STATICFILES_STORAGE = 'pipeline.storage.PipelineStorage'
+# STATICFILES_STORAGE = 'pipeline.storage.PipelineStorage'
+STORAGES = {
+    "default": {
+        "BACKEND": "pipeline.storage.PipelineStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "pipeline.storage.PipelineStorage",
+    },
+}
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
