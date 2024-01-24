@@ -26,7 +26,7 @@ INSTALLED_APPS = [
     'pipeline',
 
     # Vendor apps
-    'bootstrap5',
+    'bootstrap4',
 
     # Application apps
     'modules.base',

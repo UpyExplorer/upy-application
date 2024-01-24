@@ -690,9 +690,9 @@ msgstr ""
 #: venv/lib/python3.9/site-packages/bootstrap4/components.py:17
 #: venv/lib/python3.9/site-packages/bootstrap4/templates/bootstrap4/form_errors.html:3
 #: venv/lib/python3.9/site-packages/bootstrap4/templates/bootstrap4/messages.html:4
-#: venv/lib/python3.9/site-packages/bootstrap5/components.py:17
-#: venv/lib/python3.9/site-packages/bootstrap5/templates/bootstrap5/form_errors.html:3
-#: venv/lib/python3.9/site-packages/bootstrap5/templates/bootstrap5/messages.html:4
+#: venv/lib/python3.9/site-packages/bootstrap4/components.py:17
+#: venv/lib/python3.9/site-packages/bootstrap4/templates/bootstrap4/form_errors.html:3
+#: venv/lib/python3.9/site-packages/bootstrap4/templates/bootstrap4/messages.html:4
 msgid "close"
 msgstr ""
 
