@@ -1,0 +1,16 @@
+ARG APP_PATH=/opt/app
+
+FROM python:3.11-slim
+ARG APP_PATH
+
+COPY . $APP_PATH
+
+WORKDIR $APP_PATH
+EXPOSE 8000
+
+RUN pip install --upgrade pip --root-user-action=ignore
+RUN pip install -r requirements.txt --no-cache-dir --root-user-action=ignore
+
+RUN python manage.py setup
+
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
