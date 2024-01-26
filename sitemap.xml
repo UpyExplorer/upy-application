@@ -2,22 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>http://upyexplorer.com/</loc>
-         <lastmod>2023-04-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>http://upyexplorer.com/nav/database/</loc>
-         <lastmod>2023-04-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>http://upyexplorer.com/nav/installation/</loc>
-         <lastmod>2023-04-28</lastmod>
+         <lastmod>2024-01-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://upyexplorer.com/nav/screenshot/</loc>
-         <lastmod>2023-04-28</lastmod>
+         <lastmod>2024-01-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://upyexplorer.com/nav/project/download/</loc>
+         <lastmod>2024-01-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://upyexplorer.com/nav/project/execution/</loc>
+         <lastmod>2024-01-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://upyexplorer.com/nav/project/installation-docker/</loc>
+         <lastmod>2024-01-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://upyexplorer.com/nav/project/installation-local/</loc>
+         <lastmod>2024-01-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://upyexplorer.com/nav/settings/environment-variables/</loc>
+         <lastmod>2024-01-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://upyexplorer.com/nav/settings/python-virtual-environment/</loc>
+         <lastmod>2024-01-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
