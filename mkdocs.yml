@@ -6,9 +6,15 @@ copyright: Fernando Celmer
 
 nav:
     - Home: index.md
-    - Installation: nav/installation.md
     - Screenshot: nav/screenshot.md
-    - Database: nav/database.md
+    - Project:
+      - nav/project/download.md
+      - nav/project/installation-local.md
+      - nav/project/installation-docker.md
+      - nav/project/execution.md
+    - Settings:
+      - nav/settings/environment-variables.md
+      - nav/settings/python-virtual-environment.md
 
 theme: 
     name: material
