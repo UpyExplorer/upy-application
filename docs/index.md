@@ -20,9 +20,16 @@
 
 ## Summary
 
-- [Installation](https://upyexplorer.github.io/upy-application/nav/installation/)
+- [Home](https://upyexplorer.github.io/upy-application/)
 - [Screenshot](https://upyexplorer.github.io/upy-application/nav/screenshot/)
-- [Database](https://upyexplorer.github.io/upy-application/nav/database/)
+- Project
+    - [Download](https://upyexplorer.github.io/upy-application/nav/project/download/)
+    - [Installation Local](https://upyexplorer.github.io/upy-application/nav/project/installation-local/)
+    - [Installing with Docker](https://upyexplorer.github.io/upy-application/nav/project/installation-docker/)
+    - [Execution](https://upyexplorer.github.io/upy-application/nav/project/execution/)
+- Settings
+    - [Environment Variables](https://upyexplorer.github.io/upy-application/nav/settings/environment-variables/)
+    - [Python Virtual Environment](https://upyexplorer.github.io/upy-application/nav/settings/python-virtual-environment/)
 
 ## Commit Style
 
