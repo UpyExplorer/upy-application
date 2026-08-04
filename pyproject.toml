@@ -9,7 +9,7 @@ package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.11"
-django = "5.1.14"
+django = "5.1.15"
 dj-database-url = "2.1.0"
 django-bootstrap-modal-forms = "3.0.4"
 django-bootstrap4 = "23.4"
