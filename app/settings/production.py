@@ -4,6 +4,8 @@ import dj_database_url as url
 from os.path import dirname
 from django.utils.translation import gettext_lazy as _
 
+url.SCHEMES['mysql+pymysql'] = 'django.db.backends.mysql'
+
 BASE_DIR = dirname(dirname(dirname(os.path.abspath(__file__))))
 CONTENT_DIR = os.path.join(BASE_DIR, 'content')
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
