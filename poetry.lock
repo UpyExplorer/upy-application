@@ -841,6 +841,25 @@ pygments = ">=2.7.2"
 dev = ["argcomplete", "attrs (>=19.2)", "hypothesis (>=3.56)", "mock", "requests", "setuptools", "xmlschema"]
 
 [[package]]
+name = "pytest-django"
+version = "4.14.0"
+description = "A Django plugin for pytest."
+optional = false
+python-versions = ">=3.10"
+groups = ["dev"]
+files = [
+    {file = "pytest_django-4.14.0-py3-none-any.whl", hash = "sha256:c533b08d89cc675efcd5398eea270b34547e35f9a3608e2c9748dd88428ea187"},
+    {file = "pytest_django-4.14.0.tar.gz", hash = "sha256:26787dd3f422cfbab8f55b80a776e2edea7a11092cb74e960bef1312515708ef"},
+]
+
+[package.dependencies]
+pytest = ">=7.0.0"
+
+[package.extras]
+django = ["django (>=5.2)"]
+docs = ["sphinx", "sphinx-rtd-theme"]
+
+[[package]]
 name = "python-dateutil"
 version = "2.9.0.post0"
 description = "Extensions to the standard Python datetime module"
@@ -1134,4 +1153,4 @@ brotli = ["Brotli"]
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.11"
-content-hash = "49e61fc0c18dde9f0af5d2cc8fd793753d099198631b5e92872aae1636786aa7"
+content-hash = "99f8d2e4ef94bd53b57db60f05a84857afe1c96f75d15ed3cf95f64f89c9b336"

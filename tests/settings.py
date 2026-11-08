@@ -15,6 +15,7 @@ DATABASES = {
 }
 
 INSTALLED_APPS = [
+    'app',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -31,7 +32,6 @@ INSTALLED_APPS = [
     # Application apps
     'modules.base',
     'modules.log',
-    'modules.api',
     'modules.account',
     'modules.dashboard',
     'modules.company',
@@ -45,11 +45,8 @@ INSTALLED_APPS = [
     # Forms
     'widget_tweaks',
     'crispy_forms',
-	'bootstrap_modal_forms',
+    'bootstrap_modal_forms',
 
     # Permissions
     'global_permissions',
-
-    # Logs
-    'models_logging',
 ]
